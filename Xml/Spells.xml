@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<spellList>
+  <spell name="Acid Splash">
+    <name>Acid Splash</name>
+    <CastingTime>1 Action</CastingTime>
+    <Description>You hurl a bubble of acid. Choose two creatures within range that are within 5 ft of each other. Targets must succeed on a Dex save or take 1d6 acid damage.
+      The spell's Damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).</Description>
+    <ShortDescription>Does 1d6 acid damage to up to 2 targets within 5 ft of each other. Dex Negates.</ShortDescription>
+    <School>Conjuration</School>
+    <Targets>Up to 2 creatures within 5 ft of each other.</Targets>
+    <Range>60 ft.</Range>
+    <Save>Dexterity</Save>
+    <Level>0</Level>
+    <Concentration>No</Concentration>
+    <Duration>Instantaneous</Duration>
+    <Overcastable>No</Overcastable>
+    <Components>V, S</Components>
+    <Materials></Materials>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+    <Ritual>No</Ritual>
+  </spell>
+  <spell name="Aid">
+    <name>Aid</name>
+    <CastingTime>1 Action</CastingTime>
+    <Description>Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range.
+      Each target’s hit point maximum and current hit points increase by 5 for the duration.
+      At Higher Levels. When you cast this spell using a spell slot o f 3rd level or higher, a target’s hit points increase by an additional 5 for each slot level above 2nd.</Description>
+    <ShortDescription>Each target gets 5 bonus hit points.</ShortDescription>
+    <School>Abjuration</School>
+    <Targets>Up to 3 creatures within range.</Targets>
+    <Range>30 ft.</Range>
+    <Save>None</Save>
+    <Level>2</Level>
+    <Concentration>No</Concentration>
+    <Duration>8 Hours</Duration>
+    <Overcastable>Yes</Overcastable>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A tiny strip of while cloth.</Material>
+    </Materials>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+    <Ritual>No</Ritual>
+  </spell>
+  <spell name="Alarm">
+    <name>Alarm </name>
+    <CastingTime>1 Minute</CastingTime>
+    <Description>You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. 
+    Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the w arded area. 
+    When you cast the spell, you can designate creatures that w on’t set off the alarm. 
+    You also choose whether the alarm is mental or audible. 
+    A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area.
+    This ping awakens you if you are sleeping. 
+    An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.
+    </Description>
+    <ShortDescription>Ward an area against intrusion for 8 hours.</ShortDescription>
+    <School>Abjuration</School>
+    <Targets>Door, Window or 20ft. Cube</Targets>
+    <Range>30 ft.</Range>
+    <Save>None</Save>
+    <Level>1</Level>
+    <Concentration>No</Concentration>
+    <Duration>8 Hours</Duration>
+    <Overcastable>No</Overcastable>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A tiny bell.</Material>
+      <Material>A piece of fine silver wire.</Material>
+    </Materials>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+    <Ritual>Yes</Ritual>
+  </spell>
+  <spell name="Alter Self">
+    <name>Alter Self</name>
+    <Level>2</Level>
+    <School>Transmitation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Concentration>Yes</Concentration>
+    <Range>Self</Range>
+    <Targets>Self</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+    </Materials>
+    <Duration>Up to 1 hour</Duration>
+    <ShortDescription>Turn into an aqutic form, change appearance or gain natural weapons.</ShortDescription>
+    <Description>
+      You assume a different form. When you cast the spell,
+      choose one o f the following options, the effects o f which
+      last for the duration o f the spell. While the spell lasts,
+      you can end one option as an action to gain the benefits
+      o f a different one.
+      Aquatic Adaptation. You adapt your body to an
+      aquatic environment, sprouting gills and growing
+      webbing between your fingers. You can breathe
+      underwater and gain a swimming speed equal to your
+      walking speed.
+      Change Appearance. You transform your appearance.
+      You decide what you look like, including your height,
+      weight, facial features, sound o f your voice, hair length,
+      coloration, and distinguishing characteristics, if any.
+      You can make yourself appear as a member o f another
+      race, though none o f your statistics change. You also
+      can’t appear as a creature o f a different size than you,
+      and your basic shape stays the same; if you're bipedal,
+      you can’t use this spell to become quadrupedal, for
+      instance. At any time for the duration of the spell, you
+      can use your action to change your appearance in
+      this way again.
+      Natural Weapons. You grow claws, fangs, spines,
+      horns, or a different natural w eapon o f your choice. Your
+      unarmed strikes deal 1d6 bludgeoning, piercing, or
+      slashing damage, as appropriate to the natural weapon
+      you chose, and you are proficient with your unarmed
+      strikes. Finally, the natural weapon is magic and you
+      have a +1 bonus to the attack and damage rolls you
+      make using it.
+    </Description>
+    <Save>None</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Animal Friendship">
+    <name>Animal Friendship</name>
+    <Level>1</Level>
+    <School>Enchantment</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>30 ft..</Range>
+    <Targets>One beast with 3 or less Int.</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A morsel of food</Material>
+    </Materials>
+    <Duration>24 Hours</Duration>
+    <Concentration>no</Concentration>
+    <ShortDescription>Charms a single beast.</ShortDescription>
+    <Description>This spell lets you convince a beast that you mean it no
+      harm. Choose a beast that you can see within range.
+      It must see and hear you. If the beast’s Intelligence is
+      4 or higher, the spell fails. Otherwise, the beast must
+      succeed on a W isdom saving throw or be charmed
+      by you for the spell’s duration. If you or one of your
+      companions harms the target, the spells ends.
+      At Higher Levels. When you cast this spell using
+      a spell slot o f 2nd level or higher, you can affect one
+      additional beast for each slot level above 1st.
+    </Description>
+    <Save>Wisdom</Save>
+    <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Animal Messenger">
+    <name>Animal Messenger</name>
+    <Level>2</Level>
+    <School>Enchantment</School>
+    <Ritual>Yes</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>One tiny beast.</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A morsel of food</Material>
+    </Materials>
+    <Duration>24 hours</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>Animal travels to a location and a recipient and delivers a message.</ShortDescription>
+    <Description>
+      By means o f this spell, you use an animal to deliver a
+      message. Choose a Tiny beast you can see within range,
+      such as a squirrel, a blue jay, or a bat. You specify a
+      location, which you must have visited, and a recipient
+      who matches a general description, such as “a man or
+      woman dressed in the uniform o f the town guard” or “a
+      red-haired dwarf wearing a pointed hat.” You also speak
+      a message o f up to twenty-five words. The target beast
+      travels for the duration o f the spell toward the specified
+      location, covering about 50 miles per 24 hours for a
+      flying messenger, or 25 miles for other animals.
+      When the messenger arrives, it delivers your m essage
+      to the creature that you described, replicating the sound
+      o f your voice. The messenger speaks only to a creature
+      matching the description you gave. If the messenger
+      doesn’t reach its destination before the spell ends, the
+      message is lost, and the beast makes its way back to
+      where you cast this spell.
+      At Higher Levels. If you cast this spell using a spell
+      slot o f 3nd level or higher, the duration o f the spell
+      increases by 48 hours for each slot level above 2nd.
+    </Description>
+    <Save>None</Save>
+    <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Animal Shapes">
+    <name>Animal Shapes</name>
+    <Level>8</Level>
+    <School>Transmutation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>Any willing creature within range.</Targets>
+    <Components>V, S</Components>
+    <Materials></Materials>
+    <Duration>Up to 24 Hours</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Transform each target into a CR 4 or lower beast.</ShortDescription>
+    <Description>
+      Your m agic turns others into beasts. Choose any
+      number o f willing creatures that you can see within
+      range. You transform each target into the form o f a
+      Large or smaller beast with a challenge rating o f 4 or
+      lower. On subsequent turns, you can use your action to
+      transform affected creatures into new forms.
+      The transformation lasts for the duration for each
+      target, or until the target drops to 0 hit points or dies.
+      You can choose a different form for each target. A
+      target’s game statistics are replaced by the statistics o f
+      the chosen beast, though the target retains its alignment
+      and Intelligence, Wisdom, and Charisma scores. The
+      target assumes the hit points o f its new form, and when
+      it reverts to its normal form, it returns to the number
+      o f hit points it had before it transformed. If it reverts as
+      a result o f dropping to 0 hit points, any excess damage
+      carries over to its normal form. As long as the excess
+      damage doesn’t reduce the creature’s normal form to 0
+      hit points, it isn’t knocked unconscious. The creature is
+      limited in the actions it can perform by the nature o f its
+      new form, and it can’t speak or cast spells.
+      The target’s gear melds into the new form. The target
+      can’t activate, wield, or otherwise benefit from any o f
+      its equipment.
+    </Description>
+    <Save>None</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Animate Dead">
+    <name>Animate Dead</name>
+    <Level>3</Level>
+    <School>Necromancy</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Minute</CastingTime>
+    <Range>10 ft.</Range>
+    <Targets>Pile of bones or corpse of a small or medium humanoid.</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A drop of blood</Material>
+      <Material>Piece of flesh</Material>
+      <Material>Pinch of bone dust</Material>
+    </Materials>
+    <Duration>Instantaneous</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>Raise an undead servant.</ShortDescription>
+    <Description>
+      This spell creates an undead servant. Choose a pile
+      o f bones or a corpse o f a Medium or Small humanoid
+      within range. Your spell imbues the target with a foul
+      mimicry o f life, raising it as an undead creature. The
+      target becomes a skeleton if you chose bones or a
+      zombie if you chose a corpse (the DM has the creature’s
+      game statistics).
+      On each o f your turns, you can use a bonus action
+      to mentally command any creature you made with
+      this spell if the creature is within 60 feet o f you (if you
+      control multiple creatures, you can command any or all
+      o f them at the same time, issuing the same command to
+      each one). You decide what action the creature will take
+      and where it w ill move during its next turn, or you can
+      issue a general command, such as to guard a particular
+      chamber or corridor. If you issue no commands, the
+      creature only defends itself against hostile creatures.
+      Once given an order, the creature continues to follow it
+      until its task is complete.
+      The creature is under your control for 24 hours,
+      after which it stops obeying any command you’ve given
+      it. To maintain control o f the creature for another
+      24 hours, you must cast this spell on the creature
+      again before the current 24-hour period ends. This
+      use o f the spell reasserts your control over up to four
+      creatures you have animated with this spell, rather than
+      animating a new one.
+      At Higher Levels. When you cast this spell using a
+      spell slot o f 4th level or higher, you animate or reassert
+      control over two additional undead creatures for each
+      slot level above 3rd. Each o f the creatures must come
+      from a different corpse or pile o f bones.
+    </Description>
+    <Save>None</Save>
+    <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Template">
+    <name>Template</name>
+    <Level>99</Level>
+    <School>STemplate</School>
+    <Ritual>Yes/No</Ritual>
+    <CastingTime>Template</CastingTime>
+    <Range>RTemplate.</Range>
+    <Targets>TTemplate</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>Template</Material>
+    </Materials>
+    <Duration>Template</Duration>
+    <Concentration>Yes/No</Concentration>
+    <ShortDescription>Temp Spell</ShortDescription>
+    <Description>This is a template spell</Description>
+    <Save>SvTemplate</Save>
+    <Overcastable>Yes/No</Overcastable>
+    <RequiresAttackRoll>Yes/No</RequiresAttackRoll>
+  </spell>
+  <spell name="Template">
+    <name>Template</name>
+    <Level>99</Level>
+    <School>STemplate</School>
+    <Ritual>Yes/No</Ritual>
+    <CastingTime>Template</CastingTime>
+    <Range>RTemplate.</Range>
+    <Targets>TTemplate</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>Template</Material>
+    </Materials>
+    <Duration>Template</Duration>
+    <Concentration>Yes/No</Concentration>
+    <ShortDescription>Temp Spell</ShortDescription>
+    <Description>This is a template spell</Description>
+    <Save>SvTemplate</Save>
+    <Overcastable>Yes/No</Overcastable>
+    <RequiresAttackRoll>Yes/No</RequiresAttackRoll>
+  </spell>
+  <spell name="Template">
+    <name>Template</name>
+    <Level>99</Level>
+    <School>STemplate</School>
+    <Ritual>Yes/No</Ritual>
+    <CastingTime>Template</CastingTime>
+    <Range>RTemplate.</Range>
+    <Targets>TTemplate</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>Template</Material>
+    </Materials>
+    <Duration>Template</Duration>
+    <Concentration>Yes/No</Concentration>
+    <ShortDescription>Temp Spell</ShortDescription>
+    <Description>This is a template spell</Description>
+    <Save>SvTemplate</Save>
+    <Overcastable>Yes/No</Overcastable>
+    <RequiresAttackRoll>Yes/No</RequiresAttackRoll>
+  </spell>
+  <spell name="Template">
+    <name>Template</name>
+    <Level>99</Level>
+    <School>STemplate</School>
+    <Ritual>Yes/No</Ritual>
+    <CastingTime>Template</CastingTime>
+    <Range>RTemplate.</Range>
+    <Targets>TTemplate</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>Template</Material>
+    </Materials>
+    <Duration>Template</Duration>
+    <Concentration>Yes/No</Concentration>
+    <ShortDescription>Temp Spell</ShortDescription>
+    <Description>This is a template spell</Description>
+    <Save>SvTemplate</Save>
+    <Overcastable>Yes/No</Overcastable>
+    <RequiresAttackRoll>Yes/No</RequiresAttackRoll>
+  </spell>
+  <spell name="Template">
+    <name>Template</name>
+    <Level>99</Level>
+    <School>STemplate</School>
+    <Ritual>Yes/No</Ritual>
+    <CastingTime>Template</CastingTime>
+    <Range>RTemplate.</Range>
+    <Targets>TTemplate</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>Template</Material>
+    </Materials>
+    <Duration>Template</Duration>
+    <Concentration>Yes/No</Concentration>
+    <ShortDescription>Temp Spell</ShortDescription>
+    <Description>This is a template spell</Description>
+    <Save>SvTemplate</Save>
+    <Overcastable>Yes/No</Overcastable>
+    <RequiresAttackRoll>Yes/No</RequiresAttackRoll>
+  </spell>
+  <spell name="Template">
+    <name>Template</name>
+    <Level>99</Level>
+    <School>STemplate</School>
+    <Ritual>Yes/No</Ritual>
+    <CastingTime>Template</CastingTime>
+    <Range>RTemplate.</Range>
+    <Targets>TTemplate</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>Template</Material>
+    </Materials>
+    <Duration>Template</Duration>
+    <Concentration>Yes/No</Concentration>
+    <ShortDescription>Temp Spell</ShortDescription>
+    <Description>This is a template spell</Description>
+    <Save>SvTemplate</Save>
+    <Overcastable>Yes/No</Overcastable>
+    <RequiresAttackRoll>Yes/No</RequiresAttackRoll>
+  </spell>
+  <spell name="Template">
+    <name>Template</name>
+    <Level>99</Level>
+    <School>STemplate</School>
+    <Ritual>Yes/No</Ritual>
+    <CastingTime>Template</CastingTime>
+    <Range>RTemplate.</Range>
+    <Targets>TTemplate</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>Template</Material>
+    </Materials>
+    <Duration>Template</Duration>
+    <Concentration>Yes/No</Concentration>
+    <ShortDescription>Temp Spell</ShortDescription>
+    <Description>This is a template spell</Description>
+    <Save>SvTemplate</Save>
+    <Overcastable>Yes/No</Overcastable>
+    <RequiresAttackRoll>Yes/No</RequiresAttackRoll>
+  </spell>
+  <spell name="Template">
+    <name>Template</name>
+    <Level>99</Level>
+    <School>STemplate</School>
+    <Ritual>Yes/No</Ritual>
+    <CastingTime>Template</CastingTime>
+    <Range>RTemplate.</Range>
+    <Targets>TTemplate</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>Template</Material>
+    </Materials>
+    <Duration>Template</Duration>
+    <Concentration>Yes/No</Concentration>
+    <ShortDescription>Temp Spell</ShortDescription>
+    <Description>This is a template spell</Description>
+    <Save>SvTemplate</Save>
+    <Overcastable>Yes/No</Overcastable>
+    <RequiresAttackRoll>Yes/No</RequiresAttackRoll>
+  </spell>
+  <spell name="Template">
+    <name>Template</name>
+    <Level>99</Level>
+    <School>STemplate</School>
+    <Ritual>Yes/No</Ritual>
+    <CastingTime>Template</CastingTime>
+    <Range>RTemplate.</Range>
+    <Targets>TTemplate</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>Template</Material>
+    </Materials>
+    <Duration>Template</Duration>
+    <Concentration>Yes/No</Concentration>
+    <ShortDescription>Temp Spell</ShortDescription>
+    <Description>This is a template spell</Description>
+    <Save>SvTemplate</Save>
+    <Overcastable>Yes/No</Overcastable>
+    <RequiresAttackRoll>Yes/No</RequiresAttackRoll>
+  </spell>
+  <spell name="Template">
+    <name>Template</name>
+    <Level>99</Level>
+    <School>STemplate</School>
+    <Ritual>Yes/No</Ritual>
+    <CastingTime>Template</CastingTime>
+    <Range>RTemplate.</Range>
+    <Targets>TTemplate</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>Template</Material>
+    </Materials>
+    <Duration>Template</Duration>
+    <Concentration>Yes/No</Concentration>
+    <ShortDescription>Temp Spell</ShortDescription>
+    <Description>This is a template spell</Description>
+    <Save>SvTemplate</Save>
+    <Overcastable>Yes/No</Overcastable>
+    <RequiresAttackRoll>Yes/No</RequiresAttackRoll>
+  </spell>
+</spellList>

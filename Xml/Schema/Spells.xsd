@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="spellList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="spell">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string" />
+              <xs:element name="CastingTime" type="xs:string" />
+              <xs:element name="Description" type="xs:string" />
+              <xs:element name="ShortDescription" type="xs:string" />
+              <xs:element name="School" type="xs:string" />
+              <xs:element name="Targets" type="xs:string" />
+              <xs:element name="Range" type="xs:string" />
+              <xs:element name="Save" type="xs:string" />
+              <xs:element name="Level" type="xs:unsignedByte" />
+              <xs:element name="Concentration" type="xs:string" />
+              <xs:element name="Duration" type="xs:string" />
+              <xs:element name="Overcastable" type="xs:string" />
+              <xs:element name="Components" type="xs:string" />
+              <xs:element name="Materials">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0">
+                    <xs:element maxOccurs="unbounded" name="Material" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RequiresAttackRoll" type="xs:string" />
+              <xs:element name="Ritual" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
