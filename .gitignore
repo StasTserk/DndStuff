@@ -38,7 +38,6 @@ Thumbs.db
 
 # Specific Folders #
 ####################
-*obj/Debug*
-*bin/Debug*
-*bin/Release*
-*obj/Release*
+Debug
+Release
+*.suo

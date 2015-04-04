@@ -1,25 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DnD5thEdTools.Models
 {
-    class PlayerClass
+    public class PlayerClass
     {
         public String Name;
-        
     }
 
-    class ClassAbility
+    public class ClassAbility
     {
         public String Description;
         public AbilityType Type;
         public short LevelObtained;
     }
 
-    enum AbilityType
+    public enum AbilityType
     {
         Proficiency,
         Passive,
