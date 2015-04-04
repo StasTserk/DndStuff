@@ -1,17 +1,14 @@
-﻿using DnD5thEdTools.Controllers;
-using DnD5thEdTools.Repositories;
+﻿using DnD5thEdTools.Repositories;
 using DnD5thEdTools.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DnD5thEdTools.Controllers
 {
     public class SpellListController : ISpellListController
     {
-        public ISpellLoader _spellSource;
+        private readonly ISpellLoader _spellSource;
         private IEnumerable<Spell> _spells;
 
         public SpellListController(ISpellLoader loader)
@@ -28,7 +25,7 @@ namespace DnD5thEdTools.Controllers
         public IEnumerable<Spell> GetFilteredSpells(Func<Spell, bool> criteria)
         {
             LoadSpellList();
-            return _spells.Where(s => criteria(s) == true);
+            return _spells.Where(criteria);
         }
 
         public IEnumerable<Spell> GetUnfilteredSpells()
@@ -36,10 +33,9 @@ namespace DnD5thEdTools.Controllers
             return _spells;
         }
 
-
         public Spell GetSpellByName(string name)
         {
-            return _spells.Where(s => s.Name == name).First();
+            return _spells.First(s => s.Name == name);
         }
     }
 }
