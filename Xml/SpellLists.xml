@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<spelllist>
+  <class name="Wizard">
+    <spell name="Acid Splash" level="0"/>
+    <spell name="Blade Ward" level="0"/>
+    <spell name="Chill Touch" level="0"/>
+    <spell name="Dancing Lights" level="0"/>
+    <spell name="Fire Bolt" level="0"/>
+    <spell name="Friends" level="0"/>
+    <spell name="Light" level="0"/>
+    <spell name="Mage Hand" level="0"/>
+    <spell name="Minor Illusion" level="0"/>
+    <spell name="Poison Spray" level="0"/>
+    <spell name="Prestidigitation" level="0"/>
+    <spell name="Ray of Frost" level="0"/>
+    <spell name="Shocking Grasp" level="0"/>
+    <spell name="True Strike" level="0"/>
+    <spell name="Alarm" level="1"/>
+    <spell name="Burning Hands" level="1"/>
+    <spell name="Charm Person" level="1"/>
+    <spell name="Comprehend Languages" level="1"/>
+    <spell name="Detect Magic" level="1"/>
+    <spell name="Disguise Self" level="1"/>
+    <spell name="Expeditious Retreat" level="1"/>
+    <spell name="False Life" level="1"/>
+    <spell name="Feather Fall" level="1"/>
+    <spell name="Find Familiar" level="1"/>
+    <spell name="Fog Cloud" level="1"/>
+    <spell name="Grease" level="1"/>
+    <spell name="Identify" level="1"/>
+    <spell name="Illusory Script" level="1"/>
+    <spell name="Jump" level="1"/>
+    <spell name="Longstrider" level="1"/>
+    <spell name="Mage Armor" level="1"/>
+    <spell name="Magic Missle" level="1"/>
+    <spell name="Protection from Evil" level="1"/>
+    <spell name="Protection from Good" level="1"/>
+    <spell name="Ray of Sickness" level="1"/>
+    <spell name="Shield" level="1"/>
+    <spell name="Silent Image" level="1"/>
+    <spell name="Sleep" level="1"/>
+    <spell name="Tasha's Hideous Laughter" level="1"/>
+    <spell name="Tenser's Floating Disk" level="1"/>
+    <spell name="Thunderwave" level="1"/>
+    <spell name="Unseen Servant" level="1"/>
+    <spell name="Witch Bolt" level="1"/>
+    <spell name="Alter Self" level="2"/>
+    <spell name="Arcane Lock" level="2"/>
+    <spell name="Blindness/Deafness" level="2"/>
+    <spell name="Blur" level="2"/>
+    <spell name="Cloud of Daggers" level="2"/>
+    <spell name="Continual Flame" level="2"/>
+    <spell name="Crown of Madness" level="2"/>
+    <spell name="Darkness" level="2"/>
+    <spell name="Darkvision" level="2"/>
+    <spell name="Detect Thoughts" level="2"/>
+    <spell name="Enlarge/Reduce" level="2"/>
+    <spell name="Flaming Sphere" level="2"/>
+    <spell name="Gentle Repose" level="2"/>
+    <spell name="Gust of Wind" level="2"/>
+    <spell name="Hold Person" level="2"/>
+    <spell name="Invisibility" level="2"/>
+    <spell name="Knock" level="2"/>
+    <spell name="Levitate" level="2"/>
+    <spell name="Locate Object" level="2"/>
+    <spell name="Magic Mouth" level="2"/>
+    <spell name="Magic Weapon" level="2"/>
+    <spell name="Mirror Image" level="2"/>
+    <spell name="Misty Step" level="2"/>
+    <spell name="Nystul's Magic Aura" level="2"/>
+    <spell name="Phantasmal Force" level="2"/>
+    <spell name="Ray of ENfeeblement" level="2"/>
+    <spell name="Rope Trick" level="2"/>
+    <spell name="Scorching Ray" level="2"/>
+    <spell name="See Invisibility" level="2"/>
+    <spell name="Shatter" level="2"/>
+    <spell name="Spider Climb" level="2"/>
+    <spell name="Suggestion" level="2"/>
+    <spell name="Web" level="2"/>
+  </class>
+</spelllist>
