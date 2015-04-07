@@ -1,5 +1,703 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <spelllist>
+  <class name="Bard">
+    <spell level="0" name="Blade Ward"/>
+    <spell level="0" name="Dancing Lights"/>
+    <spell level="0" name="Friends"/>
+    <spell level="0" name="Light"/>
+    <spell level="0" name="Mage Hand"/>
+    <spell level="0" name="Mending"/>
+    <spell level="0" name="Message"/>
+    <spell level="0" name="Minor Illusion"/>
+    <spell level="0" name="Prestidigitation"/>
+    <spell level="0" name="True Strike"/>
+    <spell level="0" name="Vicious Mockery"/>
+
+    <spell level="1" name="Animal Friendship"/>
+    <spell level="1" name="Bane"/>
+    <spell level="1" name="Charm Person"/>
+    <spell level="1" name="Comprehend Languages"/>
+    <spell level="1" name="Cure Wounds"/>
+    <spell level="1" name="Detect Magic"/>
+    <spell level="1" name="Disguise Self"/>
+    <spell level="1" name="Dissonant Whispers"/>
+    <spell level="1" name="Faerie Fire"/>
+    <spell level="1" name="Feather Fall"/>
+    <spell level="1" name="Healing Word"/>
+    <spell level="1" name="Heroism"/>
+    <spell level="1" name="Identify"/>
+    <spell level="1" name="Illusory Script"/>
+    <spell level="1" name="Longstrider"/>
+    <spell level="1" name="Silent Image"/>
+    <spell level="1" name="Sleep"/>
+    <spell level="1" name="Speak with Animals"/>
+    <spell level="1" name="Tasha’s Hideous Laughter"/>
+    <spell level="1" name="Thunderwave"/>
+    <spell level="1" name="Unseen Servant"/>
+
+    <spell level="2" name="Animal Messenger"/>
+    <spell level="2" name="Blindness/Deafness"/>
+    <spell level="2" name="Calm Emotions"/>
+    <spell level="2" name="Cloud of Daggers"/>
+    <spell level="2" name="Crown of Madness"/>
+    <spell level="2" name="Detect Thoughts"/>
+    <spell level="2" name="Enhance Ability"/>
+    <spell level="2" name="Enthrall"/>
+    <spell level="2" name="Heat Metal"/>
+    <spell level="2" name="Hold Person"/>
+    <spell level="2" name="Invisibility"/>
+    <spell level="2" name="Knock"/>
+    <spell level="2" name="Lesser Restoration"/>
+    <spell level="2" name="Locate Animals or Plants"/>
+    <spell level="2" name="Locate Object"/>
+    <spell level="2" name="Magic Mouth"/>
+    <spell level="2" name="Phantasmal Force"/>
+    <spell level="2" name="See Invisibility"/>
+    <spell level="2" name="Shatter"/>
+    <spell level="2" name="Silence"/>
+    <spell level="2" name="Suggestion"/>
+    <spell level="2" name="Zone of Truth"/>
+
+    <spell level="3" name="Bestow Curse"/>
+    <spell level="3" name="Clairvoyance"/>
+    <spell level="3" name="Dispel Magic"/>
+    <spell level="3" name="Fear"/>
+    <spell level="3" name="Feign Death"/>
+    <spell level="3" name="Glyph of Warding"/>
+    <spell level="3" name="Hypnotic Pattern"/>
+    <spell level="3" name="Leomund’s Tiny Hut"/>
+    <spell level="3" name="Major Image"/>
+    <spell level="3" name="Nondetection"/>
+    <spell level="3" name="Plant Growth"/>
+    <spell level="3" name="Sending"/>
+    <spell level="3" name="Speak with Dead"/>
+    <spell level="3" name="Speak with Plants"/>
+    <spell level="3" name="Stinking Cloud"/>
+    <spell level="3" name="Tongues"/>
+           
+    <spell level="4" name="Compulsion"/>
+    <spell level="4" name="Confusion"/>
+    <spell level="4" name="Dimension Door"/>
+    <spell level="4" name="Freedom of Movement"/>
+    <spell level="4" name="Greater Invisibility"/>
+    <spell level="4" name="Hallucinatory Terrain"/>
+    <spell level="4" name="Locate Creature"/>
+    <spell level="4" name="Polymorph"/>
+
+    <spell level="5" name="Animate Objects"/>
+    <spell level="5" name="Awaken"/>
+    <spell level="5" name="Dominate Person"/>
+    <spell level="5" name="Dream"/>
+    <spell level="5" name="Geas"/>
+    <spell level="5" name="Greater Restoration"/>
+    <spell level="5" name="Hold Monster"/>
+    <spell level="5" name="Legend Lore"/>
+    <spell level="5" name="Mass Cure Wounds"/>
+    <spell level="5" name="Mislead"/>
+    <spell level="5" name="Modify Memory"/>
+    <spell level="5" name="Planar Binding"/>
+    <spell level="5" name="Raise Dead"/>
+    <spell level="5" name="Scrying"/>
+    <spell level="5" name="Seeming"/>
+    <spell level="5" name="Teleportation Circle"/>
+           
+    <spell level="6" name="Eyebite"/>
+    <spell level="6" name="Find the Path"/>
+    <spell level="6" name="Guards and Wards"/>
+    <spell level="6" name="Mass Suggestion"/>
+    <spell level="6" name="Otto’s Irresistible Dance"/>
+    <spell level="6" name="Programmed Illusion"/>
+    <spell level="6" name="True Seeing"/>
+
+    <spell level="7" name="Etherealness"/>
+    <spell level="7" name="Forcecage"/>
+    <spell level="7" name="Mirage Arcane"/>
+    <spell level="7" name="Mordenkainen’s Magnificent Mansion"/>
+    <spell level="7" name="Mordenkainen’s Sword"/>
+    <spell level="7" name="Project Image"/>
+    <spell level="7" name="Regenerate"/>
+    <spell level="7" name="Resurrection"/>
+    <spell level="7" name="Symbol"/>
+    <spell level="7" name="Teleport"/>
+
+    <spell level="8" name="Dominate Monster"/>
+    <spell level="8" name="Feeblemind"/>
+    <spell level="8" name="Glibness"/>
+    <spell level="8" name="Mind Blank"/>
+    <spell level="8" name="Power Word Stun"/>
+
+    <spell level="9" name="Foresight"/>
+    <spell level="9" name="Power Word Heal"/>
+    <spell level="9" name="Power Word Kill"/>
+    <spell level="9" name="True Polymorph"/>
+  </class>
+  <class name="Cleric">
+    <spell level="0" name="Guidance"/>
+    <spell level="0" name="Light"/>
+    <spell level="0" name="Mending"/>
+    <spell level="0" name="Resistance"/>
+    <spell level="0" name="Sacred Flame"/>
+    <spell level="0" name="Spare the Dying"/>
+    <spell level="0" name="Thaumaturgy"/>
+
+    <spell level="1" name="Bane"/>
+    <spell level="1" name="Bless"/>
+    <spell level="1" name="Command"/>
+    <spell level="1" name="Create or Destroy Water"/>
+    <spell level="1" name="Cure Wounds"/>
+    <spell level="1" name="Detect Evil and Good"/>
+    <spell level="1" name="Detect Magic"/>
+    <spell level="1" name="Detect Poison and Disease"/>
+    <spell level="1" name="Guiding Bolt"/>
+    <spell level="1" name="Healing Word"/>
+    <spell level="1" name="Inflict Wounds"/>
+    <spell level="1" name="Protection from Evil and Good"/>
+    <spell level="1" name="Purify Food and Drink"/>
+    <spell level="1" name="Sanctuary"/>
+    <spell level="1" name="Shield of Faith"/>
+
+    <spell level="2" name="Aid"/>
+    <spell level="2" name="Augury"/>
+    <spell level="2" name="Blindness/Deafness"/>
+    <spell level="2" name="Calm Emotions"/>
+    <spell level="2" name="Continual Flame"/>
+    <spell level="2" name="Enhance Ability"/>
+    <spell level="2" name="Find Traps"/>
+    <spell level="2" name="Gentle Repose"/>
+    <spell level="2" name="Hold Person"/>
+    <spell level="2" name="Lesser Restoration"/>
+    <spell level="2" name="Locate Object"/>
+    <spell level="2" name="Prayer of Healing"/>
+    <spell level="2" name="Protection from Poison"/>
+    <spell level="2" name="Silence"/>
+    <spell level="2" name="Spiritual Weapon"/>
+    <spell level="2" name="Warding Bond"/>
+    <spell level="2" name="Zone of Truth"/>
+
+    <spell level="3" name="Animate Dead"/>
+    <spell level="3" name="Beacon of Hope"/>
+    <spell level="3" name="Bestow Curse"/>
+    <spell level="3" name="Clairvoyance"/>
+    <spell level="3" name="Create Food and Water"/>
+    <spell level="3" name="Daylight"/>
+    <spell level="3" name="Dispel Magic"/>
+    <spell level="3" name="Feign Death"/>
+    <spell level="3" name="Glyph of Warding"/>
+    <spell level="3" name="Magic Circle"/>
+    <spell level="3" name="Mass Healing Word"/>
+    <spell level="3" name="Meld into Stone"/>
+    <spell level="3" name="Protection from Energy"/>
+    <spell level="3" name="Remove Curse"/>
+    <spell level="3" name="Revivify"/>
+    <spell level="3" name="Sending"/>
+    <spell level="3" name="Speak with Dead"/>
+    <spell level="3" name="Spirit Guardians"/>
+    <spell level="3" name="Tongues"/>
+    <spell level="3" name="Water Walk"/>
+
+    <spell level="4" name="Banishment"/>
+    <spell level="4" name="Control Water"/>
+    <spell level="4" name="Death Ward"/>
+    <spell level="4" name="Divination"/>
+    <spell level="4" name="Freedom of Movement"/>
+    <spell level="4" name="Guardian of Faith"/>
+    <spell level="4" name="Locate Creature"/>
+    <spell level="4" name="Stone Shape"/>
+
+    <spell level="5" name="Commune"/>
+    <spell level="5" name="Contagion"/>
+    <spell level="5" name="Dispel Evil and Good"/>
+    <spell level="5" name="Flame Strike"/>
+    <spell level="5" name="Geas"/>
+    <spell level="5" name="Greater Restoration"/>
+    <spell level="5" name="Hallow"/>
+    <spell level="5" name="Insect Plague"/>
+    <spell level="5" name="Legend Lore"/>
+    <spell level="5" name="Mass Cure Wounds"/>
+    <spell level="5" name="Planar Binding"/>
+    <spell level="5" name="Raise Dead"/>
+    <spell level="5" name="Scrying"/>
+
+    <spell level="6" name="Blade Barrier"/>
+    <spell level="6" name="Create Undead"/>
+    <spell level="6" name="Find the Path"/>
+    <spell level="6" name="Forbiddance"/>
+    <spell level="6" name="Harm"/>
+    <spell level="6" name="Heal"/>
+    <spell level="6" name="Heroes’ Feast"/>
+    <spell level="6" name="Planar Ally"/>
+    <spell level="6" name="True Seeing"/>
+    <spell level="6" name="Word of Recall"/>
+
+    <spell level="7" name="Conjure Celestial"/>
+    <spell level="7" name="Divine Word"/>
+    <spell level="7" name="Etherealness"/>
+    <spell level="7" name="Fire Storm"/>
+    <spell level="7" name="Plane Shift"/>
+    <spell level="7" name="Regenerate"/>
+    <spell level="7" name="Resurrection"/>
+    <spell level="7" name="Symbol"/>
+
+    <spell level="8" name="Antimagic Field"/>
+    <spell level="8" name="Control Weather"/>
+    <spell level="8" name="Earthquake"/>
+    <spell level="8" name="Holy Aura"/>
+
+    <spell level="9" name="Astral Projection"/>
+    <spell level="9" name="Gate"/>
+    <spell level="9" name="Mass Heal"/>
+    <spell level="9" name="True Resurrection"/>
+  </class>
+  <class name="Druid">
+    <spell level="0" name="Druidcraft"/>
+    <spell level="0" name="Guidance"/>
+    <spell level="0" name="Mending"/>
+    <spell level="0" name="Poison Spray"/>
+    <spell level="0" name="Produce Flame"/>
+    <spell level="0" name="Resistance"/>
+    <spell level="0" name="Shillelagh"/>
+    <spell level="0" name="Thorn Whip"/>
+
+    <spell level="1" name="Animal Friendship"/>
+    <spell level="1" name="Charm Person"/>
+    <spell level="1" name="Create or Destroy Water"/>
+    <spell level="1" name="Cure Wounds"/>
+    <spell level="1" name="Detect Magic"/>
+    <spell level="1" name="Detect Poison and Disease"/>
+    <spell level="1" name="Entangle"/>
+    <spell level="1" name="Faerie Fire"/>
+    <spell level="1" name="Fog Cloud"/>
+    <spell level="1" name="Goodberry"/>
+    <spell level="1" name="Healing Word"/>
+    <spell level="1" name="Jump"/>
+    <spell level="1" name="Longstrider"/>
+    <spell level="1" name="Purify Food and Drink"/>
+    <spell level="1" name="Speak with Animals"/>
+    <spell level="1" name="Thunderwave"/>
+
+    <spell level="2" name="Animal Messenger"/>
+    <spell level="2" name="Barkskin"/>
+    <spell level="2" name="Beast Sense"/>
+    <spell level="2" name="Darkvision"/>
+    <spell level="2" name="Enhance Ability"/>
+    <spell level="2" name="Find Traps"/>
+    <spell level="2" name="Flame Blade"/>
+    <spell level="2" name="Flaming Sphere"/>
+    <spell level="2" name="Gust of Wind"/>
+    <spell level="2" name="Heat Metal"/>
+    <spell level="2" name="Hold Person"/>
+    <spell level="2" name="Lesser Restoration"/>
+    <spell level="2" name="Locate Animals or Plants"/>
+    <spell level="2" name="Locate Object"/>
+    <spell level="2" name="Moonbeam"/>
+    <spell level="2" name="Pass without Trace"/>
+    <spell level="2" name="Protection from Poison"/>
+    <spell level="2" name="Spike Growth"/>
+
+    <spell level="3" name="Call Lightning"/>
+    <spell level="3" name="Conjure Animals"/>
+    <spell level="3" name="Daylight"/>
+    <spell level="3" name="Dispel Magic"/>
+    <spell level="3" name="Feign Death"/>
+    <spell level="3" name="Meld into Stone"/>
+    <spell level="3" name="Plant Growth"/>
+    <spell level="3" name="Protection from Energy"/>
+    <spell level="3" name="Sleet Storm"/>
+    <spell level="3" name="Speak with Plants"/>
+    <spell level="3" name="Water Breathing"/>
+    <spell level="3" name="Water Walk"/>
+    <spell level="3" name="Wind Wall"/>
+
+    <spell level="4" name="Blight"/>
+    <spell level="4" name="Confusion"/>
+    <spell level="4" name="Conjure Minor Elementals"/>
+    <spell level="4" name="Conjure Woodland Beings"/>
+    <spell level="4" name="Control Water"/>
+    <spell level="4" name="Dominate Beast"/>
+    <spell level="4" name="Freedom of Movement"/>
+    <spell level="4" name="Giant Insect"/>
+    <spell level="4" name="Grasping Vine"/>
+    <spell level="4" name="Hallucinatory Terrain"/>
+    <spell level="4" name="Ice Storm"/>
+    <spell level="4" name="Locate Creature"/>
+    <spell level="4" name="Polymorph"/>
+    <spell level="4" name="Stone Shape"/>
+    <spell level="4" name="Stoneskin"/>
+    <spell level="4" name="Wall of Fire"/>
+
+    <spell level="5" name="Antilife Shell"/>
+    <spell level="5" name="Awaken"/>
+    <spell level="5" name="Commune with Nature"/>
+    <spell level="5" name="Conjure Elemental"/>
+    <spell level="5" name="Contagion"/>
+    <spell level="5" name="Geas"/>
+    <spell level="5" name="Greater Restoration"/>
+    <spell level="5" name="Insect Plague"/>
+    <spell level="5" name="Mass Cure Wounds"/>
+    <spell level="5" name="Planar Binding"/>
+    <spell level="5" name="Reincarnate"/>
+    <spell level="5" name="Scrying"/>
+    <spell level="5" name="Tree Stride"/>
+    <spell level="5" name="Wall of Stone"/>
+
+    <spell level="6" name="Conjure Fey"/>
+    <spell level="6" name="Find the Path"/>
+    <spell level="6" name="Heal"/>
+    <spell level="6" name="Heroes’ Feast"/>
+    <spell level="6" name="Move Earth"/>
+    <spell level="6" name="Sunbeam"/>
+    <spell level="6" name="Transport via Plants"/>
+    <spell level="6" name="Wall of Thorns"/>
+    <spell level="6" name="Wind Walk"/>
+
+    <spell level="7" name="Fire Storm"/>
+    <spell level="7" name="Mirage Arcane"/>
+    <spell level="7" name="Plane Shift"/>
+    <spell level="7" name="Regenerate"/>
+    <spell level="7" name="Reverse Gravity"/>
+
+    <spell level="8" name="Animal Shapes"/>
+    <spell level="8" name="Antipathy/Sympathy"/>
+    <spell level="8" name="Control Weather"/>
+    <spell level="8" name="Earthquake"/>
+    <spell level="8" name="Feeblemind"/>
+    <spell level="8" name="Sunburst"/>
+    <spell level="8" name="Tsunami"/>
+
+    <spell level="9" name="Foresight"/>
+    <spell level="9" name="Shapechange"/>
+    <spell level="9" name="Storm of Vengeance"/>
+    <spell level="9" name="True Resurrection"/>
+  </class>
+  <class name="Paladin">
+    <spell level="1" name="Bless"/>
+    <spell level="1" name="Command"/>
+    <spell level="1" name="Compelled Duel"/>
+    <spell level="1" name="Cure Wounds"/>
+    <spell level="1" name="Detect Evil and Good"/>
+    <spell level="1" name="Detect Magic"/>
+    <spell level="1" name="Detect Poison and Disease"/>
+    <spell level="1" name="Divine Favor"/>
+    <spell level="1" name="Heroism"/>
+    <spell level="1" name="Protection from"/>
+    <spell level="1" name="Evil and Good"/>
+    <spell level="1" name="Purify Food and Drink"/>
+    <spell level="1" name="Searing Smite"/>
+    <spell level="1" name="Shield of Faith"/>
+    <spell level="1" name="Thunderous Smite"/>
+    <spell level="1" name="Wrathful Smite"/>
+
+    <spell level="2" name="Aid"/>
+    <spell level="2" name="Branding Smite"/>
+    <spell level="2" name="Find Steed"/>
+    <spell level="2" name="Lesser Restoration"/>
+    <spell level="2" name="Locate Object"/>
+    <spell level="2" name="Magic Weapon"/>
+    <spell level="2" name="Protection from Poison"/>
+    <spell level="2" name="Zone of Truth"/>
+
+    <spell level="3" name="Aura of Vitality"/>
+    <spell level="3" name="Blinding Smite"/>
+    <spell level="3" name="Create Food and Water"/>
+    <spell level="3" name="Crusader's Mantle"/>
+    <spell level="3" name="Daylight"/>
+    <spell level="3" name="Dispel Magic"/>
+    <spell level="3" name="Elemental Weapon"/>
+    <spell level="3" name="Magic Circle"/>
+    <spell level="3" name="Remove Curse"/>
+    <spell level="3" name="Revivify"/>
+
+    <spell level="4" name="Aura of Life"/>
+    <spell level="4" name="Aura of Purity"/>
+    <spell level="4" name="Banishment"/>
+    <spell level="4" name="Death Ward"/>
+    <spell level="4" name="Locate Creature"/>
+    <spell level="4" name="Staggering Smite"/>
+
+    <spell level="5" name="Banishing Smite"/>
+    <spell level="5" name="Circle of Power"/>
+    <spell level="5" name="Destructive Smite"/>
+    <spell level="5" name="Dispel Evil and Good"/>
+    <spell level="5" name="Geas"/>
+    <spell level="5" name="Raise Dead"/>
+  </class>
+  <class name="Ranger">
+    <spell level="0" name="Alarm"/>
+    <spell level="0" name="Animal Friendship"/>
+    <spell level="0" name="Cure Wounds"/>
+    <spell level="0" name="Detect Magic"/>
+    <spell level="0" name="Detect Poison and Disease"/>
+    <spell level="0" name="Ensnaring Strike"/>
+    <spell level="0" name="Fog Cloud"/>
+    <spell level="0" name="Goodberry"/>
+    <spell level="0" name="Hail of Thorns"/>
+    <spell level="0" name="Hunter’s Mark"/>
+    <spell level="0" name="Jump"/>
+    <spell level="0" name="Longstrider"/>
+    <spell level="0" name="Speak with Animals"/>
+
+    <spell level="1" name="Animal Messenger"/>
+    <spell level="1" name="Barkskin"/>
+    <spell level="1" name="Beast Sense"/>
+    <spell level="1" name="Cordon of Arrows"/>
+    <spell level="1" name="Darkvision"/>
+    <spell level="1" name="Find Traps"/>
+    <spell level="1" name="Lesser Restoration"/>
+    <spell level="1" name="Locate Animals or Plants"/>
+    <spell level="1" name="Locate Object"/>
+    <spell level="1" name="Pass without Trace"/>
+    <spell level="1" name="Protection from Poison"/>
+    <spell level="1" name="Silence"/>
+    <spell level="1" name="Spike Growth"/>
+
+    <spell level="2" name="Conjure Animals"/>
+    <spell level="2" name="Conjure Barrage"/>
+    <spell level="2" name="Daylight"/>
+    <spell level="2" name="Lightning Arrow"/>
+    <spell level="2" name="Nondetection"/>
+    <spell level="2" name="Plant Growth"/>
+    <spell level="2" name="Protection from Energy"/>
+    <spell level="2" name="Speak with Plants"/>
+    <spell level="2" name="Water Breathing"/>
+    <spell level="2" name="Water Walk"/>
+    <spell level="2" name="Wind Wall"/>
+
+    <spell level="3" name="Conjure Woodland Beings"/>
+    <spell level="3" name="Freedom of Movement"/>
+    <spell level="3" name="Grasping Vine"/>
+    <spell level="3" name="Locate Creature"/>
+    <spell level="3" name="Stoneskin"/>
+
+    <spell level="4" name="Commune with Nature"/>
+    <spell level="4" name="Conjure Volley"/>
+    <spell level="4" name="Swift Quiver"/>
+    <spell level="4" name="Tree Stride"/>
+  </class>
+  <class name="Sorcerer">
+    <spell level="0" name="Acid Splash"/>
+    <spell level="0" name="Blade Ward"/>
+    <spell level="0" name="Chill Touch"/>
+    <spell level="0" name="Dancing Lights"/>
+    <spell level="0" name="Fire Bolt"/>
+    <spell level="0" name="Friends"/>
+    <spell level="0" name="Light"/>
+    <spell level="0" name="Mage Hand"/>
+    <spell level="0" name="Mending"/>
+    <spell level="0" name="Message"/>
+    <spell level="0" name="Minor Illusion"/>
+    <spell level="0" name="Poison Spray"/>
+    <spell level="0" name="Prestidigitation"/>
+    <spell level="0" name="Ray of Frost"/>
+    <spell level="0" name="Shocking Grasp"/>
+    <spell level="0" name="True Strike"/>
+
+    <spell level="1" name="Burning Hands"/>
+    <spell level="1" name="Charm Person"/>
+    <spell level="1" name="Chromatic Orb"/>
+    <spell level="1" name="Color Spray"/>
+    <spell level="1" name="Comprehend Languages"/>
+    <spell level="1" name="Detect Magic"/>
+    <spell level="1" name="Disguise Self"/>
+    <spell level="1" name="Expeditious Retreat"/>
+    <spell level="1" name="False Life"/>
+    <spell level="1" name="Feather Fall"/>
+    <spell level="1" name="Fog Cloud"/>
+    <spell level="1" name="Jump"/>
+    <spell level="1" name="Mage Armor"/>
+    <spell level="1" name="Magic Missile"/>
+    <spell level="1" name="Ray of Sickness"/>
+    <spell level="1" name="Shield"/>
+    <spell level="1" name="Silent Image"/>
+    <spell level="1" name="Sleep"/>
+    <spell level="1" name="Thunderwave"/>
+    <spell level="1" name="Witch Bolt"/>
+    
+    <spell level="2" name="Alter Self"/>
+    <spell level="2" name="Blindness/Deafness"/>
+    <spell level="2" name="Blur"/>
+    <spell level="2" name="Cloud of Daggers"/>
+    <spell level="2" name="Crown of Madness"/>
+    <spell level="2" name="Darkness"/>
+    <spell level="2" name="Darkvision"/>
+    <spell level="2" name="Detect Thoughts"/>
+    <spell level="2" name="Enhance Ability"/>
+    <spell level="2" name="Enlarge/Reduce"/>
+    <spell level="2" name="Gust of Wind"/>
+    <spell level="2" name="Hold Person"/>
+    <spell level="2" name="Invisibility"/>
+    <spell level="2" name="Knock"/>
+    <spell level="2" name="Levitate"/>
+    <spell level="2" name="Mirror Image"/>
+    <spell level="2" name="Misty Step"/>
+    <spell level="2" name="Phantasmal Force"/>
+    <spell level="2" name="Scorching Ray"/>
+    <spell level="2" name="See Invisibility"/>
+    <spell level="2" name="Shatter"/>
+    <spell level="2" name="Spider Climb"/>
+    <spell level="2" name="Suggestion"/>
+    <spell level="2" name="Web"/>
+    
+    <spell level="3" name="Blink"/>
+    <spell level="3" name="Clairvoyance"/>
+    <spell level="3" name="Counterspell"/>
+    <spell level="3" name="Daylight"/>
+    <spell level="3" name="Dispel Magic"/>
+    <spell level="3" name="Fear"/>
+    <spell level="3" name="Fireball"/>
+    <spell level="3" name="Fly"/>
+    <spell level="3" name="Gaseous Form"/>
+    <spell level="3" name="Haste"/>
+    <spell level="3" name="Hypnotic Pattern"/>
+    <spell level="3" name="Lightning Bolt"/>
+    <spell level="3" name="Major Image"/>
+    <spell level="3" name="Protection from Energy"/>
+    <spell level="3" name="Sleet Storm"/>
+    <spell level="3" name="Slow"/>
+    <spell level="3" name="Stinking Cloud"/>
+    <spell level="3" name="Tongues"/>
+    <spell level="3" name="Water Breathing"/>
+    <spell level="3" name="Water Walk"/>
+
+    <spell level="4" name="Banishment"/>
+    <spell level="4" name="Blight"/>
+    <spell level="4" name="Confusion"/>
+    <spell level="4" name="Dimension Door"/>
+    <spell level="4" name="Dominate Beast"/>
+    <spell level="4" name="Greater Invisibility"/>
+    <spell level="4" name="Ice Storm"/>
+    <spell level="4" name="Polymorph"/>
+    <spell level="4" name="Stoneskin"/>
+    <spell level="4" name="Wall of Fire"/>
+
+    <spell level="5" name="Animate Objects"/>
+    <spell level="5" name="Cloudkill"/>
+    <spell level="5" name="Cone of Cold"/>
+    <spell level="5" name="Creation"/>
+    <spell level="5" name="Dominate Person"/>
+    <spell level="5" name="Hold Monster"/>
+    <spell level="5" name="Insect Plague"/>
+    <spell level="5" name="Seeming"/>
+    <spell level="5" name="Telekinesis"/>
+    <spell level="5" name="Teleportation Circle"/>
+    <spell level="5" name="Wall of Stone"/>
+    
+    <spell level="6" name="Arcane Gate"/>
+    <spell level="6" name="Chain Lightning"/>
+    <spell level="6" name="Circle of Death"/>
+    <spell level="6" name="Disintegrate"/>
+    <spell level="6" name="Eyebite"/>
+    <spell level="6" name="Globe of Invulnerability"/>
+    <spell level="6" name="Mass Suggestion"/>
+    <spell level="6" name="Move Earth"/>
+    <spell level="6" name="Sunbeam"/>
+    <spell level="6" name="True Seeing"/>
+
+    <spell level="7" name="Delayed Blast Fireball"/>
+    <spell level="7" name="Etherealness"/>
+    <spell level="7" name="Finger of Death"/>
+    <spell level="7" name="Fire Storm"/>
+    <spell level="7" name="Plane Shift"/>
+    <spell level="7" name="Prismatic Spray"/>
+    <spell level="7" name="Reverse Gravity"/>
+    <spell level="7" name="Teleport"/>
+
+    <spell level="8" name="Dominate Monster"/>
+    <spell level="8" name="Earthquake"/>
+    <spell level="8" name="Incendiary Cloud"/>
+    <spell level="8" name="Power Word Stun"/>
+    <spell level="8" name="Sunburst"/>
+    
+    <spell level="9" name="Gate"/>
+    <spell level="9" name="Meteor Swarm"/>
+    <spell level="9" name="Power Word Kill"/>
+    <spell level="9" name="Time Stop"/>
+    <spell level="9" name="Wish"/>
+  </class>
+  <class name="Warlock">
+    <spell level="0" name="Blade Ward"/>
+    <spell level="0" name="Chill Touch"/>
+    <spell level="0" name="Eldritch Blast"/>
+    <spell level="0" name="Friends"/>
+    <spell level="0" name="Mage Hand"/>
+    <spell level="0" name="Minor Illusion"/>
+    <spell level="0" name="Poison Spray"/>
+    <spell level="0" name="Prestidigitation"/>
+    <spell level="0" name="True Strike"/>
+
+    <spell level="1" name="Armor of Agathys"/>
+    <spell level="1" name="Arms of Hadar"/>
+    <spell level="1" name="Charm Person"/>
+    <spell level="1" name="Comprehend Languages"/>
+    <spell level="1" name="Expeditious Retreat"/>
+    <spell level="1" name="Hellish Rebuke"/>
+    <spell level="1" name="Hex"/>
+    <spell level="1" name="Illusory Script"/>
+    <spell level="1" name="Protection from Evil and Good"/>
+    <spell level="1" name="Unseen Servant"/>
+    <spell level="1" name="Witch Bolt"/>
+           
+    <spell level="2" name="Cloud of Daggers"/>
+    <spell level="2" name="Crown of Madness"/>
+    <spell level="2" name="Darkness"/>
+    <spell level="2" name="Enthrall"/>
+    <spell level="2" name="Hold Person"/>
+    <spell level="2" name="Invisibility"/>
+    <spell level="2" name="Mirror Image"/>
+    <spell level="2" name="Misty Step"/>
+    <spell level="2" name="Ray of Enfeeblement"/>
+    <spell level="2" name="Shatter"/>
+    <spell level="2" name="Spider Climb"/>
+    <spell level="2" name="Suggestion"/>
+
+    <spell level="3" name="Counterspell"/>
+    <spell level="3" name="Dispel Magic"/>
+    <spell level="3" name="Fear"/>
+    <spell level="3" name="Fly"/>
+    <spell level="3" name="Gaseous Form"/>
+    <spell level="3" name="Hunger of Hadar"/>
+    <spell level="3" name="Hypnotic Pattern"/>
+    <spell level="3" name="Magic Circle"/>
+    <spell level="3" name="Major Image"/>
+    <spell level="3" name="Remove Curse"/>
+    <spell level="3" name="Tongues"/>
+    <spell level="3" name="Vampiric Touch"/>
+
+    <spell level="4" name="Banishment"/>
+    <spell level="4" name="Blight"/>
+    <spell level="4" name="Dimension Door"/>
+    <spell level="4" name="Hallucinatory Terrain"/>
+
+    <spell level="5" name="Contact Other Plane"/>
+    <spell level="5" name="Dream"/>
+    <spell level="5" name="Hold Monster"/>
+    <spell level="5" name="Scrying"/>
+
+    <spell level="6" name="Arcane Gate"/>
+    <spell level="6" name="Circle of Death"/>
+    <spell level="6" name="Conjure Fey"/>
+    <spell level="6" name="Create Undead"/>
+    <spell level="6" name="Eyebite"/>
+    <spell level="6" name="Flesh to Stone"/>
+    <spell level="6" name="Mass Suggestion"/>
+    <spell level="6" name="True Seeing"/>
+
+    <spell level="7" name="Etherealness"/>
+    <spell level="7" name="Finger of Death"/>
+    <spell level="7" name="Forcecage"/>
+    <spell level="7" name="Plane Shift"/>
+
+    <spell level="8" name="Demiplane"/>
+    <spell level="8" name="Dominate Monster"/>
+    <spell level="8" name="Feeblemind"/>
+    <spell level="8" name="Glibness"/>
+    <spell level="8" name="Power Word Stun"/>
+
+    <spell level="9" name="Astral Projection"/>
+    <spell level="9" name="Foresight"/>
+    <spell level="9" name="Imprisonment"/>
+    <spell level="9" name="Power Word Kill"/>
+    <spell level="9" name="True Polymorph"/>
+  </class>
   <class name="Wizard">
     <spell name="Acid Splash" level="0"/>
     <spell name="Blade Ward" level="0"/>
@@ -33,8 +731,7 @@
     <spell name="Longstrider" level="1"/>
     <spell name="Mage Armor" level="1"/>
     <spell name="Magic Missle" level="1"/>
-    <spell name="Protection from Evil" level="1"/>
-    <spell name="Protection from Good" level="1"/>
+    <spell name="Protection from Evil and Good" level="1"/>
     <spell name="Ray of Sickness" level="1"/>
     <spell name="Shield" level="1"/>
     <spell name="Silent Image" level="1"/>
@@ -77,5 +774,144 @@
     <spell name="Spider Climb" level="2"/>
     <spell name="Suggestion" level="2"/>
     <spell name="Web" level="2"/>
+    <spell name="Animate Dead" level="3"/>
+    <spell name="Bestow Curse" level="3"/>
+    <spell name="Blink" level="3"/>
+    <spell name="Clairvoyance" level="3"/>
+    <spell name="Counterspell" level="3"/>
+    <spell name="Dispel Magic" level="3"/>
+    <spell name="Fear" level="3"/>
+    <spell name="Feign Death" level="3"/>
+    <spell name="Fireball" level="3"/>
+    <spell name="Fly" level="3"/>
+    <spell name="Gaseous Form" level="3"/>
+    <spell name="Glyph o f Warding" level="3"/>
+    <spell name="Haste" level="3"/>
+    <spell name="Hypnotic Pattern" level="3"/>
+    <spell name="Leomund’s Tiny Hut" level="3"/>
+    <spell name="Lightning Bolt" level="3"/>
+    <spell name="Magic Circle" level="3"/>
+    <spell name="Major Image" level="3"/>
+    <spell name="Nondetection" level="3"/>
+    <spell name="Phantom Steed" level="3"/>
+    <spell name="Protection from Energy" level="3"/>
+    <spell name="Remove Curse" level="3"/>
+    <spell name="Sending" level="3"/>
+    <spell name="Sleet Storm" level="3"/>
+    <spell name="Slow" level="3"/>
+    <spell name="Stinking Cloud" level="3"/>
+    <spell name="Tongues" level="3"/>
+    <spell name="Vampiric Touch" level="3"/>
+    <spell name="Water Breathing" level="3"/>
+    <spell level="4" name="Arcane Eye"/>
+    <spell level="4" name="Banishment"/>
+    <spell level="4" name="Blight"/>
+    <spell level="4" name="Confusion"/>
+    <spell level="4" name="Conjure Minor Elementals"/>
+    <spell level="4" name="Control Water"/>
+    <spell level="4" name="Dimension Door"/>
+    <spell level="4" name="Evard's Black Tentacles"/>
+    <spell level="4" name="Fabricate"/>
+    <spell level="4" name="Fire Shield"/>
+    <spell level="4" name="Greater Invisibility"/>
+    <spell level="4" name="Hallucinatory Terrain"/>
+    <spell level="4" name="Ice Storm"/>
+    <spell level="4" name="Leomund’s Secret Chest"/>
+    <spell level="4" name="Locate Creature"/>
+    <spell level="4" name="Mordenkainen’s"/>
+    <spell level="4" name="Faithful Hound"/>
+    <spell level="4" name="Mordenkainen’s"/>
+    <spell level="4" name="Private Sanctum"/>
+    <spell level="4" name="Otiluke’s Resilient Sphere"/>
+    <spell level="4" name="Phantasmal Killer"/>
+    <spell level="4" name="Polymorph"/>
+    <spell level="4" name="Stone Shape"/>
+    <spell level="4" name="Stoneskin"/>
+    <spell level="4" name="Wall of Fire"/>
+    <spell level="5" name="Animate Objects"/>
+    <spell level="5" name="Bigby’s Hand"/>
+    <spell level="5" name="CloudkilI"/>
+    <spell level="5" name="Cone of Cold"/>
+    <spell level="5" name="Conjure Elemental"/>
+    <spell level="5" name="Contact Other Plane"/>
+    <spell level="5" name="Creation"/>
+    <spell level="5" name="Dominate Person"/>
+    <spell level="5" name="Dream"/>
+    <spell level="5" name="Geas"/>
+    <spell level="5" name="Hold Monster"/>
+    <spell level="5" name="Legend Lore"/>
+    <spell level="5" name="Mislead"/>
+    <spell level="5" name="Modify Memory"/>
+    <spell level="5" name="Passwall"/>
+    <spell level="5" name="Planar Binding"/>
+    <spell level="5" name="Rary’s Telepathic Bond"/>
+    <spell level="5" name="Scrying"/>
+    <spell level="5" name="Seeming"/>
+    <spell level="5" name="Telekinesis"/>
+    <spell level="5" name="Teleportation Circle"/>
+    <spell level="5" name="Wall of Force"/>
+    <spell level="5" name="Wall of Stone"/>
+    <spell level="6" name="Arcane Gate"/>
+    <spell level="6" name="Chain Lightning"/>
+    <spell level="6" name="Circle of Death"/>
+    <spell level="6" name="Contingency"/>
+    <spell level="6" name="Create Undead"/>
+    <spell level="6" name="Disintegrate"/>
+    <spell level="6" name="Drawmij’s Instant Summons"/>
+    <spell level="6" name="Eyebite"/>
+    <spell level="6" name="Flesh to Stone"/>
+    <spell level="6" name="Globe of Invulnerability"/>
+    <spell level="6" name="Guards and Wards"/>
+    <spell level="6" name="Magic Jar"/>
+    <spell level="6" name="Mass Suggestion"/>
+    <spell level="6" name="Move Earth"/>
+    <spell level="6" name="Otiluke’s Freezing Sphere"/>
+    <spell level="6" name="Otto’s Irresistible Dance"/>
+    <spell level="6" name="Programmed Illusion"/>
+    <spell level="6" name="Sunbeam"/>
+    <spell level="6" name="True Seeing"/>
+    <spell level="6" name="Wall of Ice"/>
+    <spell level="7" name="Delayed Blast Fireball"/>
+    <spell level="7" name="Etherealness"/>
+    <spell level="7" name="Finger of Death"/>
+    <spell level="7" name="Forcecage"/>
+    <spell level="7" name="Mirage Arcane"/>
+    <spell level="7" name="Mordenkainen's"/>
+    <spell level="7" name="Magnificent Mansion"/>
+    <spell level="7" name="Mordenkainen’s Sword"/>
+    <spell level="7" name="Plane Shift"/>
+    <spell level="7" name="Prismatic Spray"/>
+    <spell level="7" name="Project Image"/>
+    <spell level="7" name="Reverse Gravity"/>
+    <spell level="7" name="Sequester"/>
+    <spell level="7" name="Simulacrum"/>
+    <spell level="7" name="Symbol"/>
+    <spell level="7" name="Teleport"/>
+    <spell level="8" name="Antimagic Field"/>
+    <spell level="8" name="Antipathy/Sympathy"/>
+    <spell level="8" name="Clone"/>
+    <spell level="8" name="Control Weather"/>
+    <spell level="8" name="Demiplane"/>
+    <spell level="8" name="Dominate Monster"/>
+    <spell level="8" name="Feeblemind"/>
+    <spell level="8" name="Incendiary Cloud"/>
+    <spell level="8" name="Maze"/>
+    <spell level="8" name="Mind Blank"/>
+    <spell level="8" name="Power Word Stun"/>
+    <spell level="8" name="Sunburst"/>
+    <spell level="8" name="Telepathy"/>
+    <spell level="8" name="Trap the Soul"/>
+    <spell level="9" name="Astral Projection"/>
+    <spell level="9" name="Foresight"/>
+    <spell level="9" name="Gate"/>
+    <spell level="9" name="Imprisonment"/>
+    <spell level="9" name="Meteor Swarm"/>
+    <spell level="9" name="Power Word Kill"/>
+    <spell level="9" name="Prismatic Wall"/>
+    <spell level="9" name="Shapechange"/>
+    <spell level="9" name="Time Stop"/>
+    <spell level="9" name="True Polymorph"/>
+    <spell level="9" name="Weird"/>
+    <spell level="9" name="Wish"/>
   </class>
 </spelllist>

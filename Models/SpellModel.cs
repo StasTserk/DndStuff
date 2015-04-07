@@ -6,7 +6,21 @@ namespace DnD5thEdTools.Models
     public class Spell
     {
         public String Name;
-        public IEnumerable<String> Classes;
+        private List<String> _Classes;
+
+        public List<String> Classes
+        {
+            get
+            {
+                if (_Classes == null)
+                {
+                    _Classes = new List<string>();
+                }
+                return _Classes;
+            }
+            set { _Classes = value; }
+        }
+
         public String CastingTime;
         public String Description;
         public String ShortDescription;
