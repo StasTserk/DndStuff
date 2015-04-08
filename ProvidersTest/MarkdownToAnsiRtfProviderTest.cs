@@ -59,7 +59,59 @@ namespace ProvidersTest
         {
             // Bob is a proper noun and should be capitalized
             const String input = "Hello.\n\nI \t  am   Bob.";
-            const String expected = @"{\rtf\ansi Hello. \par I am Bob.}";
+            const String expected = @"{\rtf\ansi Hello.\par I am Bob.}";
+            var provider = new MarkdownToAnsiRtfProvider();
+
+            var actual = provider.GetRtfFromString(input);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetRtfFromStringCorrectlyInsertsItalics()
+        {
+            // Bob is a proper noun and should be capitalized
+            const String input = "Hello. **I am** Bob.";
+            const String expected = @"{\rtf\ansi Hello. \i I am\i0  Bob.}";
+            var provider = new MarkdownToAnsiRtfProvider();
+
+            var actual = provider.GetRtfFromString(input);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetRtfFromStringHandlesMissingItalicsClose()
+        {
+            // Bob is a proper noun and should be capitalized
+            const String input = "**Hello**. **I am Bob.";
+            const String expected = @"{\rtf\ansi \i Hello\i0 . \i I am Bob.}";
+            var provider = new MarkdownToAnsiRtfProvider();
+
+            var actual = provider.GetRtfFromString(input);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetRtfFromStringCorrectlyInsertsBold()
+        {
+            // Bob is a proper noun and should be capitalized
+            const String input = "*Hello*. I am Bob.";
+            const String expected = @"{\rtf\ansi \b Hello\b0 . I am Bob.}";
+            var provider = new MarkdownToAnsiRtfProvider();
+
+            var actual = provider.GetRtfFromString(input);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetRtfFromStringHandlesMissingBoldClose()
+        {
+            // Bob is a proper noun and should be capitalized
+            const String input = "*Hello*. I am *Bob.";
+            const String expected = @"{\rtf\ansi \b Hello\b0 . I am \b Bob.}";
             var provider = new MarkdownToAnsiRtfProvider();
 
             var actual = provider.GetRtfFromString(input);
