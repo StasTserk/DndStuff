@@ -2654,148 +2654,249 @@ At Higher Levels. When you cast this spell using a spell slot o f 7th level or h
     <Overcastable>No</Overcastable>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Earthquake">
+    <name>Earthquake</name>
+    <Level>8</Level>
+    <School>Evocation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>500 ft.</Range>
+    <Targets>A 100 ft. raidus circle</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A pinch of dirt</Material>
+      <Material>A piece of rock</Material>
+      <Material>A lump of clay</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 Minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Cause an earthquake to happen in an area with multiple effects.</ShortDescription>
+    <Description>You create a seismic disturbance at a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point and shakes creatures and structures in contact with the ground in that area.
+      The ground in the area becomes difficult terrain. Each creature on the ground that is concentrating must make a Constitution saving throw. On a failed save, the creature’s concentration is broken.
+      When you cast this spell and at the end o f each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked prone.
+      This spell can have additional effects depending on the terrain in the area, as determined by the DM.
+      Fissures. Fissures open throughout the spell’s area at the start o f your next turn after you cast the spell. A total o f 1d6 such fissures open in locations chosen by the DM. Each is 1d10 x 10 feet deep, 10 feet wide, and extends from one edge o f the spell’s area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure’s edge as it opens.
+      A fissure that opens beneath a structure causes it to automatically collapse (see below).
+      Structures. The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start o f each o f your turns until the spell ends. If a structure drops to 0 hit  points, it collapses and potentially damages nearby creatures. A creature within half the distance o f a structure’s height must make a Dexterity saving throw. On a failed save, the creature takes 5d6 bludgeoning damage, is knocked prone, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature o f the rubble. On a successful save, the creature takes half as much damage and doesn’t fall prone or become buried.</Description>
+    <Save>Special</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Eldritch Blast">
+    <name>Eldritch Blast</name>
+    <Level>0</Level>
+    <School>Evocation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>120 ft.</Range>
+    <Targets>One target</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Fires beam that hits for 1d10 force damage, additional beams at 5th, 11th, and 17th</ShortDescription>
+    <Description>A beam o f crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1dlO force damage. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
     <RequiresAttackRoll>Yes</RequiresAttackRoll>
+  </spell>
+  <spell name="Elemental Weapon">
+    <name>Elemental Weapon</name>
+    <Level>3</Level>
+    <School>Transmutation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>One nonmagical weapon</Targets>
+    <Components>V, S</Components>
+    <Materials>
+    </Materials>
+    <Duration>Up to 1 Hour</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Touched weapon becomes a +1 weapon that adds 1d4 of a chosen elemental damage type.</ShortDescription>
+    <Description>A nonmagical weapon you touch becomes a magic weapon. Choose one o f the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage o f the chosen type when it hits.
+      At Higher Levels. When you cast this spell using a spell slot o f 5th or 6th level, the bonus to attack rolls increases to +2 and the extra damage increases to 2d4. When you use a spell slot of 7th level or higher, the bonus increases to +3 and the extra damage increases to 3d4.</Description>
+    <Save>None</Save>
+    <Overcastable>Yes</Overcastable>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Enhance Ability">
+    <name>Enhance Ability</name>
+    <Level>2</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Creature Touched</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Fur of a feather from a beast</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 Hour</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>Grants advantage on a specific ability check and possibly a minor boon.</ShortDescription>
+    <Description>You touch a creature and bestow upon it a magical enhancement. Choose one o f the following effects; the target gains that effect until the spell ends.
+      Bear’s Endurance. The target has advantage on Constitution checks. It also gains 2d6 temporary hit points, which are lost when the spell ends.
+      Bull’s Strength. The target has advantage on Strength checks, and his or her carrying capacity doubles.
+      Cat’s Grace. The target has advantage on Dexterity checks. It also doesn’t take damage from falling 20 feet or less if it isn’t incapacitated.
+      Eagle’s Splendor. The target has advantage on Charisma checks.
+      Fox’s Cunning. The target has advantage on Intelligence checks.
+      Owl’s Wisdom. The target has advantage on Wisdom checks.
+      At Higher Levels. When you cast this spell using a spell slot o f 3rd level or higher, you can target one additional creature for each slot level above 2nd.</Description>
+    <Save>None</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Enlarge/Reduce">
+    <name>Enlarge/Reduce</name>
+    <Level>2</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>One creature or object</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A pinch of powdered iron</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Target increases or shrinks by one size category. Changes creature damage output.</ShortDescription>
+    <Description>You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither w orn nor carried. If the target is unwilling, it can make a Constitution saving throw. On a success, the spell has no effect.
+      If the target is a creature, everything it is w earing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.
+      Enlarge. The target’s size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn’t enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on  Strength checks and Strength saving throws. The target’s weapons also grow to match its new size. While these weapons are enlarged, the target’s attacks with them deal 1d4 extra damage.
+      Reduce. The target’s size is halved in all dimensions, and its weight is reduced to one-eighth o f normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target’s weapons also shrink to match its new size. While these weapons are reduced, the target’s attacks with them deal 1d4 less damage (this can’t reduce the damage below 1).</Description>
+    <Save>Constitution</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Ensnaring Strike">
+    <name>Ensnaring Strike</name>
+    <Level>1</Level>
+    <School>Conjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Bonus Action</CastingTime>
+    <Range>Personal</Range>
+    <Targets>Self</Targets>
+    <Components>V</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 Minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>Next weapon hit ensnares the creature hit. Ensnared creatures take 1d6 piercing each turn. Strength negates.</ShortDescription>
+    <Description>The next time you hit a creature with a w eapon attack before this spell ends, a w rithing mass o f thorny vines appears at the point o f impact, and the target must succeed on a Strength saving throw or be restrained by the magical vines until the spell ends. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away.
+      While restrained by this spell, the target takes 1d6 piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch the creature can use its action to make a Strength check against your spell save DC. On a success, the target is freed.
+      At Higher Levels. If you cast this spell using a spell slot o f 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.</Description>
+    <Save>Strength</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Entangle">
+    <name>Entangle</name>
+    <Level>1</Level>
+    <School>Conjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>90 ft.</Range>
+    <Targets>20 ft. square in range.</Targets>
+    <Components>V, S</Components>
+    <Materials>
+    </Materials>
+    <Duration>Up to 1 minute</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Creates 20 ft. square that restrains creatures in it. Strength negates.</ShortDescription>
+    <Description>Grasping w eeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain.
+      A creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.
+      When the spell ends, the conjured plants wilt away.</Description>
+    <Save>Strength</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Etherealness">
+    <name>Etherealness</name>
+    <Level>7</Level>
+    <School>Transmutation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Personal</Range>
+    <Targets>Self</Targets>
+    <Components>V, S</Components>
+    <Materials>
+    </Materials>
+    <Duration>Up to 8 hours</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>Makes you ethereal until dismissed.</ShortDescription>
+    <Description>You step into the border regions o f the Ethereal Plane, in the area where it overlaps with your current plane. You remain in the Border Ethereal for the duration or until you use your action to dismiss the spell. During this time, you can move in any direction. If you move up or down, every foot o f movement costs an extra foot. You can see and hear the plane you originated from, but everything there looks gray, and you can’t see anything more than 60 feet away.
+      While on the Ethereal Plane, you can only affect and be affected by other creatures on that plane. Creatures that aren't on the Ethereal Plane can’t perceive you and can’t interact with you, unless a special ability or magic has given them the ability to do so. You ignore all objects and effects that aren’t on the Ethereal Plane, allowing you to move through objects you perceive on the plane you originated from.
+      When the spell ends, you immediately return to the plane you originated from in the spot you currently occupy. If you occupy the same spot as a solid object or creature when this happens, you are immediately shunted to the nearest unoccupied space that you can occupy and take force damage equal to twice the number o f feet you are moved.
+      This spell has no effect if you cast it while you are on the Ethereal Plane or a plane that doesn’t border it, such as one o f the Outer Planes.
+      At Higher Levels. When you cast this spell using a spell slot of 8th level or higher, you can target up to three willing creatures (including you) for each slot level above 7th. The creatures must be within 10 feet o f you when you cast the spell.</Description>
+    <Save>None</Save>
+    <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Evard's Black Tentacles">
+    <name>Evard's Black Tentacles</name>
+    <Level>4</Level>
+    <School>Conjuration</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>90 ft.</Range>
+    <Targets>One 20 ft. Square</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Piece of tentacle from a giant octopus or a giant squid</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 Minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Summons a square of tentacles that grapple and deal 3d6 bludgeoning to creatures in it.</ShortDescription>
+    <Description>Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain.
+      When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage.
+      A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.</Description>
+    <Save>Dexterity</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Expeditious Retreat">
+    <name>Expeditious Retreat</name>
+    <Level>1</Level>
+    <School>Transmutation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Personal</Range>
+    <Targets>Self</Targets>
+    <Components>V, S</Components>
+    <Materials>
+    </Materials>
+    <Duration>Up to 10 minutes</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Allows you to take the dash action as a bonus action.</ShortDescription>
+    <Description>This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each o f your turns until the spell ends, you can take the Dash action.</Description>
+    <Save>None</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Eyebite">
+    <name>Eyebite</name>
+    <Level>6</Level>
+    <School>Necromancy</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Personal</Range>
+    <Targets>Self</Targets>
+    <Components>V, S</Components>
+    <Materials>
+    </Materials>
+    <Duration>Up to 1 Minute</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Gives you a gaze attack to fighten, sicken, or put to sleep one creature per round.</ShortDescription>
+    <Description>For the spell’s duration, your eyes become an inky void imbued with dread power. One creature o f your choice within 60 feet o f you that you can see must succeed on a W isdom saving throw or be affected by one o f the following effects o f your choice for the duration. On each of your turns until the spell ends, you can use your action to target another creature but can’t target a creature again if it has succeeded on a saving throw against this casting o f eyebite.
+      Asleep. The target falls unconscious. It w akes up if it takes any damage or if another creature uses its action to shake the sleeper awake.
+      Panicked. The target is frightened o f you. On each o f its turns, the frightened creature must take the Dash action and move away from you by the safest and shortest available route, unless there is nowhere to move. If the target moves to a place at least 60 feet away from you where it can no longer see you, this effect ends.
+      Sickened. The target has disadvantage on attack rolls and ability checks. At the end o f each o f its turns, it can make another Wisdom saving throw. If it succeeds, the effect ends.</Description>
+    <Save>Wisdom</Save>
+    <Overcastable>No</Overcastable>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
   <spell name="Template">
