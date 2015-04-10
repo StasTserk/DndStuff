@@ -7,12 +7,13 @@ namespace Providers
         : IRtfProvider
     {
         /// <summary>
-        /// Converts from Markdown to RTF
+        ///     Converts from Markdown to RTF
         /// </summary>
         /// <param name="input">A markdown string</param>
         /// <returns>Its RTF equivilent</returns>
         public String GetRtfFromString(string input)
         {
+            input = EscapeBackslash(input);
             input = ReplaceSignificantWhitespace(input);
             input = RemoveInsignificantWhitespaceFromString(input);
 
@@ -20,6 +21,12 @@ namespace Providers
 
             var output = String.Concat(@"{\rtf\ansi ", input, "}");
             return output;
+        }
+
+        private static string EscapeBackslash(string input)
+        {
+            var backslashRegex = new Regex(@"\\");
+            return backslashRegex.Replace(input, @"\\");
         }
 
         private static string AddFormatting(string input)

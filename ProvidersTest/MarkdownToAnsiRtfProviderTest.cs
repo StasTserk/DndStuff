@@ -118,5 +118,17 @@ namespace ProvidersTest
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void GetRtfFromStringEscapesBackslashes()
+        {
+            const String input = @"Hello\Hi. I am Bob.";
+            const String expected = @"{\rtf\ansi Hello\\Hi. I am Bob.}";
+            var provider = new MarkdownToAnsiRtfProvider();
+
+            var actual = provider.GetRtfFromString(input);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
