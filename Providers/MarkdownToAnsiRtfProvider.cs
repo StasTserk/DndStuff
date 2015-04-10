@@ -54,7 +54,7 @@ namespace Providers
         private static string ReplaceSignificantWhitespace(string input)
         {
             // Significant whitespace is 2 or more new lines
-            var whitespaceRegex = new Regex(@"(\n){2,}");
+            var whitespaceRegex = new Regex(@"(\n)(\s)*(\n)");
 
             if (whitespaceRegex.IsMatch(input))
             {

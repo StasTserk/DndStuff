@@ -68,6 +68,19 @@ namespace ProvidersTest
         }
 
         [TestMethod]
+        public void GetRtfFromStringCorrectlyInsertsParagraphsWhenNewLinesAreSeparatedByWhiteSpace()
+        {
+            // Bob is a proper noun and should be capitalized
+            const String input = "Hello.\n  \t \nI \t  am   Bob.";
+            const String expected = @"{\rtf\ansi Hello.\par I am Bob.}";
+            var provider = new MarkdownToAnsiRtfProvider();
+
+            var actual = provider.GetRtfFromString(input);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void GetRtfFromStringCorrectlyInsertsItalics()
         {
             // Bob is a proper noun and should be capitalized
