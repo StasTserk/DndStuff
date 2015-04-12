@@ -7383,1036 +7383,1617 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
     <Overcastable>No</Overcastable>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Nondetection">
+    <name>Nondetection</name>
+    <Level>3</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Touched creature, place or object</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Diamond dust worth 25 gp</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>8 hours</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>Hide a touched object, creature, or object no larger than 10 ft from divination.</ShortDescription>
+    <Description>For the duration, you hide a target that you touch
+      from divination magic. The target can be a w illing
+      creature or a place or an object no larger than 10
+      feet in any dimension. The target can’t be targeted by
+      any divination magic or perceived through magical
+      scrying sensors.</Description>
+    <Save>None</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Nystul's Magic Aura">
+    <name>Nystul's Magic Aura</name>
+    <Level>2</Level>
+    <School>Illusion</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>One creature or object</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A square of silk</Material>
+    </Materials>
+    <Duration>8 Hours</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>Masks a creature or object from divination.</ShortDescription>
+    <Description>
+      You place an illusion on a creature or an object
+      you touch so that divination spells reveal false
+      information about it. The target can be a willing
+      creature or an object that isn’t being carried or w orn by
+      another creature.
+      
+      When you cast the spell, choose one or both o f the
+      following effects. The effect lasts for the duration. If you
+      cast this spell on the same creature or object every day
+      for 30 days, placing the same effect on it each time, the
+      illusion lasts until it is dispelled.
+      
+      *False Aura.* You change the way the target appears
+      to spells and magical effects, such as detect magic,
+      that detect magical auras. You can make a nonmagical
+      object appear magical, a magical object appear
+      nonmagical, or change the object’s magical aura so that
+      it appears to belong to a specific school of magic that
+      you choose. When you use this effect on an object, you
+      can make the false magic apparent to any creature that
+      handles the item.
+      
+      *Mask.* You change the way the target appears to spells
+      and magical effects that detect creature types, such as a
+      paladin’s Divine Sense or the trigger o f a symbol spell.
+      You choose a creature type and other spells and magical
+      effects treat the target as if it w ere a creature o f that
+      type or o f that alignment.
+    </Description>
+    <Save>None</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Otiluke's Freezing Sphere">
+    <name>Otiluke's Freezing Sphere</name>
+    <Level>6</Level>
+    <School>Evocation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>300 ft.</Range>
+    <Targets>60 ft radius sphere.</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A crystal Sphere</Material>
+    </Materials>
+    <Duration>Instantaneous</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>60 ft. explosion dealing 10d6 cold damage, freezes water, can dely the firing.</ShortDescription>
+    <Description>A frigid globe o f cold energy streaks from your fingertips
+      to a point o f your choice within range, where it explodes
+      in a 60-foot-radius sphere. Each creature within the
+      area must make a Constitution saving throw. On a
+      failed save, a creature takes 10d6 cold damage. On a
+      successful save, it takes half as much damage.
+      
+      If the globe strikes a body o f water or a liquid that is
+      principally water (not including water-based creatures),
+      it freezes the liquid to a depth o f 6 inches over an area
+      30 feet square. This ice lasts for 1 minute. Creatures
+      that w ere swimming on the surface o f frozen water are
+      trapped in the ice. A trapped creature can use an action
+      to make a Strength check against your spell save DC
+      to break free.
+      
+      You can refrain from firing the globe after completing
+      the spell, if you wish. A small globe about the size of
+      a sling stone, co o l to the touch, appears in your hand.
+      At any time, you or a creature you give the globe to
+      can throw the globe (to a range of 40 feet) or hurl it
+      with a sling (to the sling’s normal range). It shatters
+      on impact, with the same effect as the normal casting
+      o f the spell. You can also set the globe down without
+      shattering it. After 1 minute, if the globe hasn’t already
+      shattered, it explodes.
+      
+      *At Higher Levels.* When you cast this spell using a
+      spell slot o f 7th level or higher, the damage increases by
+      1d6 for each slot level above 6th.</Description>
+    <Save>Constitution</Save>
+    <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Otiluke's Resilient Sphere">
+    <name>Otiluke's Resilient Sphere</name>
+    <Level>4</Level>
+    <School>Evocation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>One creature or object in range.</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A hemispherical crystal</Material>
+      <Material>A hemispherical piece of gum arabic</Material>
+    </Materials>
+    <Duration>Up to 1 minute</Duration>
     <Concentration>Yes</Concentration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
+    <ShortDescription>Traps a creature or object in a sphere. Dexterity negates.</ShortDescription>
+    <Description>A sphere o f shimmering force encloses a creature
+      or object o f Large size or smaller within range. An
+      unwilling creature must make a Dexterity saving
+      throw. On a failed save, the creature is enclosed for
+      the duration.
+      
+      Nothing—not physical objects, energy, or other spell
+      effects—can pass through the barrier, in or out, though
+      a creature in the sphere can breathe there. The sphere
+      is immune to all damage, and a creature or object inside
+      can’t be damaged by attacks or effects originating from
+      outside, nor can a creature inside the sphere damage
+      anything outside it.
+      
+      The sphere is w eightless and just large enough to
+      contain the creature or object inside. An enclosed
+      creature can use its action to push against the sphere’s
+      walls and thus roll the sphere at up to half the creature’s
+      speed. Similarly, the globe can be picked up and moved
+      by other creatures.
+      
+      A **disintegrate spell** targeting the globe destroys it
+      without harming anything inside it.</Description>
+    <Save>Dexterity</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Otto's Irresistible Dance">
+    <name>Otto's Irresistible Dance</name>
+    <Level>6</Level>
+    <School>Enchantment</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>One creature</Targets>
+    <Components>V</Components>
+    <Materials>
+    </Materials>
+    <Duration>Up to 1 minute</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Creature in range spends all it's moving dancing. Disadvantage on all attacks and dex saves. Wisdom negates.</ShortDescription>
+    <Description>Choose one creature that you can see within range. The
+      target begins a comic dance in place: shuffling, tapping
+      its feet, and capering for the duration. Creatures that
+      can’t be charmed are immune to this spell.
+
+      A dancing creature must use all its movement to
+      dance without leaving its space and has disadvantage
+      on Dexterity saving throws and attack rolls. While
+      the target is affected by this spell, other creatures
+      have advantage on attack rolls against it. As an
+      action, a dancing creature makes a W isdom saving
+      throw to regain control o f itself. On a successful save,
+      the spell ends.</Description>
+    <Save>Wisdom</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Pass Without Trace">
+    <name>Pass Without Trace</name>
+    <Level>2</Level>
+    <School>Abjuration</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Personal</Range>
+    <Targets>Self</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>Ashes from a burned leaf of mistletoe</Material>
+      <Material>A sprig of sprice</Material>
+    </Materials>
+    <Duration>Up to 1 Hour</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>You and creatures within 30 ft. of you can't be tracked and get +10 to stealth chekcs.</ShortDescription>
+    <Description>A veil o f shadows and silence radiates from you,
+      masking you and your companions from detection.
+      For the duration, each creature you choose within 30
+      feet of you (including you) has a +10 bonus to Dexterity
+      (Stealth) checks and can’t be tracked except by m agical
+      means. A creature that receives this bonus leaves
+      behind no tracks or other traces o f its passage.
+    </Description>
+    <Save>SvTemplate</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Passwall">
+    <name>Passwall</name>
+    <Level>5</Level>
+    <School>Transmutation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>A point on a wooden, plaster or stone surface.</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A pinch of seseame seeds</Material>
+    </Materials>
+    <Duration>1 Hour</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>Create an opening up to 5' by 8' by 20' in a structure.</ShortDescription>
+    <Description>A passage appears at a point o f your choice that you
+      can see on a w ooden, plaster, or stone surface (such as
+      a wall, a ceiling, or a floor) within range, and lasts for
+      the duration. You choose the opening’s dimensions: up
+      to 5 feet wide, 8 feet tall, and 20 feet deep. The passage
+      creates no instability in a structure surrounding it.
+      
+      When the opening disappears, any creatures or
+      objects still in the passage created by the spell are safely
+      ejected to an unoccupied space nearest to the surface on
+      which you cast the spell.</Description>
+    <Save>None</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Phantasmal Force">
+    <name>Phantasmal Force</name>
+    <Level>2</Level>
+    <School>Illusion</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One creature in range.</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A bit of fleece</Material>
+    </Materials>
+    <Duration>Up to 1 minute</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Create a phantasmal object in a target's mind. Precieved damage from this object becomes 1d6 psychic damage.</ShortDescription>
+    <Description>You craft an illusion that takes root in the mind o f a
+      creature that you can see within range. The target must
+      make an Intelligence saving throw. On a failed save, you
+      create a phantasmal object, creature, or other visible
+      phenomenon o f your choice that is no larger than a
+      10-foot cube and that is perceivable only to the target
+      for the duration. This spell has no effect on undead
+      or constructs.
+      
+      The phantasm includes sound, temperature, and other
+      stimuli, also evident only to the creature.
+      
+      The target can use its action to examine the phantasm
+      with an Intelligence (Investigation) check against your
+      spell save DC. If the check succeeds, the target realizes
+      that the phantasm is an illusion, and the spell ends.
+      
+      While a target is affected by the spell, the target treats
+      the phantasm as if it were real. The target rationalizes
+      any illogical outcomes from interacting with the
+      phantasm. For example, a target attempting to walk
+      across a phantasmal bridge that spans a chasm falls
+      once it steps onto the bridge. If the target survives the
+      fall, it still believes that the bridge exists and comes up
+      with some other explanation for its fall—it w as pushed,
+      it slipped, or a strong wind might have knocked it off.
+      
+      An affected target is so convinced o f the phantasm’s
+      reality that it can even take damage from the illusion. A
+      phantasm created to appear as a creature can attack the
+      target. Similarly, a phantasm created to appear as fire, a
+      pool o f acid, or lava can burn the target. Each round on
+      your turn, the phantasm can deal 1d6 psychic damage
+      to the target if it is in the phantasm’s area or within 5
+      feet o f the phantasm, provided that the illusion is o f a
+      creature or hazard that could logically deal damage,
+      such as by attacking. The target perceives the damage
+      as a type appropriate to the illusion.</Description>
     <Save>SvTemplate</Save>
     <Overcastable>Yes</Overcastable>
     <Overcastable>No</Overcastable>
     <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Phantasmal Killer">
+    <name>Phantasmal Killer</name>
+    <Level>4</Level>
+    <School>Illusion</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>120 ft.</Range>
+    <Targets>One creature in range</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>Target is frightened and takes 4d10 psychic damage per round. Wisdom negates.</ShortDescription>
+    <Description>You tap into the nightmares of a creature you can see
+      within range and create an illusory manifestation of its
+      deepest fears, visible only to that creature. The target
+      must make a Wisdom saving throw. On a failed save,
+      the target b ecomes frightened for the duration. At the
+      start o f each o f the target’s turns before the spell ends,
+      the target must succeed on a W isdom saving throw
+      or take 4 d10 psychic damage. On a successful save,
+      the spell ends.
+      
+      *At Higher Levels.* When you cast this spell using a
+      spell slot of 5th level or higher, the damage increases by
+      1dlO for each slot level above 4th.</Description>
+    <Save>Wisdom</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
+  <spell name="Phantom Steed">
+    <name>Phantom Steed</name>
+    <Level>3</Level>
+    <School>Illusion</School>
     <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Minute</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>One space nearby</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>1 Hour</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Summon a quasi real horselike creature. Travels at 10-13 miles an hour.</ShortDescription>
+    <Description>A Large quasi-real, horselike creature appears on
+      the ground in an unoccupied space o f your choice
+      within range. You decide the creature’s appearance,
+      but it is equipped with a saddle, bit, and bridle. Any
+      o f the equipment created by the spell vanishes in a
+      puff o f smoke if it is carried more than 10 feet away
+      from the steed.
+      
+      For the duration, you or a creature you choose can
+      ride the steed. The creature uses the statistics for a
+      riding horse, except it has a speed o f 100 feet and can
+      travel 10 miles in an hour, or 13 miles at a fast pace.
+      When the spell ends, the steed gradually fades, giving
+      the rider 1 minute to dismount. The spell ends if you use
+      an action to dismiss it or if the steed takes any damage.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Planar Ally">
+    <name>Planar Ally</name>
+    <Level>6</Level>
+    <School>Conjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>10 minutes</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One being of cosmic power</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Summon a champion of a powerful outsider to aid you for payment.</ShortDescription>
+    <Description>You beseech an otherworldly entity for aid. The being
+      must be known to you: a god, a primordial, a demon
+      prince, or some other being o f cosmic power. That entity
+      sends a celestial, an elemental, or a fiend loyal to it to
+      aid you, making the creature appear in an unoccupied
+      space within range. If you know a specific creature’s
+      name, you can speak that name when you cast this spell
+      to request that creature, though you might get a different
+      creature anyway (DM’s choice).
+      
+      When the creature appears, it is under no compulsion
+      to behave in any particular way. You can ask the
+      creature to perform a service in exchange for payment,
+      but it isn’t obliged to do so. The requested task could
+      range from simple (fly us across the chasm, or help us
+      fight a battle) to complex (spy on our enemies, or protect
+      us during our foray into the dungeon). You must be
+      able to communicate with the creature to bargain for
+      its services.
+      
+      Payment can take a variety o f forms. A celestial might
+      require a sizable donation o f gold or m agic items to
+      an allied temple, while a fiend might demand a living
+      sacrifice or a gift o f treasure. Some creatures might
+      exchange their service for a quest undertaken by you.
+      
+      As a rule o f thumb, a task that can be measured in
+      minutes requires a payment worth 100 gp per minute. A
+      task measured in hours requires 1,000 gp per hour. And
+      a task m easured in days (up to 10 days) requires 10,000
+      gp per day. The DM can adjust these payments based on
+      the circumstances under which you cast the spell. If the
+      task is aligned with the creature’s ethos, the payment
+      might be halved or even waived. Nonhazardous tasks
+      typically require only half the suggested payment, while
+      especially dangerous tasks might require a greater gift.
+      Creatures rarely accept tasks that seem suicidal.
+      
+      After the creature completes the task, or when the
+      agreed-upon duration o f service expires, the creature
+      returns to its home plane after reporting back to you,
+      if appropriate to the task and if possible. If you are
+      unable to agree on a price for the creature’s service, the
+      creature immediately returns to its home plane.
+      
+      A creature enlisted to join your group counts as
+      a member o f it, receiving a full share o f experience
+      points awarded.
+      </Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Planar Binding">
+    <name>Planar Binding</name>
+    <Level>5</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Hour</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One outsider.</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A jewel worth 1,000 gp.</Material>
     </Materials>
     <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>Attempts to bind an outsider to your service. Charisma negates.</ShortDescription>
+    <Description>With this spell, you attempt to bind a celestial, an
+      elemental, a fey, or a fiend to your service. The creature
+      must be within range for the entire casting o f the spell.
+      (Typically, the creature is first summoned into the center
+      o f an inverted magic circle in order to keep it trapped
+      while this spell is cast.) At the completion o f the casting,
+      the target must make a Charisma saving throw. On a
+      failed save, it is bound to serve you for the duration. If
+      the creature w as summoned or created by another spell,
+      that spell’s duration is extended to match the duration
+      o f this spell.
+      
+      A bound creature must follow your instructions to the
+      best o f its ability. You might command the creature to
+      accompany you on an adventure, to guard a location, or
+      to deliver a message. The creature obeys the letter of
+      your instructions, but if the creature is hostile to you, it
+      strives to twist your w ords to achieve its own objectives.
+      If the creature carries out your instructions completely
+      before the spell ends, it travels to you to report this fact
+      if you are on the same plane o f existence. If you are on a
+      different plane o f existence, it returns to the place where
+      you bound it and remains there until the spell ends.
+      
+      *At Higher Levels.* When you cast this spell using a
+      spell slot o f a higher level, the duration increases to 10
+      days with a 6th-level slot, to 30 days with a 7th-level slot,
+      to 180 days with an 8th-level slot, and to a year and a
+      day with a 9th-level spell slot.</Description>
+    <Save>Charisma</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
+  <spell name="Plane Shift">
+    <name>Plane Shift</name>
+    <Level>7</Level>
+    <School>Conjuration</School>
     <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Up to 8 willing creatures touched</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A forked metal rod attuned to a particular plane worth 250 gp.</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>You and 8 friends shift to a different plane of existence. Can als otarget single hostile creature.</ShortDescription>
+    <Description>You and up to eight w illing creatures who link hands in
+      a circle are transported to a different plane o f existence.
+      You can specify a target destination in general terms,
+      such as the City o f Brass on the Elemental Plane of
+      Fire or the palace o f Dispater on the second level o f the
+      Nine Hells, and you appear in or near that destination.
+      If you are trying to reach the City o f Brass, for example,
+      you might arrive in its Street o f Steel, before its Gate of
+      Ashes, or looking at the city from across the Sea of Fire,
+      at the DM’s discretion.
+      
+      Alternatively, if you know the sigil sequence of a
+      teleportation circle on another plane o f existence, this
+      spell can take you to that circle. If the teleportation
+      circle is too small to hold all the creatures you
+      transported, they appear in the closest unoccupied
+      spaces next to the circle.
+      
+      You can use this spell to banish an unwilling creature
+      to another plane. Choose a creature within your reach
+      and make a melee spell attack against it. On a hit, the
+      creature must make a Charisma saving throw. If the
+      creature fails this save, it is transported to a random
+      location on the plane o f existence you specify. A creature
+      so transported must find its own way back to your
+      current plane of existence.</Description>
+    <Save>Charisma</Save>
     <Overcastable>No</Overcastable>
     <RequiresAttackRoll>Yes</RequiresAttackRoll>
+  </spell>
+  <spell name="Plant Growth">
+    <name>Plant Growth</name>
+    <Level>3</Level>
+    <School>Transmutation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action or 8 hours</CastingTime>
+    <Range>150 ft.</Range>
+    <Targets>Plants in a 100 ft radius.</Targets>
+    <Components>V, S</Components>
+    <Materials>
+    </Materials>
+    <Duration>Instantaneous</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>All plants in an area become extremy difficult terrain. Can cast over 8 hours to enrich the soil in a half mile radius.</ShortDescription>
+    <Description>This spell channels vitality into plants within a specific
+      area. There are two possible uses for the spell, granting
+      either immediate or long-term benefits.
+      
+      If you cast this spell using 1 action, choose a point
+      within range. All normal plants in a 100-foot radius
+      centered on that point become thick and overgrown. A
+      creature moving through the area must spend 4 feet of
+      movement for every 1 foot it moves.
+      
+      You can exclude one or more areas o f any size within
+      the spell’s area from being affected.
+      
+      If you cast this spell over 8 hours, you enrich the
+      land. All plants in a half-mile radius centered on a point
+      within range become enriched for 1 year. The plants
+      yield twice the normal amount o f food when harvested.</Description>
+    <Save>None</Save>
+    <Overcastable>No</Overcastable>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Poison Spray">
+    <name>Poison Spray</name>
+    <Level>0</Level>
+    <School>Conjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>10 ft.</Range>
+    <Targets>One creature</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Creature taks 1d12 poison damage, con halves. Extra dice at 5th, 11th, and 17th level.</ShortDescription>
+    <Description>You extend your hand toward a creature you can see
+      within range and project a puff o f noxious gas from your
+      palm. The creature must succeed on a Constitution
+      saving throw or take 1d12 poison damage.
+      
+      This spell’s damage increases by 1d12 when you reach
+      5th level (2d12), 11th level (3d12), and 17th level (4d12).</Description>
+    <Save>Constitution</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Polymorph">
+    <name>Polymorph</name>
+    <Level>4</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One creature</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A caterpillar coccoon</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 Hour</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Creature becomes a beast of less or equal CR. If new form reaches 0 hp, the spell ends.</ShortDescription>
+    <Description>This spell transforms a creature that you can see
+      within range into a new form. An unwilling creature
+      must make a W isdom saving throw to avoid the
+      effect. A shapechanger automatically succeeds on this
+      saving throw.
+      
+      The transformation lasts for the duration, or until
+      the target drops to 0 hit points or dies. The new form
+      can be any beast whose challenge rating is equal to or
+      less than the target’s (or the target’s level, if it doesn't
+      have a challenge rating). The target’s game statistics,
+      including mental ability scores, are replaced by the
+      statistics o f the chosen beast. It retains its alignment
+      and personality.
+      
+      The target assumes the hit points o f its new form.
+      When it reverts to its normal form, the creature
+      returns to the number o f hit points it had before it
+      transformed. If it reverts as a result o f dropping to
+      0 hit points, any excess damage carries over to its
+      normal form. As long as the excess damage doesn’t
+      reduce the creature’s normal form to 0 hit points, it isn’t
+      knocked unconscious.
+      
+      The creature is limited in the actions it can perform by
+      the nature o f its new form, and it can’t speak, cast spells,
+      or take any other action that requires hands or speech.
+      
+      The target’s gear melds into the new form. The
+      creature can’t activate, use, wield, or otherwise benefit
+      from any o f its equipment.</Description>
+    <Save>Wisdom</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Power Word Heal">
+    <name>Power Word Heal</name>
+    <Level>9</Level>
+    <School>Evocation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Creature touched</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Creature regains all hitpoints, removes some condtions.</ShortDescription>
+    <Description>A wave o f healing energy washes over the creature
+      you touch. The target regains all its hit points. If the
+      creature is charmed, frightened, paralyzed, or stunned,
+      the condition ends. If the creature is prone, it can use its
+      reaction to stand up. This spell has no effect on undead
+      or constructs.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Power Word Kill">
+    <name>Power Word Kill</name>
+    <Level>9</Level>
+    <School>Enchantment</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One creature</Targets>
+    <Components>V</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Kills a creature if it has less than 100 hp.</ShortDescription>
+    <Description>You utter a w ord o f power that can compel one creature
+      you can see within range to die instantly. If the
+      creature you choose has 100 hit points or fewer, it dies.
+      Otherwise, the spell has no effect.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Power Word Stun">
+    <name>Power Word Stun</name>
+    <Level>8</Level>
+    <School>Enchantment</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One Creature</Targets>
+    <Components>V</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Stuns creature if it has less than 150 hp. Creature makes Con save each round to wake up.</ShortDescription>
+    <Description>You speak a w ord o f power that can overwhelm the
+      mind o f one creature you can see within range, leaving
+      it dumbfounded. If the target has 150 hit points or fewer,
+      it is stunned. Otherwise, the spell has no effect.
+      The stunned target must make a Constitution saving
+      throw at the end o f each o f its turns. On a successful
+      save, this stunning effect ends.</Description>
+    <Save>Constitution</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Prayer of Healing">
+    <name>Prayer of Healing</name>
+    <Level>2</Level>
+    <School>Evocation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>10 Minutes</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>Up to six creatures in range.</Targets>
+    <Components>V</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Up to 6 creatures in range gain 2d8 + ability modifier hitpoints.</ShortDescription>
+    <Description>Up to six creatures o f your choice that you can see
+      within range each regain hit points equal to 2d8 + your
+      spellcasting ability modifier. This spell has no effect on
+      undead or constructs.
+      
+      *At Higher Levels.* When you cast this spell using a
+      spell slot o f 3rd level or higher, the healing increases by
+      1d8 for each slot level above 2nd.</Description>
+    <Save>Nonoe</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Prestidigitation">
+    <name>Prestidigitation</name>
+    <Level>0</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>10 ft.</Range>
+    <Targets>Varies</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Up to 1 Hour</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Create one of a number of magical effects.</ShortDescription>
+    <Description>This spell is a minor m agical trick that novice
+      spellcasters use for practice. You create one of the
+      following magical effects within range:
+      
+      • You create an instantaneous, harmless sensory effect,
+      such as a shower of sparks, a puff o f wind, faint musical
+      notes, or an odd odor.
+      
+      • You instantaneously light or snuff out a candle, a
+      torch, or a small campfire.
+      
+      • You instantaneously clean or soil an object no larger
+      than 1 cubic foot.
+      
+      • You chill, warm, or flavor up to 1 cubic foot o f nonliving
+      material for 1 hour.
+      
+      • You make a color, a small mark, or a symbol appear
+      on an object or a surface for 1 hour.
+      
+      • You create a nonmagical trinket or an illusory image
+      that can fit in your hand and that lasts until the end o f
+      your next turn.
+      
+      If you cast this spell multiple times, you can have up to
+      three o f its non-instantaneous effects active at a time,
+      and you can dismiss such an effect as an action.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Prismatic Spray">
+    <name>Prismatic Spray</name>
+    <Level>7</Level>
+    <School>Evocation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Personal (60 ft. Cone)</Range>
+    <Targets>Targets in Cone</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Lazer Death Rave. Multicoloured rays hit creatures in a cone producing effects based on ray colour.</ShortDescription>
+    <Description>Eight multicolored rays o f light flash from your hand.
+      Each ray is a different color and has a different power
+      and purpose. Each creature in a 60-foot cone must
+      make a Dexterity saving throw. For each target, roll a d8
+      to determine which color ray affects it.
+      
+      *1. Red.* The target takes 10d6 fire damage on a failed
+      save, or half as much damage on a successful one.
+      
+      *2. Orange.* The target takes 10d6 acid damage on a
+      failed save, or half as much damage on a successful one.
+      
+      *3. Yellow.* The target takes 10d6 lightning damage on a
+      failed save, or half as much damage on a successful one.
+      
+      *4. Green.* The target takes 10d6 poison damage on a
+      failed save, or half as much damage on a successful one.
+      
+      *5. Blue.* The target takes 10d6 cold damage on a failed
+      save, or half as much damage on a successful one.
+      
+      *6. Indigo.* On a failed save, the target is restrained.
+      It must then make a Constitution saving throw at the
+      end o f each o f its turns. If it successfully saves three
+      times, the spell ends. If it fails its save three times,
+      it permanently turns to stone and is subjected to the
+      petrified condition. The successes and failures don’t
+      need to be consecutive; keep track o f both until the
+      target collects three o f a kind.
+      
+      *7. Violet.* On a failed save, the target is blinded. It
+      must then make a W isdom saving throw at the start of
+      your next turn. A successful save ends the blindness. If
+      it fails that save, the creature is transported to another
+      plane o f existence of the DM’s choosing and is no longer
+      blinded. (Typically, a creature that is on a plane that isn’t
+      its home plane is banished home, while other creatures
+      are usually cast into the Astral or Ethereal planes.)
+      
+      *8. Special.* The target is struck by two rays. Roll twice
+      more, rerolling any 8.</Description>
+    <Save>Dexterity</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Prismatic Wall">
+    <name>Prismatic Wall</name>
+    <Level>9</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>90' by 30' by 1" wall or 30 ft radius sphere.</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>10 minutes</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Creates a prismatic wall or sphere. Similair effects to prismatic spray.</ShortDescription>
+    <Description>shimmering, multicolored plane o f light forms a
+      vertical opaque wall—up to 90 feet long, 30 feet high,
+      and 1 inch thick—centered on a point you can see
+      within range. Alternatively, you can shape the wall into
+      a sphere up to 30 feet in diameter centered on a point
+      you choose within range. The wall remains in place for
+      the duration. If you position the wall so that it passes
+      through a space occupied by a creature, the spell fails,
+      and your action and the spell slot are wasted.
+      The wall sheds bright light out to a range o f 100
+      feet and dim light for an additional 100 feet. You and
+      creatures you designate at the time you cast the spell
+      can pass through and remain near the wall without
+      harm. If another creature that can see the wall moves to
+      within 20 feet o f it or starts its turn there, the creature
+      must succeed on a Constitution saving throw or become
+      blinded for 1 minute.
+      
+      The wall consists o f seven layers, each with a different
+      color. When a creature attempts to reach into or pass
+      through the wall, it does so one layer at a time through
+      all the wall’s layers. As it passes or reaches through
+      each layer, the creature must make a Dexterity saving
+      throw or be affected by that layer’s properties as
+      described below.
+      
+      The wall can be destroyed, also one layer at a time, in
+      order from red to violet, by means specific to each layer.
+      Once a layer is destroyed, it remains so for the duration
+      o f the spell. A rod o f cancellation destroys a prismatic
+      wall, but an antimagic field has no effect on it.
+      
+      *1. Red.* The creature takes 10d6 fire damage on a
+      failed save, or half as much damage on a successful one.
+      While this layer is in place, nonmagical ranged attacks
+      can’t pass through the wall. The layer can be destroyed
+      by dealing at least 25 cold damage to it.
+      
+      *2. Orange.* The creature takes 10d6 acid damage on
+      a failed save, or half as much damage on a successful
+      one. While this layer is in place, magical ranged attacks
+      can’t pass through the wall. The layer is destroyed by
+      a strong wind.
+      
+      *3. Yellow.* The creature takes 10d6 lightning damage
+      on a failed save, or half as much damage on a successful
+      one. This layer can be destroyed by dealing at least 60
+      force damage to it.
+      
+      *4. Green.* The creature takes 10d6 poison damage on
+      a failed save, or half as much damage on a successful
+      one. A *passwall* spell, or another spell o f equal or
+      greater level that can open a portal on a solid surface,
+      destroys this layer.
+      
+      *5. Blue.* The creature takes 10d6 cold damage on a
+      failed save, or half as much damage on a successful one.
+      This layer can be destroyed by dealing at least 25 fire
+      damage to it.
+      
+      *6. Indigo.* On a failed save, the creature is restrained.
+      It must then make a Constitution saving throw at the
+      end o f each o f its turns. If it successfully saves three
+      times, the spell ends. If it fails its save three times,
+      it permanently turns to stone and is subjected to the
+      petrified condition. The successes and failures don’t
+      need to be consecutive; keep track of both until the
+      creature collects three of a kind.
+      While this layer is in place, spells can’t be cast
+      through the wall. The layer is destroyed by bright light
+      shed by a **daylight** spell or a similar spell o f equal or
+      higher level.
+      
+      *7. Violet.* On a failed save, the creature is blinded. It
+      must then make a W isdom saving throw at the start of
+      your next turn. A successful save ends the blindness. If
+      it fails that save, the creature is transported to another
+      plane o f the DM’s choosing and is no longer blinded.
+      (Typically, a creature that is on a plane that isn’t its
+      home plane is banished home, while other creatures
+      are usually cast into the Astral or Ethereal planes.) This
+      layer is destroyed by a **dispel magic** spell or a similar
+      spell o f equal or higher level that can end spells and
+      magical effects.
+    </Description>
+    <Save>Special</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Produce Flame">
+    <name>Produce Flame</name>
+    <Level>0</Level>
+    <School>Conjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Personal</Range>
+    <Targets>Self</Targets>
+    <Components>V, S</Components>
+    <Materials>
+    </Materials>
+    <Duration>10 Minutes</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>Flame appears in your hand. Can throw the flame as a ranged attack for 1d8 fire damage.</ShortDescription>
+    <Description>A flickering flame appears in your hand. The flame
+      remains there for the duration and harms neither you
+      nor your equipment. The flame sheds bright light in a
+      10-foot radius and dim light for an additional 10 feet.
+      The spell ends if you dismiss it as an action or if you
+      cast it again.
+      
+      You can also attack with the flame, although doing so
+      ends the spell. When you cast this spell, or as an action
+      on a later turn, you can hurl the flame at a creature
+      within 30 feet o f you. Make a ranged spell attack. On a
+      hit, the target takes 1d8 fire damage.
+      
+      This spell’s damage increases by 1d8 when you reach
+      5th level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
+    <Save>None</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>Yes</RequiresAttackRoll
+  </spell>
+  <spell name="Programmed Illusion">
+    <name>Programmed Illusion</name>
+    <Level>6</Level>
+    <School>Illusion</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>120 ft.</Range>
+    <Targets>A 30 ft. cube</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A bit of fleece</Material>
+      <Material>Jade dust worth 25 gp</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Until Dispelled</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Illusion appears in an area, can can activate on a designated condition.</ShortDescription>
+    <Description>You create an illusion o f an object, a creature, or
+      some other visible phenomenon within range that
+      activates when a specific condition occurs. The illusion
+      is imperceptible until then. It must be no larger than a
+      30-foot cube, and you decide when you cast the spell
+      how the illusion behaves and what sounds it makes. This
+      scripted performance can last up to 5 minutes.
+      
+      When the condition you specify occurs, the illusion
+      springs into existence and performs in the manner you
+      described. Once the illusion finishes performing, it
+      disappears and remains dormant for 10 minutes. After
+      this time, the illusion can be activated again.
+      
+      The triggering condition can be as general or as
+      detailed as you like, though it must be based on visual or
+      audible conditions that occur within 30 feet o f the area.
+      For example, you could create an illusion o f yourself
+      to appear and warn off others who attempt to open a
+      trapped door, or you could set the illusion to trigger only
+      when a creature says the correct w ord or phrase.
+      
+      Physical interaction with the image reveals it to be an
+      illusion, because things can pass through it. A creature
+      that uses its action to examine the image can determine
+      that it is an illusion with a successful Intelligence
+      (Investigation) check against your spell save DC. If a
+      creature discerns the illusion for what it is, the creature
+      can see through the image, and any noise it makes
+      sounds hollow to the creature.</Description>
+    <Save>Intelligence</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Project Image">
+    <name>Project Image</name>
+    <Level>7</Level>
+    <School>Illusion</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>500 miles</Range>
+    <Targets>A location within range.</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Replica of yourself worth 5 gp.</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 day</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Project an image of yourself up to 500 miles away. Share it's senses.</ShortDescription>
+    <Description>You create an illusory copy of yourself that lasts for
+      the duration. The copy can appear at any location
+      within range that you have seen before, regardless o f
+      intervening obstacles. The illusion looks and sounds
+      like you but is intangible. If the illusion takes any
+      damage, it disappears, and the spell ends.
+      
+      You can use your action to move this illusion up to
+      twice your speed, and make it gesture, speak, and
+      behave in whatever way you choose. It mimics your
+      mannerisms perfectly.
+      
+      You can see through its eyes and hear through its
+      ears as if you were in its space. On your turn as a bonus
+      action, you can switch from using its senses to using
+      your own, or back again. While you are using its senses,
+      you are blinded and deafened in regard to your own
+      surroundings.
+      
+      Physical interaction with the image reveals it to be an
+      illusion, because things can pass through it. A creature
+      that uses its action to examine the image can determine
+      that it is an illusion with a successful Intelligence
+      (Investigation) check against your spell save DC. If a
+      creature discerns the illusion for what it is, the creature
+      can see through the image, and any noise it makes
+      sounds hollow to the creature.</Description>
+    <Save>Intelligence.</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Protection from Energy">
+    <name>Protection from Energy</name>
+    <Level>3</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Creature touched</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 Hour</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Touched creature gains resistance against one energy damage.</ShortDescription>
+    <Description>For the duration, the w illing creature you touch has
+      resistance to one damage type o f your choice: acid, cold,
+      fire, lightning, or thunder.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Protection from Evil and Good">
+    <name>Protection from Evil and Good</name>
+    <Level>1</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Creature touched</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Holy water or powdered silver and iron.</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 10 minutes</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Touched creature is protected against outsiders.</ShortDescription>
+    <Description>Until the spell ends, one willing creature you
+      touch is protected against certain types of
+      creatures: aberrations, celestials, elementals, fey,
+      fiends, and undead.
+      The protection grants several benefits. Creatures of
+      those types have disadvantage on attack rolls against
+      the target. The target also can’t be charmed, frightened,
+      or possessed by them. If the target is already charmed,
+      frightened, or p ossessed by such a creature, the target
+      has advantage on any new saving throw against the
+      relevant effect.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Protection from Poison">
+    <name>Protection from Poison</name>
+    <Level>2</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Creature touched</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>1 Hour</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Neutralizes poison, grants advantage on save vs poison, poison damage resistance.</ShortDescription>
+    <Description>You touch a creature. If it is poisoned, you neutralize the
+      poison. If more than one poison afflicts the target, you
+      neutralize one poison that you know is present, or you
+      neutralize one at random.
+      For the duration, the target has advantage on saving
+      throws against being poisoned, and it has resistance to
+      poison damage.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
+  <spell name="Purify Food and Drink">
+    <name>Purify Food and Drink</name>
+    <Level>1</Level>
+    <School>Transmutation</School>
     <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>10 ft.</Range>
+    <Targets>Food and drink within 5 ft.</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Purifies food and drink in a 5 ft. sphere/</ShortDescription>
+    <Description>All nonmagical food and drink within a 5-foot-radius
+      sphere centered on a point o f your choice within range is
+      purified and rendered free o f poison and disease.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Raise Dead">
+    <name>Raise Dead</name>
+    <Level>5</Level>
+    <School>Necromancy</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Hour</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Dead creature touched</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Diamond worth 500 gp.</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Raise dead creature back to life. Raised people take -4 to all rolls. Long rest reduces this penalty by 1.</ShortDescription>
+    <Description>You return a dead creature you touch to life, provided
+      that it has been dead no longer than 10 days. If the
+      creature’s soul is both w illing and at liberty to rejoin the
+      body, the creature returns to life with 1 hit point.
+      
+      This spell also neutralizes any poisons and cures
+      nonmagical diseases that affected the creature at the
+      time it died. This spell doesn’t, however, remove magical
+      diseases, curses, or similar effects; if these aren’t first
+      removed prior to casting the spell, they take effect when
+      the creature returns to life. The spell can’t return an
+      undead creature to life.
+      
+      This spell closes all mortal w ounds, but it doesn’t
+      restore missing body parts. If the creature is lacking
+      body parts or organs integral for its survival—its head,
+      for instance—the spell automatically fails.
+      
+      Coming back from the dead is an ordeal. The target
+      takes a - 4 penalty to all attack rolls, saving throws, and
+      ability checks. Every time the target finishes a long rest,
+      the penalty is reduced by 1 until it disappears.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
+  <spell name="Rary's Telepathic Bond">
+    <name>Rary's Telepathic Bond</name>
+    <Level>5</Level>
+    <School>Divination</School>
     <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>Up to 8 friends.</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Pieces of eggshell from two different kinds of creature</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>1 Hour</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>You and 8 friends can talk to each other telepathically.</ShortDescription>
+    <Description>You forge a telepathic link among up to eight w illing
+      creatures o f your choice within range, psychically
+      linking each creature to all the others for the duration.
+      Creatures with Intelligence scores o f 2 or less aren’t
+      affected by this spell.
+      
+      Until the spell ends, the targets can communicate
+      telepathically through the bond whether or not they have
+      a common language. The communication is possible
+      over any distance, though it can’t extend to other planes
+      o f existence.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Ray of Enfeeblement">
+    <name>Ray of Enfeeblement</name>
+    <Level>2</Level>
+    <School>Necromancy</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One creature</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 Minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Ranged spell attack, target does half damage with strength attakcs.</ShortDescription>
+    <Description>A black beam o f enervating energy springs from your
+      finger toward a creature within range. Make a ranged
+      spell attack against the target. On a hit, the target deals
+      only half damage with weapon attacks that use Strength
+      until the spell ends.
+      
+      At the end o f each o f the target’s turns, it can make
+      a Constitution saving throw against the spell. On a
+      success, the spell ends.</Description>
+    <Save>Constitution</Save>
     <Overcastable>No</Overcastable>
     <RequiresAttackRoll>Yes</RequiresAttackRoll>
+  </spell>
+  <spell name="Ray of Frost">
+    <name>Ray of Frost</name>
+    <Level>0</Level>
+    <School>Evocation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One creature</Targets>
+    <Components>V, S</Components>
+    <Materials>
+    </Materials>
+    <Duration>Instantaneous</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>Ranged spell deals 1d8 cold damage, reduces speed by 10. Extra die at 5th, 11th, and 17th level.</ShortDescription>
+    <Description>A frigid beam o f blue-white light streaks toward a
+      creature within range. Make a ranged spell attack
+      against the target. On a hit, it takes 1d8 cold damage,
+      and its speed is reduced by 10 feet until the start of
+      your next turn.
+      
+      The spell’s damage increases by 1d8 when you reach
+      5th level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
+    <Save>None</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>Yes</RequiresAttackRoll>
+  </spell>
+  <spell name="Ray of Sickness">
+    <name>Ray of Sickness</name>
+    <Level>1</Level>
+    <School>Necromancy</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One creature</Targets>
+    <Components>V, S</Components>
+    <Materials>
+    </Materials>
+    <Duration>Instantaneous</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>Target takes 2d8 poison damage and is poisoned. Contitution partial.</ShortDescription>
+    <Description>A ray o f sickening greenish energy lashes out toward
+      a creature within range. Make a ranged spell attack
+      against the target. On a hit, the target takes 2d8 poison
+      damage and must make a Constitution saving throw.
+      On a failed save, it is also poisoned until the end of
+      your next turn.
+      
+      *At Higher Levels.* When you cast this spell using a
+      spell slot o f 2nd level or higher, the damage increases by
+      1d8 for each slot level above 1st.</Description>
+    <Save>Constitution</Save>
+    <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>Yes</RequiresAttackRoll>
+  </spell>
+  <spell name="Regenerate">
+    <name>Regenerate</name>
+    <Level>7</Level>
+    <School>Transmutation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Minute</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Creature touched</Targets>
+    <Components>V, S, F</Components>
+    <Materials>
+      <Material>Prayer Wheel</Material>
+      <Material>Holy Water</Material>
+    </Materials>
+    <Duration>1 Hour</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>Heals for 4d8 + 15, gains regen 1, regrows limbs.</ShortDescription>
+    <Description>You touch a creature and stimulate its natural healing
+      ability. The target regains 4d8 + 15 hit points. For the
+      duration o f the spell, the target regains 1 hit point at the
+      start o f each o f its turns (10 hit points each minute).
+      
+      The target’s severed body members (fingers, legs,
+      tails, and so on), if any, are restored after 2 minutes.
+      If you have the severed part and hold it to the stump,
+      the spell instantaneously causes the limb to knit
+      to the stump.</Description>
+    <Save>None</Save>
+    <Overcastable>No</Overcastable>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Reincarnate">
+    <name>Reincarnate</name>
+    <Level>5</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Hour</CastingTime>
+    <Range>Touch</Range>
+    <Targets>One dead humanoid</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Rare oils and unguents wroth 1,000 gp.</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Dead humanoid is reborn into a new body, randomly generated race.</ShortDescription>
+    <Description>You touch a dead humanoid or a piece o f a dead
+      humanoid. Provided that the creature has been dead no
+      longer than 10 days, the spell forms a new adult body
+      for it and then calls the soul to enter that body. If the
+      target’s soul isn’t free or w illing to do so, the spell fails.
+      
+      The magic fashions a new body for the creature
+      to inhabit, which likely causes the creature’s race to
+      change. The DM rolls a d 100 and consults the following
+      table to determine what form the creature takes when
+      restored to life, or the DM chooses a form.
+      
+      ______________________________
+      
+      
+      *d100 Race*
+      
+      *01-04* Dragonborn
+      
+      *05-13* Dwarf, hill
+      
+      *14-21* Dwarf, mountain
+      
+      *22-25* Elf, dark
+      
+      *26-34* Elf, high
+      
+      *35-42* Elf, wood
+      
+      *43-46* Gnome, forest
+      
+      
+      *47-52* Gnome, rock
+      
+      *53-56* Half-elf
+      
+      *57-60* Half-orc
+      
+      *61-68* Halfling, lightfoot
+      
+      *69-76* Halfling, stout
+      
+      *77-96* Human
+    
+      *97-00* Tiefling
+      
+      The reincarnated creature recalls its former life
+      and experiences. It retains the capabilities it had in its
+      original form, except it exchanges its original race for
+      the new one and changes its racial traits accordingly.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Remove Curse">
+    <name>Remove Curse</name>
+    <Level>3</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>One creature or object</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Removes all curses from a person or item.</ShortDescription>
+    <Description>At your touch, all curses affecting one creature or
+      object end. If the object is a cursed magic item, its curse
+      remains, but the spell breaks its owner’s attunement to
+      the object so it can be removed or discarded.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Resistance">
+    <name>Resistance</name>
+    <Level>7</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Creature touched</Targets>
+    <Components>V, S, F</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A miniature cloak</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Creature gains d4 on it's next save.</ShortDescription>
+    <Description>You touch one willing creature. Once before the spell
+      ends, the target can roll a d4 and add the number
+      rolled to one saving throw o f its choice. It can roll
+      the die before or after m aking the saving throw. The
+      spell then ends.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Resurrection">
+    <name>Resurrection</name>
+    <Level>7</Level>
+    <School>Necromancy</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Hour</CastingTime>
+    <Range>Touch</Range>
+    <Targets>One corpse touched.</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A diamond worth 1,000 gp.</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Raise a creature to life that has been dead no longer than one year.</ShortDescription>
+    <Description>You touch a dead creature that has been dead for no
+      more than a century, that didn’t die o f old age, and that
+      isn’t undead. If its soul is free and willing, the target
+      returns to life with all its hit points.
+      This spell neutralizes any p oisons and cures normal
+      diseases afflicting the creature when it died. It doesn’t,
+      however, remove magical diseases, curses, and the like;
+      if such effects aren't removed prior to casting the spell,
+      they afflict the target on its return to life.
+      This spell closes all mortal w ounds and restores any
+      missing body parts.
+      Coming back from the dead is an ordeal. The target
+      takes a - 4 penalty to all attack rolls, saving throws, and
+      ability checks. Every time the target finishes a long rest,
+      the penalty is reduced by 1 until it disappears.
+      Casting this spell to restore life to a creature that has
+      been dead for one year or longer taxes you greatly. Until
+      you finish a long rest, you can’t cast spells again, and
+      you have disadvantage on all attack rolls, ability checks,
+      and saving throws.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Reverse Gravity">
+    <name>Reverse Gravity</name>
+    <Level>7</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>100 ft.</Range>
+    <Targets>50 ft. radius cylinder</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Lodestone</Material>
+      <Material>Iron Filings</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>All creatures and objects in an area fall twoards to top of the cylinder.</ShortDescription>
+    <Description>This spell reverses gravity in a 50-foot-radius, 100-
+      foot high cylinder centered on a point within range. All
+      creatures and objects that aren’t somehow anchored to
+      the ground in the area fall upward and reach the top of
+      the area when you cast this spell. A creature can make a
+      Dexterity saving throw to grab onto a fixed object it can
+      reach, thus avoiding the fall.
+      If some solid object (such as a ceiling) is encountered
+      in this fall, falling objects and creatures strike it just as
+      they would during a normal downward fall. If an object
+      or creature reaches the top o f the area without striking
+      anything, it remains there, oscillating slightly, for
+      the duration.
+      At the end o f the duration, affected objects and
+      creatures fall back down.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Revivify">
+    <name>Revivify</name>
+    <Level>3</Level>
+    <School>Conjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Creature touched</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Diamond worth 300 pg.</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Creature that died within the last minute returns to life with 1 hp.</ShortDescription>
+    <Description>You touch a creature that has died within the last
+      minute. That creature returns to life with 1 hit point.
+      This spell can’t return to life a creature that has died of
+      old age, nor can it restore any missing body parts.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Rope Trick">
+    <name>Rope Trick</name>
+    <Level>2</Level>
+    <School>Transmitation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Length of rope</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Powdered corn extract</Material>
+      <Material>Twisted loop of parchment</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>1 Hour</Duration>
     <Concentration>Yes</Concentration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Rope stands on end and is anchored to an extradimensional space</ShortDescription>
+    <Description>You touch a length o f rope that is up to 60 feet long.
+      One end of the rope then rises into the air until the
+      whole rope hangs perpendicular to the ground. At the
+      upper end o f the rope, an invisible entrance opens to an
+      extradimensional space that lasts until the spell ends.
+      
+      The extradimensional space can be reached by
+      climbing to the top o f the rope. The space can hold as
+      many as eight Medium or smaller creatures. The rope
+      can be pulled into the space, making the rope disappear
+      from view outside the space.
+      
+      Attacks and spells can’t cross through the entrance
+      into or out o f the extradimensional space, but those
+      inside can see out o f it as if through a 3-foot-by-5-foot
+      window centered on the rope.
+      
+      Anything inside the extradimensional space drops out
+      when the spell ends.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
-    <RequiresAttackRoll>No</RequiresAttackRoll>
-  </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
-    <Materials>
-      <Material>Template</Material>
-    </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
   <spell name="Template">
