@@ -4198,652 +4198,1248 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
     <Overcastable>No</Overcastable>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Gate">
+    <name>Gate</name>
+    <Level>9</Level>
+    <School>Conjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One 5-20 ft. diameter portal</Targets>
+    <Components>V, S, F</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A diamond worth 5,000 gp</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 Minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Summon a portal to another plane. Can speak a name of a specific creature to reach them.</ShortDescription>
+    <Description>You conjure a portal linking an unoccupied space you
+      can see within range to a precise location on a different
+      plane o f existence. The portal is a circular opening,
+      which you can make 5 to 20 feet in diameter. You can
+      orient the portal in any direction you choose. The portal
+      lasts for the duration.
+
+      The portal has a front and a back on each plane where
+      it appears. Travel through the portal is possible only
+      by m oving through its front. Anything that does so is
+      instantly transported to the other plane, appearing in
+      the unoccupied space nearest to the portal.
+      Deities and other planar rulers can prevent portals
+      created by this spell from opening in their presence or
+      anywhere within their domains.
+
+      When you cast this spell, you can speak the name
+      o f a specific creature (a pseudonym, title, or nickname
+      doesn’t work). If that creature is on a plane other than
+      the one you are on, the portal opens in the named
+      creature’s immediate vicinity and draws the creature
+      through it to the nearest unoccupied space on your side
+      o f the portal. You gain no special power over the creature,
+      and it is free to act as the DM deems appropriate. It
+      might leave, attack you, or help you.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Geas">
+    <name>Geas</name>
+    <Level>5</Level>
+    <School>Enchantment</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Minute</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One creature in range.</Targets>
+    <Components>V</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>30 days</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>Cause a creature to pursue a goal you give it. Does psychic damage if it disobeys.</ShortDescription>
+    <Description>You place a magical command on a creature that you
+      can see within range, forcing it to carry out some
+      service or refrain from some action or course o f activity
+      as you decide. If the creature can understand you, it
+      must succeed on a W isdom saving throw or b ecome
+      charmed by you for the duration. While the creature
+      is charmed by you, it takes 5 d10 psychic damage
+      each time it acts in a manner directly counter to your
+      instructions, but no more than once each day. A creature
+      that can't understand you is unaffected by the spell.
+
+      You can issue any command you choose, short o f an
+      activity that would result in certain death. Should you
+      issue a suicidal command, the spell ends.
+
+      You can end the spell early by using an action to
+      dismiss it. A remove curse, greater restoration, or wish
+      spell also ends it.
+
+      *At Higher Levels.* When you cast this spell using
+      a spell slot o f 7th or 8th level, the duration is 1 year.
+      When you cast this spell using a spell slot o f 9th level,
+      the spell lasts until it is ended by one o f the spells
+      mentioned above.</Description>
+    <Save>Wisdom</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
+  <spell name="Genle Repose">
+    <name>Gentle Repose</name>
+    <Level>2</Level>
+    <School>Necromancy</School>
     <Ritual>Yes</Ritual>
-    <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Corpse or other remains touched</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>a pinch of salt</Material>
+      <Material>copper coins for each eye that must stay there for the duration</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>10 days</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Prevents decay of a body, allowing more delay before resurrection.</ShortDescription>
+    <Description>You touch a corpse or other remains. For the
+      duration, the target is protected from decay and can’t
+      become undead.
+
+      The spell also effectively extends the time limit on
+      raising the target from the dead, since days spent under
+      the influence o f this spell don’t count against the time
+      limit o f spells such as raise dead.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Giant Insect">
+    <name>Giant Insect</name>
+    <Level>4</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>Certain insects within range.</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 10 minutes</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Transforms centipedes, spiders, wasps, or a scorpion into the giant varieties.</ShortDescription>
+    <Description>You transform up to ten centipedes, three spiders, five
+      wasps, or one scorpion within range into giant versions
+      o f their natural forms for the duration. A centipede
+      becomes a giant centipede, a spider becomes a giant
+      spider, a wasp becomes a giant wasp, and a scorpion
+      becomes a giant scorpion.
+      
+      Each creature obeys your verbal commands, and
+      in combat, they act on your turn each round. The DM
+      has the statistics for these creatures and resolves their
+      actions and movement.
+      
+      A creature remains in its giant size for the duration,
+      until it drops to 0 hit points, or until you use an action to
+      dismiss the effect on it.
+      
+      The DM might allow you to choose different targets.
+      For example, if you transform a bee, its giant version
+      might have the same statistics as a giant wasp.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Glibness">
+    <name>Glibness</name>
+    <Level>8</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Personal</Range>
+    <Targets>Self</Targets>
+    <Components>V</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>1 Hour</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>All charisma rolls are at least 15, always seem like you are telling the truth.</ShortDescription>
+    <Description>Until the spell ends, when you make a Charisma
+      check, you can replace the number you roll with a 15.
+      Additionally, no matter what you say, magic that would
+      determine if you are telling the truth indicates that you
+      are being truthful.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Globe of Invulnerability">
+    <name>Globe of Invulnerability</name>
+    <Level>6</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Personal (10 ft. radius)</Range>
+    <Targets>Self</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A glass bead</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>10 ft. radius barrier that prevents most spells from targeting you.</ShortDescription>
+    <Description>An immobile, faintly shimmering barrier springs into
+      existence in a 10-foot radius around you and remains for
+      the duration.
+      
+      Any spell of 5th level or lower cast from outside the
+      barrier can't affect creatures or objects within it, even
+      if the spell is cast using a higher level spell slot. Such a
+      spell can target creatures and objects within the barrier,
+      but the spell has no effect on them. Similarly, the area
+      within the barrier is excluded from the areas affected
+      by such spells.
+      
+      *At Higher Levels.* When you cast this spell using a
+      spell slot o f 7th level or higher, the barrier blocks spells
+      o f one level higher for each slot level above 6th.</Description>
+    <Save>None</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Glyph of Warding">
+    <name>Glyph of Warding</name>
+    <Level>3</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Hour</CastingTime>
+    <Range>Touch</Range>
+    <Targets>One glyph</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Incense</Material>
+      <Material>Diamond dust worth 200gp</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Until dispelled or triggered</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>An inscribed glyph lasts until triggered then explodes or triggers a spell.</ShortDescription>
+    <Description>
+      When you cast this spell, you inscribe a glyph that
+      harms other creatures, either upon a surface (such as
+      a table or a section o f floor or wall) or within an object
+      that can be closed (such as a book, a scroll, or a treasure
+      chest) to conceal the glyph. If you choose a surface, the
+      glyph can cover an area o f the surface no larger than
+      10 feet in diameter. If you choose an object, that object
+      must remain in its place; if the object is moved more
+      than 10 feet from where you cast this spell, the glyph is
+      broken, and the spell ends without being triggered.
+      The glyph is nearly invisible and requires a successful
+      Intelligence (Investigation) check against your spell save
+      DC to be found.
+      
+      You decide what triggers the glyph when you cast
+      the spell. For glyphs inscribed on a surface, the most
+      typical triggers include touching or standing on the
+      glyph, removing another object covering the glyph,
+      approaching within a certain distance o f the glyph, or
+      manipulating the object on which the glyph is inscribed.
+      For glyphs inscribed within an object, the most common
+      triggers include opening that object, approaching within
+      a certain distance o f the object, or seeing or reading the
+      glyph. Once a glyph is triggered, this spell ends.
+      You can further refine the trigger so the spell activates
+      only under certain circumstances or according to
+      physical characteristics (such as height or weight),
+      creature kind (for example, the ward could be set to
+      affect aberrations or drow), or alignment. You can also
+      set conditions for creatures that don’t trigger the glyph,
+      such as those w ho say a certain password.
+      When you inscribe the glyph, choose explosive runes
+      or a spell glyph.
+      
+      *Explosive Runes.* When triggered, the glyph erupts
+      with magical energy in a 20-foot-radius sphere centered
+      on the glyph. The sphere spreads around corners. Each
+      creature in the area must make a Dexterity saving
+      throw. A creature takes 5d8 acid, cold, fire, lightning, or
+      thunder damage on a failed saving throw (your choice
+      when you create the glyph), or half as much damage on a
+      successful one.
+      
+      *Spell Glyph.* You can store a prepared spell of
+      3rd level or lower in the glyph by casting it as part
+      o f creating the glyph. The spell must target a single
+      creature or an area. The spell being stored has no
+      immediate effect when cast in this way. When the glyph
+      is triggered, the stored spell is cast. If the spell has a
+      target, it targets the creature that triggered the glyph.
+      If the spell affects an area, the area is centered on
+      that creature. If the spell summons hostile creatures
+      or creates harmful objects or traps, they appear as
+      close as possible to the intruder and attack it. If the
+      spell requires concentration, it lasts until the end o f its
+      full duration.
+      
+      *At Higher Levels.* When you cast this spell using
+      a spell slot o f 4th level or higher, the damage o f an
+      explosive runes glyph increases by 1d8 for each slot
+      level above 3rd. If you create a spell glyph, you can store
+      any spell o f up to the same level as the slot you use for
+      the glyph o f warding.
+    </Description>
+    <Save>Special</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Goodberry">
+    <name>Goodberry</name>
+    <Level>1</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Up to 10 berries</Targets>
+    <Components>V, S, F</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A sprig of mistletoe</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Summon up to 10 berries that restore hp and provide enough food for a day.</ShortDescription>
+    <Description>
+      Up to ten berries appear in your hand and are infused
+      with magic for the duration. A creature can use its
+      action to eat one berry. Eating a berry restores 1 hit
+      point, and the berry provides enough nourishment to
+      sustain a creature for one day.
+      
+      The berries lose their potency if they have not been
+      consumed within 24 hours o f the casting o f this spell.
+    </Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Grasping Vine">
+    <name>Grasping Vine</name>
+    <Level>4</Level>
+    <School>Conjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 bonus action</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>One vie in range.</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
+    <ShortDescription>Conjure a vine that pulls creatures twoards it.</ShortDescription>
+    <Description>
+      You conjure a vine that sprouts from the ground in an
+      unoccupied space o f your choice that you can see within
+      range. When you cast this spell, you can direct the vine
+      to lash out at a creature within 30 feet o f it that you can
+      see. That creature must succeed on a Dexterity saving
+      throw or b e pulled 20 feet directly toward the vine.
+      
+      Until the spell ends, you can direct the vine to lash out
+      at the same creature or another one as a bonus action
+      on each o f your turns.
+    </Description>
     <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Grease">
+    <name>Grease</name>
+    <Level>1</Level>
+    <School>Conjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One 10 ft. square</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A bit of pork rind or butter.</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>1 minute</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>10 ft square becomes difficult terrain and causes creatures in it to fall prone. Dex partial.</ShortDescription>
+    <Description>Slick grease covers the ground in a 10-foot square
+      centered on a point within range and turns it into
+      difficult terrain for the duration.
+      When the grease appears, each creature standing in
+      its area must succeed on a Dexterity saving throw or fall
+      prone. A creature that enters the area or ends its turn
+      there must also succeed on a Dexterity saving throw
+      or fall prone.</Description>
+    <Save>Dexterity</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Greater Invisibility">
+    <name>Greater Invisibility</name>
+    <Level>4</Level>
+    <School>Illusion</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Creature touched</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 miute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Touched creature becomes invisible for the duration</ShortDescription>
+    <Description>You or a creature you touch becomes invisible until the
+      spell ends. Anything the target is w earing or carrying is
+      invisible as long as it is on the target’s person.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Greater Restoration">
+    <name>Greater Restoration</name>
+    <Level>5</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Creature touched</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Diamond dust worth 100gp</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Undo a debilitating effect on a creature.</ShortDescription>
+    <Description>You imbue a creature you touch with positive energy to
+      undo a debilitating effect. You can reduce the target’s
+      exhaustion level by one, or end one o f the following
+      effects on the target:
+      
+      • One effect that charmed or petrified the target
+      
+      • One curse, including the target’s attunement to a
+      cursed magic item
+      
+      • Any reduction to one o f the target’s ability scores
+      
+      • One effect reducing the target’s hit point maximum</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Guardian of Faith">
+    <name>Guardian of Faith</name>
+    <Level>4</Level>
+    <School>Conjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>One large spectral guardian</Targets>
+    <Components>V</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>8 hours</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Large guardian does radiant damage to creatures entering it's range (max 60), dexterity halves.</ShortDescription>
+    <Description>A Large spectral guardian appears and hovers for the
+      duration in an unoccupied space o f your choice that you
+      can see within range. The guardian occupies that space
+      and is indistinct except for a gleaming sword and shield
+      emblazoned with the symbol o f your deity.
+      
+      Any creature hostile to you that moves to a space
+      within 10 feet o f the guardian for the first time on a
+      turn must succeed on a Dexterity saving throw. The
+      creature takes 20 radiant damage on a failed save, or
+      half as much damage on a successful one. The guardian
+      vanishes when it has dealt a total of 60 damage.</Description>
+    <Save>Dexterity</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Guards and Wards">
+    <name>Guards and Wards</name>
+    <Level>6</Level>
+    <School>Abjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>10 minutes</CastingTime>
+    <Range>Touch</Range>
+    <Targets>An area up to 2,500 sq. ft.</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Burning Incense</Material>
+      <Material>Brimstone and Oil</Material>
+      <Material>Knotted String</Material>
+      <Material>Umber Hulk Blood</Material>
+      <Material>Small Silver Rod worth 10gp</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>24 Hours</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Ward an area with several magical effects.</ShortDescription>
+    <Description>
+      You create a ward that protects up to 2,500 square feet
+      o f floor space (an area 50 feet square, or one hundred
+      5-foot squares or twenty-five 10-foot squares). The
+      warded area can be up to 20 feet tall, and shaped as you
+      desire. You can ward several stories of a stronghold by
+      dividing the area among them, as long as you can walk
+      into each contiguous area while you are casting the spell.
+      When you cast this spell, you can specify individuals
+      that are unaffected by any or all o f the effects that
+      you choose. You can also specify a password that,
+      when spoken aloud, makes the speaker immune to
+      these effects.
+      
+      Guards and wards creates the following effects within
+      the warded area.
+      
+      *Corridors.* Fog fills all the warded corridors, making
+      them heavily obscured. In addition, at each intersection
+      or branching passage offering a choice o f direction,
+      there is a 50 percent chance that a creature other than
+      you will believe it is going in the opposite direction from
+      the one it chooses.
+      
+      *Doors.* All doors in the w arded area are magically
+      locked, as if sealed by an arcane lock spell. In addition,
+      you can cover up to ten doors with an illusion (equivalent
+      to the illusory object function o f the minor illusion spell)
+      to make them appear as plain sections o f wall.
+      Stairs. Webs fill all stairs in the warded area from top
+      to bottom, as the web spell. These strands regrow in 10
+      minutes if they are burned or torn away while guards
+      and wards lasts.
+      
+      *Other Spell Effect.* You can place your choice o f one
+      o f the following magical effects within the w arded area
+      o f the stronghold.
+      
+      • Place dancing lights in four corridors. You can designate
+      a simple program that the lights repeat as long as
+      guards and wards lasts.
+      • Place magic mouth in two locations.
+      • Place stinking cloud in two locations. The vapors
+      appear in the places you designate; they return within
+      10 minutes if dispersed by w ind while guards and
+      wards lasts.
+      • Place a constant gust o f wind in one corridor or room.
+      • Place a suggestion in one location. You select an area
+      o f up to 5 feet square, and any creature that enters
+      or passes through the area receives the suggestion
+      mentally.
+      
+      The whole w arded area radiates magic. A dispel
+      magic cast on a specific effect, if successful, removes
+      only that effect.
+      
+      You can create a permanently guarded and warded
+      structure by casting this spell there every day
+      for one year.
+    </Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Guidance">
+    <name>Guidance</name>
+    <Level>0</Level>
+    <School>Divination</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
     <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>One creature adds a d4 to the next ability check.</ShortDescription>
+    <Description>You touch one w illing creature. Once before the spell
+      ends, the target can roll a d4 and add the number rolled
+      to one ability check o f its choice. It can roll the die before
+      or after making the ability check. The spell then ends.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Guiding Bolt">
+    <name>Guiding Bolt</name>
+    <Level>1</Level>
+    <School>Evocation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>120 ft.</Range>
+    <Targets>One creature</Targets>
+    <Components>V, S</Components>
+    <Materials>
+    </Materials>
+    <Duration>1 Round</Duration>
+    <Concentration>No</Concentration>
+    <ShortDescription>Does 4d6 damage radiant damage and grants advantage to the next attack against the target.</ShortDescription>
+    <Description>A flash o f light streaks toward a creature o f your choice
+      within range. Make a ranged spell attack against the
+      target. On a hit, the target takes 4d6 radiant damage,
+      and the next attack roll made against this target before
+      the end o f your next turn has advantage, thanks to the
+      mystical dim light glittering on the target until then.
+      
+      *At Higher Levels.* When you cast this spell using a
+      spell slot o f 2nd level or higher, the damage increases by
+      1d6 for each slot level above 1st.</Description>
+    <Save>None</Save>
+    <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>Yes</RequiresAttackRoll>
+  </spell>
+  <spell name="Gust of Wind">
+    <name>Gust of Wind</name>
+    <Level>2</Level>
+    <School>Evocation</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Personal (60 ft. line)</Range>
+    <Targets>Creatures in the line.</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Legume Seed</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 Minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Creates a 10 ft. wide line of strong wind. Creatures in the line get pushed away. Strength partial.</ShortDescription>
+    <Description>A line o f strong w ind 60 feet long and 10 feet wide
+      blasts from you in a direction you choose for the spell’s
+      duration. Each creature that starts its turn in the line
+      must succeed on a Strength saving throw or be pushed
+      15 feet away from you in a direction following the line.
+      
+      Any creature in the line must spend 2 feet of
+      movement for every 1 foot it moves when moving
+      closer to you.
+      
+      The gust disperses gas or vapor, and it extinguishes
+      candles, torches, and similar unprotected flames in
+      the area. It causes protected flames, such as those of
+      lanterns, to dance wildly and has a 50 percent chance to
+      extinguish them.
+      
+      As a bonus action on each o f your turns before the
+      spell ends, you can change the direction in which the
+      line blasts from you.</Description>
+    <Save>Strength</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Hail of Thorns">
+    <name>Hail of Thorns</name>
+    <Level>1</Level>
+    <School>Coonjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 bonus action</CastingTime>
+    <Range>Personal</Range>
+    <Targets>Self</Targets>
+    <Components>V</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>Next ranged attack does 1d10 extra piercing damage in a 5 ft. radius. Dex half.</ShortDescription>
+    <Description>The next time you hit a creature with a ranged weapon
+      attack before the spell ends, this spell creates a rain
+      o f thorns that sprouts from your ranged w eapon or
+      ammunition. In addition to the normal effect of the
+      attack, the target o f the attack and each creature within
+      5 feet o f it must make a Dexterity saving throw. A
+      creature takes 1dlO piercing damage on a failed save, or
+      half as much damage on a successful one.
+      
+      *At Higher Levels.* If you cast this spell using a spell
+      slot o f 2nd level or higher, the damage increases by 1d10
+      for each slot level above 1st (to a maximum o f 6 d10).</Description>
+    <Save>Dexterity</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Hallow">
+    <name>Hallow</name>
+    <Level>5</Level>
+    <School>Evocation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>24 Hours</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Area up to 60 ft. radius</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Herbs, oils, and incense worth 1,000 gp</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Until Dispelled</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Hallows an area providing protection against outsiders. Additional effects can be added.</ShortDescription>
+    <Description>You touch a point and infuse an area around it with holy
+      (or unholy) power. The area can have a radius up to 60
+      feet, and the spell fails if the radius includes an area
+      already under the effect a hallow spell. The affected area
+      is subject to the following effects.
+      
+      First, celestials, elementals, fey, fiends, and undead
+      can’t enter the area, nor can such creatures charm,
+      frighten, or p os sess creatures within it. Any creature
+      charmed, frightened, or pos sessed by such a creature
+      is no longer charmed, frightened, or possessed upon
+      entering the area. You can exclude one or more of those
+      types o f creatures from this effect.
+      
+      Second, you can bind an extra effect to the area.
+      Choose the effect from the following list, or choose an
+      effect offered by the DM. Some o f these effects apply to
+      creatures in the area; you can designate whether the
+      effect applies to all creatures, creatures that follow a
+      specific deity or leader, or creatures o f a specific sort,
+      such as ores or trolls. When a creature that would be
+      affected enters the spell’s area for the first time on a
+      turn or starts its turn there, it can make a Charisma
+      saving throw. On a success, the creature ignores the
+      extra effect until it leaves the area.
+      
+      *Courage.* Affected creatures can’t be frightened
+      while in the area.
+      
+      *Darkness.* Darkness fills the area. Normal light,
+      as well as magical light created by spells o f a lower
+      level than the slot you used to cast this spell, can’t
+      illuminate the area.
+      
+      *Daylight.* Bright light fills the area. Magical darkness
+      created by spells o f a lower level than the slot you used
+      to cast this spell can’t extinguish the light.
+      
+      *Energy Protection.* Affected creatures in the area
+      have resistance to one damage type o f your choice,
+      except for bludgeoning, piercing, or slashing.
+      
+      Energy Vulnerability.* Affected creatures in the area
+      have vulnerability to one damage type of your choice,
+      except for bludgeoning, piercing, or slashing.
+      
+      *Everlasting Rest.* Dead bodies interred in the area
+      can’t be turned into undead.
+      
+      *Extradimensional Interference.* Affected creatures
+      can’t move or travel using teleportation or by
+      extradimensional or interplanar means.
+      
+      *Fear.* Affected creatures are frightened
+      while in the area.
+      
+      *Silence.* No sound can emanate from within the area,
+      and no sound can reach into it.
+      
+      *Tongues.* Affected creatures can communicate with
+      any other creature in the area, even if they don’t share a
+      common language.</Description>
+    <Save>Charisma</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Hallucinatory Terrain">
+    <name>Hallucinatory Terrain</name>
+    <Level>4</Level>
+    <School>Illusion</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>10 Minutes</CastingTime>
+    <Range>300 ft.</Range>
+    <Targets>150 ft. cube</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A Stone</Material>
+      <Material>A Twig</Material>
+      <Material>A Bit of Green Plant</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>24 Hours</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Make a 150 ft. cube look like a specific natural terrain. Investigation to disbelieve</ShortDescription>
+    <Description>You make natural terrain in a 150-foot cube in range
+      look, sound, and smell like some other sort of natural
+      terrain. Thus, open fields or a road can be made to
+      resemble a swamp, hill, crevasse, or some other difficult
+      or impassable terrain. A pond can be made to seem
+      like a grassy meadow, a precipice like a gentle slope,
+      or a rock-strewn gully like a wide and smooth road.
+      Manufactured structures, equipment, and creatures
+      within the area aren’t changed in appearance.
+      
+      The tactile characteristics of the terrain are
+      unchanged, so creatures entering the area are likely to
+      see through the illusion. If the difference isn’t obvious
+      by touch, a creature carefully examining the illusion can
+      attempt an Intelligence (Investigation) check against
+      your spell save DC to disbelieve it. A creature who
+      discerns the illusion for what it is, sees it as a vague
+      image superimposed on the terrain.</Description>
+    <Save>Investigation</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Harm">
+    <name>Harm</name>
+    <Level>6</Level>
+    <School>Necromancy</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One creature</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Target takes 14d6 necrotic damage and has it's maximum hitpoints reduced by the same amount. Con halves.</ShortDescription>
+    <Description>You unleash a virulent disease on a creature that
+      you can see within range. The target must make a
+      Constitution saving throw. On a failed save, it takes
+      14d6 necrotic damage, or half as much damage on a
+      successful save. The damage can’t reduce the target’s
+      hit points below 1. If the target fails the saving throw,
+      its hit point maximum is reduced for 1 hour by an
+      amount equal to the necrotic damage it took. Any effect
+      that removes a disease allows a creature’s hit point
+      maximum to return to normal before that time passes.</Description>
+    <Save>Constitution</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Haste">
+    <name>Haste</name>
+    <Level>3</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>30 ft</Range>
+    <Targets>Willing creature in range</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A shaving of licorice root</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Creature gets AC, advantage on dex, and an additional action each round.</ShortDescription>
+    <Description>Choose a willing creature that you can see within range.
+      Until the spell ends, the target’s speed is doubled, it
+      gains a +2 bonus to AC, it has advantage on Dexterity
+      saving throws, and it gains an additional action on each
+      o f its turns. That action can be used only to take the
+      Attack (one weapon attack only), Dash, Disengage, Hide,
+      or Use an Object action.
+      
+      When the spell ends, the target can’t move or take
+      actions until after its next turn, as a wave o f lethargy
+      sweeps over it.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Heal">
+    <name>Heal</name>
+    <Level>6</Level>
+    <School>Evocation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One creature</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
+    <ShortDescription>Heals 70 hp, removes certain status effects.</ShortDescription>
+    <Description>Choose a creature that you can see within range. A
+      surge o f positive energy washes through the creature,
+      causing it to regain 70 hit points. This spell also ends
+      blindness, deafness, and any diseases affecting the
+      target. This spell has no effect on constructs or undead.
+      
+      *At Higher Levels.* When you cast this spell using a
+      spell slot o f 7th level or higher, the amount o f healing
+      increases by 10 for each slot level above 6th.</Description>
     <Save>SvTemplate</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Healing Word">
+    <name>Healing Word</name>
+    <Level>2</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>Creature</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>Creature regains 1d4 + Ability modifier hitpoints</ShortDescription>
+    <Description>A creature o f your choice that you can see within range
+      regains hit points equal to 1d4 + your spellcasting
+      ability modifier. This spell has no effect on undead
+      or constructs.
+      
+      *At Higher Levels.* When you cast this spell using a
+      spell slot o f 2nd level or higher, the healing increases by
+      1d4 for each slot level above 1st.</Description>
+    <Save>None</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Heat Metal">
+    <name>Heat Metal</name>
+    <Level>2</Level>
+    <School>Transmutation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>One manufactured metal object</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A piece of iron</Material>
+      <Material>A flame</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 Minute</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>Cause one metal object to glow red hot. Does 2d8 damage per round.</ShortDescription>
+    <Description>Choose a manufactured metal object, such as a metal
+      weapon or a suit o f heavy or medium metal armor, that
+      you can see within range. You cause the object to glow
+      red-hot. Any creature in physical contact with the object
+      takes 2d8 fire damage when you cast the spell. Until the
+      spell ends, you can use a bonus action on each o f your
+      subsequent turns to cause this damage again.
+      
+      If a creature is holding or wearing the object and
+      takes the damage from it, the creature must succeed on
+      a Constitution saving throw or drop the object if it can. If
+      it doesn’t drop the object, it has disadvantage on attack
+      rolls and ability checks until the start o f your next turn.
+      
+      *At Higher Levels.* When you cast this spell using a
+      spell slot o f 3rd level or higher, the damage increases by
+      1d8 for each slot level above 2nd.</Description>
+    <Save>Constitution</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Hellish Rebuke">
+    <name>Hellish Rebuke</name>
+    <Level>1</Level>
+    <School>Evocation</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
-    <Components>V, S, M</Components>
+    <CastingTime>1 reaction in response to being damaged</CastingTime>
+    <Range>60 ft.</Range>
+    <Targets>Creature that damaged out.</Targets>
+    <Components>V, S</Components>
     <Materials>
-      <Material>Template</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>Retaliate for 2d10 damage against an attacker in range. Dexterity halves.</ShortDescription>
+    <Description>You point your finger, and the creature that damaged
+      you is momentarily surrounded by hellish flames. The
+      creature must make a Dexterity saving throw. It takes
+      2d10 fire damage on a failed save, or half as much
+      damage on a successful one.
+      
+      *At Higher Levels.* When you cast this spell using a
+      spell slot o f 2nd level or higher, the damage increases by
+      1dlO for each slot level above 1st.</Description>
+    <Save>Dexterity</Save>
     <Overcastable>Yes</Overcastable>
-    <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Heroes' Feast">
+    <name>Heroes' Feast</name>
+    <Level>6</Level>
+    <School>Conjuration</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>10 Minutes</CastingTime>
+    <Range>30 ft.</Range>
+    <Targets>One area big enough for a feast</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>A gem encrusted bowl worth 1,000 gp.</Material>
     </Materials>
-    <Duration>Template</Duration>
-    <Concentration>Yes</Concentration>
+    <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
-    <Overcastable>Yes</Overcastable>
+    <ShortDescription>Conjure a feast for up to 12 people. Grants a number of benifits.</ShortDescription>
+    <Description>You bring forth a great feast, including magnificent
+      food and drink. The feast takes 1 hour to consume and
+      disappears at the end o f that time, and the beneficial
+      effects don’t set in until this hour is over. Up to twelve
+      other creatures can partake o f the feast.
+      
+      A creature that partakes o f the feast gains several
+      benefits. The creature is cured o f all diseases and
+      poison, becomes immune to poison and being
+      frightened, and makes all W isdom saving throws with
+      advantage. Its hit point maximum also increases by
+      2d10, and it gains the same number o f hit points. These
+      benefits last for 24 hours.</Description>
+    <Save>None</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
-  <spell name="Template">
-    <name>Template</name>
-    <Level>99</Level>
-    <School>STemplate</School>
-    <Ritual>Yes</Ritual>
+  <spell name="Heroism">
+    <name>Heroism</name>
+    <Level>1</Level>
+    <School>Enchantment</School>
     <Ritual>No</Ritual>
-    <CastingTime>Template</CastingTime>
-    <Range>RTemplate.</Range>
-    <Targets>TTemplate</Targets>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Touch</Range>
+    <Targets>Creature Touched</Targets>
+    <Components>V, S</Components>
+    <Materials>
+    </Materials>
+    <Duration>Up to 1 Minute</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Creature is immune to fear and gains temporary hp.</ShortDescription>
+    <Description>A willing creature you touch is imbued with bravery.
+      Until the spell ends, the creature is immune to being
+      frightened and gains temporary hit points equal to
+      your spellcasting ability modifier at the start o f each
+      o f its turns. When the spell ends, the target loses any
+      remaining temporary hit points from this spell.
+      
+      *At Higher Levels.* When you cast this spell using
+      a spell slot o f 2nd level or higher, you can target one
+      additional creature for each slot level above 1st.</Description>
+    <Save>None</Save>
+    <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Hex">
+    <name>Hex</name>
+    <Level>1</Level>
+    <School>Enchantment</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 bonus action</CastingTime>
+    <Range>90 ft.</Range>
+    <Targets>One creature in range</Targets>
     <Components>V, S, M</Components>
     <Materials>
-      <Material>Template</Material>
+      <Material>Petrified eye of a newt.</Material>
     </Materials>
-    <Duration>Template</Duration>
+    <Duration>Up to 1 Hour</Duration>
     <Concentration>Yes</Concentration>
-    <Concentration>No</Concentration>
-    <ShortDescription>Temp Spell</ShortDescription>
-    <Description>This is a template spell</Description>
-    <Save>SvTemplate</Save>
+    <ShortDescription>Creature takes extra 1d6 from an attack. Grants disadvantage with one ability.</ShortDescription>
+    <Description>You place a curse on a creature that you can see within
+      range. Until the spell ends, you deal an extra 1d6
+      necrotic damage to the target whenever you hit it with
+      an attack. A lso, choose one ability when you cast the
+      spell. The target has disadvantage on ability checks
+      made with the chosen ability.
+      
+      If the target drops to 0 hit points before this spell
+      ends, you can use a bonus action on a subsequent turn
+      o f yours to curse a new creature.
+      
+      A remove curse cast on the target ends this spell early.
+      
+      *At Higher Levels.* When you cast this spell using
+      a spell slot o f 3rd or 4th level, you can maintain your
+      concentration on the spell for up to 8 hours. When you
+      use a spell slot o f 5th level or higher, you can maintain
+      your concentration on the spell for up to 24 hours.</Description>
+    <Save>None</Save>
     <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Hold Monster">
+    <name>Hold Monster</name>
+    <Level>5</Level>
+    <School>Enchantment</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>90 ft.</Range>
+    <Targets>One creature within range</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A small, straight piece of iron</Material>
+    </Materials>
+    <Duration>Up to 1 Minute</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Paralyzes target for the duration. Wisdom save to negate every turn.</ShortDescription>
+    <Description>Choose a creature that you can see within range. The
+      target must succeed on a W isdom saving throw or be
+      paralyzed for the duration. This spell has no effect on
+      undead. At the end o f each o f its turns, the target can
+      make another Wisdom saving throw. On a success, the
+      spell ends on the target.
+      
+      *At Higher Levels.* When you cast this spell using
+      a spell slot o f 6th level or higher, you can target one
+      additional creature for each slot level above 5th. The
+      creatures must be within 30 feet o f each other when
+      you target them.</Description>
+    <Save>Wisdom</Save>
+    <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Hold Person">
+    <name>Hold Person</name>
+    <Level>2</Level>
+    <School>Enchantment</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>90 ft.</Range>
+    <Targets>One humanoid within range</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A small, straight piece of iron</Material>
+    </Materials>
+    <Duration>Up to 1 Minute</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Paralyzes target for the duration. Wisdom save to negate every turn.</ShortDescription>
+    <Description>Choose a humanoid that you can see within range. The
+      target must succeed on a W isdom saving throw or be
+      paralyzed for the duration. This spell has no effect on
+      undead. At the end o f each o f its turns, the target can
+      make another Wisdom saving throw. On a success, the
+      spell ends on the target.
+      
+      *At Higher Levels.* When you cast this spell using
+      a spell slot o f 3th level or higher, you can target one
+      additional creature for each slot level above 2nd. The
+      creatures must be within 30 feet o f each other when
+      you target them.</Description>
+    <Save>Wisdom</Save>
+    <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Holy Aura">
+    <name>Holy Aura</name>
+    <Level>8</Level>
+    <School>Abjuration</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>Personal</Range>
+    <Targets>Self</Targets>
+    <Components>V, S, F</Components>
+    <Materials>
+      <Material>A tiny reliquary worth 1,000 gp.</Material>
+    </Materials>
+    <Duration>Up to 1 MInute</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Allies in a 30 ft. radius have advantage on all saves. Others have disadvantage on attack rolls.</ShortDescription>
+    <Description>Divine light washes out from you and coalesces
+      in a soft radiance in a 30-foot radius around you.
+      Creatures o f your choice in that radius when you cast
+      this spell shed dim light in a 5-foot radius and have
+      advantage on all saving throws, and other creatures
+      have disadvantage on attack rolls against them until
+      the spell ends. In addition, when a fiend or an undead
+      hits an affected creature with a melee attack, the aura
+      flashes with brilliant light. The attacker must succeed
+      on a Constitution saving throw or be blinded until
+      the spell ends.</Description>
+    <Save>Constitution</Save>
     <Overcastable>No</Overcastable>
-    <RequiresAttackRoll>Yes</RequiresAttackRoll>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Hunger of Hadar">
+    <name>Hunger of Hadar</name>
+    <Level>3</Level>
+    <School>Conjuration</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>150 ft.</Range>
+    <Targets>20 ft. radius sphere.</Targets>
+    <Components>V, S, M</Components>
+    <Materials>
+      <Material>A pickled octapus tentacle.</Material>
+    </Materials>
+    <Duration>Up to 1 minute</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Open a gateway to eldritch horrors. Does 2d6 cold and 2d6 acid damage to creatures in the sphere.</ShortDescription>
+    <Description>You open a gateway to the dark between the stars, a
+      region infested with unknown horrors. A 20-foot-radius
+      sphere o f blackness and bitter cold appears, centered
+      on a point with range and lasting for the duration. This
+      void is filled with a cacophony o f soft whispers and
+      slurping noises that can be heard up to 30 feet away. No
+      light, magical or otherwise, can illuminate the area, and
+      creatures fully within the area are blinded.
+      
+      The void creates a warp in the fabric of space, and the
+      area is difficult terrain. Any creature that starts its turn
+      in the area takes 2d6 cold damage. Any creature that
+      ends its turn in the area must succeed on a Dexterity
+      saving throw or take 2d6 acid damage as milky,
+      otherworldly tentacles rub against it.</Description>
+    <Save>Dexterity</Save>
+    <Overcastable>No</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Hunter's Mark">
+    <name>Hunter's Mark</name>
+    <Level>1</Level>
+    <School>Divination</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 bonus action</CastingTime>
+    <Range>90 ft.</Range>
+    <Targets>One creature in range</Targets>
+    <Components>V</Components>
+    <Materials>
+    </Materials>
+    <Duration>Up to 1 Hour</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Creature takes an extra 1d6 from your weapon attacks and you have advantage on rolls to find it.</ShortDescription>
+    <Description>You choose a creature you can see within range and
+      mystically mark it as your quarry. Until the spell ends,
+      you deal an extra 1d6 damage to the target whenever
+      you hit it with a w eapon attack, and you have advantage
+      on any Wisdom (Perception) or Wisdom (Survival)
+      check you make to find it. If the target drops to 0 hit
+      points before this spell ends, you can use a bonus action
+      on a subsequent turn o f yours to mark a new creature.
+      
+      *At Higher Levels.* When you cast this spell using
+      a spell slot o f 3rd or 4th level, you can maintain your
+      concentration on the spell for up to 8 hours. When you
+      use a spell slot o f 5th level or higher, you can maintain
+      your concentration on the spell for up to 24 hours.</Description>
+    <Save>None</Save>
+    <Overcastable>Yes</Overcastable>
+    <RequiresAttackRoll>No</RequiresAttackRoll>
+  </spell>
+  <spell name="Hypnotic Pattern">
+    <name>Hypnotic Pattern</name>
+    <Level>3</Level>
+    <School>Illusion</School>
+    <Ritual>No</Ritual>
+    <CastingTime>1 Action</CastingTime>
+    <Range>120 ft.</Range>
+    <Targets>One 30 ft. cube</Targets>
+    <Components>S, M</Components>
+    <Materials>
+      <Material>A glowstick</Material>
+    </Materials>
+    <Duration>Up to 1 minute</Duration>
+    <Concentration>Yes</Concentration>
+    <ShortDescription>Creatures in the cube are incapacitated. Wisdom negates.</ShortDescription>
+    <Description>You create a twisting pattern o f colors that w eaves
+      through the air inside a 30-foot cube within range.
+      The pattern appears for a moment and vanishes. Each
+      creature in the area w ho sees the pattern must make
+      a W isdom saving throw. On a failed save, the creature
+      becomes charmed for the duration. While charmed
+      by this spell, the creature is incapacitated and has
+      a speed o f 0.
+      
+      The spell ends for an affected creature if it takes any
+      damage or if someone else uses an action to shake the
+      creature out o f its stupor.</Description>
+    <Save>Wisdom</Save>
+    <Overcastable>No</Overcastable>
     <RequiresAttackRoll>No</RequiresAttackRoll>
   </spell>
   <spell name="Template">
