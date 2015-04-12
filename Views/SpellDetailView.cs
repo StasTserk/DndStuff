@@ -1,28 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DnD5thEdTools.Views
 {
     class SpellDetailView : ISpellDetailView
     {
-        public string getSpellDetailText(Models.Spell spell)
+        public string GetSpellDetailText(Models.Spell spell)
         {
-            return spell.Description;//.Replace(System.Environment.NewLine, "");
+            return spell.Description;
         }
 
-        public string getBasicSpellText(Models.Spell spell)
+        public string GetBasicSpellText(Models.Spell spell)
         {
             String levelComposition = "";
             foreach (var cls in spell.Classes)
             {
                 levelComposition += " " + cls;
             }
-            return
-                String.Format("Name: {0}\nSchool: {1}\nClasses: {2}\nCasting Time: {3}\nComponents: {4}\nDuration: {5}\nConcentration: {6}\nRange: {7}\nTargets: {8}",
-                spell.Name, spell.School, levelComposition, spell.CastingTime, spell.Components,
+            return String.Format("*Name*: {0}\n\n" +
+                              "*School*: Level {1} {2}\n\n" +
+                              "*Casting Time*: {3}\n\n" +
+                              "*Components*: {4}\n\n" +
+                              "*Duration*: {5}\n\n" +
+                              "*Concentration*: {6}\n\n" +
+                              "*Range*: {7}\n\n" +
+                              "*Targets*: {8}",
+                spell.Name, spell.Level, spell.School, spell.CastingTime, spell.Components,
                 spell.Duration, spell.Concentration, spell.Range, spell.Targets);
         }
     }

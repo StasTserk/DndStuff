@@ -7,6 +7,7 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="name" type="xs:string" />
+              <xs:element name="Level" type="xs:string" />
               <xs:element name="CastingTime" type="xs:string" />
               <xs:element name="Description" type="xs:string" />
               <xs:element name="ShortDescription" type="xs:string" />

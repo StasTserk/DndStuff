@@ -1,6 +1,7 @@
 ﻿using DnD5thEdTools.Controllers;
 using System;
 using System.Windows.Forms;
+using Providers;
 
 namespace DnD5thEdTools.Views
 {
@@ -9,12 +10,15 @@ namespace DnD5thEdTools.Views
         private readonly ISpellListController _spellsController;
         private readonly ISimpleSpellListView _simpleSpellGridView;
         private readonly ISpellDetailView _spellDetailFormatProvider;
+        private readonly IRtfProvider _formatProvider;
 
-        public Form1(ISpellListController controller, ISimpleSpellListView spellListView, ISpellDetailView detailView)
+        public Form1(ISpellListController controller, ISimpleSpellListView spellListView,
+            ISpellDetailView detailView, IRtfProvider formatProvider)
         {
             _spellsController = controller;
             _simpleSpellGridView = spellListView;
             _spellDetailFormatProvider = detailView;
+            _formatProvider = formatProvider;
             InitializeComponent();
             InitializeSpellGrid();
         }
@@ -41,8 +45,11 @@ namespace DnD5thEdTools.Views
 
             var selectedSpell = _spellsController.GetSpellByName(ListOfSpells.SelectedItems[0].Text);
 
-            SpellDescriptionTextBox.Text = _spellDetailFormatProvider.getSpellDetailText(selectedSpell);
-            BasicSpellDetailsTextBox.Text = _spellDetailFormatProvider.getBasicSpellText(selectedSpell);
+            SpellDescriptionTextBox.Rtf = _formatProvider.GetRtfFromString(
+                _spellDetailFormatProvider.GetSpellDetailText(selectedSpell));
+
+            BasicSpellDetailsTextBox.Rtf = _formatProvider.GetRtfFromString(
+                _spellDetailFormatProvider.GetBasicSpellText(selectedSpell));
         }
     }
 }
