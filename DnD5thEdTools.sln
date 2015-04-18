@@ -12,6 +12,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvidersTest", "ProvidersT
 		{2BC6C288-C79D-410E-B4E4-36074B1687BE} = {2BC6C288-C79D-410E-B4E4-36074B1687BE}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMViews", "MVVMViews\MVVMViews.csproj", "{D4825A0B-6BA1-416B-8903-BC9CB29C40DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{680720A8-5865-452F-ADAE-F7873A49E923}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +34,14 @@ Global
 		{8AE7F3B8-8E06-4A8E-A124-F17782D5F27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AE7F3B8-8E06-4A8E-A124-F17782D5F27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AE7F3B8-8E06-4A8E-A124-F17782D5F27C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4825A0B-6BA1-416B-8903-BC9CB29C40DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4825A0B-6BA1-416B-8903-BC9CB29C40DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4825A0B-6BA1-416B-8903-BC9CB29C40DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4825A0B-6BA1-416B-8903-BC9CB29C40DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680720A8-5865-452F-ADAE-F7873A49E923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680720A8-5865-452F-ADAE-F7873A49E923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680720A8-5865-452F-ADAE-F7873A49E923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680720A8-5865-452F-ADAE-F7873A49E923}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
