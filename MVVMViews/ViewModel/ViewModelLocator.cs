@@ -12,6 +12,7 @@
   See http://www.galasoft.ch/mvvm
 */
 
+using System.Windows.Data;
 using GalaSoft.MvvmLight;
 using MVVMViews.NinjectModules;
 using Ninject;
@@ -58,6 +59,11 @@ namespace MVVMViews.ViewModel
         public SimpleSpellListViewModel SimpleSpellList
         {
             get { return _kernel.Get<SimpleSpellListViewModel>(); }
+        }
+
+        public SpellDetailViewModel SpellDetail
+        {
+            get { return _kernel.Get<SpellDetailViewModel>(); }
         }
 
         public static void Cleanup()

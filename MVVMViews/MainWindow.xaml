@@ -9,7 +9,9 @@
         Title="MVVM Light Application"
         DataContext="{Binding Main, Source={StaticResource Locator}}"
         ResizeMode="CanMinimize"
-        SizeToContent="Width">
+        SizeToContent="Height"
+        Width="620"
+        Background="#F0F0F0">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -19,6 +21,14 @@
     </Window.Resources>
 
     <Grid x:Name="LayoutRoot">
-            <views:SimpleSpellListView />
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="300" />
+            <RowDefinition  Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <views:SimpleSpellListView Grid.Row="0" HorizontalAlignment="Stretch" />
+        <views:SpellDetailView Grid.Row="1" HorizontalAlignment="Stretch"/>
     </Grid>
 </Window>

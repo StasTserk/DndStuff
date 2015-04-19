@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="MVVMViews.Views.SpellDetailView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:toolkit="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        xmlns:ignore="http://www.ignore.com"
+        mc:Ignorable="d ignore"
+        d:DesignWidth="620"
+        DataContext="{Binding SpellDetail, Source={StaticResource Locator}}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <toolkit:RichTextBox Margin="5"
+                             Text="{Binding BasicSpellText}"
+                             Grid.Column="0"
+                             Height="150"
+                             IsReadOnly="True">
+            <toolkit:RichTextBox.TextFormatter>
+                <toolkit:RtfFormatter />
+            </toolkit:RichTextBox.TextFormatter>
+        </toolkit:RichTextBox>
+        <toolkit:RichTextBox Margin="5" 
+                             Grid.Column="1"
+                             Height="150"
+                             IsReadOnly="True"
+                             Text="{Binding SpellDescriptionText}"
+                             VerticalScrollBarVisibility="Auto">
+            <toolkit:RichTextBox.TextFormatter>
+                <toolkit:RtfFormatter />
+            </toolkit:RichTextBox.TextFormatter>
+        </toolkit:RichTextBox>
+    </Grid>
+</UserControl>

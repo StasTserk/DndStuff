@@ -1,10 +1,9 @@
 ﻿using System.Collections.ObjectModel;
-using System.Linq;
 using DnD5thEdTools.Controllers;
 using DnD5thEdTools.Models;
-using DnD5thEdTools.Repositories;
 using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using MVVMViews.Messages;
 
 namespace MVVMViews.ViewModel
 {
@@ -16,6 +15,7 @@ namespace MVVMViews.ViewModel
     /// </summary>
     public class SimpleSpellListViewModel : ViewModelBase
     {
+        private readonly IMessenger _messenger;
         private readonly ISpellListController _controller;
 
         private Spell _selectedSpell;
@@ -28,6 +28,9 @@ namespace MVVMViews.ViewModel
             set
             {
                 _selectedSpell = value;
+
+                // Send a Message indicating that a Spell has been selected
+                _messenger.Send(new SpellSelectedMessage{SelectedSpell = _selectedSpell});
                 RaisePropertyChanged(() => SelectedSpell);
             }
         }
@@ -49,9 +52,10 @@ namespace MVVMViews.ViewModel
         /// <summary>
         /// Initializes a new instance of the SimpleSpellListViewModel class.
         /// </summary>
-        public SimpleSpellListViewModel(ISpellListController controller)
+        public SimpleSpellListViewModel(ISpellListController controller, IMessenger messenger)
         {
             _controller = controller;
+            _messenger = messenger;
             Spells = new ObservableCollection<Spell>(_controller.GetUnfilteredSpells());
         }
     }

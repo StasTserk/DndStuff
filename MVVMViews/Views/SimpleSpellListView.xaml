@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ignore="http://www.ignore.com"
         mc:Ignorable="d ignore"
-        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        d:DesignWidth="620"
         DataContext="{Binding SimpleSpellList, Source={StaticResource Locator}}">
         <Grid>
             <DataGrid AutoGenerateColumns="False"
-                          ItemsSource="{Binding Spells}"
-                          IsReadOnly="True"
-                          SelectedItem="{Binding SelectedSpell, Mode=TwoWay}">
+                      ItemsSource="{Binding Spells}"
+                      IsReadOnly="True"
+                      SelectedItem="{Binding SelectedSpell, Mode=TwoWay}"
+                      Margin="5">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Name"
                                         Width="100"
@@ -33,7 +34,7 @@
                                         CanUserResize="False"
                                         Binding="{Binding Level}"/>
                     <DataGridTextColumn Header="Description"
-                                        Width="300"
+                                        Width="*"
                                         CanUserResize="False"
                                         Binding="{Binding ShortDescription}">
                         <DataGridTextColumn.ElementStyle>

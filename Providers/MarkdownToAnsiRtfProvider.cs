@@ -23,6 +23,24 @@ namespace Providers
             return output;
         }
 
+        /// <summary>
+        ///     Converts from Markdown to RTF
+        /// </summary>
+        /// <param name="input">A markdown string</param>
+        /// <param name="textSize">Size of text</param>
+        /// <returns>Its RTF equivilent</returns>
+        public String GetRtfFromString(string input, int textSize)
+        {
+            input = EscapeBackslash(input);
+            input = ReplaceSignificantWhitespace(input);
+            input = RemoveInsignificantWhitespaceFromString(input);
+
+            input = AddFormatting(input);
+
+            var output = String.Concat(@"{\rtf\ansi\fs", (textSize*2), input, "}");
+            return output;
+        }
+
         private static string EscapeBackslash(string input)
         {
             var backslashRegex = new Regex(@"\\");
