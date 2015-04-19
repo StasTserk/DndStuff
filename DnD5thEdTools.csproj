@@ -44,14 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\Interfaces\ISpellListController.cs" />
-    <Compile Include="Controllers\SpellListController.cs" />
-    <Compile Include="Models\ClassModel.cs" />
-    <Compile Include="Models\PCModel.cs" />
-    <Compile Include="Models\SpellListModel.cs" />
-    <Compile Include="Models\SpellModel.cs" />
-    <Compile Include="Repositories\Interfaces\ISpellLoader.cs" />
-    <Compile Include="Repositories\SpellLoader.cs" />
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,17 +78,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Xml\Schema\Spells.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Xml\Spells.xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="Services\Services.csproj">
+      <Project>{7c32e931-9573-4211-9938-f052f2f7133c}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="Data\Data.csproj">
+      <Project>{680720a8-5865-452f-adae-f7873a49e923}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
     <ProjectReference Include="Providers\Providers.csproj">
       <Project>{2BC6C288-C79D-410E-B4E4-36074B1687BE}</Project>
       <Name>Providers</Name>
