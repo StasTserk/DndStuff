@@ -24,7 +24,7 @@ namespace MVVMViews.ViewModel
     /// </summary>
     public class ViewModelLocator
     {
-        public StandardKernel _kernel;
+        private readonly StandardKernel _kernel;
 
         /// <summary>
         /// Initializes a new instance of the ViewModelLocator class.
@@ -36,13 +36,15 @@ namespace MVVMViews.ViewModel
             if (ViewModelBase.IsInDesignModeStatic)
             {
                 // Create design time view services and models
-                _kernel.Load(new DesignTimeModules());
+                _kernel.Load(new DesignTimeModule());
             }
             else
             {
                 // Create run time view services and models
                 _kernel.Load(new RunTimeModule());
             }
+
+            _kernel.Load(new ViewModelModule());
         }
 
         public MainViewModel Main

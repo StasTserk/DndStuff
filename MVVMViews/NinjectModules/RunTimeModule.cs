@@ -1,4 +1,5 @@
-﻿using DnD5thEdTools.Repositories;
+﻿using DnD5thEdTools.Controllers;
+using DnD5thEdTools.Repositories;
 using Ninject.Modules;
 
 namespace MVVMViews.NinjectModules
@@ -9,6 +10,7 @@ namespace MVVMViews.NinjectModules
         public override void Load()
         {
             Bind<ISpellLoader>().To<SpellLoader>();
+            Bind<ISpellListController>().To<SpellListController>().InSingletonScope();
         }
     }
 }

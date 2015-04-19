@@ -79,7 +79,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Design\DesignSpellLoader.cs" />
-    <Compile Include="NinjectModules\DesignTimeModules.cs" />
+    <Compile Include="NinjectModules\DesignTimeModule.cs" />
     <Compile Include="NinjectModules\RunTimeModule.cs" />
     <Compile Include="NinjectModules\ViewModelModule.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -135,6 +135,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{7c32e931-9573-4211-9938-f052f2f7133c}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{680720a8-5865-452f-adae-f7873a49e923}</Project>
       <Name>Data</Name>
