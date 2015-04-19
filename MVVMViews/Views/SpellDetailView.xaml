@@ -17,6 +17,7 @@
                              Text="{Binding BasicSpellText}"
                              Grid.Column="0"
                              Height="150"
+                             IsEnabled="False"
                              IsReadOnly="True">
             <toolkit:RichTextBox.TextFormatter>
                 <toolkit:RtfFormatter />
@@ -26,6 +27,7 @@
                              Grid.Column="1"
                              Height="150"
                              IsReadOnly="True"
+                             IsEnabled="False"
                              Text="{Binding SpellDescriptionText}"
                              VerticalScrollBarVisibility="Auto">
             <toolkit:RichTextBox.TextFormatter>

@@ -6,7 +6,7 @@
         xmlns:ignore="http://www.ignore.com"
         xmlns:views="clr-namespace:MVVMViews.Views"
         mc:Ignorable="d ignore"
-        Title="MVVM Light Application"
+        Title="DnD 5th Edition Tools"
         DataContext="{Binding Main, Source={StaticResource Locator}}"
         ResizeMode="CanMinimize"
         SizeToContent="Height"
@@ -22,8 +22,8 @@
 
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
-            <RowDefinition  Height="300" />
-            <RowDefinition  Height="*" />
+            <RowDefinition  Height=".75*" />
+            <RowDefinition  Height="1*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />

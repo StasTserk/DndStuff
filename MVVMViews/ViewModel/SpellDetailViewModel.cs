@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
-using System.Windows.Controls;
 using DnD5thEdTools.Models;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
@@ -21,7 +19,6 @@ namespace MVVMViews.ViewModel
         private readonly IRtfProvider _provider;
 
         private Spell _selectedSpell;
-
         private Spell SelectedSpell
         {
             set
