@@ -6,10 +6,10 @@
         xmlns:ignore="http://www.ignore.com"
         xmlns:views="clr-namespace:MVVMViews.Views"
         mc:Ignorable="d ignore"
-        Height="300"
-        Width="300"
         Title="MVVM Light Application"
-        DataContext="{Binding Main, Source={StaticResource Locator}}">
+        DataContext="{Binding Main, Source={StaticResource Locator}}"
+        ResizeMode="CanMinimize"
+        SizeToContent="Width">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

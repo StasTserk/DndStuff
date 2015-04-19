@@ -7,22 +7,37 @@
         mc:Ignorable="d ignore"
         DataContext="{Binding SimpleSpellList, Source={StaticResource Locator}}">
         <Grid>
-            <ListView ItemsSource="{Binding Spells}">
-                <ListView.View>
-                    <GridView AllowsColumnReorder="True">
-                        <GridViewColumn Header="Name"
-                                        DisplayMemberBinding="{Binding Name}"/>
-                        <GridViewColumn Header="School" 
+            <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding Spells}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name"
+                                        Width="100"
+                                        CanUserResize="False"
+                                        Binding="{Binding Name}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="School"
                                         Width="Auto"
-                                        DisplayMemberBinding="{Binding School}"/>
-                        <GridViewColumn Header="Level"
+                                        CanUserResize="False"
+                                        Binding="{Binding School}"/>
+                    <DataGridTextColumn Header="Level"
                                         Width="Auto"
-                                        DisplayMemberBinding="{Binding Level}"/>
-                        <GridViewColumn Header="Description"
-                                        Width="Auto"
-                                        DisplayMemberBinding="{Binding ShortDescription}"/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
+                                        CanUserResize="False"
+                                        Binding="{Binding Level}"/>
+                    <DataGridTextColumn Header="Description"
+                                        Width="300"
+                                        CanUserResize="False"
+                                        Binding="{Binding ShortDescription}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
 </UserControl>
