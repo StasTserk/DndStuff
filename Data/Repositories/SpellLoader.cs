@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace DnD5thEdTools.Repositories
 {
-    class SpellLoader : ISpellLoader
+    public class SpellLoader : ISpellLoader
     {
         private List<Spell> _spellList;
         private Dictionary<String, Spell> _classSpellList;
@@ -43,7 +43,7 @@ namespace DnD5thEdTools.Repositories
 
         private void LoadSpells()
         {
-            var doc = XDocument.Load(@"../../Xml/Spells.xml");
+            var doc = XDocument.Load(@"Xml/Spells.xml");
             var list = doc.Root.Elements("spell");
 
             _spellList = new List<Spell>();

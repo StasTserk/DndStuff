@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="MVVMViews.Views.SimpleSpellListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.ignore.com"
+        mc:Ignorable="d ignore"
+        d:DesignWidth="620"
+        DataContext="{Binding SimpleSpellList, Source={StaticResource Locator}}">
+        <Grid>
+            <DataGrid AutoGenerateColumns="False"
+                      ItemsSource="{Binding Spells}"
+                      IsReadOnly="True"
+                      SelectedItem="{Binding SelectedSpell, Mode=TwoWay}"
+                      Margin="5">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name"
+                                        Width="100"
+                                        CanUserResize="False"
+                                        CanUserSort="True"
+                                        Binding="{Binding Name}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="School"
+                                        Width="Auto"
+                                        CanUserResize="False"
+                                        Binding="{Binding School}"/>
+                    <DataGridTextColumn Header="Level"
+                                        Width="Auto"
+                                        CanUserResize="False"
+                                        Binding="{Binding Level}"/>
+                    <DataGridTextColumn Header="Description"
+                                        Width="*"
+                                        CanUserResize="False"
+                                        Binding="{Binding ShortDescription}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+</UserControl>
