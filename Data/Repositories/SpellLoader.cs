@@ -19,7 +19,7 @@ namespace DnD5thEdTools.Repositories
 
         private void SetSpellLists()
         {
-            var doc = XDocument.Load(@"../../Xml/SpellLists.xml");
+            var doc = XDocument.Load(@"Xml/SpellLists.xml");
             var list = doc.Root.Elements("class");
 
             _classSpellList = new Dictionary<string, Spell>();
@@ -35,7 +35,6 @@ namespace DnD5thEdTools.Repositories
                         Spell spl = _spellList.Where(s => s.Name == spellEntry.Attribute("name").Value).First();
 
                         spl.Classes.Add(className + " " + spellEntry.Attribute("level").Value);
-                        //_classSpellList.Add(className, spl); // may or may not be necessary
                     }
                 }
             }
@@ -43,6 +42,7 @@ namespace DnD5thEdTools.Repositories
 
         private void LoadSpells()
         {
+            var rootPath = AppDomain.CurrentDomain.BaseDirectory;
             var doc = XDocument.Load(@"Xml/Spells.xml");
             var list = doc.Root.Elements("spell");
 

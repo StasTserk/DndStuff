@@ -35,7 +35,7 @@ namespace DnD5thEdTools.Controllers
 
         public Spell GetSpellByName(string name)
         {
-            return _spells.First(s => s.Name == name);
+            return _spells.FirstOrDefault(s => s.Name == name);
         }
     }
 }

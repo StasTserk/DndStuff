@@ -31,7 +31,7 @@
     <spell level="1" name="Silent Image"/>
     <spell level="1" name="Sleep"/>
     <spell level="1" name="Speak with Animals"/>
-    <spell level="1" name="Tasha’s Hideous Laughter"/>
+    <spell level="1" name="Tasha's Hideous Laughter"/>
     <spell level="1" name="Thunderwave"/>
     <spell level="1" name="Unseen Servant"/>
 
@@ -65,7 +65,7 @@
     <spell level="3" name="Feign Death"/>
     <spell level="3" name="Glyph of Warding"/>
     <spell level="3" name="Hypnotic Pattern"/>
-    <spell level="3" name="Leomund’s Tiny Hut"/>
+    <spell level="3" name="Leomund's Tiny Hut"/>
     <spell level="3" name="Major Image"/>
     <spell level="3" name="Nondetection"/>
     <spell level="3" name="Plant Growth"/>
@@ -105,15 +105,15 @@
     <spell level="6" name="Find the Path"/>
     <spell level="6" name="Guards and Wards"/>
     <spell level="6" name="Mass Suggestion"/>
-    <spell level="6" name="Otto’s Irresistible Dance"/>
+    <spell level="6" name="Otto's Irresistible Dance"/>
     <spell level="6" name="Programmed Illusion"/>
     <spell level="6" name="True Seeing"/>
 
     <spell level="7" name="Etherealness"/>
     <spell level="7" name="Forcecage"/>
     <spell level="7" name="Mirage Arcane"/>
-    <spell level="7" name="Mordenkainen’s Magnificent Mansion"/>
-    <spell level="7" name="Mordenkainen’s Sword"/>
+    <spell level="7" name="Mordenkainen's Magnificent Mansion"/>
+    <spell level="7" name="Mordenkainen's Sword"/>
     <spell level="7" name="Project Image"/>
     <spell level="7" name="Regenerate"/>
     <spell level="7" name="Resurrection"/>
@@ -343,7 +343,7 @@
     <spell level="6" name="Conjure Fey"/>
     <spell level="6" name="Find the Path"/>
     <spell level="6" name="Heal"/>
-    <spell level="6" name="Heroes’ Feast"/>
+    <spell level="6" name="Heroes' Feast"/>
     <spell level="6" name="Move Earth"/>
     <spell level="6" name="Sunbeam"/>
     <spell level="6" name="Transport via Plants"/>
@@ -762,6 +762,7 @@
     <spell name="Locate Object" level="2"/>
     <spell name="Magic Mouth" level="2"/>
     <spell name="Magic Weapon" level="2"/>
+    <spell name="Melf's Acid Arrow" level ="2"/>
     <spell name="Mirror Image" level="2"/>
     <spell name="Misty Step" level="2"/>
     <spell name="Nystul's Magic Aura" level="2"/>
@@ -788,7 +789,7 @@
     <spell name="Glyph o f Warding" level="3"/>
     <spell name="Haste" level="3"/>
     <spell name="Hypnotic Pattern" level="3"/>
-    <spell name="Leomund’s Tiny Hut" level="3"/>
+    <spell name="Leomund's Tiny Hut" level="3"/>
     <spell name="Lightning Bolt" level="3"/>
     <spell name="Magic Circle" level="3"/>
     <spell name="Major Image" level="3"/>
@@ -816,13 +817,11 @@
     <spell level="4" name="Greater Invisibility"/>
     <spell level="4" name="Hallucinatory Terrain"/>
     <spell level="4" name="Ice Storm"/>
-    <spell level="4" name="Leomund’s Secret Chest"/>
+    <spell level="4" name="Leomund's Secret Chest"/>
     <spell level="4" name="Locate Creature"/>
-    <spell level="4" name="Mordenkainen’s"/>
-    <spell level="4" name="Faithful Hound"/>
-    <spell level="4" name="Mordenkainen’s"/>
-    <spell level="4" name="Private Sanctum"/>
-    <spell level="4" name="Otiluke’s Resilient Sphere"/>
+    <spell level="4" name="Mordenkainen's Faithful Hound"/>
+    <spell level="4" name="Mordenkainen's Private Sanctum"/>
+    <spell level="4" name="Otiluke's Resilient Sphere"/>
     <spell level="4" name="Phantasmal Killer"/>
     <spell level="4" name="Polymorph"/>
     <spell level="4" name="Stone Shape"/>
@@ -844,7 +843,7 @@
     <spell level="5" name="Modify Memory"/>
     <spell level="5" name="Passwall"/>
     <spell level="5" name="Planar Binding"/>
-    <spell level="5" name="Rary’s Telepathic Bond"/>
+    <spell level="5" name="Rary's Telepathic Bond"/>
     <spell level="5" name="Scrying"/>
     <spell level="5" name="Seeming"/>
     <spell level="5" name="Telekinesis"/>
@@ -865,8 +864,8 @@
     <spell level="6" name="Magic Jar"/>
     <spell level="6" name="Mass Suggestion"/>
     <spell level="6" name="Move Earth"/>
-    <spell level="6" name="Otiluke’s Freezing Sphere"/>
-    <spell level="6" name="Otto’s Irresistible Dance"/>
+    <spell level="6" name="Otiluke's Freezing Sphere"/>
+    <spell level="6" name="Otto's Irresistible Dance"/>
     <spell level="6" name="Programmed Illusion"/>
     <spell level="6" name="Sunbeam"/>
     <spell level="6" name="True Seeing"/>
@@ -876,9 +875,8 @@
     <spell level="7" name="Finger of Death"/>
     <spell level="7" name="Forcecage"/>
     <spell level="7" name="Mirage Arcane"/>
-    <spell level="7" name="Mordenkainen's"/>
-    <spell level="7" name="Magnificent Mansion"/>
-    <spell level="7" name="Mordenkainen’s Sword"/>
+    <spell level="7" name="Mordenkainen's Magnificent Mansion"/>
+    <spell level="7" name="Mordenkainen's Sword"/>
     <spell level="7" name="Plane Shift"/>
     <spell level="7" name="Prismatic Spray"/>
     <spell level="7" name="Project Image"/>

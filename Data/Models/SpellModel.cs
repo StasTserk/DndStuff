@@ -5,8 +5,14 @@ namespace DnD5thEdTools.Models
 {
     public class Spell
     {
+        public Spell()
+        {
+            Classes = new List<String>();
+            Materials = new List<String>();
+        }
+
         public String Name { get; set; }
-        public IEnumerable<String> Classes { get; set; }
+        public List<String> Classes { get; set; }
         public String CastingTime { get; set; }
         public String Description { get; set; }
         public String ShortDescription { get; set; }
