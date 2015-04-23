@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DnD5thEdTools.Views
 {
@@ -11,16 +12,21 @@ namespace DnD5thEdTools.Views
 
         public string GetBasicSpellText(Models.Spell spell)
         {
-            return
-                String.Format("*Name*: {0}\n\n" +
-                              "*School*: Level {1} {2}\n\n" +
+            String levelComposition = "";
+            foreach (var cls in spell.Classes)
+            {
+                levelComposition += " " + cls;
+            }
+            return String.Format("*Name*: {0}\n\n" +
+                              "*School*: {1} \n\n" +
+                              "*Level*: {2} \n\n" +
                               "*Casting Time*: {3}\n\n" +
                               "*Components*: {4}\n\n" +
                               "*Duration*: {5}\n\n" +
                               "*Concentration*: {6}\n\n" +
                               "*Range*: {7}\n\n" +
                               "*Targets*: {8}",
-                spell.Name, spell.Level, spell.School, spell.CastingTime, spell.Components,
+                spell.Name, spell.School, levelComposition, spell.CastingTime, spell.Components,
                 spell.Duration, spell.Concentration, spell.Range, spell.Targets);
         }
     }

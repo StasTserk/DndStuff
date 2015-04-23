@@ -53,6 +53,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Xml\SpellLists.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Xml\Spells.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
