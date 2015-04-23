@@ -332,15 +332,15 @@
     
     Animated creature statistics:
     
-    Tiny: 20hp; 18 AC; +8 to hit; 1d4+4 damage; 4 str; 18 dex;
+    Tiny:\t20hp;\t18 AC;\t+8 to hit;\t1d4+4 damage;\t4 str;\t18 dex;
     
-    Small: 25hp; 16 AC; +4 to hit; 1d8+2 damage; 6 str; 14 dex;
+    Small:\t25hp;\t16 AC;\t+4 to hit;\t1d8+2 damage;\t6 str;\t14 dex;
     
-    Medium: 40hp; 13 AC; +5 to hit; 2d6+1 damage; 10 str; 12 dex;
+    Medium:\t40hp;\t13 AC;\t+5 to hit;\t2d6+1 damage;\t10 str;\t12 dex;
     
-    Large: 50hp; 10 AC; +6 to hit; 2d10+2 damage; 14 str; 10 dex;
+    Large:\t50hp;\t10 AC;\t+6 to hit;\t2d10+2 damage;\t14 str;\t10 dex;
     
-    Huge: 80hp; 10 AC; +8 to hit; 2d12+4 damage; 18 str; 6 dex;
+    Huge:\t80hp;\t10 AC;\t+8 to hit;\t2d12+4 damage;\t18 str;\t6 dex;
     
     Animated objects have 10 constitution, 3 intelligence and wisdom, and 1 charisma.
     
@@ -768,7 +768,7 @@ If you cast the spell two or more times before completing your next long rest, t
 
       If the target is native to a different plane of existence than the one you're on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn't return.
 
-      At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th.</Description>
+      *At Higher Levels.* When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th.</Description>
     <Save>Charisma</Save>
     <Overcastable>Yes</Overcastable>
     <RequiresAttackRoll>No</RequiresAttackRoll>
@@ -886,13 +886,13 @@ The hand is an object that has AC 20 and hit points equal to your hit point maxi
 
 When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it.
 
-Clenched Fist. The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes 4d8 force damage.
+*Clenched Fist.* The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes 4d8 force damage.
 
-Forceful Hand. The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it.
+*Forceful Hand.* The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it.
 
-Grasping Hand. The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand's Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your spellcasting ability modifier.
+*Grasping Hand.* The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand's Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your spellcasting ability modifier.
 
-Interposing Hand. The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand's space if its Strength score is less than or equal to the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move toward you through the hand's space, but that space is difficult terrain for the target. 
+*Interposing Hand.* The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand's space if its Strength score is less than or equal to the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move toward you through the hand's space, but that space is difficult terrain for the target. 
 
 *At Higher Levels.* When you cast this spell using a spell slot of 6th level or higher, the damage from the clenched fist option increases by 2d8 and the damage from the grasping hand increases by 2d6 for each slot level above 5th.</Description>
     <Save>None</Save>
@@ -1616,13 +1616,13 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
       
       An affected target can't take reactions and must roll a d 10 at the start of each of its turns to determine its behavior for that turn.
       
-      *1*     The creature uses all its movement to move in a random direction. To determine the direction, roll a d8 and assign a direction to each die face. The creature doesn't take an action this turn.
+      *1*\tThe creature uses all its movement to move in a random direction. To determine the direction, roll a d8 and assign a direction to each die face. The creature doesn't take an action this turn.
       
-      *2-6*  The creature doesn't move or take actions this turn.
+      *2-6*\tThe creature doesn't move or take actions this turn.
       
-      *7-8*   The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn.
+      *7-8*\tThe creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn.
       
-      *9-10*  The creature can act and move normally.
+      *9-10*\tThe creature can act and move normally.
       
       At the end of each of its turns, an affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target.
       
@@ -2005,58 +2005,59 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
     <Duration>Up to 8 hours</Duration>
     <Concentration>Yes</Concentration>
     <ShortDescription>Control the weather within 5 miles of you.</ShortDescription>
-    <Description>You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.
-    
-    When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.
-    
-    When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.
-      
+    <Description>
+      You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.
+
+      When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.
+
+      When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.
+
       Percipitation
-      
-      Stage Condition
-      
-      *1*     Clear
-      
-      *2*     Light clouds
-      
-      *3*     Overcast or ground fog
-      
-      *4*     Rain, hail, or snow
-      
-      
-      *5*     Torrential rain, driving hail, or blizzard
-      
-      
-      
+
+      *Stage\tCondition*
+
+      *1*\tClear
+
+      *2*\tLight clouds
+
+      *3*\tOvercast or ground fog
+
+      *4*\tRain, hail, or snow
+
+
+      *5*\tTorrential rain, driving hail, or blizzard
+
+
+
       Temperature
-      
-      Stage Condition
-      
-      *1*     Unbearable heat
-      
-      *2*     Hot
-      
-      *3*     Warm
-      
-      *4*     Cool
-      
-      *5*     Cold
-      
-      *6*     Arctic cold
-      
+
+      *Stage\tCondition*
+
+      *1*\tUnbearable heat
+
+      *2*\tHot
+
+      *3*\tWarm
+
+      *4*\tCool
+
+      *5*\tCold
+
+      *6*\tArctic cold
+
       Wind
-      
-      Stage Condition
-      
-      *1*     Calm
-      
-      *2*     Moderate wind
-      
-      *3*     Strong wind
-      
-      *4*     Gale
-      
-      *5*     Storm</Description>
+
+      *Stage\tCondition*
+
+      *1*\tCalm
+
+      *2*\tModerate wind
+
+      *3*\tStrong wind
+
+      *4*\tGale
+
+      *5*\tStorm</Description>
     <Save>None</Save>
     <Overcastable>No</Overcastable>
     <RequiresAttackRoll>No</RequiresAttackRoll>
@@ -2196,22 +2197,23 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
     <Duration>Special</Duration>
     <Concentration>No</Concentration>
     <ShortDescription>Create an object of one kind of material or another for a while.</ShortDescription>
-    <Description>You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within range: soft goods, rope, wood, or something similar. You can also use this spell to create mineral objects such as stone, crystal, or metal. The object created must be no larger than a 5-foot cube, and the object must be of a form and material that you have seen before.
-      
+    <Description>
+      You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within range: soft goods, rope, wood, or something similar. You can also use this spell to create mineral objects such as stone, crystal, or metal. The object created must be no larger than a 5-foot cube, and the object must be of a form and material that you have seen before.
+
       The duration depends on the object's material. If the object is composed of multiple materials, use the shortest duration.
-      
-      *Material                Duration*
-      
-      Vegetable matter        - 1 day
-      
-      Stone or crystal        - 12 hours
-      
-      Precious metals         - 1 hour
-      
-      Gems                    - 10 minutes
-      
-      Adamantine or mithral   - 1 minute
-      
+
+      *Material\t\t\tDuration*
+
+      Vegetable matter\t\t1 day
+
+      Stone or crystal\t\t12 hours
+
+      Precious metals\t\t1 hour
+
+      Gems\t\t\t10 minutes
+
+      Adamantine or mithral\t1 minute
+
       Using any material created by this spell as another spell's material component causes that spell to fail. At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the cube increases by 5 feet for each slot level above 5th.</Description>
     <Save>None</Save>
     <Overcastable>Yes</Overcastable>
@@ -2761,13 +2763,9 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
       
       • 50 hit points or fewer: deafened for 1 minute
       
-      • 40 hit points or fewer: deafened and blinded for 10
+      • 40 hit points or fewer: deafened and blinded for 10 minutes
       
-      minutes
-      
-      • 30 hit points or fewer: blinded, deafened, and stunned
-      
-      for 1 hour
+      • 30 hit points or fewer: blinded, deafened, and stunned for 1 hour
       
       • 20 hit points or fewer: killed instantly
       
@@ -4720,12 +4718,16 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
       • Place dancing lights in four corridors. You can designate
       a simple program that the lights repeat as long as
       guards and wards lasts.
+      
       • Place magic mouth in two locations.
+      
       • Place stinking cloud in two locations. The vapors
       appear in the places you designate; they return within
       10 minutes if dispersed by wind while guards and
       wards lasts.
+      
       • Place a constant gust of wind in one corridor or room.
+      
       • Place a suggestion in one location. You select an area
       of up to 5 feet square, and any creature that enters
       or passes through the area receives the suggestion
@@ -6077,6 +6079,7 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
       failed save, or half as much damage on a successful one.
       The lightning ignites flammable objects in the area
       that aren't being worn or carried.
+      
       *At Higher Levels.* When you cast this spell using a
       spell slot of 4th level or higher, the damage increases by
       1d6 for each slot level above 3rd.</Description>
@@ -6244,6 +6247,7 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
       you dismiss it as an action. The hand vanishes if it is
       ever more than 30 feet away from you or if you cast
       this spell again.
+      
       You can use your action to control the hand. You can
       use the hand to manipulate an object, open an unlocked
       door or container, stow or retrieve an item from an open
@@ -8774,36 +8778,36 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
       ______________________________
       
       
-      *d100 Race*
+      *d100\tRace*
       
-      *01-04* Dragonborn
+      *01-04*\tDragonborn
       
-      *05-13* Dwarf, hill
+      *05-13*\tDwarf, hill
       
-      *14-21* Dwarf, mountain
+      *14-21*\tDwarf, mountain
       
-      *22-25* Elf, dark
+      *22-25*\tElf, dark
       
-      *26-34* Elf, high
+      *26-34*\tElf, high
       
-      *35-42* Elf, wood
+      *35-42*\tElf, wood
       
-      *43-46* Gnome, forest
+      *43-46*\tGnome, forest
       
       
-      *47-52* Gnome, rock
+      *47-52*\tGnome, rock
       
-      *53-56* Half-elf
+      *53-56*\tHalf-elf
       
-      *57-60* Half-orc
+      *57-60*\tHalf-orc
       
-      *61-68* Halfling, lightfoot
+      *61-68*\tHalfling, lightfoot
       
-      *69-76* Halfling, stout
+      *69-76*\tHalfling, stout
       
-      *77-96* Human
+      *77-96*\tHuman
     
-      *97-00* Tiefling
+      *97-00*\tTiefling
       
       The reincarnated creature recalls its former life
       and experiences. It retains the capabilities it had in its
@@ -9085,46 +9089,48 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
     <Duration>Up to 10 minutes</Duration>
     <Concentration>Yes</Concentration>
     <ShortDescription>See and hear a particular creature on the same plane as you. Wisdom negates.</ShortDescription>
-    <Description>You can see and hear a particular creature you choose
+    <Description>
+      You can see and hear a particular creature you choose
       that is on the same plane of existence as you. The target
       must make a Wisdom saving throw, which is modified
       by how well you know the target and the sort of physical
       connection you have to it. If a target knows you're
       casting this spell, it can fail the saving throw voluntarily
       if it wants to be observed.
-      
-      __________________________________
-      
-      
-      *Knowledge          Save Modifier*
-      
-      Secondhand (you have heard of the target) +5
-      
-      Firsthand (you have met the target) +0
-      
-      Familiar (you know the target well) -5
-      
-      ___________________________________
-      *Connection Save Modifier*
-      
-      Likeness or picture -2
-      
-      Possession or garment -4
-      
-      Body part, lock of hair, bit of nail, or the like -10
-      
+
+      ________________________________________________________________
+
+
+      *Knowledge\t\t\t\tSave Modifier*
+
+      Secondhand (you have heard of the target)\t+5
+
+      Firsthand (you have met the target)\t\t+0
+
+      Familiar (you know the target well)\t\t-5
+
+      ________________________________________________________________
+
+      *Connection\t\t\t\tSave Modifier*
+
+      Likeness or picture\t\t\t\t-2
+
+      Possession or garment\t\t\t-4
+
+      Body part, lock of hair, bit of nail, or the like\t-10
+
       -
-      
+
       On a successful save, the target isn't affected, and you
       can't use this spell against it again for 24 hours.
-      
+
       On a failed save, the spell creates an invisible sensor
       within 10 feet of the target. You can see and hear through
       the sensor as if you were there. The sensor moves with
       the target, remaining within 10 feet of it for the duration.
       A creature that can see invisible objects sees the sensor
       as a luminous orb about the size of your fist.
-      
+
       Instead of targeting a creature, you can choose a
       location you have seen before as the target of this spell.
       When you do, the sensor appears at that location and
@@ -10541,47 +10547,51 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
     <Duration>Instantaneous</Duration>
     <Concentration>No</Concentration>
     <ShortDescription>Teleport you and 8 friends or one large object elswhere on the same plane. Some chance of arriving off target.</ShortDescription>
-    <Description>This spell instantly transports you and up to eight
+    <Description>
+      This spell instantly transports you and up to eight
       willing creatures of your choice that you can see within
       range, or a single object that you can see within range,
       to a destination you select. If you target an object, it
       must be able to fit entirely inside a 10-foot cube, and it
       can't be held or carried by an unwilling creature.
-      
+
       The destination you choose must be known to you,
       and it must be on the same plane of existence as
       you. Your familiarity with the destination determines
       whether you arrive there successfully. The DM rolls
       d 100 and consults the table.
-      
+
       _____________________________________________________________
-      
-      *Familiarity | Mishap | Similar Area | Off Target | On Target*
-      
-      Permanent circle | — | — | — | 01-100 |
-      
-      Associated object | — | — | — | 01-100 |
-      
-      Very familiar | 01-05 | 06-13 | 14-24 | 25-100 |
-      
-      Seen casually | 01-33 | 34-43 | 44-53 | 54-100 |
-      
-      Viewed once | 01-43 | 44-53 | 54-73 | 74-100 |
-      
-      Description | 01-43 | 44-53 | 54-73 | 74-100 |
-      
-      False destination | 01-50 | 51-100 | - | - |
-      
+
+      *Familiarity\tMishap\tSimilar\tOff Tgt\tOn Tgt*
+
+      Permanent circle\t—\t—\t—\t01-100
+
+      Associated object\t—\t—\t—\t01-100
+
+      Very familiar\t01-05\t06-13\t14-24\t25-100
+
+      Seen casually\t01-33\t34-43\t44-53\t54-100
+
+      Viewed once\t01-43\t44-53\t54-73\t74-100
+
+      Description\t01-43\t44-53\t54-73\t74-100
+
+      False destination\t01-50\t51-100\t-\t-
+
       ______________________________________________________________
-      
-      *Familiarity.* “Permanent circle” means a permanent
+
+      *Familiarity.*
+
+      “Permanent circle” means a permanent
       teleportation circle whose sigil sequence you know.
+
       “Associated object” means that you possess an object
       taken from the desired destination within the last six
       months, such as a book from a wizard's library, bed
       linen from a royal suite, or a chunk of marble from a
       lich's secret tomb.
-      
+
       “Very familiar” is a place you have been very often, a
       place you have carefully studied, or a place you can see
       when you cast the spell. “Seen casually” is someplace
@@ -10590,15 +10600,15 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
       once, possibly using magic. “Description” is a place
       whose location and appearance you know through
       someone else's description, perhaps from a map.
-      
+
       “False destination” is a place that doesn't exist.
       Perhaps you tried to scry an enemy's sanctum but
       instead viewed an illusion, or you are attempting to
       teleport to a familiar location that no longer exists.
-      
+
       *On Target.* You and your group (or the target object)
       appear where you want to.
-      
+
       *Off Target.* You and your group (or the target object)
       appear a random distance away from the destination
       in a random direction. Distance off target is 1d10 x
@@ -10611,7 +10621,7 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
       and so on around the points of the compass. If you were
       teleporting to a coastal city and wound up 18 miles out
       at sea, you could be in trouble.
-      
+
       *Similar Area.* You and your group (or the target
       object) wind up in a different area that's visually or
       thematically similar to the target area. If you are
@@ -10622,7 +10632,7 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
       you appear in the closest similar place, but since the
       spell has no range limit, you could conceivably wind up
       anywhere on the plane.
-      
+
       *Mishap.* The spell's unpredictable magic results in a
       difficult journey. Each teleporting creature (or the target
       object) takes 3d10 force damage, and the DM rerolls on

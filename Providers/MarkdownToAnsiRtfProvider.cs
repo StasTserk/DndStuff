@@ -51,9 +51,22 @@ namespace Providers
         {
             var italicsRegex = new Regex(@"\*\*");
             var boldRegex = new Regex(@"\*");
+            var tabRegex = new Regex(@"\\\\t");
+            input = AddSingleSymbolFormatting(input, tabRegex, @"\tab");
             input = AddFormatting(input, italicsRegex, @"\i");
             return AddFormatting(input, boldRegex, @"\b");
         }
+
+        private static string AddSingleSymbolFormatting(string input, Regex tabRegex, string p)
+        {
+            while (tabRegex.IsMatch(input))
+            {
+                input = tabRegex.Replace(input, String.Concat(p, " "), 1);
+            }
+            return input;
+        }
+
+
 
         private static string AddFormatting(string input, Regex italicsRegex, string formatOption)
         {
