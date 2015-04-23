@@ -30,13 +30,8 @@ namespace DnD5thEdTools.Views
 
         private void loadSpellsButton_Click(object sender, EventArgs e)
         {
-            var spells = _spellsController.GetFilteredSpells(s => true);
-
-            ListOfSpells.Items.Clear();
-            foreach (var spell in spells)
-	        {
-                ListOfSpells.Items.Add(_simpleSpellGridView.ConvertToColumnRecord(spell));
-            }
+            _spellsController.AddFilterCriteria("default", s => s.Duration == s.Duration);
+            ResetSpells();
         }
 
         private void ListOfSpells_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,6 +45,30 @@ namespace DnD5thEdTools.Views
 
             BasicSpellDetailsTextBox.Rtf = _formatProvider.GetRtfFromString(
                 _spellDetailFormatProvider.GetBasicSpellText(selectedSpell));
+        }
+
+        private void Filter_Box_Conc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Filter_Box_Conc.Checked)
+            {
+                _spellsController.AddFilterCriteria("conc", s => s.Concentration);
+            }
+            else
+            {
+                _spellsController.RemoveFilterCriteria("conc");
+            }
+            ResetSpells();
+        }
+
+        private void ResetSpells()
+        {
+            var spells = _spellsController.GetFilteredSpells();
+
+            ListOfSpells.Items.Clear();
+            foreach (var spell in spells)
+            {
+                ListOfSpells.Items.Add(_simpleSpellGridView.ConvertToColumnRecord(spell));
+            }
         }
     }
 }

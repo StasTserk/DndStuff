@@ -32,6 +32,7 @@
             this.ListOfSpells = new System.Windows.Forms.ListView();
             this.BasicSpellDetailsTextBox = new System.Windows.Forms.RichTextBox();
             this.SpellDescriptionTextBox = new System.Windows.Forms.RichTextBox();
+            this.Filter_Box_Conc = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // loadSpellsButton
@@ -49,9 +50,9 @@
             this.ListOfSpells.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ListOfSpells.Location = new System.Drawing.Point(95, 13);
+            this.ListOfSpells.Location = new System.Drawing.Point(95, 37);
             this.ListOfSpells.Name = "ListOfSpells";
-            this.ListOfSpells.Size = new System.Drawing.Size(967, 336);
+            this.ListOfSpells.Size = new System.Drawing.Size(967, 312);
             this.ListOfSpells.TabIndex = 1;
             this.ListOfSpells.UseCompatibleStateImageBehavior = false;
             this.ListOfSpells.View = System.Windows.Forms.View.Details;
@@ -78,11 +79,23 @@
             this.SpellDescriptionTextBox.TabIndex = 5;
             this.SpellDescriptionTextBox.Text = "";
             // 
+            // Filter_Box_Conc
+            // 
+            this.Filter_Box_Conc.AutoSize = true;
+            this.Filter_Box_Conc.Location = new System.Drawing.Point(95, 13);
+            this.Filter_Box_Conc.Name = "Filter_Box_Conc";
+            this.Filter_Box_Conc.Size = new System.Drawing.Size(92, 17);
+            this.Filter_Box_Conc.TabIndex = 6;
+            this.Filter_Box_Conc.Text = "Concentration";
+            this.Filter_Box_Conc.UseVisualStyleBackColor = true;
+            this.Filter_Box_Conc.CheckedChanged += new System.EventHandler(this.Filter_Box_Conc_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 517);
+            this.Controls.Add(this.Filter_Box_Conc);
             this.Controls.Add(this.SpellDescriptionTextBox);
             this.Controls.Add(this.BasicSpellDetailsTextBox);
             this.Controls.Add(this.ListOfSpells);
@@ -90,6 +103,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -99,6 +113,7 @@
         private System.Windows.Forms.ListView ListOfSpells;
         private System.Windows.Forms.RichTextBox BasicSpellDetailsTextBox;
         private System.Windows.Forms.RichTextBox SpellDescriptionTextBox;
+        private System.Windows.Forms.CheckBox Filter_Box_Conc;
     }
 }
 
