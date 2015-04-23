@@ -12,7 +12,7 @@ namespace DnD5thEdTools.Models
         }
 
         public String Name { get; set; }
-        public List<String> Classes { get; set; }
+        public ICollection<String> Classes { get; set; }
         public String CastingTime { get; set; }
         public String Description { get; set; }
         public String ShortDescription { get; set; }
