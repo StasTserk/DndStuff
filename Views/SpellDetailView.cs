@@ -25,9 +25,11 @@ namespace DnD5thEdTools.Views
                               "*Duration*: {5}\n\n" +
                               "*Concentration*: {6}\n\n" +
                               "*Range*: {7}\n\n" +
-                              "*Targets*: {8}",
+                              "*Targets*: {8} \n\n" +
+                              "*Save*: {9} \n\n" +
+                              "*Requires Attack*: {10}",
                 spell.Name, spell.School, levelComposition, spell.CastingTime, spell.Components,
-                spell.Duration, spell.Concentration, spell.Range, spell.Targets);
+                spell.Duration, spell.Concentration, spell.Range, spell.Targets, spell.Save, spell.RequiresAttackRoll);
         }
     }
 }

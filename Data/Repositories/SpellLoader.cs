@@ -64,6 +64,7 @@ namespace DnD5thEdTools.Repositories
                     Overcastable = spellNode.Elements("Overcastable").First().Value == "Yes",
                     Components = spellNode.Elements("Components").First().Value,
                     School = spellNode.Elements("School").First().Value,
+                    RequiresAttackRoll = spellNode.Elements("RequiresAttackRoll").First().Value == "Yes",
                     Level = Int32.Parse(spellNode.Elements("Level").First().Value)
                 };
 
