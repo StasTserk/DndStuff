@@ -28,6 +28,7 @@ namespace DnD5thEdTools.Views
             InitializeYesNoDropdown("Concentration", Filter_ConcentrationDropdown);
             InitializeYesNoDropdown("Has Save", Filter_HasSaveDropdown);
             InitializeYesNoDropdown("Attack Roll", Filter_RequiresAttackDropdown);
+            InitializeYesNoDropdown("Ritual", Filter_RitualDropdown);
 
             InitializeMultiOptionMenus();
         }
@@ -38,6 +39,12 @@ namespace DnD5thEdTools.Views
             Filter_CastingTimeDropdown.SelectedItem = "Casting Time";
             Filter_CastingTimeDropdown.Items.AddRange(
                 _spellsController.GetUnfilteredSpells().Select(s => s.CastingTime).Distinct().ToArray()
+                );
+
+            Filter_ClassDropdown.Items.Add("Class");
+            Filter_ClassDropdown.SelectedItem = "Class";
+            Filter_ClassDropdown.Items.AddRange(
+                _spellsController.GetClassList().ToArray()
                 );
         }
 
@@ -98,6 +105,10 @@ namespace DnD5thEdTools.Views
         {
             ProcessYesNoDropdown(Filter_RequiresAttackDropdown, "attack", s => s.RequiresAttackRoll == true);
         }
+        private void Filter_RitualDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ProcessYesNoDropdown(Filter_RitualDropdown, "ritual", s => s.Ritual == true);
+        }
 
         private void ProcessYesNoDropdown(ComboBox dropdown, string filterName, Func<Spell, bool> criteria)
         {
@@ -131,5 +142,19 @@ namespace DnD5thEdTools.Views
             ResetSpells();
         }
 
+        private void Filter_ClassDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Filter_ClassDropdown.SelectedItem == "Class")
+            {
+                _spellsController.RemoveFilterCriteria("class");
+            }
+            else
+            {
+                _spellsController.AddFilterCriteria("class",
+                    s => s.Classes.FirstOrDefault(c => c.Contains(Filter_ClassDropdown.SelectedItem.ToString())) != null
+                    );
+            }
+            ResetSpells();
+        }
     }
 }

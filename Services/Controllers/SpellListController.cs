@@ -96,5 +96,11 @@ namespace DnD5thEdTools.Controllers
         {
             _filterCriteria.Clear();
         }
+
+
+        public IEnumerable<string> GetClassList()
+        {
+            return _spellSource.GetClassList();
+        }
     }
 }

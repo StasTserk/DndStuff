@@ -18,7 +18,7 @@ namespace DnD5thEdTools.Views
                 levelComposition += " " + cls;
             }
             return String.Format("*Name*: {0}\n\n" +
-                              "*School*: {1} \n\n" +
+                              "*School*: {1}" +
                               "*Level*: {2} \n\n" +
                               "*Casting Time*: {3}\n\n" +
                               "*Components*: {4}\n\n" +
@@ -27,9 +27,11 @@ namespace DnD5thEdTools.Views
                               "*Range*: {7}\n\n" +
                               "*Targets*: {8} \n\n" +
                               "*Save*: {9} \n\n" +
-                              "*Requires Attack*: {10}",
-                spell.Name, spell.School, levelComposition, spell.CastingTime, spell.Components,
-                spell.Duration, spell.Concentration, spell.Range, spell.Targets, spell.Save, spell.RequiresAttackRoll);
+                              "*Requires Attack*: {10}\n\n",
+                spell.Name, 
+                spell.School + (spell.Ritual ? " (Ritual)\n\n":"\n\n"), levelComposition, spell.CastingTime, spell.Components,
+                spell.Duration, spell.Concentration, spell.Range, spell.Targets, spell.Save, 
+                spell.RequiresAttackRoll);
         }
     }
 }
