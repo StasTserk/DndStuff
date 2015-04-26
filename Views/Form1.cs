@@ -11,15 +11,15 @@ namespace DnD5thEdTools.Views
     {
         private readonly ISpellListController _spellsController;
         private readonly ISimpleSpellListView _simpleSpellGridView;
-        private readonly ISpellDetailView _spellDetailFormatProvider;
+        private readonly ISpellDetailProvider _spellDetailFormatProvider;
         private readonly IRtfProvider _formatProvider;
 
         public Form1(ISpellListController controller, ISimpleSpellListView spellListView,
-            ISpellDetailView detailView, IRtfProvider formatProvider)
+            ISpellDetailProvider detailProvider, IRtfProvider formatProvider)
         {
             _spellsController = controller;
             _simpleSpellGridView = spellListView;
-            _spellDetailFormatProvider = detailView;
+            _spellDetailFormatProvider = detailProvider;
             _formatProvider = formatProvider;
             
             InitializeComponent();

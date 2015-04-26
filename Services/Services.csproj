@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="Controllers\Interfaces\ISpellListController.cs" />
     <Compile Include="Controllers\SpellListController.cs" />
+    <Compile Include="FilterService.cs" />
+    <Compile Include="IFilterService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

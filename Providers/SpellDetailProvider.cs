@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Linq;
 
 namespace DnD5thEdTools.Views
 {
-    class SpellDetailView : ISpellDetailView
+    public class SpellDetailProvider : ISpellDetailProvider
     {
         public string GetSpellDetailText(Models.Spell spell)
         {
@@ -12,12 +11,13 @@ namespace DnD5thEdTools.Views
 
         public string GetBasicSpellText(Models.Spell spell)
         {
-            String levelComposition = "";
-            foreach (var cls in spell.Classes)
+            if (spell == null)
             {
-                levelComposition += " " + cls;
+                return string.Empty;
             }
-            return String.Format("*Name*: {0}\n\n" +
+
+            string levelComposition = spell.Classes.Aggregate("", (current, cls) => current + (" " + cls));
+            return string.Format("*Name*: {0}\n\n" +
                               "*School*: {1}" +
                               "*Level*: {2} \n\n" +
                               "*Casting Time*: {3}\n\n" +

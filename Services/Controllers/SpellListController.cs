@@ -58,7 +58,15 @@ namespace DnD5thEdTools.Controllers
                 return false;
             }
 
-            _filterCriteria[filterName] = criteria;
+            if (criteria == null)
+            {
+                RemoveFilterCriteria(filterName);
+            }
+            else
+            {
+                _filterCriteria[filterName] = criteria;
+            }
+
             return true;
         }
 

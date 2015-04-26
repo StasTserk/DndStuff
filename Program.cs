@@ -18,7 +18,7 @@ namespace DnD5thEdTools
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            ISpellDetailView spellDetail = new SpellDetailView();
+            ISpellDetailProvider spellDetail = new SpellDetailProvider();
             ISpellLoader loader = new SpellLoader();
             ISpellListController controller = new SpellListController(loader);
             ISimpleSpellListView spellGridView = new SimpleSpellListView();

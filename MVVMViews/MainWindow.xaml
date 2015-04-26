@@ -8,9 +8,11 @@
         mc:Ignorable="d ignore"
         Title="DnD 5th Edition Tools"
         DataContext="{Binding Main, Source={StaticResource Locator}}"
-        ResizeMode="CanMinimize"
-        SizeToContent="Height"
+        ResizeMode="CanResizeWithGrip"
+        MinWidth="620"
+        MinHeight="400"
         Width="620"
+        Height="400"
         Background="#F0F0F0">
     <Window.Resources>
         <ResourceDictionary>
@@ -22,13 +24,15 @@
 
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto" />
             <RowDefinition  Height=".75*" />
-            <RowDefinition  Height="1*" />
+            <RowDefinition  Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <views:SimpleSpellListView Grid.Row="0" HorizontalAlignment="Stretch" />
-        <views:SpellDetailView Grid.Row="1" HorizontalAlignment="Stretch"/>
+        <views:SpellListFilterView Grid.Row="0" HorizontalAlignment="Stretch"/>
+        <views:SimpleSpellListView Grid.Row="1" HorizontalAlignment="Stretch" />
+        <views:SpellDetailView Grid.Row="2" HorizontalAlignment="Stretch"/>
     </Grid>
 </Window>

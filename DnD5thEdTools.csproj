@@ -53,9 +53,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Interfaces\ISimpleSpellListView.cs" />
-    <Compile Include="Views\Interfaces\ISpellDetailView.cs" />
     <Compile Include="Views\SimpleSpellListView.cs" />
-    <Compile Include="Views\SpellDetailView.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

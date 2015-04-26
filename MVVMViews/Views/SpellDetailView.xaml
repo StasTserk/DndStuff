@@ -10,15 +10,16 @@
         DataContext="{Binding SpellDetail, Source={StaticResource Locator}}">
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         <toolkit:RichTextBox Margin="5"
                              Text="{Binding BasicSpellText}"
                              Grid.Column="0"
                              Height="150"
-                             IsEnabled="False"
-                             IsReadOnly="True">
+                             IsReadOnlyCaretVisible="False"
+                             IsReadOnly="True"
+                             VerticalScrollBarVisibility="Auto">
             <toolkit:RichTextBox.TextFormatter>
                 <toolkit:RtfFormatter />
             </toolkit:RichTextBox.TextFormatter>
@@ -26,8 +27,8 @@
         <toolkit:RichTextBox Margin="5" 
                              Grid.Column="1"
                              Height="150"
+                             IsReadOnlyCaretVisible="False"
                              IsReadOnly="True"
-                             IsEnabled="False"
                              Text="{Binding SpellDescriptionText}"
                              VerticalScrollBarVisibility="Auto">
             <toolkit:RichTextBox.TextFormatter>

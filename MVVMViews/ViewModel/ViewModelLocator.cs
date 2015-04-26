@@ -12,9 +12,11 @@
   See http://www.galasoft.ch/mvvm
 */
 
+using System;
 using System.Windows.Data;
 using GalaSoft.MvvmLight;
 using MVVMViews.NinjectModules;
+using MVVMViews.Views;
 using Ninject;
 
 namespace MVVMViews.ViewModel
@@ -23,7 +25,8 @@ namespace MVVMViews.ViewModel
     /// This class contains static references to all the view models in the
     /// application and provides an entry point for the bindings.
     /// </summary>
-    public class ViewModelLocator
+    public sealed class ViewModelLocator
+        : IDisposable
     {
         private readonly StandardKernel _kernel;
 
@@ -66,9 +69,18 @@ namespace MVVMViews.ViewModel
             get { return _kernel.Get<SpellDetailViewModel>(); }
         }
 
+        public SpellListFilterViewModel SpellListFilter
+        {
+            get { return _kernel.Get<SpellListFilterViewModel>(); }
+        }
+
         public static void Cleanup()
         {
-            // TODO Clear the ViewModels
+        }
+
+        public void Dispose()
+        {
+           _kernel.Dispose(); 
         }
     }
 }
