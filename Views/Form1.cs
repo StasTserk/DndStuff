@@ -93,7 +93,7 @@ namespace DnD5thEdTools.Views
 
         private void Filter_ConcentrationDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ProcessYesNoDropdown(Filter_ConcentrationDropdown, "conc", s => s.Concentration == true);
+            ProcessYesNoDropdown(Filter_ConcentrationDropdown, "conc", s => s.Concentration);
         }
 
         private void Filter_HasSaveDropdown_SelectedIndexChanged(object sender, EventArgs e)
@@ -103,26 +103,26 @@ namespace DnD5thEdTools.Views
 
         private void Filter_RequiresAttackDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ProcessYesNoDropdown(Filter_RequiresAttackDropdown, "attack", s => s.RequiresAttackRoll == true);
+            ProcessYesNoDropdown(Filter_RequiresAttackDropdown, "attack", s => s.RequiresAttackRoll);
         }
         private void Filter_RitualDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ProcessYesNoDropdown(Filter_RitualDropdown, "ritual", s => s.Ritual == true);
+            ProcessYesNoDropdown(Filter_RitualDropdown, "ritual", s => s.Ritual );
         }
 
         private void ProcessYesNoDropdown(ComboBox dropdown, string filterName, Func<Spell, bool> criteria)
         {
-            if (dropdown.SelectedItem.ToString() == "Yes")
+            switch (dropdown.SelectedItem.ToString())
             {
-                _spellsController.AddFilterCriteria(filterName, s => criteria(s) == true);
-            }
-            else if (dropdown.SelectedItem.ToString() == "No")
-            {
-                _spellsController.AddFilterCriteria(filterName, s => criteria(s) == false);
-            }
-            else
-            {
-                _spellsController.RemoveFilterCriteria(filterName);
+                case "Yes":
+                    _spellsController.AddFilterCriteria(filterName, criteria );
+                    break;
+                case "No":
+                    _spellsController.AddFilterCriteria(filterName, s => !criteria(s));
+                    break;
+                default:
+                    _spellsController.RemoveFilterCriteria(filterName);
+                    break;
             }
             ResetSpells();
         }

@@ -1,6 +1,7 @@
 ﻿using DnD5thEdTools.Repositories;
 using DnD5thEdTools.Models;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -44,24 +45,10 @@ namespace DnD5thEdTools.Controllers
 
         public IEnumerable<Spell> GetFilteredSpells()
         {
-            foreach (var spell in _spells)
-            {
-                bool validSpell = true;
-                foreach (var expr in _filterCriteria)
-                {
-                    var criteria = expr.Value;
-                    if (!criteria(spell))
-                    {
-                        validSpell = false;
-                        break;
-                    }
-                }
-                if (validSpell)
-                {
-                    yield return spell;
-                }
-            }
-
+            return from spell in _spells
+                let validSpell = _filterCriteria.Select(expr => expr.Value).All(criteria => criteria(spell))
+                where validSpell
+                select spell;
         }
 
         public bool AddFilterCriteria(string filterName, Func<Spell, bool> criteria)
@@ -71,11 +58,7 @@ namespace DnD5thEdTools.Controllers
                 return false;
             }
 
-            if (_filterCriteria.ContainsKey(filterName))
-            {
-                _filterCriteria.Remove(filterName);
-            }
-            _filterCriteria.Add(filterName, criteria);
+            _filterCriteria[filterName] = criteria;
             return true;
         }
 
@@ -85,6 +68,7 @@ namespace DnD5thEdTools.Controllers
             {
                 return false;
             }
+
             if (_filterCriteria.ContainsKey(filterName))
             {
                 _filterCriteria.Remove(filterName);
