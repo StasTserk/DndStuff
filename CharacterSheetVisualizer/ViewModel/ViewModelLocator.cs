@@ -59,6 +59,11 @@ namespace CharacterSheetVisualizer.ViewModel
             get { return _kernel.Get<BaseCharacterStatsViewModel>(); }
         }
 
+        public CharacterSkillsViewModel CharacterSkills
+        {
+            get { return _kernel.Get<CharacterSkillsViewModel>(); }
+        }
+
         public static void Cleanup()
         {
             // TODO Clear the ViewModels

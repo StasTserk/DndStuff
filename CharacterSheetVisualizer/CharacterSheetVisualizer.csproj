@@ -76,14 +76,22 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Character.cs" />
+    <Compile Include="Model\CharacterService.cs" />
+    <Compile Include="Model\ICharacterService.cs" />
+    <Compile Include="Model\IStatService.cs" />
+    <Compile Include="Model\StatService.cs" />
     <Compile Include="NinjectModules\DesignTimeModule.cs" />
     <Compile Include="NinjectModules\RunTimeModule.cs" />
     <Compile Include="NinjectModules\ViewModelModule.cs" />
     <Compile Include="ViewModel\BaseCharacterStatsViewModel.cs" />
+    <Compile Include="ViewModel\CharacterSkillsViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="Views\BaseCharacterStatsView.xaml.cs">
       <DependentUpon>BaseCharacterStatsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CharacterSkillsView.xaml.cs">
+      <DependentUpon>CharacterSkillsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CharacterVisualizationView.xaml.cs">
       <DependentUpon>CharacterVisualizationView.xaml</DependentUpon>
@@ -108,6 +116,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\BaseCharacterStatsView.xaml">
+      <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CharacterSkillsView.xaml">
       <SubType>Form</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

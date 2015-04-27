@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="CharacterSheetVisualizer.Views.CharacterSkillsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.ignore.com"
+        mc:Ignorable="d ignore"
+        DataContext="{Binding CharacterSkills, Source={StaticResource Locator}}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding Character.Skills}"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  CanUserReorderColumns="False"
+                  AutoGenerateColumns="False"
+                  Style="{DynamicResource DataGridStyle1}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header=""
+                                    Width="Auto"
+                                    FontSize="15"
+                                    FontWeight="Bold"
+                                    Binding="{Binding Type}"
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Header="Modifier"
+                                    Binding="{Binding Modifier}"
+                                    IsReadOnly="True"
+                                    FontSize="15"
+                                    Width="Auto"/>
+                <DataGridTemplateColumn Header="Proficency"
+                                        IsReadOnly="False">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding ModifierTypes}"
+                                      SelectedItem="{Binding ModifierType, UpdateSourceTrigger=PropertyChanged}"
+                                      />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

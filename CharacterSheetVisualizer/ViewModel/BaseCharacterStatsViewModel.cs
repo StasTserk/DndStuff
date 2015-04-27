@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.Runtime.Remoting.Channels;
 using CharacterSheetVisualizer.Model;
 using GalaSoft.MvvmLight;
 
@@ -14,18 +13,26 @@ namespace CharacterSheetVisualizer.ViewModel
     /// </summary>
     public class BaseCharacterStatsViewModel : ViewModelBase
     {
+        private readonly ICharacterService _characterService;
+
         public Character Character
         {
-            get;
-            set;
+            get { return _characterService.CurrentCharacter; }
         }
 
         /// <summary>
         /// Initializes a new instance of the BaseCharacterStatsViewModel class.
         /// </summary>
-        public BaseCharacterStatsViewModel()
+        public BaseCharacterStatsViewModel(ICharacterService characterService)
         {
-            Character = new Character();
+            _characterService = characterService;
+            _characterService.NewCharacterLoaded += OnCharacterLoaded;
+        }
+
+        private void OnCharacterLoaded(object sender, EventArgs e)
+        {
+            // THe Current Character should be reloaded
+            RaisePropertyChanged(() => Character);
         }
     }
 }

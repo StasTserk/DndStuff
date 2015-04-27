@@ -61,10 +61,15 @@
                                     IsReadOnly="True"
                                     FontSize="15"
                                     Width="Auto"/>
-                <DataGridCheckBoxColumn Header="Proficency"
-                                        Binding="{Binding HasProficency, Mode=OneWay}"
-                                        IsReadOnly="True"
-                                        Width="Auto"/>
+                <DataGridTemplateColumn Header="Is Proficent">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsProficent, UpdateSourceTrigger=PropertyChanged}"
+                                      HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

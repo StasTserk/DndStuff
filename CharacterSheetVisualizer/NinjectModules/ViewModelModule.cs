@@ -1,4 +1,5 @@
-﻿using CharacterSheetVisualizer.ViewModel;
+﻿using CharacterSheetVisualizer.Model;
+using CharacterSheetVisualizer.ViewModel;
 using GalaSoft.MvvmLight.Messaging;
 using Ninject.Modules;
 
@@ -10,6 +11,8 @@ namespace CharacterSheetVisualizer.NinjectModules
         public override void Load()
         {
             Bind<IMessenger>().To<Messenger>().InSingletonScope();
+            Bind<IStatService>().To<StatService>().InSingletonScope();
+            Bind<ICharacterService>().To<CharacterService>().InSingletonScope();
 
             Bind<MainViewModel>().To<MainViewModel>().InSingletonScope();
         }
