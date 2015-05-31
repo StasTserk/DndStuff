@@ -1,15 +1,15 @@
 ﻿using System;
 
-namespace DnD5thEdTools.Models
+namespace Data.Models
 {
     public class PlayerClass
     {
-        public String Name;
+        public string Name;
     }
 
     public class ClassAbility
     {
-        public String Description;
+        public string Description;
         public AbilityType Type;
         public short LevelObtained;
     }

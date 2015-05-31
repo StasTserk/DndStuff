@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using Data.Models;
+using DnD5thEdTools.Views.Interfaces;
 
 namespace DnD5thEdTools.Views
 {
     class SpellDetailView : ISpellDetailView
     {
-        public string GetSpellDetailText(Models.Spell spell)
+        public string GetSpellDetailText(Spell spell)
         {
             return spell.Description;
         }
 
-        public string GetBasicSpellText(Models.Spell spell)
+        public string GetBasicSpellText(Spell spell)
         {
             String levelComposition = "";
             foreach (var cls in spell.Classes)

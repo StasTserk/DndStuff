@@ -2,6 +2,7 @@
 using MVVMViews.ViewModel;
 using Ninject.Modules;
 using Providers;
+using Providers.FormatProviders;
 using Xceed.Wpf.Toolkit;
 
 namespace MVVMViews.NinjectModules

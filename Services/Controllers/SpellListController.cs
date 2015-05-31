@@ -1,10 +1,11 @@
-﻿using DnD5thEdTools.Repositories;
-using DnD5thEdTools.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Data.Models;
+using Data.Repositories.Interfaces;
+using Services.Controllers.Interfaces;
 
-namespace DnD5thEdTools.Controllers
+namespace Services.Controllers
 {
     public class SpellListController : ISpellListController
     {

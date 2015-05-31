@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DnD5thEdTools.Models
+namespace Data.Models
 {
     class SpellList
     {
-        IDictionary<String, Spell> SourcedList;
+        IDictionary<string, Spell> SourcedList;
     }
 }

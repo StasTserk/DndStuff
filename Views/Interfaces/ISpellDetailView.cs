@@ -1,7 +1,7 @@
-﻿using DnD5thEdTools.Models;
-using System;
+﻿using System;
+using Data.Models;
 
-namespace DnD5thEdTools.Views
+namespace DnD5thEdTools.Views.Interfaces
 {
     public interface ISpellDetailView
     {

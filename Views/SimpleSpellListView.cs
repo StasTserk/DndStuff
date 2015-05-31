@@ -1,5 +1,6 @@
-﻿using DnD5thEdTools.Models;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using Data.Models;
+using DnD5thEdTools.Views.Interfaces;
 
 namespace DnD5thEdTools.Views
 {

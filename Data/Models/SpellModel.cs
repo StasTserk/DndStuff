@@ -1,31 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DnD5thEdTools.Models
+namespace Data.Models
 {
     public class Spell
     {
         public Spell()
         {
-            Classes = new List<String>();
-            Materials = new List<String>();
+            Classes = new List<string>();
+            Materials = new List<string>();
         }
 
-        public String Name { get; set; }
-        public ICollection<String> Classes { get; set; }
-        public String CastingTime { get; set; }
-        public String Description { get; set; }
-        public String ShortDescription { get; set; }
-        public String School { get; set; }
-        public String Targets { get; set; }
-        public String Range { get; set; }
-        public String Save { get; set; }
-        public IEnumerable<String> Materials { get; set; }
+        public string Name { get; set; }
+        public ICollection<string> Classes { get; set; }
+        public string CastingTime { get; set; }
+        public string Description { get; set; }
+        public string ShortDescription { get; set; }
+        public string School { get; set; }
+        public string Targets { get; set; }
+        public string Range { get; set; }
+        public string Save { get; set; }
+        public IEnumerable<string> Materials { get; set; }
         public int Level { get; set; }
         public bool Concentration { get; set; }
-        public String Duration { get; set; }
+        public string Duration { get; set; }
         public bool Overcastable { get; set; }
-        public String Components { get; set; }
+        public string Components { get; set; }
         public bool RequiresAttackRoll { get; set; }
         public bool Ritual { get; set; }
     }

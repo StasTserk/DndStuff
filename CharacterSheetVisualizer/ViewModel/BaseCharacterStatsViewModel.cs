@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Runtime.Remoting.Channels;
-using CharacterSheetVisualizer.Model;
+using Data.Models;
 using GalaSoft.MvvmLight;
+using Providers.CharacterProviders;
 
 namespace CharacterSheetVisualizer.ViewModel
 {
@@ -13,20 +13,20 @@ namespace CharacterSheetVisualizer.ViewModel
     /// </summary>
     public class BaseCharacterStatsViewModel : ViewModelBase
     {
-        private readonly ICharacterService _characterService;
+        private readonly ICharacterProvider _characterProvider;
 
         public Character Character
         {
-            get { return _characterService.CurrentCharacter; }
+            get { return _characterProvider.CurrentCharacter; }
         }
 
         /// <summary>
         /// Initializes a new instance of the BaseCharacterStatsViewModel class.
         /// </summary>
-        public BaseCharacterStatsViewModel(ICharacterService characterService)
+        public BaseCharacterStatsViewModel(ICharacterProvider characterProvider)
         {
-            _characterService = characterService;
-            _characterService.NewCharacterLoaded += OnCharacterLoaded;
+            _characterProvider = characterProvider;
+            _characterProvider.NewCharacterLoaded += OnCharacterLoaded;
         }
 
         private void OnCharacterLoaded(object sender, EventArgs e)

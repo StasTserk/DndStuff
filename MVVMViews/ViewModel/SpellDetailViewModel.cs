@@ -1,9 +1,10 @@
 ﻿using System;
-using DnD5thEdTools.Models;
+using Data.Models;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
 using MVVMViews.Messages;
 using Providers;
+using Providers.FormatProviders;
 
 namespace MVVMViews.ViewModel
 {
