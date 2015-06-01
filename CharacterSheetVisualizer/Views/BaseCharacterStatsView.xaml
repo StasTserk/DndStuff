@@ -86,7 +86,7 @@
                 <DataGridTextColumn
                 Header="Other Proficiencies"
                 Width="Auto"
-                FontSize="10"
+                FontSize="12"
                 Binding="{Binding Name}"/>
             </DataGrid.Columns>
         </DataGrid>

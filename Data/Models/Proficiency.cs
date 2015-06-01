@@ -5,8 +5,8 @@
     /// </summary>
     public class Proficiency
     {
-        private string Source;
-        private string Name;
+        public string Source { get; set; }
+        public string Name { get; set; }
 
         public Proficiency(string source, string name)
         {

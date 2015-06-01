@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using GalaSoft.MvvmLight;
 
 namespace Data.Models
@@ -10,11 +8,11 @@ namespace Data.Models
     {
         public IEnumerable<Stat> Stats { get; set; }
         public IEnumerable<Skill> Skills { get; set; }
-        public string PlayerName;
-        public string CharacterName;
-        public string RaceName;
-        public string AlignmentName;
-        public IEnumerable<Proficiency> OtherProficiencies;
-        public IEnumerable<string> FeaturesAndTraits;
+        public string PlayerName { get; set; }
+        public string CharacterName { get; set; }
+        public string RaceName { get; set; }
+        public string AlignmentName { get; set; }
+        public IEnumerable<Proficiency> OtherProficiencies { get; set; }
+        public IEnumerable<string> FeaturesAndTraits { get; set; }
     }
 }
