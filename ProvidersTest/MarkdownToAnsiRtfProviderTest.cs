@@ -1,6 +1,6 @@
 ﻿using System;
-using Providers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Providers.FormatProviders;
 
 namespace ProvidersTest
 {
@@ -18,8 +18,8 @@ namespace ProvidersTest
         public void GetRtfFromStringConvertsEmptyString()
         {
             // Setup inputs and expectations
-            const String input = "";
-            const String expected = @"{\rtf\ansi }";
+            const string input = "";
+            const string expected = @"{\rtf\ansi }";
             var provider = new MarkdownToAnsiRtfProvider();
 
             // Run conversion
@@ -32,8 +32,8 @@ namespace ProvidersTest
         public void GetRtfFromStringConvertsText()
         {
             // Bob is a proper noun and should be capitalized
-            const String input = "Hello I am Bob.";
-            const String expected = @"{\rtf\ansi Hello I am Bob.}";
+            const string input = "Hello I am Bob.";
+            const string expected = @"{\rtf\ansi Hello I am Bob.}";
             var provider = new MarkdownToAnsiRtfProvider();
 
             var actual = provider.GetRtfFromString(input);
@@ -45,8 +45,8 @@ namespace ProvidersTest
         public void GetRtfFromStringIgnoresInsignificantWhitespace()
         {
             // Bob is a proper noun and should be capitalized
-            const String input = "Hello \nI \t  am   Bob.";
-            const String expected = @"{\rtf\ansi Hello I am Bob.}";
+            const string input = "Hello \nI \t  am   Bob.";
+            const string expected = @"{\rtf\ansi Hello I am Bob.}";
             var provider = new MarkdownToAnsiRtfProvider();
 
             var actual = provider.GetRtfFromString(input);
@@ -58,8 +58,8 @@ namespace ProvidersTest
         public void GetRtfFromStringCorrectlyInsertsParagraphsForSignificantWhiteSpace()
         {
             // Bob is a proper noun and should be capitalized
-            const String input = "Hello.\n\nI \t  am   Bob.";
-            const String expected = @"{\rtf\ansi Hello.\par I am Bob.}";
+            const string input = "Hello.\n\nI \t  am   Bob.";
+            const string expected = @"{\rtf\ansi Hello.\par I am Bob.}";
             var provider = new MarkdownToAnsiRtfProvider();
 
             var actual = provider.GetRtfFromString(input);
@@ -71,8 +71,8 @@ namespace ProvidersTest
         public void GetRtfFromStringCorrectlyInsertsParagraphsWhenNewLinesAreSeparatedByWhiteSpace()
         {
             // Bob is a proper noun and should be capitalized
-            const String input = "Hello.\n  \t \nI \t  am   Bob.";
-            const String expected = @"{\rtf\ansi Hello.\par I am Bob.}";
+            const string input = "Hello.\n  \t \nI \t  am   Bob.";
+            const string expected = @"{\rtf\ansi Hello.\par I am Bob.}";
             var provider = new MarkdownToAnsiRtfProvider();
 
             var actual = provider.GetRtfFromString(input);
@@ -84,8 +84,8 @@ namespace ProvidersTest
         public void GetRtfFromStringCorrectlyInsertsItalics()
         {
             // Bob is a proper noun and should be capitalized
-            const String input = "Hello. **I am** Bob.";
-            const String expected = @"{\rtf\ansi Hello. \i I am\i0  Bob.}";
+            const string input = "Hello. **I am** Bob.";
+            const string expected = @"{\rtf\ansi Hello. \i I am\i0  Bob.}";
             var provider = new MarkdownToAnsiRtfProvider();
 
             var actual = provider.GetRtfFromString(input);
@@ -97,8 +97,8 @@ namespace ProvidersTest
         public void GetRtfFromStringHandlesMissingItalicsClose()
         {
             // Bob is a proper noun and should be capitalized
-            const String input = "**Hello**. **I am Bob.";
-            const String expected = @"{\rtf\ansi \i Hello\i0 . \i I am Bob.}";
+            const string input = "**Hello**. **I am Bob.";
+            const string expected = @"{\rtf\ansi \i Hello\i0 . \i I am Bob.}";
             var provider = new MarkdownToAnsiRtfProvider();
 
             var actual = provider.GetRtfFromString(input);
@@ -110,8 +110,8 @@ namespace ProvidersTest
         public void GetRtfFromStringCorrectlyInsertsBold()
         {
             // Bob is a proper noun and should be capitalized
-            const String input = "*Hello*. I am Bob.";
-            const String expected = @"{\rtf\ansi \b Hello\b0 . I am Bob.}";
+            const string input = "*Hello*. I am Bob.";
+            const string expected = @"{\rtf\ansi \b Hello\b0 . I am Bob.}";
             var provider = new MarkdownToAnsiRtfProvider();
 
             var actual = provider.GetRtfFromString(input);
@@ -123,8 +123,8 @@ namespace ProvidersTest
         public void GetRtfFromStringHandlesMissingBoldClose()
         {
             // Bob is a proper noun and should be capitalized
-            const String input = "*Hello*. I am *Bob.";
-            const String expected = @"{\rtf\ansi \b Hello\b0 . I am \b Bob.}";
+            const string input = "*Hello*. I am *Bob.";
+            const string expected = @"{\rtf\ansi \b Hello\b0 . I am \b Bob.}";
             var provider = new MarkdownToAnsiRtfProvider();
 
             var actual = provider.GetRtfFromString(input);
@@ -135,8 +135,8 @@ namespace ProvidersTest
         [TestMethod]
         public void GetRtfFromStringEscapesBackslashes()
         {
-            const String input = @"Hello\Hi. I am Bob.";
-            const String expected = @"{\rtf\ansi Hello\\Hi. I am Bob.}";
+            const string input = @"Hello\Hi. I am Bob.";
+            const string expected = @"{\rtf\ansi Hello\\Hi. I am Bob.}";
             var provider = new MarkdownToAnsiRtfProvider();
 
             var actual = provider.GetRtfFromString(input);

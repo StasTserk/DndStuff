@@ -1,8 +1,9 @@
 ﻿using System;
+using Data.Models;
 
-namespace CharacterSheetVisualizer.Model
+namespace Providers.CharacterProviders
 {
-    public interface ICharacterService
+    public interface ICharacterProvider
     {
         event EventHandler NewCharacterLoaded;
         Character CurrentCharacter { get; }

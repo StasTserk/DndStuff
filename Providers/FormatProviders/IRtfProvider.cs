@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Providers
+﻿namespace Providers.FormatProviders
 {
     public interface IRtfProvider
     {
@@ -9,8 +7,8 @@ namespace Providers
         /// </summary>
         /// <param name="input">The string to convert to RTF</param>
         /// <returns>The RTF representation of the input string</returns>
-        String GetRtfFromString(String input);
+        string GetRtfFromString(string input);
 
-        String GetRtfFromString(String input, int textSize);
+        string GetRtfFromString(string input, int textSize);
     }
 }

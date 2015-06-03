@@ -1,7 +1,7 @@
-﻿using DnD5thEdTools.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Data.Models;
 
-namespace DnD5thEdTools.Repositories
+namespace Data.Repositories.Interfaces
 {
     public interface ISpellLoader
     {

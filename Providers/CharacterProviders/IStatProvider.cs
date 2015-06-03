@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Data.Models;
 
-namespace CharacterSheetVisualizer.Model
+namespace Providers.CharacterProviders
 {
-    public interface IStatService
+    public interface IStatProvider
     {
         IEnumerable<Stat> GetDefaultStats(LevelModifiers modifiers);
     }

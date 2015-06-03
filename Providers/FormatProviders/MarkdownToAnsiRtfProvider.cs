@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Providers
+namespace Providers.FormatProviders
 {
     public class MarkdownToAnsiRtfProvider
         : IRtfProvider
@@ -11,7 +11,7 @@ namespace Providers
         /// </summary>
         /// <param name="input">A markdown string</param>
         /// <returns>Its RTF equivilent</returns>
-        public String GetRtfFromString(string input)
+        public string GetRtfFromString(string input)
         {
             input = EscapeBackslash(input);
             input = ReplaceSignificantWhitespace(input);
@@ -19,7 +19,7 @@ namespace Providers
 
             input = AddFormatting(input);
 
-            var output = String.Concat(@"{\rtf\ansi ", input, "}");
+            var output = string.Concat(@"{\rtf\ansi ", input, "}");
             return output;
         }
 
@@ -29,7 +29,7 @@ namespace Providers
         /// <param name="input">A markdown string</param>
         /// <param name="textSize">Size of text</param>
         /// <returns>Its RTF equivilent</returns>
-        public String GetRtfFromString(string input, int textSize)
+        public string GetRtfFromString(string input, int textSize)
         {
             input = EscapeBackslash(input);
             input = ReplaceSignificantWhitespace(input);
@@ -37,7 +37,7 @@ namespace Providers
 
             input = AddFormatting(input);
 
-            var output = String.Concat(@"{\rtf\ansi\fs", (textSize*2), input, "}");
+            var output = string.Concat(@"{\rtf\ansi\fs", (textSize*2), input, "}");
             return output;
         }
 
@@ -74,26 +74,14 @@ namespace Providers
             // Significant whitespace is 2 or more new lines
             var whitespaceRegex = new Regex(@"(\n)(\s)*(\n)");
 
-            if (whitespaceRegex.IsMatch(input))
-            {
-                // Replace any Group of whitespace characters with a single space
-                return whitespaceRegex.Replace(input, @"\par ");
-            }
-
-            return input;
+            return whitespaceRegex.IsMatch(input) ? whitespaceRegex.Replace(input, @"\par ") : input;
         }
 
         private static string RemoveInsignificantWhitespaceFromString(string input)
         {
             var whitespaceRegex = new Regex(@"\s{2,}");
 
-            if (whitespaceRegex.IsMatch(input))
-            {
-                // Replace any Group of whitespace characters with a single space
-                return whitespaceRegex.Replace(input, " ");
-            }
-
-            return input;
+            return whitespaceRegex.IsMatch(input) ? whitespaceRegex.Replace(input, " ") : input;
         }
     }
 }

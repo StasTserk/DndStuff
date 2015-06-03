@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Data.Models;
 
-namespace CharacterSheetVisualizer.Model
+namespace Providers.CharacterProviders
 {
-    public class StatService
-        : IStatService
+    public class StatProvider
+        : IStatProvider
     {
         public IEnumerable<Stat> GetDefaultStats(LevelModifiers modifiers)
         {

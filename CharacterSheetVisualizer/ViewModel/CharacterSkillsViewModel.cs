@@ -1,5 +1,7 @@
-﻿using CharacterSheetVisualizer.Model;
+﻿
+using Data.Models;
 using GalaSoft.MvvmLight;
+using Providers.CharacterProviders;
 
 namespace CharacterSheetVisualizer.ViewModel
 {
@@ -11,19 +13,19 @@ namespace CharacterSheetVisualizer.ViewModel
     /// </summary>
     public class CharacterSkillsViewModel : ViewModelBase
     {
-        private readonly ICharacterService _characterService;
+        private readonly ICharacterProvider _characterProvider;
 
         public Character Character
         {
-            get { return _characterService.CurrentCharacter; }
+            get { return _characterProvider.CurrentCharacter; }
         }
 
         /// <summary>
         /// Initializes a new instance of the CharacterSkillsViewModel class.
         /// </summary>
-        public CharacterSkillsViewModel(ICharacterService characterService)
+        public CharacterSkillsViewModel(ICharacterProvider characterProvider)
         {
-            _characterService = characterService;
+            _characterProvider = characterProvider;
         }
     }
 }

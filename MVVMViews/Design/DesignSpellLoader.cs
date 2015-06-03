@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using DnD5thEdTools.Models;
-using DnD5thEdTools.Repositories;
+using Data.Models;
+using Data.Repositories.Interfaces;
 
 namespace MVVMViews.Design
 {

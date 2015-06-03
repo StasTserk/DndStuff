@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DnD5thEdTools.Models;
-using DnD5thEdTools.Repositories;
 using Rhino.Mocks;
 using System.Collections.Generic;
 using System.Linq;
-using DnD5thEdTools.Controllers;
+using Data.Models;
+using Data.Repositories.Interfaces;
+using Services.Controllers;
 
 namespace ServicesTest
 {

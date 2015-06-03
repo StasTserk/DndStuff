@@ -1,7 +1,9 @@
-﻿using DnD5thEdTools.Controllers;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using DnD5thEdTools.Views.Interfaces;
 using Providers;
+using Providers.FormatProviders;
+using Services.Controllers.Interfaces;
 
 namespace DnD5thEdTools.Views
 {

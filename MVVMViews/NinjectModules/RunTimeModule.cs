@@ -1,6 +1,8 @@
-﻿using DnD5thEdTools.Controllers;
-using DnD5thEdTools.Repositories;
+﻿using Data.Repositories;
+using Data.Repositories.Interfaces;
 using Ninject.Modules;
+using Services.Controllers;
+using Services.Controllers.Interfaces;
 
 namespace MVVMViews.NinjectModules
 {

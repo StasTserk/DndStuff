@@ -1,9 +1,9 @@
 ﻿using System.Collections.ObjectModel;
-using DnD5thEdTools.Controllers;
-using DnD5thEdTools.Models;
+using Data.Models;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
 using MVVMViews.Messages;
+using Services.Controllers.Interfaces;
 
 namespace MVVMViews.ViewModel
 {

@@ -1,10 +1,11 @@
-﻿using DnD5thEdTools.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
+using Data.Models;
+using Data.Repositories.Interfaces;
 
-namespace DnD5thEdTools.Repositories
+namespace Data.Repositories
 {
     public class SpellLoader : ISpellLoader
     {

@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
+using Data.Repositories;
+using Data.Repositories.Interfaces;
 using DnD5thEdTools.Views;
-using DnD5thEdTools.Controllers;
-using DnD5thEdTools.Repositories;
+using DnD5thEdTools.Views.Interfaces;
 using Providers;
+using Providers.FormatProviders;
+using Services.Controllers;
+using Services.Controllers.Interfaces;
 
 namespace DnD5thEdTools
 {

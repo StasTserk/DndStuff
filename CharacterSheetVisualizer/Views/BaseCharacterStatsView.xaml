@@ -24,7 +24,7 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
-    <Grid>
+    <Grid Margin="10,10,10,10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
@@ -38,7 +38,9 @@
                   CanUserDeleteRows="False"
                   CanUserReorderColumns="False"
                   AutoGenerateColumns="False"
-                  Style="{DynamicResource DataGridStyle1}">
+                  Style="{DynamicResource DataGridStyle1}"
+                  Grid.Column="0"
+                  Grid.Row="0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header=""
                                     Width="Auto"
@@ -72,5 +74,22 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <DataGrid ItemsSource="{Binding Character.OtherProficiencies}"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  CanUserReorderColumns="False"
+                  AutoGenerateColumns="False"
+                  Style="{DynamicResource DataGridStyle1}"
+                  Grid.Column="0"
+                  Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                Header="Other Proficiencies"
+                Width="Auto"
+                FontSize="12"
+                Binding="{Binding Name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
     </Grid>
 </UserControl>
