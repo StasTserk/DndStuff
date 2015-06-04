@@ -17,7 +17,7 @@ namespace Providers.CharacterProviders
         {
             return new Stat(modifiers)
             {
-                Score = 10,
+                BaseScore = 10,
                 Type = type,
                 IsProficent = false
             };

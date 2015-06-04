@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Data.Models;
+using Data.Models.Effects;
 
 namespace Providers.CharacterProviders
 {
@@ -69,6 +70,12 @@ namespace Providers.CharacterProviders
                 Skills = defaultSkills.ToList(),
                 OtherProficiencies = proficiencyList
             };
+
+            var minimumStatBonus = new MinimumStatEffect(StatType.Strength, 17);
+            var flatStatBonus = new BonusStatEffect(StatType.Dexterity, 2);
+
+            minimumStatBonus.ApplyToCharacter(CurrentCharacter);
+            flatStatBonus.ApplyToCharacter(CurrentCharacter);
         }
     }
 }

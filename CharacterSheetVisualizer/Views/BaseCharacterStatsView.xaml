@@ -48,9 +48,14 @@
                                     FontWeight="Bold"
                                     Binding="{Binding Type}"
                                     IsReadOnly="True"/>
+                <DataGridTextColumn Header="Base"
+                                    Binding="{Binding BaseScore}"
+                                    IsReadOnly="False"
+                                    FontSize="15"
+                                    Width="Auto"/>
                 <DataGridTextColumn Header="Score"
                                     Binding="{Binding Score}"
-                                    IsReadOnly="False"
+                                    IsReadOnly="True"
                                     FontSize="15"
                                     Width="Auto"/>
                 <DataGridTextColumn Header="Modifier"

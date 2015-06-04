@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using Data.Models.Effects;
 using GalaSoft.MvvmLight;
 
 namespace Data.Models
@@ -20,18 +24,33 @@ namespace Data.Models
 
         public StatType Type { get; set; }
 
-        private int _score;
+        private IList<IStatEffect> _statEffects;
+        public IList<IStatEffect> StatEffects {
+            get { return _statEffects ?? (_statEffects = new List<IStatEffect>()); }
+            set { _statEffects = value; }
+        }
+
         public int Score
         {
-            get { return _score; }
+            get
+            {   // chains stat modifiers
+                return StatEffects.Aggregate(_baseScore, (stat, mod) => mod.GetAffectedStatScore(stat));
+            }
+        }
+
+        private int _baseScore;
+        public int BaseScore {
+            get { return _baseScore; }
             set
             {
-                if (_score == value)
+                if (_baseScore == value)
                 {
                     return;
                 }
+                
+                _baseScore = value;
 
-                _score = value;
+                RaisePropertyChanged(() => BaseScore);
                 RaisePropertyChanged(() => Score);
                 RaisePropertyChanged(() => Modifier);
                 RaisePropertyChanged(() => Save);
