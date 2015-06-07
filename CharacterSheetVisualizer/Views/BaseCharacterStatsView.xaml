@@ -68,15 +68,6 @@
                                     IsReadOnly="True"
                                     FontSize="15"
                                     Width="Auto"/>
-                <DataGridTemplateColumn Header="Is Proficent">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <CheckBox IsChecked="{Binding IsProficent, UpdateSourceTrigger=PropertyChanged}"
-                                      HorizontalAlignment="Center"
-                                      VerticalAlignment="Center"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
         <DataGrid ItemsSource="{Binding Character.OtherProficiencies}"

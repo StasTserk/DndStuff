@@ -51,14 +51,21 @@
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\CharacterFeature.cs" />
     <Compile Include="Models\ClassModel.cs" />
+    <Compile Include="Models\Effects\AddFeatureEffect.cs" />
+    <Compile Include="Models\Effects\AddProficiencyEffect.cs" />
     <Compile Include="Models\Effects\BonusSkillEffect.cs" />
     <Compile Include="Models\Effects\BonusStatEffect.cs" />
     <Compile Include="Models\Effects\IEffect.cs" />
+    <Compile Include="Models\Effects\IFeatureEffect.cs" />
+    <Compile Include="Models\Effects\IOtherProficencyEffect.cs" />
+    <Compile Include="Models\Effects\ISaveProficiencyEffect.cs" />
     <Compile Include="Models\Effects\ISkillEffect.cs" />
     <Compile Include="Models\Effects\ISkillProficiencyEffect.cs" />
     <Compile Include="Models\Effects\IStatEffect.cs" />
     <Compile Include="Models\Effects\MinimumStatEffect.cs" />
     <Compile Include="Models\Effects\MinimumSkillProficiencyEffect.cs" />
+    <Compile Include="Models\Effects\ModifyFeatureEffect.cs" />
+    <Compile Include="Models\Effects\SaveProficiencyEffect.cs" />
     <Compile Include="Models\Items\EquippableItem.cs" />
     <Compile Include="Models\Items\IEquippable.cs" />
     <Compile Include="Models\Items\IItem.cs" />
@@ -78,6 +85,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Xml\Classes.xml" />
     <Content Include="Xml\SpellLists.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

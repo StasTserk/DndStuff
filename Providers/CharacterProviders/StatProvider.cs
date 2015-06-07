@@ -19,7 +19,6 @@ namespace Providers.CharacterProviders
             {
                 BaseScore = 10,
                 Type = type,
-                IsProficent = false
             };
         }
 

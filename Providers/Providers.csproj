@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterProviders\CharacterProvider.cs" />
+    <Compile Include="CharacterProviders\ClassProvider.cs" />
     <Compile Include="CharacterProviders\ICharacterProvider.cs" />
+    <Compile Include="CharacterProviders\IClassProvider.cs" />
     <Compile Include="FormatProviders\IRtfProvider.cs" />
     <Compile Include="CharacterProviders\ISkillProvider.cs" />
     <Compile Include="CharacterProviders\IStatProvider.cs" />

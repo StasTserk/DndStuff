@@ -61,19 +61,16 @@ namespace Data.Models
 
         public int Save
         {
-            get { return Modifier + _modifiers.GetProficencyBonus(_proficencyType); }
+            get { return Modifier + _modifiers.GetProficencyBonus(Proficiency); }
         }
 
-        private ProficencyModifierType _proficencyType;
-        public bool IsProficent
+        private readonly ICollection<ISaveProficiencyEffect> _proficiencyEffects;
+        public ProficencyModifierType Proficiency
         {
-            get { return _proficencyType == ProficencyModifierType.Proficent; }
-            set
-            {
-                _proficencyType = value ? ProficencyModifierType.Proficent : ProficencyModifierType.None;
-
-                RaisePropertyChanged(() => IsProficent);
-                RaisePropertyChanged(() => Save);
+            get 
+            { 
+                return _proficiencyEffects.Aggregate(ProficencyModifierType.None,
+                    (prof, mod) => mod.GetSaveModifier(prof));
             }
         }
 
@@ -101,10 +98,25 @@ namespace Data.Models
             RaisePropertyChanged(() => Save);
         }
 
+        public void AddSaveEffect(ISaveProficiencyEffect effect)
+        {
+            _proficiencyEffects.Add(effect);
+            RaisePropertyChanged(() => Modifier);
+            RaisePropertyChanged(() => Save);
+        }
+
+        public void RemoveSaveEffect(ISaveProficiencyEffect effect)
+        {
+            _proficiencyEffects.Remove(effect);
+            RaisePropertyChanged(() => Modifier);
+            RaisePropertyChanged(() => Save);
+        }
+
         public Stat(LevelModifiers modifiers)
         {
             _modifiers = modifiers;
             _statEffects = new List<IStatEffect>();
+            _proficiencyEffects = new List<ISaveProficiencyEffect>();
         }
     }
 }

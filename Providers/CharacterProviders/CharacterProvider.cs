@@ -12,6 +12,7 @@ namespace Providers.CharacterProviders
     {
         private readonly IStatProvider _statProvider;
         private readonly ISkillProvider _skillProvider;
+        private readonly IClassProvider _classProvider;
 
         public event EventHandler NewCharacterLoaded;
 
@@ -30,10 +31,11 @@ namespace Providers.CharacterProviders
             }
         }
 
-        public CharacterProvider(IStatProvider statProvider, ISkillProvider skillProvider)
+        public CharacterProvider(IStatProvider statProvider, ISkillProvider skillProvider, IClassProvider classProvider)
         {
             _statProvider = statProvider;
             _skillProvider = skillProvider;
+            _classProvider = classProvider;
             // Load a new Character
             CreateNewCharacter();
         }
@@ -59,32 +61,12 @@ namespace Providers.CharacterProviders
                 enumerable.FirstOrDefault(s => s.Type == StatType.Charisma)
                 );
 
-            var proficiencyList = new List<Proficiency>
-            {
-                new Proficiency("class", "Snozzberries"),
-                new Proficiency("race", "Clambering")
-            };
-
-            var FeatureList = new List<CharacterFeature>
-            {
-                new CharacterFeature(
-                    name: "Luck of the Irish",
-                    description: "You are lucky but also an alcoholic",
-                    shortDescription: "You are lucky",
-                    source: "Racial Trait"),
-                new CharacterFeature(
-                    name: "Cool guy",
-                    description: "You are a cool guy and everyone likes you.",
-                    shortDescription: "You are a cool guy",
-                    source: "Your hat")
-            };
-
             CurrentCharacter = new Character()
             {
                 Stats = enumerable,
                 Skills = defaultSkills.ToList(),
-                OtherProficiencies = proficiencyList,
-                FeaturesAndTraits = FeatureList
+                //OtherProficiencies = proficiencyList,
+                //FeaturesAndTraits = FeatureList
             };
 
             var minimumStatBonus = new MinimumStatEffect(StatType.Strength, 17);
@@ -95,6 +77,8 @@ namespace Providers.CharacterProviders
                 minimumStatBonus,
                 flatStatBonus
             };
+
+            _classProvider.GetSampleClass().GetClassLevel(1).ApplyToCharacter(CurrentCharacter);
 
             var randomHat = new EquippableItem(
                 name: "Cool Hat", 
