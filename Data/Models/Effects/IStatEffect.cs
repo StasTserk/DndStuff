@@ -6,5 +6,6 @@
     public interface IStatEffect : IEffect
     {
         int GetAffectedStatScore(int statScore);
+        StatType Type { get; }
     }
 }

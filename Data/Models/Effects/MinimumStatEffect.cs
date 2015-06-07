@@ -15,17 +15,22 @@ namespace Data.Models.Effects
 
         public void ApplyToCharacter(Character targetCharacter)
         {
-            targetCharacter.Stats.First(s => s.Type == _type).StatEffects.Add(this);
+            targetCharacter.Stats.First(s => s.Type == _type).AddEffectLast(this);
         }
 
         public void RemoveFromCharacter(Character targetCharacter)
         {
-            targetCharacter.Stats.First(s => s.Type == _type).StatEffects.Remove(this);
+            targetCharacter.Stats.First(s => s.Type == _type).RemoveEffect(this);
         }
 
         public int GetAffectedStatScore(int statScore)
         {
             return statScore > _statMinimum ? statScore : _statMinimum;
+        }
+
+        public StatType Type
+        {
+            get { return _type; }
         }
     }
 }

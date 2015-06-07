@@ -24,22 +24,19 @@ namespace Data.Models
 
         public StatType Type { get; set; }
 
-        private IList<IStatEffect> _statEffects;
-        public IList<IStatEffect> StatEffects {
-            get { return _statEffects ?? (_statEffects = new List<IStatEffect>()); }
-            set { _statEffects = value; }
-        }
+        private readonly IList<IStatEffect> _statEffects;
 
         public int Score
         {
             get
             {   // chains stat modifiers
-                return StatEffects.Aggregate(_baseScore, (stat, mod) => mod.GetAffectedStatScore(stat));
+                return _statEffects.Aggregate(_baseScore, (stat, mod) => mod.GetAffectedStatScore(stat));
             }
         }
 
         private int _baseScore;
-        public int BaseScore {
+        public int BaseScore 
+        {
             get { return _baseScore; }
             set
             {
@@ -80,9 +77,34 @@ namespace Data.Models
             }
         }
 
+        public void AddEffect(IStatEffect effect)
+        {
+            _statEffects.Insert(0, effect);
+            RaisePropertyChanged(() => Score);
+            RaisePropertyChanged(() => Modifier);
+            RaisePropertyChanged(() => Save);
+        }
+
+        public void AddEffectLast(IStatEffect effect)
+        {
+            _statEffects.Add(effect);
+            RaisePropertyChanged(() => Score);
+            RaisePropertyChanged(() => Modifier);
+            RaisePropertyChanged(() => Save);
+        }
+
+        public void RemoveEffect(IStatEffect effect)
+        {
+            _statEffects.Remove(effect);
+            RaisePropertyChanged(() => Score);
+            RaisePropertyChanged(() => Modifier);
+            RaisePropertyChanged(() => Save);
+        }
+
         public Stat(LevelModifiers modifiers)
         {
             _modifiers = modifiers;
+            _statEffects = new List<IStatEffect>();
         }
     }
 }

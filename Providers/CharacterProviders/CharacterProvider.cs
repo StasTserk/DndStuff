@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Data.Models;
 using Data.Models.Effects;
+using Data.Models.Items;
 
 namespace Providers.CharacterProviders
 {
@@ -74,8 +75,22 @@ namespace Providers.CharacterProviders
             var minimumStatBonus = new MinimumStatEffect(StatType.Strength, 17);
             var flatStatBonus = new BonusStatEffect(StatType.Dexterity, 2);
 
-            minimumStatBonus.ApplyToCharacter(CurrentCharacter);
-            flatStatBonus.ApplyToCharacter(CurrentCharacter);
+            var effectList = new List<IEffect>
+            {
+                minimumStatBonus,
+                flatStatBonus
+            };
+
+            var randomHat = new EquippableItem(
+                name: "Cool Hat", 
+                description: "A cool hat",
+                shortDescription: "Coolhat",
+                weight: 1,
+                cost: 100,
+                slot: EquippableSlot.Head,
+                effects: effectList);
+
+            CurrentCharacter.Equip(randomHat);
         }
     }
 }

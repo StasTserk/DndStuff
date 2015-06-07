@@ -1,21 +1,86 @@
-﻿namespace Data.Models
+﻿using System.Collections.Generic;
+using System.Linq;
+using Data.Models.Effects;
+
+namespace Data.Models
 {
-    public class PlayerClass
+    public enum CharacterClassType
     {
-        public string Name { get; set; }
+        Barbarian,
+        Druid,
+        Fighter,
+        Monk,
+        Paladin,
+        Ranger,
+        Sorcerer,
+        Warlock,
+        Wizard
     }
 
-    public class ClassAbility
+    /// <summary>
+    /// Data structure representing a set of benifits gained by gaining a class
+    /// </summary>
+    public class ClassLevel : IEffect
     {
-        public string Description { get; set; }
-        public AbilityType Type { get; set; }
-        public short LevelObtained { get; set; }
+        private readonly IEnumerable<IEffect> _levelEffects;
+        private readonly int _level;
+
+        public ClassLevel(IEnumerable<IEffect> levelEffects, int level)
+        {
+            _levelEffects = levelEffects;
+            _level = level;
+        }
+
+        public int Level
+        {
+            get { return _level;  }
+        }
+
+        public IEnumerable<IEffect> LevelEffects 
+        {
+            get { return _levelEffects; }
+        }
+
+        public void ApplyToCharacter(Character targetCharacter)
+        {
+            foreach (var levelEffect in _levelEffects)
+            {
+                levelEffect.ApplyToCharacter(targetCharacter);
+            }
+        }
+
+        public void RemoveFromCharacter(Character targetCharacter)
+        {
+            foreach (var levelEffect in _levelEffects)
+            {
+                levelEffect.RemoveFromCharacter(targetCharacter);
+            }
+        }
     }
 
-    public enum AbilityType
+    public class CharacterClass
     {
-        Proficiency,
-        Passive,
-        Active
+        private readonly IEnumerable<ClassLevel> _levelEffects ;
+        private readonly CharacterClassType _classType;
+        public CharacterClass(IEnumerable<ClassLevel> levelEffects, CharacterClassType classType)
+        {
+            _levelEffects = levelEffects;
+            _classType = classType;
+        }
+
+        public IEnumerable<ClassLevel> LevelEffects
+        {
+            get { return _levelEffects; }
+        }
+
+        public CharacterClassType ClassType
+        {
+            get { return _classType; }
+        }
+
+        public ClassLevel GetClassLevel(int level)
+        {
+            return _levelEffects.FirstOrDefault(l => l.Level == level);
+        }
     }
 }

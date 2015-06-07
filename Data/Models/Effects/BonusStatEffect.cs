@@ -23,17 +23,22 @@ namespace Data.Models.Effects
         /// <param name="targetCharacter">Player stat effect must be added to.</param>
         public void ApplyToCharacter(Character targetCharacter)
         {
-            targetCharacter.Stats.First(s => s.Type == _type).StatEffects.Insert(0, this);
+            targetCharacter.Stats.First(s => s.Type == _type).AddEffect(this);
         }
 
         public void RemoveFromCharacter(Character targetCharacter)
         {
-            targetCharacter.Stats.First(s => s.Type == _type).StatEffects.Remove(this);
+            targetCharacter.Stats.First(s => s.Type == _type).RemoveEffect(this);
         }
 
         public int GetAffectedStatScore(int statScore)
         {
             return statScore + _bonus;
+        }
+
+        public StatType Type
+        {
+            get { return _type; }
         }
     }
 }
