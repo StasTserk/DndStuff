@@ -50,10 +50,14 @@
   <ItemGroup>
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\ClassModel.cs" />
+    <Compile Include="Models\Effects\BonusSkillEffect.cs" />
     <Compile Include="Models\Effects\BonusStatEffect.cs" />
     <Compile Include="Models\Effects\IEffect.cs" />
+    <Compile Include="Models\Effects\ISkillEffect.cs" />
+    <Compile Include="Models\Effects\ISkillProficiencyEffect.cs" />
     <Compile Include="Models\Effects\IStatEffect.cs" />
     <Compile Include="Models\Effects\MinimumStatEffect.cs" />
+    <Compile Include="Models\Effects\MinimumSkillProficiencyEffect.cs" />
     <Compile Include="Models\Items\EquippableItem.cs" />
     <Compile Include="Models\Items\IEquippable.cs" />
     <Compile Include="Models\Items\IItem.cs" />
