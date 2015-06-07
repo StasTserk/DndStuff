@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\CharacterFeature.cs" />
     <Compile Include="Models\ClassModel.cs" />
     <Compile Include="Models\Effects\BonusSkillEffect.cs" />
     <Compile Include="Models\Effects\BonusStatEffect.cs" />

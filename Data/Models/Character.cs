@@ -15,7 +15,7 @@ namespace Data.Models
         public string RaceName { get; set; }
         public string AlignmentName { get; set; }
         public IEnumerable<Proficiency> OtherProficiencies { get; set; }
-        public IEnumerable<string> FeaturesAndTraits { get; set; }
+        public IEnumerable<CharacterFeature> FeaturesAndTraits { get; set; }
         public IEnumerable<IEquippable> EquippedItems { get { return _equippedItems;} }
         public IEnumerable<IItem> Inventory {
             get { return _inventory; }

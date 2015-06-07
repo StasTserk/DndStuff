@@ -14,6 +14,9 @@
             <TabItem Header="Skills">
                 <views:CharacterSkillsView/>
             </TabItem>
+            <TabItem Header="Background">
+                <views:CharacterBackgroundView/>
+            </TabItem>
         </TabControl>
     </Grid>
 </Page>

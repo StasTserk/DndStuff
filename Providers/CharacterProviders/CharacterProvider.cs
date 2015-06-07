@@ -65,11 +65,26 @@ namespace Providers.CharacterProviders
                 new Proficiency("race", "Clambering")
             };
 
+            var FeatureList = new List<CharacterFeature>
+            {
+                new CharacterFeature(
+                    name: "Luck of the Irish",
+                    description: "You are lucky but also an alcoholic",
+                    shortDescription: "You are lucky",
+                    source: "Racial Trait"),
+                new CharacterFeature(
+                    name: "Cool guy",
+                    description: "You are a cool guy and everyone likes you.",
+                    shortDescription: "You are a cool guy",
+                    source: "Your hat")
+            };
+
             CurrentCharacter = new Character()
             {
                 Stats = enumerable,
                 Skills = defaultSkills.ToList(),
-                OtherProficiencies = proficiencyList
+                OtherProficiencies = proficiencyList,
+                FeaturesAndTraits = FeatureList
             };
 
             var minimumStatBonus = new MinimumStatEffect(StatType.Strength, 17);

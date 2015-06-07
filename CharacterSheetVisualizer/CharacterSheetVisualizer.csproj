@@ -79,11 +79,15 @@
     <Compile Include="NinjectModules\RunTimeModule.cs" />
     <Compile Include="NinjectModules\ViewModelModule.cs" />
     <Compile Include="ViewModel\BaseCharacterStatsViewModel.cs" />
+    <Compile Include="ViewModel\CharacterBackgroundViewModel.cs" />
     <Compile Include="ViewModel\CharacterSkillsViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="Views\BaseCharacterStatsView.xaml.cs">
       <DependentUpon>BaseCharacterStatsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CharacterBackgroundView.xaml.cs">
+      <DependentUpon>CharacterBackgroundView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CharacterSkillsView.xaml.cs">
       <DependentUpon>CharacterSkillsView.xaml</DependentUpon>
@@ -113,6 +117,10 @@
     <Page Include="Views\BaseCharacterStatsView.xaml">
       <SubType>Form</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CharacterBackgroundView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\CharacterSkillsView.xaml">
       <SubType>Form</SubType>
