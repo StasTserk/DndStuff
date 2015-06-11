@@ -61,12 +61,14 @@ namespace Providers.CharacterProviders
                 enumerable.FirstOrDefault(s => s.Type == StatType.Charisma)
                 );
 
+            var acTracker = new ArmorClass(enumerable.First(s => s.Type == StatType.Dexterity));
+
             CurrentCharacter = new Character()
             {
                 Stats = enumerable,
                 Skills = defaultSkills.ToList(),
-                //OtherProficiencies = proficiencyList,
-                //FeaturesAndTraits = FeatureList
+                Armor = acTracker,
+                LevelModifiers = modifiers
             };
 
             var minimumStatBonus = new MinimumStatEffect(StatType.Strength, 17);

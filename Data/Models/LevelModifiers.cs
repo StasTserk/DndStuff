@@ -47,8 +47,12 @@ namespace Data.Models
                     break;
             }
 
-            return (int)(multiplier * (2 + (Level / 4)));
+            return (int)(multiplier * ProficiencyBonus);
         }
 
+        public int ProficiencyBonus
+        {
+            get { return 2 + (Level/4); }
+        }
     }
 }

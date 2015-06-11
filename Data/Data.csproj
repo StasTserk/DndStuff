@@ -48,13 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ArmorClass.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\CharacterFeature.cs" />
     <Compile Include="Models\ClassModel.cs" />
     <Compile Include="Models\Effects\AddFeatureEffect.cs" />
     <Compile Include="Models\Effects\AddProficiencyEffect.cs" />
+    <Compile Include="Models\Effects\ArmorWithMaxDexEffect.cs" />
     <Compile Include="Models\Effects\BonusSkillEffect.cs" />
     <Compile Include="Models\Effects\BonusStatEffect.cs" />
+    <Compile Include="Models\Effects\IArmorClassEffect.cs" />
     <Compile Include="Models\Effects\IEffect.cs" />
     <Compile Include="Models\Effects\IFeatureEffect.cs" />
     <Compile Include="Models\Effects\IOtherProficencyEffect.cs" />

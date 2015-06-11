@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using Data.Models.Effects;
 using Data.Models.Items;
@@ -9,15 +10,57 @@ namespace Data.Models
     public class Character
         : ObservableObject
     {
+        #region Backing Fields
         private readonly ICollection<IOtherProficencyEffect> _proficiencyEffects;
-        private readonly ICollection<IFeatureEffect> _featureEffects; 
+        private readonly ICollection<IArmorClassEffect> _armorClassEffects; 
+        private readonly ICollection<IFeatureEffect> _featureEffects;
+        private readonly ICollection<IEquippable> _equippedItems;
+        private readonly ICollection<IItem> _inventory;
+        private IEnumerable<Skill> _skills;
+        private IEnumerable<Stat> _stats; 
+        #endregion
 
-        public IEnumerable<Stat> Stats { get; set; }
-        public IEnumerable<Skill> Skills { get; set; }
+        #region Properties
+        public IEnumerable<Stat> Stats {
+            get { return _stats; }
+            set
+            {
+                _stats = value;
+                _stats.First(s => s.Type == StatType.Dexterity).PropertyChanged +=
+                    UpdateInitiative;
+            }
+        }
+
+        public IEnumerable<Skill> Skills 
+        {
+            get
+            {
+                return _skills;
+            }
+            set
+            {
+                _skills = value;
+                _skills.First(s => s.Type == SkillType.Perception).PropertyChanged +=
+                    UpdatePassivePerception;
+            } 
+        }
+
+        public int PassivePerception
+        {
+            get { return 10 + Skills.First(s => s.Type == SkillType.Perception).Modifier; }
+        }
+
+        public int Initiative
+        {
+            get { return Stats.First(s => s.Type == StatType.Dexterity).Modifier; }
+        }
+
         public string PlayerName { get; set; }
         public string CharacterName { get; set; }
         public string RaceName { get; set; }
         public string AlignmentName { get; set; }
+        public LevelModifiers LevelModifiers { get; set; }
+        public ArmorClass Armor { get; set; }
 
         public IEnumerable<Proficiency> OtherProficiencies
         {
@@ -44,22 +87,30 @@ namespace Data.Models
                 return featureList;
             }
         }
-        public IEnumerable<IEquippable> EquippedItems { get { return _equippedItems;} }
-        public IEnumerable<IItem> Inventory {
+
+        public IEnumerable<IEquippable> EquippedItems
+        {
+            get { return _equippedItems;}
+        }
+        
+        public IEnumerable<IItem> Inventory 
+        {
             get { return _inventory; }
         }
+        #endregion
 
-        private readonly ICollection<IEquippable> _equippedItems;
-        private readonly ICollection<IItem> _inventory;
-
+        #region Constructors
         public Character()
         {
             _featureEffects = new List<IFeatureEffect>();
             _proficiencyEffects = new List<IOtherProficencyEffect>();
+            _armorClassEffects = new List<IArmorClassEffect>();
             _equippedItems = new List<IEquippable>();
             _inventory = new List<IItem>();
         }
+        #endregion
 
+        #region Item Handling
         public void Equip(IEquippable equippableItem)
         {
             var slot = equippableItem.GetSlot();
@@ -89,27 +140,45 @@ namespace Data.Models
             RaisePropertyChanged(() => Inventory);
             RaisePropertyChanged(() => EquippedItems);
         }
+        #endregion
 
-#region Effects handling
+        #region Event Handling
+        private void UpdatePassivePerception(object sender, PropertyChangedEventArgs e)
+        {
+            RaisePropertyChanged(() => PassivePerception);
+        }
+
+        private void UpdateInitiative(object sender, PropertyChangedEventArgs e)
+        {
+            RaisePropertyChanged(() => Initiative);
+        }
+
+        #endregion
+
+        #region Effects handling
         public void AddProficiencyEffect(IOtherProficencyEffect otherProficencyEffect)
         {
             _proficiencyEffects.Add(otherProficencyEffect);
+            RaisePropertyChanged(() => OtherProficiencies);
         }
 
         public void RemoveProficiencyEffect(IOtherProficencyEffect otherProficencyEffect)
         {
             _proficiencyEffects.Remove(otherProficencyEffect);
+            RaisePropertyChanged(() => OtherProficiencies);
         }
 
         public void AddFeatureEffect(IFeatureEffect featureEffect)
         {
             _featureEffects.Add(featureEffect);
+            RaisePropertyChanged(() => FeaturesAndTraits);
         }
 
         public void RemoveFeatureEffect(IFeatureEffect featureEffect)
         {
             _featureEffects.Remove(featureEffect);
+            RaisePropertyChanged(() => FeaturesAndTraits);
         }
-#endregion
+        #endregion
     }
 }

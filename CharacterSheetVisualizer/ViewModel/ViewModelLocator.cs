@@ -76,12 +76,13 @@ namespace CharacterSheetVisualizer.ViewModel
 
         public void Dispose()
         {
-            ((IDisposable) _kernel).Dispose();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
-        public void Dispose(bool nativeOrManaged)
+        protected virtual void Dispose(bool nativeOrManaged)
         {
-            Dispose();
+            ((IDisposable)_kernel).Dispose();
         }
     }
 }
