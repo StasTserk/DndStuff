@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Data.Models.Effects;
@@ -51,6 +50,7 @@ namespace Data.Models
                 RaisePropertyChanged(() => Score);
                 RaisePropertyChanged(() => Modifier);
                 RaisePropertyChanged(() => Save);
+                RaisePropertyChanged(() => PointBuyEquivalent);
             }
         }
 
@@ -71,6 +71,26 @@ namespace Data.Models
             { 
                 return _proficiencyEffects.Aggregate(ProficencyModifierType.None,
                     (prof, mod) => mod.GetSaveModifier(prof));
+            }
+        }
+
+        public int PointBuyEquivalent
+        {
+            get
+            {
+                switch (_baseScore)
+                {
+                    case 8: return 0;
+                    case 9: return 1;
+                    case 10: return 2;
+                    case 11: return 3;
+                    case 12: return 4;
+                    case 13: return 5;
+                    case 14: return 7;
+                    case 15: return 9;
+                    default:
+                        return 100;
+                }
             }
         }
 

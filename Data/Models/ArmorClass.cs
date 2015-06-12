@@ -19,7 +19,7 @@ namespace Data.Models
             _associatedStat.PropertyChanged += UpdateAc;
         }
 
-        private void UpdateAc(object sender, PropertyChangedEventArgs e)
+        public void UpdateAc(object sender, PropertyChangedEventArgs e)
         {
             RaisePropertyChanged(() => Value);
         }

@@ -36,8 +36,25 @@ namespace Providers.CharacterProviders
                                     name: "Unarmored Defense",
                                     description: "Gain CON to AC while not wearing armor",
                                     shortDescription: "Gain CON TO AC",
+                                    source: "Barbarian")),
+                            new ArmorAddStatEffect(StatType.Constitution)
+                        }, 1),
+                    new ClassLevel(
+                        new List<IEffect>
+                        {
+                            new AddFeatureEffect(
+                                new CharacterFeature(
+                                    name: "Reckless Attack",
+                                    description: "Gain advantage on strength chceks and melee attacks while granting advantage on attacks",
+                                    shortDescription: "Easier to hit, easier to be hit",
+                                    source: "Barbarian")),
+                            new AddFeatureEffect(
+                                new CharacterFeature(
+                                    name: "Danger Sense",
+                                    description: "Gain advantage on dexterity saving throws against things you can see",
+                                    shortDescription: "Advantage to Dex Saves vs things you are aware of",
                                     source: "Barbarian"))
-                        }, 1)
+                        }, 2)
                 }, CharacterClassType.Barbarian);
         }
 

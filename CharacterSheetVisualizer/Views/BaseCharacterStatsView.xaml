@@ -45,48 +45,69 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <DataGrid ItemsSource="{Binding Character.Stats}"
-                  CanUserAddRows="False"
-                  CanUserDeleteRows="False"
-                  CanUserReorderColumns="False"
-                  AutoGenerateColumns="False"
-                  Style="{DynamicResource DataGridStyle1}"
-                  Grid.Column="0"
-                  Grid.Row="0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header=""
-                                    Width="Auto"
-                                    FontSize="15"
-                                    FontWeight="Bold"
-                                    Binding="{Binding Type}"
-                                    IsReadOnly="True"/>
-                <DataGridTextColumn Header="Base"
-                                    Binding="{Binding BaseScore}"
-                                    IsReadOnly="False"
-                                    FontSize="15"
-                                    Width="Auto"/>
-                <DataGridTextColumn Header="Score"
-                                    Binding="{Binding Score}"
-                                    IsReadOnly="True"
-                                    FontSize="15"
-                                    Width="Auto"/>
-                <DataGridTextColumn Header="Modifier"
-                                    Binding="{Binding Modifier}"
-                                    IsReadOnly="True"
-                                    FontSize="15"
-                                    Width="Auto"/>
-                <DataGridTextColumn Header="Save"
-                                    Binding="{Binding Save}"
-                                    IsReadOnly="True"
-                                    FontSize="15"
-                                    Width="Auto"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <StackPanel Grid.Column="0"
-                    Grid.Row="1">
+        <StackPanel Name="AbilityScoreGrid"
+                    Grid.Column="0"
+                    Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="20"
+                       FontWeight="ExtraBold"
+                       Margin="15,0,5,0"
+                       Content="Ability Scores"/>
+                <Label FontSize="12"
+                       HorizontalAlignment="Right"
+                       Content="PBE"
+                       Margin="100,0,0,0"
+                       VerticalAlignment="Center"/>
+                <TextBox Text="{Binding Character.PointBuyEquivalent, Binding.Mode=OneWay}"
+                         FontSize="12"
+                         HorizontalAlignment="Center"
+                         Height="22"
+                         Width="30"/>
+            </StackPanel>
+            <DataGrid ItemsSource="{Binding Character.Stats}"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      CanUserReorderColumns="False"
+                      AutoGenerateColumns="False"
+                      Style="{DynamicResource DataGridStyle1}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header=""
+                                        Width="Auto"
+                                        FontSize="15"
+                                        FontWeight="Bold"
+                                        Binding="{Binding Type}"
+                                        IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Base"
+                                        Binding="{Binding BaseScore}"
+                                        IsReadOnly="False"
+                                        FontSize="15"
+                                        Width="Auto"/>
+                    <DataGridTextColumn Header="Score"
+                                        Binding="{Binding Score}"
+                                        IsReadOnly="True"
+                                        FontSize="15"
+                                        Width="Auto"/>
+                    <DataGridTextColumn Header="Modifier"
+                                        Binding="{Binding Modifier}"
+                                        IsReadOnly="True"
+                                        FontSize="15"
+                                        Width="Auto"/>
+                    <DataGridTextColumn Header="Save"
+                                        Binding="{Binding Save}"
+                                        IsReadOnly="True"
+                                        FontSize="15"
+                                        Width="Auto"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <StackPanel Name="GenericCalculatedStats"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Margin="0,15,0,0">
+            
             <StackPanel Name="AcDisplayPanel"
                         Orientation="Horizontal"
-                        Margin="10,10,10,10">
+                        Margin="10,5,5,5">
                 <TextBox Text="{Binding Character.Armor.Value, Binding.Mode=OneWay}"
                          Style="{DynamicResource StatDisplayBoxStyle}"/>
                 <Label Content="Armor Class"
@@ -94,7 +115,7 @@
             </StackPanel>
             <StackPanel Name="PassivePcpDisplayPanel"
                         Orientation="Horizontal"
-                        Margin="10,10,10,10">
+                        Margin="10,5,5,5">
                 <TextBox Text="{Binding Character.PassivePerception, Binding.Mode=OneWay}"
                          Style="{DynamicResource StatDisplayBoxStyle}"/>
                 <Label Content="Passive Perception"
@@ -102,7 +123,7 @@
             </StackPanel>
             <StackPanel Name="InitiativePanel"
                         Orientation="Horizontal"
-                        Margin="10,10,10,10">
+                        Margin="10,5,5,5">
                 <TextBox Text="{Binding Character.Initiative, Binding.Mode=OneWay}"
                          Style="{DynamicResource StatDisplayBoxStyle}"/>
                 <Label Content="Initiative"
@@ -110,7 +131,7 @@
             </StackPanel>
             <StackPanel Name="ProficiencyBonusPanel"
                         Orientation="Horizontal"
-                        Margin="10,10,10,10">
+                        Margin="10,5,5,5">
                 <TextBox Text="{Binding Character.LevelModifiers.ProficiencyBonus, Binding.Mode=OneWay}"
                          Style="{DynamicResource StatDisplayBoxStyle}"/>
                 <Label Content="Proficiency Bonus"

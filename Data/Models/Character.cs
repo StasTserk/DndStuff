@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using Data.Models.Effects;
 using Data.Models.Items;
@@ -12,7 +13,6 @@ namespace Data.Models
     {
         #region Backing Fields
         private readonly ICollection<IOtherProficencyEffect> _proficiencyEffects;
-        private readonly ICollection<IArmorClassEffect> _armorClassEffects; 
         private readonly ICollection<IFeatureEffect> _featureEffects;
         private readonly ICollection<IEquippable> _equippedItems;
         private readonly ICollection<IItem> _inventory;
@@ -28,6 +28,11 @@ namespace Data.Models
                 _stats = value;
                 _stats.First(s => s.Type == StatType.Dexterity).PropertyChanged +=
                     UpdateInitiative;
+
+                foreach (var stat in value)
+                {
+                    stat.PropertyChanged += UpdatePointBuyEquivalent;
+                }
             }
         }
 
@@ -97,6 +102,11 @@ namespace Data.Models
         {
             get { return _inventory; }
         }
+
+        public int PointBuyEquivalent
+        {
+            get { return Stats.Sum(s => s.PointBuyEquivalent); }
+        }
         #endregion
 
         #region Constructors
@@ -104,7 +114,6 @@ namespace Data.Models
         {
             _featureEffects = new List<IFeatureEffect>();
             _proficiencyEffects = new List<IOtherProficencyEffect>();
-            _armorClassEffects = new List<IArmorClassEffect>();
             _equippedItems = new List<IEquippable>();
             _inventory = new List<IItem>();
         }
@@ -153,6 +162,10 @@ namespace Data.Models
             RaisePropertyChanged(() => Initiative);
         }
 
+        private void UpdatePointBuyEquivalent(object sender, PropertyChangedEventArgs e)
+        {
+            RaisePropertyChanged(() => PointBuyEquivalent);
+        }
         #endregion
 
         #region Effects handling

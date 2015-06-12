@@ -54,6 +54,7 @@
     <Compile Include="Models\ClassModel.cs" />
     <Compile Include="Models\Effects\AddFeatureEffect.cs" />
     <Compile Include="Models\Effects\AddProficiencyEffect.cs" />
+    <Compile Include="Models\Effects\ArmorAddStatEffect.cs" />
     <Compile Include="Models\Effects\ArmorWithMaxDexEffect.cs" />
     <Compile Include="Models\Effects\BonusSkillEffect.cs" />
     <Compile Include="Models\Effects\BonusStatEffect.cs" />
