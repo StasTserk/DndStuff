@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Data.Models.Effects
 {
-    class ModifyFeatureEffect : IFeatureEffect
+    public class ModifyFeatureEffect : IFeatureEffect
     {
         private readonly CharacterFeature _newFeature;
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using Data.Models.Effects;
 using Data.Models.Items;
@@ -19,6 +20,7 @@ namespace Data.Models
         Evil,
         ChaoticEvil
     }
+
     public class Character
         : ObservableObject
     {

@@ -75,6 +75,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Design\DesignClassController.cs" />
     <Compile Include="NinjectModules\DesignTimeModule.cs" />
     <Compile Include="NinjectModules\RunTimeModule.cs" />
     <Compile Include="NinjectModules\ViewModelModule.cs" />
@@ -164,7 +165,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Design\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +175,10 @@
     <ProjectReference Include="..\Providers\Providers.csproj">
       <Project>{2BC6C288-C79D-410E-B4E4-36074B1687BE}</Project>
       <Name>Providers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{7C32E931-9573-4211-9938-F052F2F7133C}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

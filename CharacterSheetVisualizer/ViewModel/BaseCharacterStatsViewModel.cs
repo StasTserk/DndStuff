@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Data;
 using Data.Models;
 using GalaSoft.MvvmLight;
 using Providers.CharacterProviders;

@@ -44,10 +44,7 @@ namespace Providers.CharacterProviders
 
         public void CreateNewCharacter()
         {
-            var modifiers = new LevelModifiers()
-            {
-                Level = 1
-            };
+            var modifiers = new LevelModifiers();
 
             var defaultStats = _statProvider.GetDefaultStats(modifiers);
 
@@ -87,6 +84,7 @@ namespace Providers.CharacterProviders
             };
 
             _classProvider.GetSampleClass().GetClassLevel(1).ApplyToCharacter(CurrentCharacter);
+            _classProvider.GetSampleClass().GetClassLevel(2).ApplyToCharacter(CurrentCharacter);
 
             var randomHat = new EquippableItem(
                 name: "Cool Hat", 

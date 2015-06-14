@@ -10,7 +10,7 @@ namespace Data.Repositories
     public class SpellLoader : ISpellLoader
     {
         private List<Spell> _spellList;
-        private Dictionary<String, Spell> _classSpellList;
+        private Dictionary<string, Spell> _classSpellList;
 
         public SpellLoader()
         {
@@ -27,16 +27,15 @@ namespace Data.Repositories
 
             foreach(var spellClass in list)
             {
-                String className = spellClass.Attribute("name").Value;
+                string className = spellClass.Attribute("name").Value;
                 var spellCollection = spellClass.Elements("spell");
                 foreach (var spellEntry in spellCollection)
                 {
-                    if (_spellList.Where(s => s.Name == spellEntry.Attribute("name").Value).Any())
-                    {
-                        Spell spl = _spellList.Where(s => s.Name == spellEntry.Attribute("name").Value).First();
+                    if (_spellList.All(s => s.Name != spellEntry.Attribute("name").Value)) continue;
+                    
+                    Spell spl = _spellList.First(s => s.Name == spellEntry.Attribute("name").Value);
 
-                        spl.Classes.Add(className + " " + spellEntry.Attribute("level").Value);
-                    }
+                    spl.Classes.Add(className + " " + spellEntry.Attribute("level").Value);
                 }
             }
         }

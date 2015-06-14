@@ -30,16 +30,26 @@
                 </DataGrid.Columns>
             </DataGrid>
             <DataGrid Name="TraitsAndFeaturesList"
-                  ItemsSource="{Binding Character.FeaturesAndTraits}"
-                  AutoGenerateColumns="False"
-                  Style="{DynamicResource BorderlessTextListGrid}">
+                      ItemsSource="{Binding Character.FeaturesAndTraits}"
+                      AutoGenerateColumns="False"
+                      Style="{DynamicResource BorderlessTextListGrid}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Name}"
-                                    Header="Trait"
-                                    IsReadOnly="True"/>
-                    <DataGridTextColumn Binding="{Binding ShortDescription}"
-                                    Header="Short Description"
-                                    IsReadOnly="True"/>
+                                        Header="Trait"
+                                        IsReadOnly="True"
+                                        Width="150"/>
+                    <DataGridTemplateColumn Header="Short Description"
+                                            IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock TextWrapping="Wrap"
+                                           Width="200"
+                                           Text="{Binding ShortDescription}"
+                                           ToolTip="{Binding Description}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

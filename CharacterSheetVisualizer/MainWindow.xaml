@@ -7,8 +7,8 @@
         xmlns:views="clr-namespace:CharacterSheetVisualizer.Views"
         mc:Ignorable="d ignore"
         Height="Auto"
-        Width="600"
-        MinWidth="600"
+        Width="650"
+        MinWidth="650"
         Title="Character Visualization Tool Thing"
         DataContext="{Binding Main, Source={StaticResource Locator}}">
     

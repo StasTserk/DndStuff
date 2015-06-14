@@ -55,6 +55,7 @@
     <Compile Include="CharacterProviders\IClassProvider.cs" />
     <Compile Include="CharacterProviders\IRaceProvider.cs" />
     <Compile Include="CharacterProviders\RaceProvider.cs" />
+    <Compile Include="FormatProviders\DescriptionTooltipConverter.cs" />
     <Compile Include="FormatProviders\IRtfProvider.cs" />
     <Compile Include="CharacterProviders\ISkillProvider.cs" />
     <Compile Include="CharacterProviders\IStatProvider.cs" />
@@ -67,6 +68,10 @@
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{680720a8-5865-452f-adae-f7873a49e923}</Project>
       <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{7C32E931-9573-4211-9938-F052F2F7133C}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

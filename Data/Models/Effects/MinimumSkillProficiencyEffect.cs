@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Data.Models.Effects
 {
-    class MinimumSkillProficiencyEffect : ISkillProficiencyEffect
+    public class MinimumSkillProficiencyEffect : ISkillProficiencyEffect
     {
         private readonly SkillType _type;
         private readonly ProficencyModifierType _minimumModifierType;
@@ -30,7 +30,7 @@ namespace Data.Models.Effects
             {
                 case ProficencyModifierType.Expert:
                     return _minimumModifierType;
-                case ProficencyModifierType.Proficent:
+                case ProficencyModifierType.Proficient:
                     return type == ProficencyModifierType.Expert ? type : _minimumModifierType;
                 case ProficencyModifierType.JackOfAllTrades:
                     return type == ProficencyModifierType.None ? _minimumModifierType : type;

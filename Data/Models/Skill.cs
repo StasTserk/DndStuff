@@ -83,7 +83,7 @@ namespace Data.Models
                 {
                     ProficencyModifierType.None,
                     ProficencyModifierType.JackOfAllTrades,
-                    ProficencyModifierType.Proficent,
+                    ProficencyModifierType.Proficient,
                     ProficencyModifierType.Expert
                 };
             }

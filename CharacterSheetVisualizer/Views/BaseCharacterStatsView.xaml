@@ -51,6 +51,7 @@
             <Setter Property="Margin" Value="5,0,10,0"></Setter>
             <Setter Property="VerticalAlignment" Value="Bottom"/>
         </Style>
+        
     </UserControl.Resources>
     <StackPanel Name="MainStatsDisplayPanel"
                 Width="595">
@@ -105,6 +106,7 @@
                     <TextBox Text="{Binding Character.ExperiencePoints, Binding.Mode=TwoWay}"
                              Width="75"
                              TextAlignment="Center"
+                             ToolTip="{Binding Character.LevelModifiers.NextLevelTooltip}"
                              FontSize="16"
                              HorizontalAlignment="Right"/>
                 </StackPanel>

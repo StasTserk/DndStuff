@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data.Models.Effects
 {
-    class BonusSkillEffect : ISkillEffect
+    public class BonusSkillEffect : ISkillEffect
     {
         private readonly SkillType _skillType;
         private readonly int _skillBonus;
