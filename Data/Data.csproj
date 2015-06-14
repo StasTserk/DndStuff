@@ -58,6 +58,7 @@
     <Compile Include="Models\Effects\ArmorAddStatEffect.cs" />
     <Compile Include="Models\Effects\ArmorWithMaxDexEffect.cs" />
     <Compile Include="Models\Effects\BonusSkillEffect.cs" />
+    <Compile Include="Models\Effects\BonusSpeedEffect.cs" />
     <Compile Include="Models\Effects\BonusStatEffect.cs" />
     <Compile Include="Models\Effects\IArmorClassEffect.cs" />
     <Compile Include="Models\Effects\IEffect.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Models\Effects\ISaveProficiencyEffect.cs" />
     <Compile Include="Models\Effects\ISkillEffect.cs" />
     <Compile Include="Models\Effects\ISkillProficiencyEffect.cs" />
+    <Compile Include="Models\Effects\ISpeedEffect.cs" />
     <Compile Include="Models\Effects\IStatEffect.cs" />
     <Compile Include="Models\Effects\MinimumStatEffect.cs" />
     <Compile Include="Models\Effects\MinimumSkillProficiencyEffect.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Models\Items\IItem.cs" />
     <Compile Include="Models\LevelModifiers.cs" />
     <Compile Include="Models\Proficiency.cs" />
+    <Compile Include="Models\Race.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\SpellListModel.cs" />
     <Compile Include="Models\SpellModel.cs" />

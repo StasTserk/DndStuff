@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using Data.Models;
 using Data.Models.Effects;
@@ -14,6 +13,7 @@ namespace Providers.CharacterProviders
         private readonly IStatProvider _statProvider;
         private readonly ISkillProvider _skillProvider;
         private readonly IClassProvider _classProvider;
+        private readonly IRaceProvider _raceProvider;
 
         public event EventHandler NewCharacterLoaded;
 
@@ -32,11 +32,12 @@ namespace Providers.CharacterProviders
             }
         }
 
-        public CharacterProvider(IStatProvider statProvider, ISkillProvider skillProvider, IClassProvider classProvider)
+        public CharacterProvider(IStatProvider statProvider, ISkillProvider skillProvider, IClassProvider classProvider, IRaceProvider raceProvider)
         {
             _statProvider = statProvider;
             _skillProvider = skillProvider;
             _classProvider = classProvider;
+            _raceProvider = raceProvider;
             // Load a new Character
             CreateNewCharacter();
         }
@@ -47,7 +48,6 @@ namespace Providers.CharacterProviders
             {
                 Level = 1
             };
-
 
             var defaultStats = _statProvider.GetDefaultStats(modifiers);
 
@@ -64,8 +64,7 @@ namespace Providers.CharacterProviders
 
             var acTracker = new ArmorClass(enumerable.First(s => s.Type == StatType.Dexterity));
 
-            var background = new Background();
-            background.Name = "Adept";
+            var background = new Background {Name = "Adept"};
 
             CurrentCharacter = new Character()
             {
@@ -73,7 +72,8 @@ namespace Providers.CharacterProviders
                 Skills = defaultSkills.ToList(),
                 Armor = acTracker,
                 LevelModifiers = modifiers,
-                PlayerName = "Bruenor",
+                PlayerName = "Coolguy Steve",
+                CharacterName = "Bruenor",
                 Background = background
             };
 
@@ -98,6 +98,7 @@ namespace Providers.CharacterProviders
                 effects: effectList);
 
             CurrentCharacter.Equip(randomHat);
+            _raceProvider.GetSampleRace().ApplyToCharacter(CurrentCharacter);
         }
     }
 }

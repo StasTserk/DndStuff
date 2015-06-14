@@ -5,49 +5,85 @@
     <UserControl.Resources>
         <Style x:Key="BorderlessTextListGrid" TargetType="{x:Type DataGrid}">
             <Setter Property="ColumnHeaderStyle" Value="{DynamicResource BorderlessTextListGridHeaderStyle}"/>
-            <Setter Property="VerticalGridLinesBrush" Value="AliceBlue"/>
+            <Setter Property="VerticalGridLinesBrush" Value="White"/>
             <Setter Property="HorizontalGridLinesBrush" Value="AliceBlue"/>
+            <Setter Property="Margin" Value="10,10,10,10"/>
+            <Setter Property="MinHeight" Value="100"/>
+            <Setter Property="MinWidth" Value="200"/>
         </Style>
         <Style x:Key="BorderlessTextListGridHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
     </UserControl.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <DataGrid Name="OtherBackground"
-                  ItemsSource="{Binding Character.OtherProficiencies}"
+    <StackPanel Orientation="Horizontal"
+                Width="Auto">
+        <StackPanel Name="TraitsAndProficienciesPanel">
+            <DataGrid Name="OtherBackground"
+                      ItemsSource="{Binding Character.OtherProficiencies}"
+                      AutoGenerateColumns="False"
+                      Style="{DynamicResource BorderlessTextListGrid}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}"
+                                        Header="Other Proficiencies"
+                                        IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="TraitsAndFeaturesList"
+                  ItemsSource="{Binding Character.FeaturesAndTraits}"
                   AutoGenerateColumns="False"
-                  Style="{DynamicResource BorderlessTextListGrid}"
-                  Grid.Row="0"
-                  Grid.Column="0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Name}"
-                                    Header="Other Proficiencies"
+                  Style="{DynamicResource BorderlessTextListGrid}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}"
+                                    Header="Trait"
                                     IsReadOnly="True"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <DataGrid Name="TraitsAndFeaturesList"
-              ItemsSource="{Binding Character.FeaturesAndTraits}"
-              AutoGenerateColumns="False"
-              Style="{DynamicResource BorderlessTextListGrid}"
-              Grid.Row="1"
-              Grid.Column="0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Name}"
-                                Header="Trait"
-                                IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding ShortDescription}"
-                                Header="Short Description"
-                                IsReadOnly="True"/>
-            </DataGrid.Columns>
-    </DataGrid>
-    </Grid>
+                    <DataGridTextColumn Binding="{Binding ShortDescription}"
+                                    Header="Short Description"
+                                    IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <StackPanel Name="CharacterComponentsPanel">
+            <DataGrid Name="PersonalityTraits"
+                      ItemsSource="{Binding Character.Background}"
+                      AutoGenerateColumns="False"
+                      Style="{DynamicResource BorderlessTextListGrid}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding PersonalityTraits}"
+                                        Header="Personality Traits"
+                                        IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="Ideals"
+                      ItemsSource="{Binding Character.Background}"
+                      AutoGenerateColumns="False"
+                      Style="{DynamicResource BorderlessTextListGrid}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Ideals}"
+                                        Header="Ideals"
+                                        IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="Flaws"
+                      ItemsSource="{Binding Character.Background}"
+                      AutoGenerateColumns="False"
+                      Style="{DynamicResource BorderlessTextListGrid}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Flaws}"
+                                        Header="Flaws"
+                                        IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="Bonds"
+                      ItemsSource="{Binding Character.Background}"
+                      AutoGenerateColumns="False"
+                      Style="{DynamicResource BorderlessTextListGrid}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Bonds}"
+                                        Header="Bonds"
+                                        IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </StackPanel>
 </UserControl>

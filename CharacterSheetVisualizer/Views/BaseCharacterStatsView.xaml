@@ -52,13 +52,18 @@
             <Setter Property="VerticalAlignment" Value="Bottom"/>
         </Style>
     </UserControl.Resources>
-    <StackPanel>
+    <StackPanel Name="MainStatsDisplayPanel"
+                Width="595">
+        <Label FontSize="24"
+               FontWeight="Heavy"
+               Content="{Binding Character.CharacterName}"
+               HorizontalAlignment="Center"/>
         <Border Name="NamesAndSuchBorder"
                 Style="{DynamicResource RoundedBlockBorderStyle}"
                 CornerRadius="10"
-                Width="555"
                 HorizontalAlignment="Left"
-                Margin="10,0,0,0">
+                Margin="10,0,0,0"
+                Width="555">
             <StackPanel Name="NamesAndSuchStackPanel">
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Class and Level:"
@@ -85,7 +90,7 @@
                     <Label Content="Race:"
                            Style="{DynamicResource GeneralNameStringsLabelStyle}"
                            HorizontalAlignment="Left"/>
-                    <Label Content="{Binding Character.RaceName}"
+                    <Label Content="{Binding Character.Race.Name}"
                            Style="{DynamicResource GeneralNameStringsTextStyle}"
                            HorizontalAlignment="Left"/>
                     <Label Content="Alignment:"
@@ -105,7 +110,7 @@
                 </StackPanel>
             </StackPanel>
         </Border>
-    <Grid Margin="10,10,10,10">
+        <Grid Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
@@ -179,7 +184,8 @@
                 <Border Style="{DynamicResource RoundedBlockBorderStyle}">
                     <StackPanel Name="AcDisplayPanel"
                                 Orientation="Horizontal"
-                                Margin="5,5,5,5">
+                                Margin="5,5,5,5"
+                                ToolTip="Attack rolls must match or exceed this score to hit the character">
                         <TextBox Text="{Binding Character.Armor.Value, Binding.Mode=OneWay}"
                                  Style="{DynamicResource StatDisplayBoxStyle}"/>
                         <Label Content="Armor Class"
@@ -189,7 +195,8 @@
                 <Border Style="{DynamicResource RoundedBlockBorderStyle}">
                     <StackPanel Name="PassivePcpDisplayPanel"
                                 Orientation="Horizontal"
-                                Margin="5,5,5,5">
+                                Margin="5,5,5,5"
+                                ToolTip="Perception score used when not actively rolling for perception">
                         <TextBox Text="{Binding Character.PassivePerception, Binding.Mode=OneWay}"
                                  Style="{DynamicResource StatDisplayBoxStyle}"/>
                         <Label Content="Passive Perception"
@@ -199,7 +206,8 @@
                 <Border Style="{DynamicResource RoundedBlockBorderStyle}">
                     <StackPanel Name="InitiativePanel"
                                 Orientation="Horizontal"
-                                Margin="5,5,5,5">
+                                Margin="5,5,5,5"
+                                ToolTip="Bonus added to the initiative roll">
                         <TextBox Text="{Binding Character.Initiative, Binding.Mode=OneWay}"
                                  Style="{DynamicResource StatDisplayBoxStyle}"/>
                         <Label Content="Initiative"
@@ -209,10 +217,22 @@
                 <Border Style="{DynamicResource RoundedBlockBorderStyle}">
                     <StackPanel Name="ProficiencyBonusPanel"
                                 Orientation="Horizontal"
-                                Margin="5,5,5,5">
+                                Margin="5,5,5,5"
+                                ToolTip="Bonus added to all rolls with which the character is proficient.">
                         <TextBox Text="{Binding Character.LevelModifiers.ProficiencyBonus, Binding.Mode=OneWay}"
                                  Style="{DynamicResource StatDisplayBoxStyle}"/>
                         <Label Content="Proficiency Bonus"
+                               Style="{DynamicResource StatDisplayLabelStyle}"/>
+                    </StackPanel>
+                </Border>
+                <Border Style="{DynamicResource RoundedBlockBorderStyle}">
+                    <StackPanel Name="SpeedPanel"
+                                Orientation="Horizontal"
+                                Margin="5,5,5,5"
+                                ToolTip="Distance in feet covered in a single move action">
+                        <TextBox Text="{Binding Character.Speed, Binding.Mode=OneWay}"
+                                 Style="{DynamicResource StatDisplayBoxStyle}"/>
+                        <Label Content="Speed"
                                Style="{DynamicResource StatDisplayLabelStyle}"/>
                     </StackPanel>
                 </Border>

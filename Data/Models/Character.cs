@@ -25,8 +25,10 @@ namespace Data.Models
         #region Backing Fields
         private readonly ICollection<IOtherProficencyEffect> _proficiencyEffects;
         private readonly ICollection<IFeatureEffect> _featureEffects;
+        private readonly ICollection<ISpeedEffect> _speedEffects;
         private readonly ICollection<IEquippable> _equippedItems;
         private readonly ICollection<IItem> _inventory;
+        private Race _race;
         private IEnumerable<Skill> _skills;
         private IEnumerable<Stat> _stats;
         private AlignmentType _alignment;
@@ -71,13 +73,37 @@ namespace Data.Models
         {
             get { return Stats.First(s => s.Type == StatType.Dexterity).Modifier; }
         }
+        
         public int ExperiencePoints { get; set; }
 
+        public int Speed
+        {
+            get
+            {
+                return _speedEffects.Aggregate(
+                    0, (speed, mod) => mod.GetSpeed(speed));
+            }
+        }
+
         public string PlayerName { get; set; }
+        
         public string CharacterName { get; set; }
-        public string RaceName { get; set; }
-        public string AlignmentName { get; set; }
+        
+        public Race Race 
+        {
+            get
+            {
+                return _race;
+            }
+            set
+            {
+                _race = value;
+                RaisePropertyChanged(() => Race.Name);
+            } 
+        }
+        
         public LevelModifiers LevelModifiers { get; set; }
+        
         public ArmorClass Armor { get; set; }
 
         public AlignmentType Alignment
@@ -89,6 +115,7 @@ namespace Data.Models
                 RaisePropertyChanged(() => Alignment);
             }
         }
+        
         public IEnumerable<Proficiency> OtherProficiencies
         {
             get
@@ -131,7 +158,6 @@ namespace Data.Models
         }
 
         public Background Background { get; set; }
-
         #endregion
 
         #region Constructors
@@ -141,6 +167,7 @@ namespace Data.Models
             _proficiencyEffects = new List<IOtherProficencyEffect>();
             _equippedItems = new List<IEquippable>();
             _inventory = new List<IItem>();
+            _speedEffects = new List<ISpeedEffect>();
         }
         #endregion
 
@@ -216,6 +243,18 @@ namespace Data.Models
         {
             _featureEffects.Remove(featureEffect);
             RaisePropertyChanged(() => FeaturesAndTraits);
+        }
+
+        public void AddSpeedEffect(ISpeedEffect speedEffect)
+        {
+            _speedEffects.Add(speedEffect);
+            RaisePropertyChanged(() => Speed);
+        }
+
+        public void RemoveSpeedEffect(ISpeedEffect speedEffect)
+        {
+            _speedEffects.Remove(speedEffect);
+            RaisePropertyChanged(() => Speed);
         }
         #endregion
     }
