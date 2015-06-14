@@ -38,7 +38,7 @@ namespace Providers.CharacterProviders
                                     shortDescription: "Gain CON TO AC",
                                     source: "Barbarian")),
                             new ArmorAddStatEffect(StatType.Constitution)
-                        }, 1),
+                        }, 1, CharacterClassType.Barbarian),
                     new ClassLevel(
                         new List<IEffect>
                         {
@@ -54,7 +54,7 @@ namespace Providers.CharacterProviders
                                     description: "Gain advantage on dexterity saving throws against things you can see",
                                     shortDescription: "Advantage to Dex Saves vs things you are aware of",
                                     source: "Barbarian"))
-                        }, 2)
+                        }, 2, CharacterClassType.Barbarian)
                 }, CharacterClassType.Barbarian);
         }
 

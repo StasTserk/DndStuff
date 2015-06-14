@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using Data.Models;
 using Data.Models.Effects;
@@ -63,12 +64,17 @@ namespace Providers.CharacterProviders
 
             var acTracker = new ArmorClass(enumerable.First(s => s.Type == StatType.Dexterity));
 
+            var background = new Background();
+            background.Name = "Adept";
+
             CurrentCharacter = new Character()
             {
                 Stats = enumerable,
                 Skills = defaultSkills.ToList(),
                 Armor = acTracker,
-                LevelModifiers = modifiers
+                LevelModifiers = modifiers,
+                PlayerName = "Bruenor",
+                Background = background
             };
 
             var minimumStatBonus = new MinimumStatEffect(StatType.Strength, 17);

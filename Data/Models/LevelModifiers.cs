@@ -1,4 +1,6 @@
-﻿using GalaSoft.MvvmLight;
+﻿using System.Collections.Generic;
+using System.Linq;
+using GalaSoft.MvvmLight;
 
 namespace Data.Models
 {
@@ -13,7 +15,15 @@ namespace Data.Models
     public class LevelModifiers
         : ObservableObject
     {
+        private ICollection<ClassLevel> _classLevels;
+
         private int _level;
+
+        public LevelModifiers()
+        {
+            _classLevels = new List<ClassLevel>();
+        }
+
         public int Level
         {
             get { return _level; }
@@ -25,6 +35,7 @@ namespace Data.Models
                 _level = value;
 
                 RaisePropertyChanged(() => Level);
+                RaisePropertyChanged(() => ProficiencyBonus);
             }
         }
 
@@ -48,6 +59,17 @@ namespace Data.Models
             }
 
             return (int)(multiplier * ProficiencyBonus);
+        }
+
+        public string ComposedClassLevelString
+        {
+            get { return _classLevels.First().ClassType + " 1"; }
+        }
+
+        public void AddClass(ClassLevel classLevel)
+        {
+            _classLevels.Add(classLevel);
+            Level ++;
         }
 
         public int ProficiencyBonus

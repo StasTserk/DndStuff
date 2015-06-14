@@ -7,5 +7,4 @@ namespace Providers.CharacterProviders
         CharacterClass GetSampleClass();
         CharacterClass GetClassByClassType(CharacterClassType type);
     }
-
 }

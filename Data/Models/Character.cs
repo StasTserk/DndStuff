@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Linq;
 using Data.Models.Effects;
 using Data.Models.Items;
@@ -8,6 +7,18 @@ using GalaSoft.MvvmLight;
 
 namespace Data.Models
 {
+    public enum AlignmentType
+    {
+        LawfulGood,
+        Good,
+        ChaoticGood,
+        Lawful,
+        Neutral,
+        Chaotic,
+        LawfulEvil,
+        Evil,
+        ChaoticEvil
+    }
     public class Character
         : ObservableObject
     {
@@ -17,7 +28,8 @@ namespace Data.Models
         private readonly ICollection<IEquippable> _equippedItems;
         private readonly ICollection<IItem> _inventory;
         private IEnumerable<Skill> _skills;
-        private IEnumerable<Stat> _stats; 
+        private IEnumerable<Stat> _stats;
+        private AlignmentType _alignment;
         #endregion
 
         #region Properties
@@ -59,6 +71,7 @@ namespace Data.Models
         {
             get { return Stats.First(s => s.Type == StatType.Dexterity).Modifier; }
         }
+        public int ExperiencePoints { get; set; }
 
         public string PlayerName { get; set; }
         public string CharacterName { get; set; }
@@ -67,6 +80,15 @@ namespace Data.Models
         public LevelModifiers LevelModifiers { get; set; }
         public ArmorClass Armor { get; set; }
 
+        public AlignmentType Alignment
+        {
+            get {return _alignment;}
+            set
+            {
+                _alignment = value;
+                RaisePropertyChanged(() => Alignment);
+            }
+        }
         public IEnumerable<Proficiency> OtherProficiencies
         {
             get
@@ -107,6 +129,9 @@ namespace Data.Models
         {
             get { return Stats.Sum(s => s.PointBuyEquivalent); }
         }
+
+        public Background Background { get; set; }
+
         #endregion
 
         #region Constructors

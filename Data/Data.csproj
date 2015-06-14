@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ArmorClass.cs" />
+    <Compile Include="Models\Background.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\CharacterFeature.cs" />
     <Compile Include="Models\ClassModel.cs" />

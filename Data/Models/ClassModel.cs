@@ -24,11 +24,13 @@ namespace Data.Models
     {
         private readonly IEnumerable<IEffect> _levelEffects;
         private readonly int _level;
+        private readonly CharacterClassType _classType ;
 
-        public ClassLevel(IEnumerable<IEffect> levelEffects, int level)
+        public ClassLevel(IEnumerable<IEffect> levelEffects, int level, CharacterClassType classType)
         {
             _levelEffects = levelEffects;
             _level = level;
+            _classType = classType;
         }
 
         public int Level
@@ -41,8 +43,11 @@ namespace Data.Models
             get { return _levelEffects; }
         }
 
+        public CharacterClassType ClassType { get { return _classType; } }
+
         public void ApplyToCharacter(Character targetCharacter)
         {
+            targetCharacter.LevelModifiers.AddClass(this);
             foreach (var levelEffect in _levelEffects)
             {
                 levelEffect.ApplyToCharacter(targetCharacter);

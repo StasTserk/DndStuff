@@ -2,7 +2,7 @@
 
 namespace Data.Models.Effects
 {
-    class ArmorWithMaxDexEffect : IArmorClassEffect
+    public class ArmorWithMaxDexEffect : IArmorClassEffect
     {
         private readonly int _acBonus;
         private readonly int _maxDex;
