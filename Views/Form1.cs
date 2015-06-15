@@ -46,6 +46,12 @@ namespace DnD5thEdTools.Views
             Filter_ClassDropdown.Items.AddRange(
                 _spellsController.GetClassList().ToArray()
                 );
+
+            Filter_LevelDropdown.Items.Add("Level");
+            Filter_LevelDropdown.SelectedItem = "Level";
+            Filter_LevelDropdown.Items.AddRange(
+                _spellsController.GetUnfilteredSpells().Select(s => "" + s.Level).Distinct().ToArray()
+                );
         }
 
         private void InitializeYesNoDropdown(string defaultOption, ComboBox dropdown)
@@ -152,6 +158,21 @@ namespace DnD5thEdTools.Views
             {
                 _spellsController.AddFilterCriteria("class",
                     s => s.Classes.FirstOrDefault(c => c.Contains(Filter_ClassDropdown.SelectedItem.ToString())) != null
+                    );
+            }
+            ResetSpells();
+        }
+
+        private void Filter_LevelDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Filter_LevelDropdown.SelectedItem == "Level")
+            {
+                _spellsController.RemoveFilterCriteria("level");
+            }
+            else
+            {
+                _spellsController.AddFilterCriteria("level",
+                    s => s.Level == int.Parse((string)Filter_LevelDropdown.SelectedItem)
                     );
             }
             ResetSpells();

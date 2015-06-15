@@ -44,6 +44,8 @@
             this.Label_Attack = new System.Windows.Forms.Label();
             this.Label_HasSave = new System.Windows.Forms.Label();
             this.Label_Concentration = new System.Windows.Forms.Label();
+            this.Filter_LevelDropdown = new System.Windows.Forms.ComboBox();
+            this.LevelDropdownLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // loadSpellsButton
@@ -198,11 +200,31 @@
             this.Label_Concentration.TabIndex = 17;
             this.Label_Concentration.Text = "Concentration";
             // 
+            // Filter_LevelDropdown
+            // 
+            this.Filter_LevelDropdown.FormattingEnabled = true;
+            this.Filter_LevelDropdown.Location = new System.Drawing.Point(859, 33);
+            this.Filter_LevelDropdown.Name = "Filter_LevelDropdown";
+            this.Filter_LevelDropdown.Size = new System.Drawing.Size(121, 21);
+            this.Filter_LevelDropdown.TabIndex = 18;
+            this.Filter_LevelDropdown.SelectedIndexChanged += new System.EventHandler(this.Filter_LevelDropdown_SelectedIndexChanged);
+            // 
+            // LevelDropdownLabel
+            // 
+            this.LevelDropdownLabel.AutoSize = true;
+            this.LevelDropdownLabel.Location = new System.Drawing.Point(856, 13);
+            this.LevelDropdownLabel.Name = "LevelDropdownLabel";
+            this.LevelDropdownLabel.Size = new System.Drawing.Size(33, 13);
+            this.LevelDropdownLabel.TabIndex = 19;
+            this.LevelDropdownLabel.Text = "Level";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 560);
+            this.Controls.Add(this.LevelDropdownLabel);
+            this.Controls.Add(this.Filter_LevelDropdown);
             this.Controls.Add(this.Label_Concentration);
             this.Controls.Add(this.Label_HasSave);
             this.Controls.Add(this.Label_Attack);
@@ -244,6 +266,8 @@
         private System.Windows.Forms.Label Label_Attack;
         private System.Windows.Forms.Label Label_HasSave;
         private System.Windows.Forms.Label Label_Concentration;
+        private System.Windows.Forms.ComboBox Filter_LevelDropdown;
+        private System.Windows.Forms.Label LevelDropdownLabel;
     }
 }
 
