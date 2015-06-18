@@ -64,6 +64,11 @@ namespace CharacterSheetVisualizer.ViewModel
             get { return _kernel.Get<CharacterSkillsViewModel>(); }
         }
 
+        public CharacterBackgroundViewModel CharacterBackground
+        {
+            get { return _kernel.Get<CharacterBackgroundViewModel>(); }
+        }
+
         public static void Cleanup()
         {
             // TODO Clear the ViewModels
@@ -71,7 +76,13 @@ namespace CharacterSheetVisualizer.ViewModel
 
         public void Dispose()
         {
-            ((IDisposable) _kernel).Dispose();
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool nativeOrManaged)
+        {
+            ((IDisposable)_kernel).Dispose();
         }
     }
 }

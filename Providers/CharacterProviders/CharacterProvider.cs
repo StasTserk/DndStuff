@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Data.Models;
+using Data.Models.Effects;
+using Data.Models.Items;
 
 namespace Providers.CharacterProviders
 {
@@ -10,6 +12,8 @@ namespace Providers.CharacterProviders
     {
         private readonly IStatProvider _statProvider;
         private readonly ISkillProvider _skillProvider;
+        private readonly IClassProvider _classProvider;
+        private readonly IRaceProvider _raceProvider;
 
         public event EventHandler NewCharacterLoaded;
 
@@ -28,21 +32,19 @@ namespace Providers.CharacterProviders
             }
         }
 
-        public CharacterProvider(IStatProvider statProvider, ISkillProvider skillProvider)
+        public CharacterProvider(IStatProvider statProvider, ISkillProvider skillProvider, IClassProvider classProvider, IRaceProvider raceProvider)
         {
             _statProvider = statProvider;
             _skillProvider = skillProvider;
+            _classProvider = classProvider;
+            _raceProvider = raceProvider;
             // Load a new Character
             CreateNewCharacter();
         }
 
         public void CreateNewCharacter()
         {
-            var modifiers = new LevelModifiers()
-            {
-                Level = 1
-            };
-
+            var modifiers = new LevelModifiers();
 
             var defaultStats = _statProvider.GetDefaultStats(modifiers);
 
@@ -57,18 +59,44 @@ namespace Providers.CharacterProviders
                 enumerable.FirstOrDefault(s => s.Type == StatType.Charisma)
                 );
 
-            var proficiencyList = new List<Proficiency>
-            {
-                new Proficiency("class", "Snozzberries"),
-                new Proficiency("race", "Clambering")
-            };
+            var acTracker = new ArmorClass(enumerable.First(s => s.Type == StatType.Dexterity));
+
+            var background = new Background {Name = "Adept"};
 
             CurrentCharacter = new Character()
             {
                 Stats = enumerable,
                 Skills = defaultSkills.ToList(),
-                OtherProficiencies = proficiencyList
+                Armor = acTracker,
+                LevelModifiers = modifiers,
+                PlayerName = "Coolguy Steve",
+                CharacterName = "Bruenor",
+                Background = background
             };
+
+            var minimumStatBonus = new MinimumStatEffect(StatType.Strength, 17);
+            var flatStatBonus = new BonusStatEffect(StatType.Dexterity, 2);
+
+            var effectList = new List<IEffect>
+            {
+                minimumStatBonus,
+                flatStatBonus
+            };
+
+            _classProvider.GetSampleClass().GetClassLevel(1).ApplyToCharacter(CurrentCharacter);
+            _classProvider.GetSampleClass().GetClassLevel(2).ApplyToCharacter(CurrentCharacter);
+
+            var randomHat = new EquippableItem(
+                name: "Cool Hat", 
+                description: "A cool hat",
+                shortDescription: "Coolhat",
+                weight: 1,
+                cost: 100,
+                slot: EquippableSlot.Head,
+                effects: effectList);
+
+            CurrentCharacter.Equip(randomHat);
+            _raceProvider.GetSampleRace().ApplyToCharacter(CurrentCharacter);
         }
     }
 }

@@ -6,8 +6,9 @@
         xmlns:ignore="http://www.ignore.com"
         xmlns:views="clr-namespace:CharacterSheetVisualizer.Views"
         mc:Ignorable="d ignore"
-        Height="300"
-        Width="300"
+        Height="Auto"
+        Width="650"
+        MinWidth="650"
         Title="Character Visualization Tool Thing"
         DataContext="{Binding Main, Source={StaticResource Locator}}">
     

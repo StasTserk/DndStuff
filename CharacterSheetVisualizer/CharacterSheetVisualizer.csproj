@@ -75,15 +75,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Design\DesignClassController.cs" />
     <Compile Include="NinjectModules\DesignTimeModule.cs" />
     <Compile Include="NinjectModules\RunTimeModule.cs" />
     <Compile Include="NinjectModules\ViewModelModule.cs" />
     <Compile Include="ViewModel\BaseCharacterStatsViewModel.cs" />
+    <Compile Include="ViewModel\CharacterBackgroundViewModel.cs" />
     <Compile Include="ViewModel\CharacterSkillsViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="Views\BaseCharacterStatsView.xaml.cs">
       <DependentUpon>BaseCharacterStatsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CharacterBackgroundView.xaml.cs">
+      <DependentUpon>CharacterBackgroundView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CharacterSkillsView.xaml.cs">
       <DependentUpon>CharacterSkillsView.xaml</DependentUpon>
@@ -113,6 +118,10 @@
     <Page Include="Views\BaseCharacterStatsView.xaml">
       <SubType>Form</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CharacterBackgroundView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\CharacterSkillsView.xaml">
       <SubType>Form</SubType>
@@ -156,7 +165,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Design\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +175,10 @@
     <ProjectReference Include="..\Providers\Providers.csproj">
       <Project>{2BC6C288-C79D-410E-B4E4-36074B1687BE}</Project>
       <Name>Providers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{7C32E931-9573-4211-9938-F052F2F7133C}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

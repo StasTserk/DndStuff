@@ -23,73 +23,222 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-    </UserControl.Resources>
-    <Grid Margin="10,10,10,10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <DataGrid ItemsSource="{Binding Character.Stats}"
-                  CanUserAddRows="False"
-                  CanUserDeleteRows="False"
-                  CanUserReorderColumns="False"
-                  AutoGenerateColumns="False"
-                  Style="{DynamicResource DataGridStyle1}"
-                  Grid.Column="0"
-                  Grid.Row="0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header=""
-                                    Width="Auto"
-                                    FontSize="15"
-                                    FontWeight="Bold"
-                                    Binding="{Binding Type}"
-                                    IsReadOnly="True"/>
-                <DataGridTextColumn Header="Score"
-                                    Binding="{Binding Score}"
-                                    IsReadOnly="False"
-                                    FontSize="15"
-                                    Width="Auto"/>
-                <DataGridTextColumn Header="Modifier"
-                                    Binding="{Binding Modifier}"
-                                    IsReadOnly="True"
-                                    FontSize="15"
-                                    Width="Auto"/>
-                <DataGridTextColumn Header="Save"
-                                    Binding="{Binding Save}"
-                                    IsReadOnly="True"
-                                    FontSize="15"
-                                    Width="Auto"/>
-                <DataGridTemplateColumn Header="Is Proficent">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <CheckBox IsChecked="{Binding IsProficent, UpdateSourceTrigger=PropertyChanged}"
-                                      HorizontalAlignment="Center"
-                                      VerticalAlignment="Center"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
-        <DataGrid ItemsSource="{Binding Character.OtherProficiencies}"
-                  CanUserAddRows="False"
-                  CanUserDeleteRows="False"
-                  CanUserReorderColumns="False"
-                  AutoGenerateColumns="False"
-                  Style="{DynamicResource DataGridStyle1}"
-                  Grid.Column="0"
-                  Grid.Row="1">
-            <DataGrid.Columns>
-                <DataGridTextColumn
-                Header="Other Proficiencies"
-                Width="Auto"
-                FontSize="12"
-                Binding="{Binding Name}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <Style x:Key="StatDisplayBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key="StatDisplayLabelStyle" TargetType="{x:Type Label}">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="10,0,0,0"/>
+        </Style>
+        <Style x:Key="RoundedBlockBorderStyle" TargetType="{x:Type Border}">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="6"/>
+            <Setter Property="Margin" Value="0,0,0,5"></Setter>
+        </Style>
+        <Style x:Key="GeneralNameStringsLabelStyle" TargetType="{x:Type Label}">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Margin" Value="10,0,0,0"></Setter>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+        </Style>
+        <Style x:Key="GeneralNameStringsTextStyle" TargetType="{x:Type Label}">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5,0,10,0"></Setter>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+        </Style>
         
-    </Grid>
+    </UserControl.Resources>
+    <StackPanel Name="MainStatsDisplayPanel"
+                Width="595">
+        <Label FontSize="24"
+               FontWeight="Heavy"
+               Content="{Binding Character.CharacterName}"
+               HorizontalAlignment="Center"/>
+        <Border Name="NamesAndSuchBorder"
+                Style="{DynamicResource RoundedBlockBorderStyle}"
+                CornerRadius="10"
+                HorizontalAlignment="Left"
+                Margin="10,0,0,0"
+                Width="555">
+            <StackPanel Name="NamesAndSuchStackPanel">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Class and Level:"
+                           Style="{DynamicResource GeneralNameStringsLabelStyle}"
+                           HorizontalAlignment="Left"/>
+                    <Label Content="{Binding Character.LevelModifiers.ComposedClassLevelString}"
+                           Style="{DynamicResource GeneralNameStringsTextStyle}"
+                           HorizontalAlignment="Left"/>
+                    <Label Content="Background:"
+                           Style="{DynamicResource GeneralNameStringsLabelStyle}"
+                           HorizontalAlignment="Center"/>
+                    <Label Content="{Binding Character.Background.Name}"
+                           Style="{DynamicResource GeneralNameStringsTextStyle}"
+                           HorizontalAlignment="Center"/>
+                    <Label Content="Player Name:"
+                           Style="{DynamicResource GeneralNameStringsLabelStyle}"
+                           HorizontalAlignment="Right"/>
+                    <Label Content="{Binding Character.PlayerName}"
+                           Style="{DynamicResource GeneralNameStringsTextStyle}"
+                           HorizontalAlignment="Right"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Left">
+                    <Label Content="Race:"
+                           Style="{DynamicResource GeneralNameStringsLabelStyle}"
+                           HorizontalAlignment="Left"/>
+                    <Label Content="{Binding Character.Race.Name}"
+                           Style="{DynamicResource GeneralNameStringsTextStyle}"
+                           HorizontalAlignment="Left"/>
+                    <Label Content="Alignment:"
+                           Style="{DynamicResource GeneralNameStringsLabelStyle}"
+                           HorizontalAlignment="Center"/>
+                    <Label Content="{Binding Character.Alignment}"
+                           Style="{DynamicResource GeneralNameStringsTextStyle}"
+                           HorizontalAlignment="Center"/>
+                    <Label Content="Experience:"
+                           Style="{DynamicResource GeneralNameStringsLabelStyle}"
+                           HorizontalAlignment="Right"/>
+                    <TextBox Text="{Binding Character.ExperiencePoints, Binding.Mode=TwoWay}"
+                             Width="75"
+                             TextAlignment="Center"
+                             ToolTip="{Binding Character.LevelModifiers.NextLevelTooltip}"
+                             FontSize="16"
+                             HorizontalAlignment="Right"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <Grid Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Name="AbilityScoreGridPanel"
+                        Grid.Column="0"
+                        Grid.Row="0">
+                <StackPanel Orientation="Horizontal">
+                    <Label FontSize="20"
+                           FontWeight="ExtraBold"
+                           Margin="15,0,5,0"
+                           Content="Ability Scores"/>
+                    <Label FontSize="12"
+                           HorizontalAlignment="Right"
+                           Content="PBE"
+                           Margin="100,0,0,0"
+                           VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding Character.PointBuyEquivalent, Binding.Mode=OneWay}"
+                             FontSize="12"
+                             HorizontalAlignment="Center"
+                             Height="22"
+                             Width="30"
+                             ToolTip="Point Buy Equivalent"/>
+                </StackPanel>
+                <DataGrid ItemsSource="{Binding Character.Stats}"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
+                          CanUserReorderColumns="False"
+                          AutoGenerateColumns="False"
+                          Style="{DynamicResource DataGridStyle1}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header=""
+                                            Width="Auto"
+                                            FontSize="15"
+                                            FontWeight="Bold"
+                                            Binding="{Binding Type}"
+                                            IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Base"
+                                            Binding="{Binding BaseScore}"
+                                            IsReadOnly="False"
+                                            FontSize="15"
+                                            Width="Auto"/>
+                        <DataGridTextColumn Header="Score"
+                                            Binding="{Binding Score}"
+                                            IsReadOnly="True"
+                                            FontSize="15"
+                                            Width="Auto"/>
+                        <DataGridTextColumn Header="Modifier"
+                                            Binding="{Binding Modifier}"
+                                            IsReadOnly="True"
+                                            FontSize="15"
+                                            Width="Auto"/>
+                        <DataGridTextColumn Header="Save"
+                                            Binding="{Binding Save}"
+                                            IsReadOnly="True"
+                                            FontSize="15"
+                                            Width="Auto"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+            <StackPanel Name="GenericCalculatedStats"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Margin="15,15,15,15"
+                        Width="200"
+                        HorizontalAlignment="Left">
+                <Border Style="{DynamicResource RoundedBlockBorderStyle}">
+                    <StackPanel Name="AcDisplayPanel"
+                                Orientation="Horizontal"
+                                Margin="5,5,5,5"
+                                ToolTip="Attack rolls must match or exceed this score to hit the character">
+                        <TextBox Text="{Binding Character.Armor.Value, Binding.Mode=OneWay}"
+                                 Style="{DynamicResource StatDisplayBoxStyle}"/>
+                        <Label Content="Armor Class"
+                               Style="{DynamicResource StatDisplayLabelStyle}"/>
+                    </StackPanel>
+                </Border>
+                <Border Style="{DynamicResource RoundedBlockBorderStyle}">
+                    <StackPanel Name="PassivePcpDisplayPanel"
+                                Orientation="Horizontal"
+                                Margin="5,5,5,5"
+                                ToolTip="Perception score used when not actively rolling for perception">
+                        <TextBox Text="{Binding Character.PassivePerception, Binding.Mode=OneWay}"
+                                 Style="{DynamicResource StatDisplayBoxStyle}"/>
+                        <Label Content="Passive Perception"
+                               Style="{DynamicResource StatDisplayLabelStyle}"/>
+                    </StackPanel>
+                </Border>
+                <Border Style="{DynamicResource RoundedBlockBorderStyle}">
+                    <StackPanel Name="InitiativePanel"
+                                Orientation="Horizontal"
+                                Margin="5,5,5,5"
+                                ToolTip="Bonus added to the initiative roll">
+                        <TextBox Text="{Binding Character.Initiative, Binding.Mode=OneWay}"
+                                 Style="{DynamicResource StatDisplayBoxStyle}"/>
+                        <Label Content="Initiative"
+                               Style="{DynamicResource StatDisplayLabelStyle}"/>
+                    </StackPanel>
+                </Border>
+                <Border Style="{DynamicResource RoundedBlockBorderStyle}">
+                    <StackPanel Name="ProficiencyBonusPanel"
+                                Orientation="Horizontal"
+                                Margin="5,5,5,5"
+                                ToolTip="Bonus added to all rolls with which the character is proficient.">
+                        <TextBox Text="{Binding Character.LevelModifiers.ProficiencyBonus, Binding.Mode=OneWay}"
+                                 Style="{DynamicResource StatDisplayBoxStyle}"/>
+                        <Label Content="Proficiency Bonus"
+                               Style="{DynamicResource StatDisplayLabelStyle}"/>
+                    </StackPanel>
+                </Border>
+                <Border Style="{DynamicResource RoundedBlockBorderStyle}">
+                    <StackPanel Name="SpeedPanel"
+                                Orientation="Horizontal"
+                                Margin="5,5,5,5"
+                                ToolTip="Distance in feet covered in a single move action">
+                        <TextBox Text="{Binding Character.Speed, Binding.Mode=OneWay}"
+                                 Style="{DynamicResource StatDisplayBoxStyle}"/>
+                        <Label Content="Speed"
+                               Style="{DynamicResource StatDisplayLabelStyle}"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
 </UserControl>

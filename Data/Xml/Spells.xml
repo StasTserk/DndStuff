@@ -9361,7 +9361,7 @@ A target must make a Dexterity saving throw. The target takes 10d8 lightning dam
       the creature's shape and size. Your equipment doesn't
       change shape or size to match the new form, and any
       equipment that the new form can't wear must either fall
-      to the ground or merge into your new form. Equipment
+      to the ground or merge into your new form. EquippedItems
       that merges has no effect in that state.
       
       During this spell's duration, you can use your action to

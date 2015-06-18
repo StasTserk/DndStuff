@@ -12,7 +12,6 @@
   See http://www.galasoft.ch/mvvm
 */
 
-using System.Windows.Data;
 using GalaSoft.MvvmLight;
 using MVVMViews.NinjectModules;
 using Ninject;

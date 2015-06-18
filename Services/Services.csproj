@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ClassController.cs" />
+    <Compile Include="Controllers\Interfaces\IClassController.cs" />
     <Compile Include="Controllers\Interfaces\ISpellListController.cs" />
     <Compile Include="Controllers\SpellListController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

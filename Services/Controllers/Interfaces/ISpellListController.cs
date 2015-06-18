@@ -8,6 +8,6 @@ namespace Services.Controllers.Interfaces
     {
         IEnumerable<Spell> GetFilteredSpells(Func<Spell, bool> criteria);
         IEnumerable<Spell> GetUnfilteredSpells();
-        Spell GetSpellByName(String name);
+        Spell GetSpellByName(string name);
     }
 }
