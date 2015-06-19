@@ -5,15 +5,15 @@ using System.Windows.Data;
 
 namespace Providers.FormatProviders
 {
-    class DescriptionTooltipConverter : IValueConverter
+    public class DescriptionTooltipConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var tooltipString = value.ToString();
+            var tooltipString = value as string;
 
-            var regex = new Regex(@"(\s)*(\n)(\s)*");
+            tooltipString = Regex.Replace(tooltipString, @"\s\s+", "\n");
 
-            return regex.IsMatch(tooltipString) ? regex.Replace(tooltipString, @"&#x0a;") : tooltipString;
+            return tooltipString;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

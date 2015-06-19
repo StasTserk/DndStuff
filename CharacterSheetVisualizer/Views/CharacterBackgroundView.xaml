@@ -1,8 +1,10 @@
 <UserControl x:Class="CharacterSheetVisualizer.Views.CharacterBackgroundView"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    DataContext="{Binding CharacterBackground, Source={StaticResource Locator}}">
+    DataContext="{Binding CharacterBackground, Source={StaticResource Locator}}"
+    xmlns:cvtr="clr-namespace:Providers.FormatProviders;assembly=Providers">
     <UserControl.Resources>
+        <cvtr:DescriptionTooltipConverter x:Key="TooltipConverter"/>
         <Style x:Key="BorderlessTextListGrid" TargetType="{x:Type DataGrid}">
             <Setter Property="ColumnHeaderStyle" Value="{DynamicResource BorderlessTextListGridHeaderStyle}"/>
             <Setter Property="VerticalGridLinesBrush" Value="White"/>
@@ -45,7 +47,7 @@
                                 <TextBlock TextWrapping="Wrap"
                                            Width="200"
                                            Text="{Binding ShortDescription}"
-                                           ToolTip="{Binding Description}"/>
+                                           ToolTip="{Binding Description, Converter={StaticResource TooltipConverter}}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
