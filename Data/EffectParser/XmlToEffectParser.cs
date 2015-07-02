@@ -92,6 +92,9 @@ namespace Data.EffectParser
         {
             var cust = new ClassCustomizationChoiceEffect(new ModifiableChoice(),
                 ParseClassType(effectElement.Attribute("AffectedClass").Value));
+            cust.Choice.Name = effectElement.Attribute("Name").Value;
+            cust.Choice.ShortDescription = effectElement.Attribute("ShortDescription").Value;
+            cust.Choice.Description = effectElement.Attribute("Description").Value;
             _outstandingClassCustomizationChoiceEffects.Add(cust);
             return cust;
         }

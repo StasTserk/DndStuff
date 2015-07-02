@@ -5,7 +5,9 @@ namespace Data.Models.Choices
 {
     public interface IChoice
     {
-        IEnumerable<IChoiceOption> GetChoices();
+        void MakeChoice(IChoiceOption chosenOption);
+        IChoiceOption ChosenOption { get; }
+        IEnumerable<IChoiceOption> Choices { get; }
         string Name { get; set; }
         string Description { get; set; }
         string ShortDescription { get; set; }

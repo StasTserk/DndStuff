@@ -81,6 +81,7 @@
     <Compile Include="NinjectModules\ViewModelModule.cs" />
     <Compile Include="ViewModel\BaseCharacterStatsViewModel.cs" />
     <Compile Include="ViewModel\CharacterBackgroundViewModel.cs" />
+    <Compile Include="ViewModel\CharacterChoicesViewModel.cs" />
     <Compile Include="ViewModel\CharacterSkillsViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -89,6 +90,9 @@
     </Compile>
     <Compile Include="Views\CharacterBackgroundView.xaml.cs">
       <DependentUpon>CharacterBackgroundView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CharacterChoicesView.xaml.cs">
+      <DependentUpon>CharacterChoicesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CharacterSkillsView.xaml.cs">
       <DependentUpon>CharacterSkillsView.xaml</DependentUpon>
@@ -122,6 +126,10 @@
     <Page Include="Views\CharacterBackgroundView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CharacterChoicesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CharacterSkillsView.xaml">
       <SubType>Form</SubType>

@@ -17,6 +17,9 @@
             <TabItem Header="Background">
                 <views:CharacterBackgroundView/>
             </TabItem>
+            <TabItem Header="Choices">
+                <views:CharacterChoicesView/>
+            </TabItem>
         </TabControl>
     </Grid>
 </Page>

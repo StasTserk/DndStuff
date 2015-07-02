@@ -1,20 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using GalaSoft.MvvmLight;
 
 namespace Data.Models.Choices
 {
-    class ModifiableChoice : IModifiableChoice
+    class ModifiableChoice : ObservableObject, IModifiableChoice
     {
         private readonly ICollection<IChoiceOption> _choices;
+        private IChoiceOption _choiceOption;
 
         public ModifiableChoice()
         {
             _choices = new List<IChoiceOption>();
         }
 
-        public IEnumerable<IChoiceOption> GetChoices()
+        public void MakeChoice(IChoiceOption chosenOption)
         {
-            return _choices;
+            if (_choices.Contains(chosenOption))
+            {
+                return;
+            }
+            _choiceOption = chosenOption;
+            RaisePropertyChanged(() => ChosenOption);
+        }
+
+        public IChoiceOption ChosenOption
+        {
+            get { return _choiceOption; }
+        }
+
+        public IEnumerable<IChoiceOption> Choices
+        {
+            get { return _choices; }
         }
 
         public string Name { get; set; }
@@ -23,6 +40,7 @@ namespace Data.Models.Choices
         public void AddChoiceOption(IChoiceOption option)
         {
             _choices.Add(option);
+            RaisePropertyChanged(() => Choices);
         }
     }
 }

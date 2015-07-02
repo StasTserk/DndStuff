@@ -14,7 +14,7 @@ namespace Data.Repositories
     {
         private readonly ICollection<CharacterClass> _characterClasses;
         private readonly IEffectParser _effectParser;
-        private ICollection<ClassCustomization> _classCustomizations;
+        private readonly ICollection<ClassCustomization> _classCustomizations;
 
         public ClassLoader(IEffectParser effectParser)
         {
@@ -66,7 +66,7 @@ namespace Data.Repositories
                                 new ChoiceOption(
                                     name: clsCstm.Name,
                                     description: clsCstm.Description,
-                                    shortDescription: clsCstm.Description,
+                                    shortDescription: clsCstm.ShortDescription,
                                     effect: new ClassCustomizationEffect(clsCstm))))
                 {
                     outstandingCustomizationChoice.ChoiceAsModifiable.AddChoiceOption(cOpt);
@@ -103,7 +103,9 @@ namespace Data.Repositories
 
             return new ClassCustomization(classLevels, targetType)
             {
-                Name = specNode.Attribute("Name").Value
+                Name = specNode.Attribute("Name").Value,
+                Description = specNode.Attribute("Description").Value,
+                ShortDescription = specNode.Attribute("ShortDescription").Value
             };
         }
     }

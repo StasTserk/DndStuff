@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 using Data.Models.Effects;
 
 namespace Data.Models
@@ -87,6 +88,8 @@ namespace Data.Models
         public string Name { get; set; }
 
         public string Description { get; set; }
+
+        public string ShortDescription { get; set; }
 
         public IEnumerable<ClassLevel> LevelEffects
         {

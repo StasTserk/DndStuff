@@ -11,7 +11,7 @@ namespace Providers.FormatProviders
         {
             var tooltipString = value as string;
 
-            tooltipString = Regex.Replace(tooltipString, @"\s\s+", "\n");
+            tooltipString = Regex.Replace(tooltipString ?? @"", @"\s\s+", "\n");
 
             return tooltipString;
         }

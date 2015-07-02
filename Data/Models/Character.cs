@@ -207,6 +207,18 @@ namespace Data.Models
             _oustandingChoices.Remove(choice);
         }
 
+        public void MakeChoice(IChoice choiceSet, IChoiceOption choiceOption)
+        {
+            if (choiceSet == null || choiceOption == null) return;
+
+            choiceSet.MakeChoice(choiceOption);
+            _oustandingChoices.Remove(choiceSet);
+            _completedChoices.Add(choiceSet);
+
+            RaisePropertyChanged(() => CompletedChoices);
+            RaisePropertyChanged(() => OutstandingChoices);
+        }
+
         #endregion
 
         #region Item Handling

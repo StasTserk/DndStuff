@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Data.Models.Choices;
 
 namespace Data.Models.Effects.ChoiceEffects
@@ -16,7 +15,7 @@ namespace Data.Models.Effects.ChoiceEffects
 
         public void ApplyChoiceToCharacter(IChoiceOption chosenOption, Character playerCharacter)
         {
-            if (!_choice.GetChoices().Contains(chosenOption)) return;
+            if (!_choice.Choices.Contains(chosenOption)) return;
 
             _chosenOption = chosenOption;
             foreach (var choiceEffect in _chosenOption.ChoiceEffects)

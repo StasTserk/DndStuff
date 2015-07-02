@@ -85,6 +85,7 @@ namespace Providers.CharacterProviders
 
             _classProvider.GetSampleClass().GetClassLevel(1).ApplyToCharacter(CurrentCharacter);
             _classProvider.GetSampleClass().GetClassLevel(2).ApplyToCharacter(CurrentCharacter);
+            _classProvider.GetSampleClass().GetClassLevel(3).ApplyToCharacter(CurrentCharacter);
 
             var randomHat = new EquippableItem(
                 name: "Cool Hat", 

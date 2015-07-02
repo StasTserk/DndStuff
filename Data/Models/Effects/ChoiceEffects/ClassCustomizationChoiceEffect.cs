@@ -28,7 +28,7 @@ namespace Data.Models.Effects.ChoiceEffects
 
         public void ApplyChoiceToCharacter(IChoiceOption choice, Character playerCharacter)
         {
-            if (!_choice.GetChoices().Contains(choice)) return;
+            if (!_choice.Choices.Contains(choice)) return;
 
             _chosenOption = choice;
 

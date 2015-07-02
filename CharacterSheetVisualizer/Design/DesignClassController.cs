@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Media.Effects;
 using Data.Models;
+using Data.Models.Choices;
 using Data.Models.Effects;
+using Data.Models.Effects.ChoiceEffects;
 using Services.Controllers.Interfaces;
 
 namespace CharacterSheetVisualizer.Design
@@ -54,7 +57,48 @@ namespace CharacterSheetVisualizer.Design
                                     description: "Gain advantage on dexterity saving throws against things you can see",
                                     shortDescription: "Advantage to Dex Saves vs things you are aware of",
                                     source: "Barbarian"))
-                        }, 2, CharacterClassType.Barbarian)
+                        }, 2, CharacterClassType.Barbarian),
+                    new ClassLevel(
+                        new List<IEffect>
+                        {
+                            new ChoiceEffect(
+                                new ExclusiveEffectChoice(
+                                    new List<IChoiceOption>
+                                    {
+                                        new ChoiceOption(
+                                            name: "Choice A", 
+                                            description: "Choice A Description",
+                                            shortDescription: "Choice A Short Description", 
+                                            effect: new AddFeatureEffect(
+                                                new CharacterFeature(
+                                                    name: "Sample Choice A",
+                                                    description: "This is the first option in a choice",
+                                                    shortDescription: "Easier to hit, easier to be hit",
+                                                    source: "Barbarian"
+                                                    )
+                                                )
+                                            ),
+                                        new ChoiceOption(
+                                            name: "Choice B", 
+                                            description: "Choice B Description",
+                                            shortDescription: "Choice B Short Description", 
+                                            effect:new AddFeatureEffect(
+                                            new CharacterFeature(
+                                                name: "Sample Choice B",
+                                                description: "Gain advantage on dexterity saving throws against things you can see",
+                                                shortDescription: "Advantage to Dex Saves vs things you are aware of",
+                                                source: "Barbarian"
+                                                )
+                                            )
+                                        )
+                                    })
+                                {
+                                    Description = "A sample Choice description using many more words         \r\nAnd extra newlines",
+                                    Name = "SampleChoice",
+                                    ShortDescription = "A sample choice description"
+                                })
+                                    
+                            }, 3, CharacterClassType.Barbarian)                
                 }, CharacterClassType.Barbarian);
         }
     }
