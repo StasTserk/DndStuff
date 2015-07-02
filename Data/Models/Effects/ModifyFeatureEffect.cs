@@ -29,5 +29,7 @@ namespace Data.Models.Effects
             featureList.Add(_newFeature);
             return featureList;
         }
+
+        public CharacterFeature Feature { get { return _newFeature; } }
     }
 }

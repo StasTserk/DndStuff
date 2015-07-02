@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using GalaSoft.MvvmLight;
 
@@ -15,15 +17,20 @@ namespace Data.Models
     public class LevelModifiers
         : ObservableObject
     {
+        #region Backing fields
         private readonly ICollection<ClassLevel> _classLevels;
-
+        private readonly ICollection<CharacterClass> _characterClasses; 
         private int _level;
+        #endregion
 
+        #region Constructors
         public LevelModifiers()
         {
             _classLevels = new List<ClassLevel>();
         }
+        #endregion
 
+        #region Properties
         public int Level
         {
             get { return _level; }
@@ -36,6 +43,8 @@ namespace Data.Models
 
                 RaisePropertyChanged(() => Level);
                 RaisePropertyChanged(() => ProficiencyBonus);
+                RaisePropertyChanged(() => NextLevelTooltip);
+                RaisePropertyChanged(() => ComposedClassLevelString);
             }
         }
 
@@ -44,7 +53,7 @@ namespace Data.Models
             get
             {
                 var tooltip = "Experience to next level: ";
-                tooltip = tooltip + GetExperienceToNextLevelString();
+                tooltip = tooltip + ExperienceToNextLevelString();
                 return tooltip;
             }
         }
@@ -73,13 +82,13 @@ namespace Data.Models
 
         public string ComposedClassLevelString
         {
-            get { return _classLevels.First().ClassType + " " + Level; }
-        }
-
-        public void AddClass(ClassLevel classLevel)
-        {
-            _classLevels.Add(classLevel);
-            Level ++;
+            get
+            {
+                return ClassesAndLevels.Aggregate(
+                    @"", (current, classAndLevel) =>
+                        string.Join("/", current, string.Format(@"{0} {1}", classAndLevel.Item1, classAndLevel.Item2)))
+                    .Substring(1); // remove leading /
+            }
         }
 
         public int ProficiencyBonus
@@ -87,7 +96,38 @@ namespace Data.Models
             get { return 2 + (Level/4); }
         }
 
-        private string GetExperienceToNextLevelString()
+        public IEnumerable<CharacterClass> CharacterClasses; 
+
+        public IEnumerable<Tuple<CharacterClassType, int>> ClassesAndLevels
+        {
+            get
+            {
+                return from c in _classLevels
+                    group c.Level by c.ClassType
+                    into g
+                    select new Tuple<CharacterClassType, int>(
+                        g.Key, 
+                        g.Max(l => l));
+            }
+        }
+        #endregion
+
+        #region Class Level Handling
+        public void RemoveClassLevel(ClassLevel classLevel)
+        {
+            _classLevels.Remove(classLevel);
+            Level --;
+        }
+
+        public void AddClassLevel(ClassLevel classLevel)
+        {
+            _classLevels.Add(classLevel);
+            Level++;
+        }
+        #endregion
+
+        #region Helper Methods
+        private string ExperienceToNextLevelString()
         {
             switch (Level)
             {
@@ -133,5 +173,6 @@ namespace Data.Models
                     return "NaN";
             }
         }
+        #endregion
     }
 }

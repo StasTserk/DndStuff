@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
+using Data.Models.Choices;
 using Data.Models.Effects;
 using Data.Models.Items;
 using GalaSoft.MvvmLight;
@@ -30,13 +31,28 @@ namespace Data.Models
         private readonly ICollection<ISpeedEffect> _speedEffects;
         private readonly ICollection<IEquippable> _equippedItems;
         private readonly ICollection<IItem> _inventory;
+        private readonly ICollection<IChoice> _oustandingChoices;
+        private ICollection<IChoice> _completedChoices;
         private Race _race;
         private IEnumerable<Skill> _skills;
         private IEnumerable<Stat> _stats;
         private AlignmentType _alignment;
+        
+
         #endregion
 
         #region Properties
+
+        public IEnumerable<IChoice> OutstandingChoices 
+        {
+            get { return _oustandingChoices; }
+        }
+
+        public IEnumerable<IChoice> CompletedChoices
+        {
+            get { return _completedChoices; }
+        }
+
         public IEnumerable<Stat> Stats {
             get { return _stats; }
             set
@@ -160,6 +176,9 @@ namespace Data.Models
         }
 
         public Background Background { get; set; }
+
+        public ClassCustomization ClassCustomization { get; set; }
+
         #endregion
 
         #region Constructors
@@ -170,7 +189,24 @@ namespace Data.Models
             _equippedItems = new List<IEquippable>();
             _inventory = new List<IItem>();
             _speedEffects = new List<ISpeedEffect>();
+            _oustandingChoices = new List<IChoice>();
+            _completedChoices = new List<IChoice>();
         }
+        #endregion
+
+        #region Choice Handling
+
+        // TODO reowrk massive logic flaw (dealing with ChoiceEffects instead of choices directly?)
+        public void AddChoice(IChoice choice)
+        {
+            _oustandingChoices.Add(choice);
+        }
+
+        public void RemoveChoice(IChoice choice)
+        {
+            _oustandingChoices.Remove(choice);
+        }
+
         #endregion
 
         #region Item Handling
