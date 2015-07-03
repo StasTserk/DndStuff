@@ -14,8 +14,8 @@ namespace Data.Models.Effects
 
         public void ApplyToCharacter(Character targetCharacter)
         {
-            targetCharacter.Armor.AddArmorClassEffect(this);
             _associatedStat = targetCharacter.Stats.First(s => s.Type == _associatedStatType);
+            targetCharacter.Armor.AddArmorClassEffect(this);
             _associatedStat.PropertyChanged += targetCharacter.Armor.UpdateAc;
         }
 

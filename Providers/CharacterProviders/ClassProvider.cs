@@ -22,7 +22,7 @@ namespace Providers.CharacterProviders
 
         public CharacterClass GetClassByClassType(CharacterClassType type)
         {
-            throw new NotImplementedException();
+            return _classController.GetClassByClassType(type);
         }
 
         public IEnumerable<CharacterClass> GetAvailableLevelUpOptions(Character player)
@@ -33,6 +33,10 @@ namespace Providers.CharacterProviders
                 return new List<CharacterClass>();
             }
 
+            if (player.LevelModifiers.Level == 0)
+            {
+                return _classController.GetClasses();
+            }
             // otherwise return all classes we are not level 20 in -- TODO add multiclassing
             return player.LevelModifiers.ClassesAndLevels
                 .Select(cl => GetClassByClassType(cl.Item1));

@@ -2,6 +2,54 @@
 <ClassList>
   <Class Name="Barbarian">
     <Effects Level="1">
+      <Effect Type="MultipleChoiceFromPoolEffect"
+              ChoiceCount="2"
+              Name="Skill Proficiencies"
+              Description="Choose a skill proficiency from the list"
+              ShortDescription="Choose a skill proficiency">
+        <Choice Name="Animal Handling"
+                Description="Gain Proficiency with animal handling"
+                ShortDescription="Gain proficiency with the animal handling skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="AnimalHandling"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Athletics"
+                Description="Gain Proficiency with Athletics"
+                ShortDescription="Gain proficiency with the Athletics skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Athletics"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Intimidation"
+                Description="Gain Proficiency with Intimidation"
+                ShortDescription="Gain proficiency with the Intimidation skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Intimidation"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Nature"
+                Description="Gain Proficiency with Nature"
+                ShortDescription="Gain proficiency with the Nature skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Nature"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Perception"
+                Description="Gain Proficiency with Perception"
+                ShortDescription="Gain proficiency with the Perception skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Perception"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Suvival"
+                Description="Gain Proficiency with survival"
+                ShortDescription="Gain proficiency with the survival skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Survival"
+                  Proficiency="Proficient"/>
+        </Choice>
+      </Effect>
       <Effect Type="SaveProficiencyEffect"
               Proficiency="Proficient"
               SaveModified="Constitution"/>

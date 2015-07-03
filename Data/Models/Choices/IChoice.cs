@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Data.Models.Effects;
+using System.ComponentModel;
 
 namespace Data.Models.Choices
 {

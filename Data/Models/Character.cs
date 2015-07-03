@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using Data.Models.Choices;
 using Data.Models.Effects;
+using Data.Models.Effects.BackgroundEffects;
 using Data.Models.Items;
 using GalaSoft.MvvmLight;
 
@@ -32,9 +33,14 @@ namespace Data.Models
         private readonly ICollection<ISpeedEffect> _speedEffects;
         private readonly ICollection<IEquippable> _equippedItems;
         private readonly ICollection<IItem> _inventory;
+        private readonly ICollection<string> _personalityTraits;
+        private readonly ICollection<string> _characterBonds;
+        private readonly ICollection<string> _characterFlaws;
+        private readonly ICollection<string> _CharacterIdeals;
         private readonly ObservableCollection<IChoice> _oustandingChoices;
         private readonly ObservableCollection<IChoice> _completedChoices;
         private Race _race;
+        private Background _background;
         private IEnumerable<Skill> _skills;
         private IEnumerable<Stat> _stats;
         private AlignmentType _alignment;
@@ -176,7 +182,20 @@ namespace Data.Models
             get { return Stats.Sum(s => s.PointBuyEquivalent); }
         }
 
-        public Background Background { get; set; }
+        public IEnumerable<string> PersonalityTraits { get { return _personalityTraits; } }
+        public IEnumerable<string> CharacterBonds { get { return _characterBonds; } }
+        public IEnumerable<string> CharacterFlaws { get { return _characterFlaws; } }
+        public IEnumerable<string> CharacterIdeals { get { return _CharacterIdeals; } }
+
+        public Background Background
+        {
+            get {return _background; }
+            set
+            {
+                _background = value;
+                RaisePropertyChanged(() => Background);
+            }
+        }
 
         public ClassCustomization ClassCustomization { get; set; }
 
@@ -192,6 +211,10 @@ namespace Data.Models
             _speedEffects = new List<ISpeedEffect>();
             _oustandingChoices = new ObservableCollection<IChoice>();
             _completedChoices = new ObservableCollection<IChoice>();
+            _personalityTraits = new List<string>();
+            _characterBonds = new List<string>();
+            _characterFlaws = new List<string>();
+            _CharacterIdeals = new List<string>();
         }
         #endregion
 
@@ -220,6 +243,58 @@ namespace Data.Models
 
             RaisePropertyChanged(() => CompletedChoices);
             RaisePropertyChanged(() => OutstandingChoices);
+        }
+
+        #endregion
+
+        #region Backgrounds
+
+        public void AddBackgroundTrait(string trait)
+        {              
+            _personalityTraits.Add(trait);
+            RaisePropertyChanged(() => PersonalityTraits);
+        }              
+                       
+        public void AddBackgroundFlaw(string flaw)
+        {              
+            _characterFlaws.Add(flaw);
+            RaisePropertyChanged(() => CharacterFlaws);
+        }              
+                       
+        public void AddBackgroundIdeal(string ideal)
+        {              
+            _CharacterIdeals.Add(ideal);
+            RaisePropertyChanged(() => CharacterIdeals);
+        }
+
+        public void AddBackgroundBond(string bond)
+        {
+            _characterBonds.Add(bond);
+            RaisePropertyChanged(() => CharacterBonds);
+        }
+
+        public void RemoveBackgroundTrait(string trait)
+        {
+            _personalityTraits.Remove(trait);
+            RaisePropertyChanged(() => PersonalityTraits);
+        }
+
+        public void RemoveBackgroundFlaw(string flaw)
+        {
+            _characterFlaws.Remove(flaw);
+            RaisePropertyChanged(() => CharacterFlaws);
+        }
+
+        public void RemoveBackgroundIdeal(string ideal)
+        {
+            _CharacterIdeals.Remove(ideal);
+            RaisePropertyChanged(() => CharacterIdeals);
+        }
+
+        public void RemoveBackgroundBond(string bond)
+        {
+            _characterBonds.Remove(bond);
+            RaisePropertyChanged(() => CharacterBonds);
         }
 
         #endregion

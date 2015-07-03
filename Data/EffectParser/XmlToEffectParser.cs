@@ -38,6 +38,8 @@ namespace Data.EffectParser
         {
             switch (effectElement.Attribute("Type").Value)
             {
+                case "MultipleChoiceFromPoolEffect":
+                    return ParseMultipleChoiceFromPoolEffect(effectElement);
                 case "ClassCustomizationChoiceEffect":
                     return ParseClassCustomizationChoiceEffect(effectElement);
                 case "FeatureChoiceEffect":
@@ -67,7 +69,32 @@ namespace Data.EffectParser
             }
             throw new InvalidDataException("XML Element contains invalid Effect Type attribute - " 
                 + effectElement.Attribute("Type").Value);
-        } 
+        }
+
+        private IEffect ParseMultipleChoiceFromPoolEffect(XElement effectElement)
+        {
+            int choiceCount = int.Parse(effectElement.Attribute("ChoiceCount").Value);
+            var choiceList = new List<IChoice>();
+            var optionList = new List<IChoiceOption>();
+            optionList.AddRange(effectElement.Elements("Choice")
+                .Select(e =>
+                    new ChoiceOption(name: e.Attribute("Name").Value,
+                        description: e.Attribute("ShortDescription").Value,
+                        shortDescription: e.Attribute("ShortDescription").Value,
+                        effects: e.Elements().Select(ParseEffect))).ToList());
+
+            for (var i = 0; i < choiceCount; i++)
+            {
+                choiceList.Add(new CommonPoolChoice(optionList)
+                {
+                    Description = effectElement.Attribute("Description").Value,
+                    Name = effectElement.Attribute("Name").Value,
+                    ShortDescription = effectElement.Attribute("ShortDescription").Value
+                });
+            }
+
+            return new MultipleChoiceFromPoolEffect(choiceList);
+        }
 
         private IEffect ParseFeatureChoiceEffect(XElement effectElement)
         {

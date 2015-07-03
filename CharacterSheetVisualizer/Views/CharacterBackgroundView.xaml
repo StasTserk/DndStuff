@@ -57,43 +57,75 @@
         </StackPanel>
         <StackPanel Name="CharacterComponentsPanel">
             <DataGrid Name="PersonalityTraits"
-                      ItemsSource="{Binding Character.Background}"
+                      ItemsSource="{Binding Character.PersonalityTraits}"
                       AutoGenerateColumns="False"
-                      Style="{DynamicResource BorderlessTextListGrid}">
+                      Style="{DynamicResource BorderlessTextListGrid}"
+                      MaxWidth="210">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding PersonalityTraits}"
+                    <DataGridTextColumn Binding="{Binding Path=.}"
                                         Header="Personality Traits"
-                                        IsReadOnly="True"/>
+                                        IsReadOnly="True"
+                                        MaxWidth="200">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
             <DataGrid Name="Ideals"
-                      ItemsSource="{Binding Character.Background}"
+                      ItemsSource="{Binding Character.CharacterIdeals}"
                       AutoGenerateColumns="False"
-                      Style="{DynamicResource BorderlessTextListGrid}">
+                      Style="{DynamicResource BorderlessTextListGrid}"
+                      MaxWidth="210">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Ideals}"
+                    <DataGridTextColumn Binding="{Binding Path=.}"
                                         Header="Ideals"
-                                        IsReadOnly="True"/>
+                                        IsReadOnly="True"
+                                        MaxWidth="200">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
             <DataGrid Name="Flaws"
-                      ItemsSource="{Binding Character.Background}"
+                      ItemsSource="{Binding Character.CharacterFlaws}"
                       AutoGenerateColumns="False"
-                      Style="{DynamicResource BorderlessTextListGrid}">
+                      Style="{DynamicResource BorderlessTextListGrid}"
+                      MaxWidth="210">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Flaws}"
+                    <DataGridTextColumn Binding="{Binding Path=.}"
                                         Header="Flaws"
-                                        IsReadOnly="True"/>
+                                        IsReadOnly="True"
+                                        MaxWidth="200">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
             <DataGrid Name="Bonds"
-                      ItemsSource="{Binding Character.Background}"
+                      ItemsSource="{Binding Character.CharacterBonds}"
                       AutoGenerateColumns="False"
-                      Style="{DynamicResource BorderlessTextListGrid}">
+                      Style="{DynamicResource BorderlessTextListGrid}"
+                      MaxWidth="210">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Bonds}"
+                    <DataGridTextColumn Binding="{Binding Path=.}"
                                         Header="Bonds"
-                                        IsReadOnly="True"/>
+                                        IsReadOnly="True"
+                                        MaxWidth="200">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

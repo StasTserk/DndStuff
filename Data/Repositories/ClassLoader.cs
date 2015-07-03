@@ -33,9 +33,18 @@ namespace Data.Repositories
             return _characterClasses.First(c => c.ClassType == type);
         }
 
+        public IEnumerable<CharacterClass> GetClasses()
+        {
+            if (!_characterClasses.Any())
+            {
+                LoadClasses();
+            }
+
+            return _characterClasses;
+        }
+
         private void LoadClasses()
         {
-            var rootPath = AppDomain.CurrentDomain.BaseDirectory;
             var doc = XDocument.Load(@"Xml/Classes.xml");
 
             var specList = doc.Root.Elements("ClassCustomization");

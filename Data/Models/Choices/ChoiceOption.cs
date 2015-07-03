@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Data.Models.Effects;
+using GalaSoft.MvvmLight;
 
 namespace Data.Models.Choices
 {

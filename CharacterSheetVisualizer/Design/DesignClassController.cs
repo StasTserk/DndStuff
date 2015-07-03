@@ -101,5 +101,13 @@ namespace CharacterSheetVisualizer.Design
                             }, 3, CharacterClassType.Barbarian)                
                 }, CharacterClassType.Barbarian);
         }
+
+        public IEnumerable<CharacterClass> GetClasses()
+        {
+            return new List<CharacterClass>
+            {
+                GetClassByClassType(CharacterClassType.Barbarian)
+            };
+        }
     }
 }
