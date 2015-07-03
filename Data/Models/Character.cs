@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
@@ -31,8 +32,8 @@ namespace Data.Models
         private readonly ICollection<ISpeedEffect> _speedEffects;
         private readonly ICollection<IEquippable> _equippedItems;
         private readonly ICollection<IItem> _inventory;
-        private readonly ICollection<IChoice> _oustandingChoices;
-        private ICollection<IChoice> _completedChoices;
+        private readonly ObservableCollection<IChoice> _oustandingChoices;
+        private readonly ObservableCollection<IChoice> _completedChoices;
         private Race _race;
         private IEnumerable<Skill> _skills;
         private IEnumerable<Stat> _stats;
@@ -43,12 +44,12 @@ namespace Data.Models
 
         #region Properties
 
-        public IEnumerable<IChoice> OutstandingChoices 
+        public ObservableCollection<IChoice> OutstandingChoices 
         {
             get { return _oustandingChoices; }
         }
 
-        public IEnumerable<IChoice> CompletedChoices
+        public ObservableCollection<IChoice> CompletedChoices
         {
             get { return _completedChoices; }
         }
@@ -189,8 +190,8 @@ namespace Data.Models
             _equippedItems = new List<IEquippable>();
             _inventory = new List<IItem>();
             _speedEffects = new List<ISpeedEffect>();
-            _oustandingChoices = new List<IChoice>();
-            _completedChoices = new List<IChoice>();
+            _oustandingChoices = new ObservableCollection<IChoice>();
+            _completedChoices = new ObservableCollection<IChoice>();
         }
         #endregion
 
@@ -200,11 +201,13 @@ namespace Data.Models
         public void AddChoice(IChoice choice)
         {
             _oustandingChoices.Add(choice);
+            RaisePropertyChanged(() => OutstandingChoices);
         }
 
         public void RemoveChoice(IChoice choice)
         {
             _oustandingChoices.Remove(choice);
+            RaisePropertyChanged(() => OutstandingChoices);
         }
 
         public void MakeChoice(IChoice choiceSet, IChoiceOption choiceOption)

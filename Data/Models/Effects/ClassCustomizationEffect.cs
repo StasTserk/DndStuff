@@ -1,4 +1,6 @@
-﻿namespace Data.Models.Effects
+﻿using System.Linq;
+
+namespace Data.Models.Effects
 {
     // TODO add specialized interface for this
     class ClassCustomizationEffect : IEffect
@@ -13,6 +15,8 @@
         public void ApplyToCharacter(Character targetCharacter)
         {
             targetCharacter.ClassCustomization = _classCustomization;
+            _classCustomization.LevelEffects.OrderBy(l => l.Level)
+                .First().ApplyToCharacter(targetCharacter);
         }
 
         public void RemoveFromCharacter(Character targetCharacter)

@@ -15,7 +15,7 @@
                FontWeight="Bold"
                Margin="10,0,10,0"/>
         <DataGrid Name="OutsatndingChoicesGrid"
-                  ItemsSource="{Binding Character.OutstandingChoices}"
+                  ItemsSource="{Binding Character.OutstandingChoices, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}"
                   SelectedItem="{Binding SelectedChoice, Mode=TwoWay}"
                   AutoGenerateColumns="False">
             <DataGrid.Columns>
@@ -62,7 +62,10 @@
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Pick This Option" Command="{Binding OptionPickedCommand}"/>
+                            <Button Content="Pick This Option" 
+                                    Command="{Binding RelativeSource={RelativeSource FindAncestor, 
+                                                AncestorType={x:Type UserControl}},
+                                                Path=DataContext.OptionPickedCommand}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -72,7 +75,7 @@
                FontSize="18"
                FontWeight="Bold"
                Margin="10,10,10,0"/>
-        <DataGrid ItemsSource="{Binding Character.CompletedChoices}"
+        <DataGrid ItemsSource="{Binding Character.CompletedChoices, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}"
             AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}"

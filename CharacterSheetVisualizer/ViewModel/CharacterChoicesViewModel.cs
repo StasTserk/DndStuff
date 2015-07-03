@@ -45,14 +45,15 @@ namespace CharacterSheetVisualizer.ViewModel
         private void OnChoiceOptionPicked()
         {
             if (_selectedChoice == null) return;
-
+            var effects = SelectedOption.ChoiceEffects;
             Character.MakeChoice(SelectedChoice, SelectedOption);
-            foreach (var choiceEffect in SelectedOption.ChoiceEffects)
+            foreach (var choiceEffect in effects)
             {
                 choiceEffect.ApplyToCharacter(Character);
             }
+            SelectedOption = null;
+            SelectedChoice = null;
         }
-
 
         private void OnCharacterLoaded(object sender, EventArgs e)
         {

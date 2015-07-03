@@ -16,7 +16,7 @@ namespace Data.Models.Choices
 
         public void MakeChoice(IChoiceOption chosenOption)
         {
-            if (_choices.Contains(chosenOption))
+            if (!_choices.Contains(chosenOption))
             {
                 return;
             }
