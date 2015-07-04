@@ -21,6 +21,8 @@ namespace CharacterSheetVisualizer.NinjectModules
             Bind<ISkillProvider>().To<SkillProvider>().InSingletonScope();
             Bind<IClassProvider>().To<ClassProvider>().InSingletonScope();
             Bind<IRaceProvider>().To<RaceProvider>().InSingletonScope();
+            Bind<IBackgroundLoader>().To<BackgroundLoader>();
+            Bind<IBackgroundProvider>().To<BackgroundProvider>();
 
             Bind<MainViewModel>().To<MainViewModel>().InSingletonScope();
         }

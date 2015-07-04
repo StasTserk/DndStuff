@@ -55,10 +55,20 @@
     </UserControl.Resources>
     <StackPanel Name="MainStatsDisplayPanel"
                 Width="595">
-        <Label FontSize="24"
-               FontWeight="Heavy"
-               Content="{Binding Character.CharacterName}"
-               HorizontalAlignment="Center"/>
+        <StackPanel Name="NameAndLevelupButton"
+                Orientation="Horizontal"
+                Width="595">
+            <Label FontSize="24"
+                   FontWeight="Heavy"
+                   Content="{Binding Character.CharacterName}"
+                   HorizontalAlignment="Center"
+                   Width="500"/>
+            <Button Content="Level Up"
+                    Width="90"
+                    Height="30"
+                    Command="{Binding LevelUpCommand}"
+                    IsEnabled="True"/>
+        </StackPanel>
         <Border Name="NamesAndSuchBorder"
                 Style="{DynamicResource RoundedBlockBorderStyle}"
                 CornerRadius="10"

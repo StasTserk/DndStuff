@@ -9,5 +9,6 @@ namespace Data.Models.Effects
     public interface IFeatureEffect : IEffect
     {
         IList<CharacterFeature> GetFeatureList(IList<CharacterFeature> featureList);
+        CharacterFeature Feature { get; }
     }
 }

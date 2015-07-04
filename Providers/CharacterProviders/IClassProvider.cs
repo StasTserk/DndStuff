@@ -1,4 +1,5 @@
-﻿using Data.Models;
+﻿using System.Collections.Generic;
+using Data.Models;
 
 namespace Providers.CharacterProviders
 {
@@ -6,5 +7,6 @@ namespace Providers.CharacterProviders
     {
         CharacterClass GetSampleClass();
         CharacterClass GetClassByClassType(CharacterClassType type);
+        IEnumerable<CharacterClass> GetAvailableLevelUpOptions(Character player);
     }
 }

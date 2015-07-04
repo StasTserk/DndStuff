@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 using Data.Models.Effects;
 
 namespace Data.Models
@@ -47,7 +48,7 @@ namespace Data.Models
 
         public void ApplyToCharacter(Character targetCharacter)
         {
-            targetCharacter.LevelModifiers.AddClass(this);
+            targetCharacter.LevelModifiers.AddClassLevel(this);
             foreach (var levelEffect in _levelEffects)
             {
                 levelEffect.ApplyToCharacter(targetCharacter);
@@ -56,10 +57,21 @@ namespace Data.Models
 
         public void RemoveFromCharacter(Character targetCharacter)
         {
+            targetCharacter.LevelModifiers.RemoveClassLevel(this);
             foreach (var levelEffect in _levelEffects)
             {
                 levelEffect.RemoveFromCharacter(targetCharacter);
             }
+        }
+    }
+
+    public class ClassCustomization : CharacterClass
+    {
+        // essentially identical behaviour for now, 
+        // mostly want to have a semantic destinction between classes and customizations
+        public ClassCustomization(IEnumerable<ClassLevel> levelEffects, CharacterClassType classType)
+            : base(levelEffects, classType)
+        {
         }
     }
 
@@ -72,6 +84,12 @@ namespace Data.Models
             _levelEffects = levelEffects;
             _classType = classType;
         }
+
+        public string Name { get; set; }
+
+        public string Description { get; set; }
+
+        public string ShortDescription { get; set; }
 
         public IEnumerable<ClassLevel> LevelEffects
         {

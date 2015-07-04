@@ -26,5 +26,7 @@ namespace Data.Models.Effects
             featureList.Add(_feature);
             return featureList;
         }
+
+        public CharacterFeature Feature { get { return _feature; } }
     }
 }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Xml.Linq;
 using Data.EffectParser;
 using Data.Models;
+using Data.Models.Choices;
+using Data.Models.Effects;
 using Data.Repositories.Interfaces;
 
 namespace Data.Repositories
@@ -12,11 +14,13 @@ namespace Data.Repositories
     {
         private readonly ICollection<CharacterClass> _characterClasses;
         private readonly IEffectParser _effectParser;
+        private readonly ICollection<ClassCustomization> _classCustomizations;
 
         public ClassLoader(IEffectParser effectParser)
         {
             _effectParser = effectParser;
             _characterClasses = new List<CharacterClass>();
+            _classCustomizations = new List<ClassCustomization>();
         }
 
         public CharacterClass GetClass(CharacterClassType type)
@@ -29,16 +33,55 @@ namespace Data.Repositories
             return _characterClasses.First(c => c.ClassType == type);
         }
 
+        public IEnumerable<CharacterClass> GetClasses()
+        {
+            if (!_characterClasses.Any())
+            {
+                LoadClasses();
+            }
+
+            return _characterClasses;
+        }
+
         private void LoadClasses()
         {
-            var rootPath = AppDomain.CurrentDomain.BaseDirectory;
             var doc = XDocument.Load(@"Xml/Classes.xml");
-            var list = doc.Root.Elements("Class");
 
-            foreach (var classNode in list)
+            var specList = doc.Root.Elements("ClassCustomization");
+            foreach (var specNode in specList)
+            {
+                _classCustomizations.Add(ParseCustomization(specNode));
+            }
+
+            
+            var classList = doc.Root.Elements("Class");
+
+            foreach (var classNode in classList)
             {
                 _characterClasses.Add(ParseClass(classNode));
             }
+
+            CustomizationChoicePostProcessing();
+        }
+
+        private void CustomizationChoicePostProcessing()
+        {
+            foreach (var outstandingCustomizationChoice in _effectParser.GetOutstandingCustomizationChoices())
+            {
+                CharacterClassType targetType = outstandingCustomizationChoice.TargetClass;
+                foreach (var cOpt in
+                        _classCustomizations.Where(c => c.ClassType == targetType)
+                            .Select(clsCstm =>
+                                new ChoiceOption(
+                                    name: clsCstm.Name,
+                                    description: clsCstm.Description,
+                                    shortDescription: clsCstm.ShortDescription,
+                                    effect: new ClassCustomizationEffect(clsCstm))))
+                {
+                    outstandingCustomizationChoice.ChoiceAsModifiable.AddChoiceOption(cOpt);
+                }
+            }
+            _effectParser.ClearOutstandingChoices();
         }
 
         private CharacterClass ParseClass(XElement classNode)
@@ -51,7 +94,28 @@ namespace Data.Repositories
                     level: int.Parse(effects.Attribute("Level").Value), 
                     classType: classType)).ToList();
 
-            return new CharacterClass(classLevels, classType);
+            return new CharacterClass(classLevels, classType)
+            {
+                Name = classNode.Attribute("Name").Value
+            };
+        }
+
+        private ClassCustomization ParseCustomization(XElement specNode)
+        {
+            var targetType =
+                (CharacterClassType)Enum.Parse(typeof(CharacterClassType), specNode.Attribute("AffectedClass").Value);
+            var classLevels = specNode.Elements("Effects").Select(
+                effects => new ClassLevel(
+                    levelEffects: _effectParser.GetEffectsFromXml(effects),
+                    level: int.Parse(effects.Attribute("Level").Value),
+                    classType: targetType)).ToList();
+
+            return new ClassCustomization(classLevels, targetType)
+            {
+                Name = specNode.Attribute("Name").Value,
+                Description = specNode.Attribute("Description").Value,
+                ShortDescription = specNode.Attribute("ShortDescription").Value
+            };
         }
     }
 }

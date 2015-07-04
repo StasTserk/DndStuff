@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -54,14 +54,32 @@
     <Compile Include="Models\Background.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\CharacterFeature.cs" />
+    <Compile Include="Models\Choices\ChoiceOption.cs" />
+    <Compile Include="Models\Choices\ClassSelectionChoice.cs" />
+    <Compile Include="Models\Choices\CommonPoolChoice.cs" />
+    <Compile Include="Models\Choices\ExclusiveEffectChoice.cs" />
+    <Compile Include="Models\Choices\IChoice.cs" />
+    <Compile Include="Models\Choices\IChoiceOption.cs" />
+    <Compile Include="Models\Choices\IModifiableChoice.cs" />
+    <Compile Include="Models\Choices\ModifiableChoice.cs" />
     <Compile Include="Models\ClassModel.cs" />
+    <Compile Include="Models\Effects\BackgroundEffects\AddBackgroundEffect.cs" />
     <Compile Include="Models\Effects\AddFeatureEffect.cs" />
+    <Compile Include="Models\Effects\BackgroundEffects\AddBondsEffect.cs" />
+    <Compile Include="Models\Effects\BackgroundEffects\AddFlawsEffect.cs" />
+    <Compile Include="Models\Effects\BackgroundEffects\AddIdealsEffect.cs" />
+    <Compile Include="Models\Effects\BackgroundEffects\AddPersonalityTraitEffect.cs" />
     <Compile Include="Models\Effects\AddProficiencyEffect.cs" />
     <Compile Include="Models\Effects\ArmorAddStatEffect.cs" />
     <Compile Include="Models\Effects\ArmorWithMaxDexEffect.cs" />
     <Compile Include="Models\Effects\BonusSkillEffect.cs" />
     <Compile Include="Models\Effects\BonusSpeedEffect.cs" />
     <Compile Include="Models\Effects\BonusStatEffect.cs" />
+    <Compile Include="Models\Effects\ChoiceEffects\ChoiceEffect.cs" />
+    <Compile Include="Models\Effects\ChoiceEffects\ClassCustomizationChoiceEffect.cs" />
+    <Compile Include="Models\Effects\ChoiceEffects\IChoiceEffect.cs" />
+    <Compile Include="Models\Effects\ChoiceEffects\MultipleChoiceFromPoolEffect.cs" />
+    <Compile Include="Models\Effects\ClassCustomizationEffect.cs" />
     <Compile Include="Models\Effects\IArmorClassEffect.cs" />
     <Compile Include="Models\Effects\IEffect.cs" />
     <Compile Include="Models\Effects\IFeatureEffect.cs" />
@@ -74,6 +92,7 @@
     <Compile Include="Models\Effects\MinimumStatEffect.cs" />
     <Compile Include="Models\Effects\MinimumSkillProficiencyEffect.cs" />
     <Compile Include="Models\Effects\ModifyFeatureEffect.cs" />
+    <Compile Include="Models\Effects\MultiEffect.cs" />
     <Compile Include="Models\Effects\SaveProficiencyEffect.cs" />
     <Compile Include="Models\Items\EquippableItem.cs" />
     <Compile Include="Models\Items\IEquippable.cs" />
@@ -86,7 +105,9 @@
     <Compile Include="Models\SpellModel.cs" />
     <Compile Include="Models\Stat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BackgroundLoader.cs" />
     <Compile Include="Repositories\ClassLoader.cs" />
+    <Compile Include="Repositories\Interfaces\IBackgroundLoader.cs" />
     <Compile Include="Repositories\Interfaces\IClassLoader.cs" />
     <Compile Include="Repositories\Interfaces\ISpellLoader.cs" />
     <Compile Include="Repositories\SpellLoader.cs" />
@@ -97,8 +118,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Xml\Backgrounds.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Xml\Classes.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Xml\SpellLists.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Data.Models;
+using Data.Models.Choices;
 using Data.Models.Effects;
 using Data.Models.Items;
 
@@ -14,6 +15,7 @@ namespace Providers.CharacterProviders
         private readonly ISkillProvider _skillProvider;
         private readonly IClassProvider _classProvider;
         private readonly IRaceProvider _raceProvider;
+        private readonly IBackgroundProvider _backgroundProvider;
 
         public event EventHandler NewCharacterLoaded;
 
@@ -32,12 +34,13 @@ namespace Providers.CharacterProviders
             }
         }
 
-        public CharacterProvider(IStatProvider statProvider, ISkillProvider skillProvider, IClassProvider classProvider, IRaceProvider raceProvider)
+        public CharacterProvider(IStatProvider statProvider, ISkillProvider skillProvider, IClassProvider classProvider, IRaceProvider raceProvider, IBackgroundProvider backgroundProvider)
         {
             _statProvider = statProvider;
             _skillProvider = skillProvider;
             _classProvider = classProvider;
             _raceProvider = raceProvider;
+            _backgroundProvider = backgroundProvider;
             // Load a new Character
             CreateNewCharacter();
         }
@@ -61,7 +64,7 @@ namespace Providers.CharacterProviders
 
             var acTracker = new ArmorClass(enumerable.First(s => s.Type == StatType.Dexterity));
 
-            var background = new Background {Name = "Adept"};
+            var background = new Background();
 
             CurrentCharacter = new Character()
             {
@@ -71,7 +74,6 @@ namespace Providers.CharacterProviders
                 LevelModifiers = modifiers,
                 PlayerName = "Coolguy Steve",
                 CharacterName = "Bruenor",
-                Background = background
             };
 
             var minimumStatBonus = new MinimumStatEffect(StatType.Strength, 17);
@@ -83,8 +85,17 @@ namespace Providers.CharacterProviders
                 flatStatBonus
             };
 
-            _classProvider.GetSampleClass().GetClassLevel(1).ApplyToCharacter(CurrentCharacter);
-            _classProvider.GetSampleClass().GetClassLevel(2).ApplyToCharacter(CurrentCharacter);
+            // set level up choice
+            var choice = new ClassSelectionChoice(
+                CurrentCharacter.LevelModifiers,
+                _classProvider.GetAvailableLevelUpOptions(CurrentCharacter)
+                )
+            {
+                Description = string.Format(@"Pick your level {0} class", CurrentCharacter.LevelModifiers.Level + 1),
+                Name = string.Format(@"Level Up to {0}", CurrentCharacter.LevelModifiers.Level + 1),
+                ShortDescription = string.Format(@"Pick your level {0} class", CurrentCharacter.LevelModifiers.Level + 1)
+            };
+            CurrentCharacter.AddChoice(choice);
 
             var randomHat = new EquippableItem(
                 name: "Cool Hat", 
@@ -97,6 +108,7 @@ namespace Providers.CharacterProviders
 
             CurrentCharacter.Equip(randomHat);
             _raceProvider.GetSampleRace().ApplyToCharacter(CurrentCharacter);
+            _backgroundProvider.GetBackgroundChoiceEffect().ApplyToCharacter(CurrentCharacter);
         }
     }
 }
