@@ -20,7 +20,6 @@ namespace CharacterSheetVisualizer.NinjectModules
             Bind<ICharacterProvider>().To<CharacterProvider>().InSingletonScope();
             Bind<ISkillProvider>().To<SkillProvider>().InSingletonScope();
             Bind<IClassProvider>().To<ClassProvider>().InSingletonScope();
-            Bind<IRaceProvider>().To<RaceProvider>().InSingletonScope();
             Bind<IBackgroundLoader>().To<BackgroundLoader>();
             Bind<IBackgroundProvider>().To<BackgroundProvider>();
 

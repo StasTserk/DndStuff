@@ -1,25 +1,18 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using Data.Models;
 using Data.Models.Choices;
 using Data.Models.Effects;
 using Data.Models.Effects.ChoiceEffects;
-using Data.Repositories.Interfaces;
+using Providers.CharacterProviders;
 
-namespace Providers.CharacterProviders
+namespace CharacterSheetVisualizer.Design
 {
-    public class RaceProvider : IRaceProvider
+    class DesignRaceProvider : IRaceProvider
     {
-        private readonly IRaceLoader _raceLoader;
-
-        public RaceProvider(IRaceLoader raceLoader)
-        {
-            _raceLoader = raceLoader;
-        }
-
         public IEnumerable<Race> GetRaces()
         {
-            return _raceLoader.GetRaces();
+            throw new NotImplementedException();
         }
 
         public Race GetSampleRace()
@@ -49,29 +42,20 @@ namespace Providers.CharacterProviders
 
         public Race GetRaceByName(string name)
         {
-            return _raceLoader.GetRaceByName(name);
+            return GetSampleRace();
         }
 
         public IChoiceEffect GetRaceChoiceEffect()
         {
-            return new ChoiceEffect(GetRaceChoice());
+            // todo add design time choice here
+            return null;
         }
 
         private IChoice GetRaceChoice()
         {
-            return new ExclusiveEffectChoice(
-                GetRaces().Select(race =>
-                    new ChoiceOption(
-                        name: race.Name,
-                        description: race.Description,
-                        shortDescription: race.ShortDescription,
-                        effect: race))
-                )
-            {
-                Description = "Pick a race for your character.",
-                ShortDescription = "Pick a race for your character.",
-                Name = "Race"
-            };
+            // todo add design time choice here
+            return null;
         }
     }
 }
+

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Races>
+  <Race Name="Hill Dwarf"
+        Description="As a hill dwarf, you have keen senses, deep intuition,
+        and remarkable resilience. The gold dwarves of Faerun
+        in their mighty southern kingdom are hill dwarves, as
+        are the exiled Neidar and the debased Klar of Krynn in
+        the Dragonlance setting."
+        ShortDescription="Above ground dwelling dwarves; +2 Con +1 Wis">
+    <Effects>
+      <Effect Type="BonusSpeedEffect"
+              Speed="25"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Dwarven Speed"
+              Description="Your speed is by wearing heavy armour."
+              ShortDescription="Your speed is by wearing heavy armour."
+              Source="Dwarf Racial"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Constitution"
+              Bonus="2"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Darkvision"
+              Description="Accustomed to life underground, you
+              have superior vision in dark and dim conditions. You
+              can see in dim light within 60 feet o f you as if it w ere
+              bright light, and in darkness as if it were dim light. You
+              can’t discern color in darkness, only shades o f gray."
+              ShortDescription="You can see up to 60 ft. in the dark."
+              Source="Dwarf Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Dwarven Resilience"
+              Description="You have advantage on saving
+              throws against poison, and you have resistance against
+              poison damage (explained in chapter 9)."
+              ShortDescription="You have advantage on saves vs poison and poison resistance."
+              Source="Dwarf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Battleaxe"
+              Source="Dwarf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Handaxe"
+              Source="Dwarf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Throwing Hammer"
+              Source="Dwarf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Warhammer"
+              Source="Dwarf Racial"/>
+      <Effect Type="FeatureChoiceEffect"
+              Name="Dwarven Tool Proficiency"
+              Description="Gain Proficiency with one set of artisan's tools"
+              ShortDescription="Gain Proficiency with one set of artisan's tools">
+        <Choice Name="Smith's Tools Proficiency"
+                ShortDescription="Gain proficiency with the Smith's Tools">
+          <Effect Type="AddProficiencyEffect"
+                  Name="Smith's Tools"
+                  Source="Dwarf Racial"/>
+        </Choice>
+        <Choice Name="Brewer's Supplies Proficiency"
+                ShortDescription="Gain proficiency with the Brewer's Supplies">
+          <Effect Type="AddProficiencyEffect"
+                  Name="Brewer's Supplies"
+                  Source="Dwarf Racial"/>
+        </Choice>
+        <Choice Name="Mason's Tools Proficiency"
+                ShortDescription="Gain proficiency with the Mason's Tools">
+          <Effect Type="AddProficiencyEffect"
+                  Name="Mason's Tools"
+                  Source="Dwarf Racial"/>
+        </Choice>
+      </Effect>
+      <Effect Type="AddFeatureEffect"
+              Name="Stonecutting"
+              Description="Whenever you make an Intelligence
+              (History) check related to the origin of stonework, you
+              are considered proficient in the History skill and add
+              double your proficiency bonus to the check, instead of
+              your normal proficiency bonus."
+              ShortDescription="Gain double proficiency on history checks concerning stonework."
+              Source="Dwarf Racial"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Wisdom"
+              Bonus="1"/>
+    </Effects>
+  </Race>
+  <Race Name="Mountain Dwarf"
+        Description="As a mountain dwarf, you're strong and hardy,
+                     accustomed to a difficult life in rugged terrain. You’re
+                     probably on the tall side (for a dwarf), and tend toward
+                     lighter coloration. The shield dwarves of northern
+                     Faerun, as well as the ruling Hylar clan and the noble
+                     Daewar clan of Dragonlance, are mountain dwarves."
+        ShortDescription="Above ground dwelling dwarves; +2 Con +2 Str">
+    <Effects>
+      <Effect Type="BonusSpeedEffect"
+              Speed="25"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Dwarven Speed"
+              Description="Your speed is by wearing heavy armour."
+              ShortDescription="Your speed is by wearing heavy armour."
+              Source="Dwarf Racial"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Constitution"
+              Bonus="2"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Darkvision"
+              Description="Accustomed to life underground, you
+              have superior vision in dark and dim conditions. You
+              can see in dim light within 60 feet o f you as if it w ere
+              bright light, and in darkness as if it were dim light. You
+              can’t discern color in darkness, only shades o f gray."
+              ShortDescription="You can see up to 60 ft. in the dark."
+              Source="Dwarf Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Dwarven Resilience"
+              Description="You have advantage on saving
+              throws against poison, and you have resistance against
+              poison damage (explained in chapter 9)."
+              ShortDescription="You have advantage on saves vs poison and poison resistance."
+              Source="Dwarf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Battleaxe"
+              Source="Dwarf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Handaxe"
+              Source="Dwarf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Throwing Hammer"
+              Source="Dwarf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Warhammer"
+              Source="Dwarf Racial"/>
+      <Effect Type="FeatureChoiceEffect"
+              Name="Dwarven Tool Proficiency"
+              Description="Gain Proficiency with one set of artisan's tools"
+              ShortDescription="Gain Proficiency with one set of artisan's tools">
+        <Choice Name="Smith's Tools Proficiency"
+                ShortDescription="Gain proficiency with the Smith's Tools">
+          <Effect Type="AddProficiencyEffect"
+                  Name="Smith's Tools"
+                  Source="Dwarf Racial"/>
+        </Choice>
+        <Choice Name="Brewer's Supplies Proficiency"
+                ShortDescription="Gain proficiency with the Brewer's Supplies">
+          <Effect Type="AddProficiencyEffect"
+                  Name="Brewer's Supplies"
+                  Source="Dwarf Racial"/>
+        </Choice>
+        <Choice Name="Mason's Tools Proficiency"
+                ShortDescription="Gain proficiency with the Mason's Tools">
+          <Effect Type="AddProficiencyEffect"
+                  Name="Mason's Tools"
+                  Source="Dwarf Racial"/>
+        </Choice>
+      </Effect>
+      <Effect Type="AddFeatureEffect"
+              Name="Stonecutting"
+              Description="Whenever you make an Intelligence
+              (History) check related to the origin of stonework, you
+              are considered proficient in the History skill and add
+              double your proficiency bonus to the check, instead of
+              your normal proficiency bonus."
+              ShortDescription="Gain double proficiency on history checks concerning stonework."
+              Source="Dwarf Racial"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Strength"
+              Bonus="2"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Light Armor"
+              Source="Hill Dwarf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Medium Armor"
+              Source="Hill Dwarf Racial"/>
+    </Effects>
+  </Race>
+</Races>

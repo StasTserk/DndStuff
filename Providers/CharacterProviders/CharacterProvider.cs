@@ -64,8 +64,6 @@ namespace Providers.CharacterProviders
 
             var acTracker = new ArmorClass(enumerable.First(s => s.Type == StatType.Dexterity));
 
-            var background = new Background();
-
             CurrentCharacter = new Character()
             {
                 Stats = enumerable,
@@ -97,17 +95,17 @@ namespace Providers.CharacterProviders
             };
             CurrentCharacter.AddChoice(choice);
 
-            var randomHat = new EquippableItem(
-                name: "Cool Hat", 
-                description: "A cool hat",
-                shortDescription: "Coolhat",
-                weight: 1,
-                cost: 100,
-                slot: EquippableSlot.Head,
-                effects: effectList);
+            //var randomHat = new EquippableItem(
+            //    name: "Cool Hat", 
+            //    description: "A cool hat",
+            //    shortDescription: "Coolhat",
+            //    weight: 1,
+            //    cost: 100,
+            //    slot: EquippableSlot.Head,
+            //    effects: effectList);
 
-            CurrentCharacter.Equip(randomHat);
-            _raceProvider.GetSampleRace().ApplyToCharacter(CurrentCharacter);
+            //CurrentCharacter.Equip(randomHat);
+            _raceProvider.GetRaceChoiceEffect().ApplyToCharacter(CurrentCharacter);
             _backgroundProvider.GetBackgroundChoiceEffect().ApplyToCharacter(CurrentCharacter);
         }
     }
