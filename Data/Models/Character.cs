@@ -124,6 +124,7 @@ namespace Data.Models
             {
                 _race = value;
                 RaisePropertyChanged(() => Race.Name);
+                RaisePropertyChanged(() => Race);
             } 
         }
         

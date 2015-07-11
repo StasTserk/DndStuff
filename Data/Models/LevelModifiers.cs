@@ -84,10 +84,11 @@ namespace Data.Models
         {
             get
             {
-                return ClassesAndLevels.Aggregate(
-                    @"", (current, classAndLevel) =>
-                        string.Join("/", current, string.Format(@"{0} {1}", classAndLevel.Item1, classAndLevel.Item2)))
-                    .Substring(1); // remove leading /
+                return ClassesAndLevels.Any()
+                    ? string.Join("/",
+                        ClassesAndLevels.Select(
+                            cl => string.Format("{0} {1}", cl.Item1, cl.Item2)))
+                    : "";
             }
         }
 

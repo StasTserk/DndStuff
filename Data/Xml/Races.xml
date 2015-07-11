@@ -83,6 +83,7 @@
               Bonus="1"/>
     </Effects>
   </Race>
+
   <Race Name="Mountain Dwarf"
         Description="As a mountain dwarf, you're strong and hardy,
                      accustomed to a difficult life in rugged terrain. You’re
@@ -171,6 +172,1079 @@
       <Effect Type="AddProficiencyEffect"
               Name="Medium Armor"
               Source="Hill Dwarf Racial"/>
+    </Effects>
+  </Race>
+  
+  <Race Name="High Elf"
+        Description="As a high elf, you have a keen mind and a mastery of
+          at least the basics o f magic. In many of the worlds
+          of DnD, there are two kinds of high elves. One type
+          (which includes the gray elves and valley elves of
+          Greyhawk, the Silvanesti of Dragonlance, and the
+          sun elves of the Forgotten Realms) is haughty and
+          reclusive, believing themselves to be superior to
+          non-elves and even other elves. The other type
+          (including the high elves of Greyhawk. the
+          Qualinesti of Dragonlance, and the moon elves
+          of the Forgotten Realms) are more common
+          and m ore friendly, and often encountered
+          among humans and other races.
+          The sun elves of Faerun (also called gold
+          elves or sunrise elves) have bronze skin and
+          hair of copper, black, or golden blond. Their
+          eyes are golden, silver, or black. Moon elves (also
+          called silver elves or gray elves) are much paler,
+          with alabaster skin sometimes tinged with blue.
+          They often have hair of silver-white, black, or blue,
+          but various shades of blond, brown, and red are
+          not uncommon. Their eyes are blue or green and
+          flecked with gold."
+        ShortDescription="High society elves; +2 Dex, +1 Int">
+    <Effects>
+      <Effect Type="BonusStatEffect"
+              Stat="Dexterity"
+              Bonus="2"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="30"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Darkvision"
+              Description="Accustomed to life underground, you
+              have superior vision in dark and dim conditions. You
+              can see in dim light within 60 feet of you as if it w ere
+              bright light, and in darkness as if it were dim light. You
+              can’t discern color in darkness, only shades of gray."
+              ShortDescription="You can see up to 60 ft. in the dark."
+              Source="Elf Racial"/>
+      <Effect Type="MinimumSkillProficiencyEffect"
+              Skill="Perception"
+              Proficiency="Proficient"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Fey Ancestry"
+              Description="You have advantage on saving throws
+              against being charmed, and magic can’t put you to sleep."
+              ShortDescription="You have advantage on saving throws against being charmed, and magic can’t put you to sleep."
+              Source="Elf Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Trance"
+              Description="Elves don’t need to sleep. Instead, they
+              meditate deeply, remaining semiconscious, for 4
+              hours a day. (The Common word for such meditation
+              is “trance.”) While meditating, you can dream after a
+              fashion; such dreams are actually mental exercises that
+              have become reflexive through years of practice. After
+              resting in this way, you gain the same benefit that a
+              human does from 8 hours of sleep."
+              ShortDescription="Instead of sleeping, you meditate for 4 hours."
+              Source="Elf Racial"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Intelligence"
+              Bonus="1"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Longsword"
+              Source="High Elf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Shortword"
+              Source="High Elf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Shortbow"
+              Source="High Elf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Longbow"
+              Source="High Elf Racial"/>
+    </Effects>
+  </Race>
+
+  <Race Name="Wood Elf"
+        Description="As a w ood elf, you have keen senses and intuition, and
+        your fleet feet carry you quickly and stealthily through
+        your native forests. This category includes the wild
+        elves (grugach) o f Greyhawk and the Kagonesti of
+        Dragonlance, as well as the races called wood elves in
+        Greyhawk and the Forgotten Realms. In Faerun, wood
+        elves (also called wild elves, green elves, or forest elves)
+        are reclusive and distrusting o f non-elves.
+        Wood elves’ skin tends to be copperish in hue,
+        sometimes with traces o f green. Their hair tends toward
+        browns and blacks, but it is occasionally blond or
+        copper-colored. Their eyes are green, brown, or hazel."
+        ShortDescription="Nature elves; +2 Dex, +1 Wis">
+    <Effects>
+      <Effect Type="BonusStatEffect"
+              Stat="Dexterity"
+              Bonus="2"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="30"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Darkvision"
+              Description="Accustomed to life underground, you
+              have superior vision in dark and dim conditions. You
+              can see in dim light within 60 feet of you as if it w ere
+              bright light, and in darkness as if it were dim light. You
+              can’t discern color in darkness, only shades of gray."
+              ShortDescription="You can see up to 60 ft. in the dark."
+              Source="Elf Racial"/>
+      <Effect Type="MinimumSkillProficiencyEffect"
+              Skill="Perception"
+              Proficiency="Proficient"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Fey Ancestry"
+              Description="You have advantage on saving throws
+              against being charmed, and magic can’t put you to sleep."
+              ShortDescription="You have advantage on saving throws against being charmed, and magic can’t put you to sleep."
+              Source="Elf Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Trance"
+              Description="Elves don’t need to sleep. Instead, they
+              meditate deeply, remaining semiconscious, for 4
+              hours a day. (The Common word for such meditation
+              is “trance.”) While meditating, you can dream after a
+              fashion; such dreams are actually mental exercises that
+              have become reflexive through years of practice. After
+              resting in this way, you gain the same benefit that a
+              human does from 8 hours of sleep."
+              ShortDescription="Instead of sleeping, you meditate for 4 hours."
+              Source="Elf Racial"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Wisdom"
+              Bonus="1"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Longsword"
+              Source="Wood Elf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Shortword"
+              Source="Wood Elf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Shortbow"
+              Source="Wood Elf Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Longbow"
+              Source="Wood Elf Racial"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="5"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Mask of the Wild"
+              Description="You can attempt to hide even when
+              you are only lightly obscured by foliage, heavy rain,
+              falling snow, mist, and other natural phenomena."
+              ShortDescription="You can hide even when only lightly obscured."
+              Source="Wood Elf Racial"/>
+    </Effects>
+  </Race>
+
+  <Race Name="Drow"
+        Description="Descended from an earlier subrace of dark-skinned
+        elves, the drow w ere banished from the surface world
+        for following the goddess Lolth down the path to
+        evil and corruption. Now they have built their own
+        civilization in the depths o f the Underdark, patterned
+        after the Way o f Lolth. Also called dark elves, the drow
+        have black skin that resembles polished obsidian and
+        stark white or pale yellow hair. They commonly have
+        very pale eyes (so pale as to be mistaken for white) in
+        shades o f lilac, silver, pink, red, and blue. They tend to
+        be smaller and thinner than most elves.
+        Drow adventurers are rare, and the race does not exist
+        in all worlds. Check with your Dungeon Master to see
+        if you can play a drow character."
+        ShortDescription="Grimdark edgy elves; +2 Dex, +1 Wis">
+    <Effects>
+      <Effect Type="BonusStatEffect"
+              Stat="Dexterity"
+              Bonus="2"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="30"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Darkvision"
+              Description="Accustomed to life underground, you
+              have superior vision in dark and dim conditions. You
+              can see in dim light within 120 feet of you as if it w ere
+              bright light, and in darkness as if it were dim light. You
+              can’t discern color in darkness, only shades of gray."
+              ShortDescription="You can see up to 120 ft. in the dark."
+              Source="Elf Racial"/>
+      <Effect Type="MinimumSkillProficiencyEffect"
+              Skill="Perception"
+              Proficiency="Proficient"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Fey Ancestry"
+              Description="You have advantage on saving throws
+              against being charmed, and magic can’t put you to sleep."
+              ShortDescription="You have advantage on saving throws against being charmed, and magic can’t put you to sleep."
+              Source="Elf Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Trance"
+              Description="Elves don’t need to sleep. Instead, they
+              meditate deeply, remaining semiconscious, for 4
+              hours a day. (The Common word for such meditation
+              is “trance.”) While meditating, you can dream after a
+              fashion; such dreams are actually mental exercises that
+              have become reflexive through years of practice. After
+              resting in this way, you gain the same benefit that a
+              human does from 8 hours of sleep."
+              ShortDescription="Instead of sleeping, you meditate for 4 hours."
+              Source="Elf Racial"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Charisma"
+              Bonus="1"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Rapier"
+              Source="Drow Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Shortword"
+              Source="Drow Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Hand Crossbow"
+              Source="DrowRacial"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="5"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Light Sensitivity"
+              Description="You have disadvantage on attack
+              rolls and on Wisdom (Perception) checks that rely on
+              sight when you, the target o f your attack, or whatever
+              you are trying to perceive is in direct sunlight."
+              ShortDescription="You have disadvantage to sight based things in direct sunlight."
+              Source="Drow Racial"/>
+    </Effects>
+  </Race>
+
+  <Race Name="Lightfoot Halfling"
+        Description="As a lightfoot halfling, you can easily hide from notice,
+        even using other people as cover. You’re inclined to be
+        affable and get along well with others. In the Forgotten
+        Realms, lightfoot halflings have spread the farthest and
+        thus are the most common variety.
+        Lightfoots are more prone to wanderlust than other
+        halflings, and often dwell alongside other races or take
+        up a nomadic life. In the world o f Greyhawk, these
+        halflings are called hairfeet or tallfellows."
+        ShortDescription="Thief halflings; +2 dex +1 cha">
+    <Effects>
+      <Effect Type="BonusStatEffect"
+              Stat="Dexterity"
+              Bonus="2"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="25"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Lucky"
+              Description="When you roll a 1 on an attack roll, ability
+              check, or saving throw, you can reroll the die and must
+              use the new roll."
+              ShortDescription="Reroll 1's on attacks, ability checks, and saves."
+              Source="Halfling Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Brave"
+              Description="You have advantage on saving throws against being frightened."
+              ShortDescription="You have advantage on saving throws against being frightened."
+              Source="Halfling Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Halfling Nimbleness"
+              Description="You can move through the space of any creature that is of a size larger than yours."
+              ShortDescription="You can move through the space of any creature that is of a size larger than yours."
+              Source="Halfling Racial"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Charisma"
+              Bonus="1"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Natually Stealthy"
+              Description="You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
+              ShortDescription="You can hide behind creatures larger than you."
+              Source="Lightfoot Halfling Racial"/>
+    </Effects>    
+  </Race>
+
+  <Race Name="Stout Halfling"
+        Description="As a stout halfling, you’re hardier than average and have
+        some resistance to poison. Some say that stouts have
+        dwarven blood. In the Forgotten Realms, these halflings
+        are called stronghearts, and they’re most common
+        in the south."
+        ShortDescription="Dwarflings; +2 dex +1 con">
+    <Effects>
+      <Effect Type="BonusStatEffect"
+              Stat="Dexterity"
+              Bonus="2"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="25"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Lucky"
+              Description="When you roll a 1 on an attack roll, ability
+              check, or saving throw, you can reroll the die and must
+              use the new roll."
+              ShortDescription="Reroll 1's on attacks, ability checks, and saves."
+              Source="Halfling Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Brave"
+              Description="You have advantage on saving throws against being frightened."
+              ShortDescription="You have advantage on saving throws against being frightened."
+              Source="Halfling Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Halfling Nimbleness"
+              Description="You can move through the space of any creature that is of a size larger than yours."
+              ShortDescription="You can move through the space of any creature that is of a size larger than yours."
+              Source="Halfling Racial"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Constitution"
+              Bonus="1"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Stout Resilience"
+              Description="You have advantage on saving
+              throws against poison, and you have resistance
+              against poison damage."
+              ShortDescription="Advantage on saves vs poison and resistance to poison damage."
+              Source="Stout Halfling Racial"/>
+    </Effects>
+  </Race>
+
+  <Race Name="Human"
+        Description="In the reckonings o f most w orlds, humans are the
+        youngest o f the common races, late to arrive on the
+        world scene and short-lived in comparison to dwarves,
+        elves, and dragons. Perhaps it is because o f their shorter
+        lives that they strive to achieve as much as they can in
+        the years they are given. Or maybe they feel they have
+        something to prove to the elder races, and that’s why
+        they build their mighty empires on the foundation of
+        conquest and trade. Whatever drives them, humans
+        are the innovators, the achievers, and the pioneers
+        o f the worlds."
+        ShortDescription="Humans are everywhere! +1 to all stats">
+    <Effects>
+      <Effect Type="BonusStatEffect"
+              Stat="Strength"
+              Bonus="1"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Dexterity"
+              Bonus="1"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Constitution"
+              Bonus="1"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Intelligence"
+              Bonus="1"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Wisdom"
+              Bonus="1"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Charisma"
+              Bonus="1"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="30"/>
+    </Effects>
+  </Race>
+
+  <Race Name="Dragonborn"
+        Description="Born o f dragons, as their name proclaims, the
+        dragonborn walk proudly through a world that greets
+        them with fearful incomprehension. Shaped by draconic
+        gods or the dragons themselves, dragonborn originally
+        hatched from dragon eggs as a unique race, combining
+        the best attributes o f dragons and humanoids. Some
+        dragonborn are faithful servants to true dragons, others
+        form the ranks o f soldiers in great wars, and still others
+        find themselves adrift, with no clear calling in life."
+        ShortDescription="Half-Dragon race; +2 str, +1 cha">
+    <Effects>
+      <Effect Type="BonusStatEffect"
+              Stat="Strength"
+              Bonus="2"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Charisma"
+              Bonus="1"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="30"/>
+      <Effect Type="FeatureChoiceEffect"
+              Name="Draconic Ancestry"
+              Description="You have draconic ancestry.
+              Choose one type o f dragon from the Draconic Ancestry
+              table. Your breath weapon and damage resistance are
+              determined by the dragon type, as shown in the table."
+              ShortDescription="Pick an ancestral dragon type">
+        <Choice Name="Black Dragon Ancestry"
+                ShortDescription="Acid resistance and a 30 ft line breath weapon.">
+          <Effect Type="AddFeatureEffect"
+                  Name="Black Dragon Resistance"
+                  ShortDescription="Take half damage from acid damage."
+                  Description="Take half damage from acid damage."
+                  Source="Dragonborn Racial"/>
+          <Effect Type="AddFeatureEffect"
+                  Name="Black Dragon Breath Weapon"
+                  ShortDescription="5 by 30 ft. line that does 2d6 acid damage. Dexterity save of DC 8 + Con + Prof save halves"
+                  Description="You can use your action to exhale
+                  destructive energy. Your draconic ancestry determines
+                  the size, shape, and damage type of the exhalation.
+                  When you use your breath weapon, each creature in
+                  the area of the exhalation must make a saving throw,
+                  the type of which is determined by your draconic
+                  ancestry. The DC for this saving throw equals 8 +
+                  your Constitution modifier + your proficiency bonus. A
+                  creature takes 2d6 damage on a failed save, and half
+                  as much damage on a successful one. The damage
+                  increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+                  at 16th level.
+                  After you use your breath weapon, you can’t use it
+                  again until you complete a short or long rest."
+                  Source="Dragonborn Racial"/>
+        </Choice>
+        <Choice Name="Blue Dragon Ancestry"
+                ShortDescription="Lightning resistance and a 30 ft line breath weapon.">
+          <Effect Type="AddFeatureEffect"
+                  Name="Blue Dragon Resistance"
+                  ShortDescription="Take half damage from lightning damage."
+                  Description="Take half damage from lightning damage."
+                  Source="Dragonborn Racial"/>
+          <Effect Type="AddFeatureEffect"
+                  Name="Blue Dragon Breath Weapon"
+                  ShortDescription="5 by 30 ft. line that does 2d6 lightning damage. Dexterity save of DC 8 + Con + Prof save halves"
+                  Description="You can use your action to exhale
+                  destructive energy. Your draconic ancestry determines
+                  the size, shape, and damage type of the exhalation.
+                  When you use your breath weapon, each creature in
+                  the area of the exhalation must make a saving throw,
+                  the type of which is determined by your draconic
+                  ancestry. The DC for this saving throw equals 8 +
+                  your Constitution modifier + your proficiency bonus. A
+                  creature takes 2d6 damage on a failed save, and half
+                  as much damage on a successful one. The damage
+                  increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+                  at 16th level.
+                  After you use your breath weapon, you can’t use it
+                  again until you complete a short or long rest."
+                  Source="Dragonborn Racial"/>
+        </Choice>
+        <Choice Name="Brass Dragon Ancestry"
+                ShortDescription="Fire resistance and a 30 ft line breath weapon.">
+          <Effect Type="AddFeatureEffect"
+                  Name="Brass Dragon Resistance"
+                  ShortDescription="Take half damage from fire damage."
+                  Description="Take half damage from fire damage."
+                  Source="Dragonborn Racial"/>
+          <Effect Type="AddFeatureEffect"
+                  Name="Brass Dragon Breath Weapon"
+                  ShortDescription="5 by 30 ft. line that does 2d6 fire damage. Dexterity save of DC 8 + Con + Prof save halves"
+                  Description="You can use your action to exhale
+                  destructive energy. Your draconic ancestry determines
+                  the size, shape, and damage type of the exhalation.
+                  When you use your breath weapon, each creature in
+                  the area of the exhalation must make a saving throw,
+                  the type of which is determined by your draconic
+                  ancestry. The DC for this saving throw equals 8 +
+                  your Constitution modifier + your proficiency bonus. A
+                  creature takes 2d6 damage on a failed save, and half
+                  as much damage on a successful one. The damage
+                  increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+                  at 16th level.
+                  After you use your breath weapon, you can’t use it
+                  again until you complete a short or long rest."
+                  Source="Dragonborn Racial"/>
+        </Choice>
+        <Choice Name="Bronze Dragon Ancestry"
+                ShortDescription="Lightning resistance and a 30 ft line breath weapon.">
+          <Effect Type="AddFeatureEffect"
+                  Name="Bronze Dragon Resistance"
+                  ShortDescription="Take half damage from acid damage."
+                  Description="Take half damage from lightning damage."
+                  Source="Dragonborn Racial"/>
+          <Effect Type="AddFeatureEffect"
+                  Name="Bronze Dragon Breath Weapon"
+                  ShortDescription="5 by 30 ft. line that does 2d6 lightning damage. Dexterity save of DC 8 + Con + Prof save halves"
+                  Description="You can use your action to exhale
+                  destructive energy. Your draconic ancestry determines
+                  the size, shape, and damage type of the exhalation.
+                  When you use your breath weapon, each creature in
+                  the area of the exhalation must make a saving throw,
+                  the type of which is determined by your draconic
+                  ancestry. The DC for this saving throw equals 8 +
+                  your Constitution modifier + your proficiency bonus. A
+                  creature takes 2d6 damage on a failed save, and half
+                  as much damage on a successful one. The damage
+                  increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+                  at 16th level.
+                  After you use your breath weapon, you can’t use it
+                  again until you complete a short or long rest."
+                  Source="Dragonborn Racial"/>
+        </Choice>
+        <Choice Name="Copper Dragon Ancestry"
+                ShortDescription="Acid resistance and a 30 ft line breath weapon.">
+          <Effect Type="AddFeatureEffect"
+                  Name="Copper Dragon Resistance"
+                  ShortDescription="Take half damage from acid damage."
+                  Description="Take half damage from acid damage."
+                  Source="Dragonborn Racial"/>
+          <Effect Type="AddFeatureEffect"
+                  Name="Copper Dragon Breath Weapon"
+                  ShortDescription="5 by 30 ft. line that does 2d6 acid damage. Dexterity save of DC 8 + Con + Prof save halves"
+                  Description="You can use your action to exhale
+                  destructive energy. Your draconic ancestry determines
+                  the size, shape, and damage type of the exhalation.
+                  When you use your breath weapon, each creature in
+                  the area of the exhalation must make a saving throw,
+                  the type of which is determined by your draconic
+                  ancestry. The DC for this saving throw equals 8 +
+                  your Constitution modifier + your proficiency bonus. A
+                  creature takes 2d6 damage on a failed save, and half
+                  as much damage on a successful one. The damage
+                  increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+                  at 16th level.
+                  After you use your breath weapon, you can’t use it
+                  again until you complete a short or long rest."
+                  Source="Dragonborn Racial"/>
+        </Choice>
+        <Choice Name="Gold Dragon Ancestry"
+                ShortDescription="Fire resistance and a 15 ft. cone breath weapon.">
+          <Effect Type="AddFeatureEffect"
+                  Name="Gold Dragon Resistance"
+                  ShortDescription="Take half damage from fire damage."
+                  Description="Take half damage from fire damage."
+                  Source="Dragonborn Racial"/>
+          <Effect Type="AddFeatureEffect"
+                  Name="Gold Dragon Breath Weapon"
+                  ShortDescription="15 ft. cone that does 2d6 fire damage. Dexterity save of DC 8 + Con + Prof save halves"
+                  Description="You can use your action to exhale
+                  destructive energy. Your draconic ancestry determines
+                  the size, shape, and damage type of the exhalation.
+                  When you use your breath weapon, each creature in
+                  the area of the exhalation must make a saving throw,
+                  the type of which is determined by your draconic
+                  ancestry. The DC for this saving throw equals 8 +
+                  your Constitution modifier + your proficiency bonus. A
+                  creature takes 2d6 damage on a failed save, and half
+                  as much damage on a successful one. The damage
+                  increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+                  at 16th level.
+                  After you use your breath weapon, you can’t use it
+                  again until you complete a short or long rest."
+                  Source="Dragonborn Racial"/>
+        </Choice>
+        <Choice Name="Green Dragon Ancestry"
+                ShortDescription="Poison resistance and a 15 ft. cone breath weapon.">
+          <Effect Type="AddFeatureEffect"
+                  Name="Green Dragon Resistance"
+                  ShortDescription="Take half damage from poison damage."
+                  Description="Take half damage from poison damage."
+                  Source="Dragonborn Racial"/>
+          <Effect Type="AddFeatureEffect"
+                  Name="Green Dragon Breath Weapon"
+                  ShortDescription="15 ft. cone that does 2d6 poison damage. Dexterity save of DC 8 + Con + Prof save halves"
+                  Description="You can use your action to exhale
+                  destructive energy. Your draconic ancestry determines
+                  the size, shape, and damage type of the exhalation.
+                  When you use your breath weapon, each creature in
+                  the area of the exhalation must make a saving throw,
+                  the type of which is determined by your draconic
+                  ancestry. The DC for this saving throw equals 8 +
+                  your Constitution modifier + your proficiency bonus. A
+                  creature takes 2d6 damage on a failed save, and half
+                  as much damage on a successful one. The damage
+                  increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+                  at 16th level.
+                  After you use your breath weapon, you can’t use it
+                  again until you complete a short or long rest."
+                  Source="Dragonborn Racial"/>
+        </Choice>
+        <Choice Name="Red Dragon Ancestry"
+                ShortDescription="Fire resistance and a 15 ft. cone breath weapon.">
+          <Effect Type="AddFeatureEffect"
+                  Name="Red Dragon Resistance"
+                  ShortDescription="Take half damage from fire damage."
+                  Description="Take half damage from fire damage."
+                  Source="Dragonborn Racial"/>
+          <Effect Type="AddFeatureEffect"
+                  Name="Red Dragon Breath Weapon"
+                  ShortDescription="15 ft. cone that does 2d6 fire damage. Dexterity save of DC 8 + Con + Prof save halves"
+                  Description="You can use your action to exhale
+                  destructive energy. Your draconic ancestry determines
+                  the size, shape, and damage type of the exhalation.
+                  When you use your breath weapon, each creature in
+                  the area of the exhalation must make a saving throw,
+                  the type of which is determined by your draconic
+                  ancestry. The DC for this saving throw equals 8 +
+                  your Constitution modifier + your proficiency bonus. A
+                  creature takes 2d6 damage on a failed save, and half
+                  as much damage on a successful one. The damage
+                  increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+                  at 16th level.
+                  After you use your breath weapon, you can’t use it
+                  again until you complete a short or long rest."
+                  Source="Dragonborn Racial"/>
+        </Choice>
+        <Choice Name="Silver Dragon Ancestry"
+                ShortDescription="Cold resistance and a 15 ft. cone breath weapon.">
+          <Effect Type="AddFeatureEffect"
+                  Name="Silver Dragon Resistance"
+                  ShortDescription="Take half damage from cold damage."
+                  Description="Take half damage from cold damage."
+                  Source="Dragonborn Racial"/>
+          <Effect Type="AddFeatureEffect"
+                  Name="Silver Dragon Breath Weapon"
+                  ShortDescription="15 ft. cone that does 2d6 cold damage. Dexterity save of DC 8 + Con + Prof save halves"
+                  Description="You can use your action to exhale
+                  destructive energy. Your draconic ancestry determines
+                  the size, shape, and damage type of the exhalation.
+                  When you use your breath weapon, each creature in
+                  the area of the exhalation must make a saving throw,
+                  the type of which is determined by your draconic
+                  ancestry. The DC for this saving throw equals 8 +
+                  your Constitution modifier + your proficiency bonus. A
+                  creature takes 2d6 damage on a failed save, and half
+                  as much damage on a successful one. The damage
+                  increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+                  at 16th level.
+                  After you use your breath weapon, you can’t use it
+                  again until you complete a short or long rest."
+                  Source="Dragonborn Racial"/>
+        </Choice>
+        <Choice Name="White Dragon Ancestry"
+                ShortDescription="Cold resistance and a 15 ft. cone breath weapon.">
+          <Effect Type="AddFeatureEffect"
+                  Name="White Dragon Resistance"
+                  ShortDescription="Take half damage from cold damage."
+                  Description="Take half damage from cold damage."
+                  Source="Dragonborn Racial"/>
+          <Effect Type="AddFeatureEffect"
+                  Name="White Dragon Breath Weapon"
+                  ShortDescription="15 ft. cone that does 2d6 cold damage. Dexterity save of DC 8 + Con + Prof save halves"
+                  Description="You can use your action to exhale
+                  destructive energy. Your draconic ancestry determines
+                  the size, shape, and damage type of the exhalation.
+                  When you use your breath weapon, each creature in
+                  the area of the exhalation must make a saving throw,
+                  the type of which is determined by your draconic
+                  ancestry. The DC for this saving throw equals 8 +
+                  your Constitution modifier + your proficiency bonus. A
+                  creature takes 2d6 damage on a failed save, and half
+                  as much damage on a successful one. The damage
+                  increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+                  at 16th level.
+                  After you use your breath weapon, you can’t use it
+                  again until you complete a short or long rest."
+                  Source="Dragonborn Racial"/>
+        </Choice>
+      </Effect>
+    </Effects>
+  </Race>
+
+  <Race Name="Forest Gnome"
+        Description="As a forest gnome, you have a natural knack for illusion
+        and inherent quickness and stealth. In the worlds of
+        DnD, forest gnomes are rare and secretive. They gather
+        in hidden communities in sylvan forests, using illusions
+        and trickery to conceal themselves from threats or
+        to mask their escape should they be detected. Forest
+        gnomes tend to be friendly with other good-spirited
+        woodland folk, and they regard elves and good fey as
+        their most important allies. These gnomes also befriend
+        small forest animals and rely on them for information
+        about threats that might prowl their lands."
+        ShortDescription="Little forest people; +2 int, +1 dex">
+    <Effects>
+      <Effect Type="BonusStatEffect"
+              Stat="Intelligence"
+              Bonus="2"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="25"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Darkvision"
+              Description="Accustomed to life underground, you have
+              superior vision in dark and dim conditions. You can
+              see in dim light within 60 feet of you as if it were bright
+              light, and in darkness as if it were dim light. You can't
+              discern color in darkness, only shades of gray."
+              ShortDescription="You can see 60 ft. in the dark."
+              Source="Gnome Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Gnome Cunning"
+              Description="You have advantage on all
+              Intelligence, Wisdom, and Charisma saving throws
+              against magic."
+              ShortDescription="You have advantage on all mental saves vs magic."
+              Source="Gnome Racial"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Dexterity"
+              Bonus="1"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Speak with Small Beasts"
+              Description="Through sounds and
+              gestures, you can communicate simple ideas with Small
+              or smaller beasts. Forest gnomes love animals and often
+              keep squirrels, badgers, rabbits, moles, woodpeckers,
+              and other creatures as beloved pets."
+              ShortDescription="You can communicate simple concepts with small beasts."
+              Source="Forest Gnome Racial"/>
+    </Effects>
+  </Race>
+
+  <Race Name="Rock Gnome"
+        Description="As a rock gnome, you have a natural inventiveness and
+        hardiness beyond that of other gnomes. Most gnomes
+        in the worlds of DnD are rock gnomes, including the
+        tinker gnomes of the Dragonlance setting."
+        ShortDescription="Little rock people; +2 int, +1 con">
+    <Effects>
+      <Effect Type="BonusStatEffect"
+              Stat="Intelligence"
+              Bonus="2"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="25"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Darkvision"
+              Description="Accustomed to life underground, you have
+              superior vision in dark and dim conditions. You can
+              see in dim light within 60 feet of you as if it were bright
+              light, and in darkness as if it were dim light. You can't
+              discern color in darkness, only shades of gray."
+              ShortDescription="You can see 60 ft. in the dark."
+              Source="Gnome Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Gnome Cunning"
+              Description="You have advantage on all
+              Intelligence, Wisdom, and Charisma saving throws
+              against magic."
+              ShortDescription="You have advantage on all mental saves vs magic."
+              Source="Gnome Racial"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Constitution"
+              Bonus="1"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Artificer's Lore"
+              Description="Whenever you make an Intelligence
+              (History) check related to magic items, alchemical
+              objects, or technological devices, you can add twice your
+              proficiency bonus, instead of any proficiency bonus you
+              normally apply."
+              ShortDescription="Add twice your proficiency bonus on History checks related to artifice."
+              Source="Rock Gnome Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Tinker"
+              Description="You have proficiency with artisan’s tools
+              (tinker’s tools). Using those tools, you can spend 1
+              hour and 10 gp worth o f materials to construct a Tiny
+              clockwork device (AC 5, 1 hp). The device ceases
+              to function after 24 hours (unless you spend 1 hour
+              repairing it to keep the device functioning), or when
+              you use your action to dismantle it; at that time, you can
+              reclaim the materials used to create it. You can have up
+              to three such devices active at a time.
+              When you create a device, choose one o f the
+              following options:
+              Clockwork Toy.
+              This toy is a clockwork animal, monster,
+              or person, such as a frog, mouse, bird, dragon, or
+              soldier. When placed on the ground, the toy m oves
+              5 feet across the ground on each o f your turns in a
+              random direction. It makes noises as appropriate
+              to the creature it represents.
+              Fire Starter.
+              The device produces a miniature
+              flame, which you can use to light a candle,
+              torch, or campfire. Using the device
+              requires your action.
+              Music Box. 
+              When opened, this music box
+              plays a single song at a moderate volume.
+              The box stops playing when it
+              reaches the song’s end or
+              when it is closed."
+              ShortDescription="You can make a few simple contraptions."
+              Source="Rock Gnome Racial"/>
+      <Effect Type="AddProficiencyEffect"
+              Name="Tinker's Tools"
+              Source="Rock Gnome Racial"/>
+    </Effects>
+  </Race>
+
+  <Race Name="Half-Elf"
+        Description="Half-elves have no lands o f their own, though they are
+        welcome in human cities and somewhat less w elcome
+        in elven forests. In large cities in regions where elves
+        and humans interact often, half-elves are sometimes
+        numerous enough to form small communities of their
+        own. They enjoy the company o f other half-elves, the
+        only people who truly understand what it is to live
+        between these two worlds."
+        ShortDescription="Not-quite-elf; +2 Cha, +1 to 2 others">
+    <Effects>
+      <Effect Type="MultipleChoiceFromPoolEffect"
+              ChoiceCount="2"
+              Name="Attribute Gain Choice"
+              Description="Pick one attribute to gain a point in."
+              ShortDescription="Add 1 to an attribute">
+        <Choice Name="Strength"
+                Description="Add one point in strength"
+                ShortDescription="Add one point in strength">
+          <Effect Type="BonusStatEffect"
+                  Stat="Strength"
+                  Bonus="1"/>
+        </Choice>
+        <Choice Name="Dexterity"
+                Description="Add one point in dexterity"
+                ShortDescription="Add one point in dexterity">
+          <Effect Type="BonusStatEffect"
+                  Stat="Dexterity"
+                  Bonus="1"/>
+        </Choice>
+        <Choice Name="Constitution"
+                Description="Add one point in constitution"
+                ShortDescription="Add one point in constitution">
+          <Effect Type="BonusStatEffect"
+                  Stat="Constitution"
+                  Bonus="1"/>
+        </Choice>
+        <Choice Name="Intelligence"
+                Description="Add one point in intelligence"
+                ShortDescription="Add one point in intelligence">
+          <Effect Type="BonusStatEffect"
+                  Stat="Intelligence"
+                  Bonus="1"/>
+        </Choice>
+        <Choice Name="Wisdom"
+                Description="Add one point in wisdom"
+                ShortDescription="Add one point in wisdom">
+          <Effect Type="BonusStatEffect"
+                  Stat="Wisdom"
+                  Bonus="1"/>
+        </Choice>
+      </Effect>
+      <Effect Type="BonusSpeedEffect"
+              Speed="30"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Charisma"
+              Bonus="2"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Darkvision"
+              Description="Thanks to your elf blood, you have
+            superior vision in dark and dim conditions. You can
+            see in dim light within 60 feet of you as if it were bright
+            light, and in darkness as if it were dim light. You can’t
+            discern color in darkness, only shades of gray."
+              ShortDescription="Gain the ability to see in darkness up to 60 ft."
+              Source="Half-Elf Racial"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Fey Ancestry"
+              Description="You have advantage on saving throws
+            against being charmed, and magic can’t put you to sleep."
+              ShortDescription="Gain the ability to see in darkness up to 60 ft."
+              Source="Half-Elf Racial"/>
+      <Effect Type="MultipleChoiceFromPoolEffect"
+                    ChoiceCount="2"
+                    Name="Skill Versatility"
+                    Description="Choose a skill proficiency from the list"
+                    ShortDescription="Choose a skill proficiency">
+        <Choice Name="Acrobatics"
+                Description="Gain Proficiency with acrobatics"
+                ShortDescription="Gain proficiency with the acrobatics skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Acrobatics"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Animal Handling"
+                Description="Gain Proficiency with animal handling"
+                ShortDescription="Gain proficiency with the animal handling skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="AnimalHandling"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Arcana"
+                Description="Gain Proficiency with arcana"
+                ShortDescription="Gain proficiency with the arcana skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Arcana"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Athletics"
+                Description="Gain Proficiency with Athletics"
+                ShortDescription="Gain proficiency with the Athletics skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Athletics"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Deception"
+                Description="Gain Proficiency with deception"
+                ShortDescription="Gain proficiency with the deception skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Deception"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="History"
+                Description="Gain Proficiency with history"
+                ShortDescription="Gain proficiency with the history skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="History"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Insight"
+                Description="Gain Proficiency with insight"
+                ShortDescription="Gain proficiency with the insight skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Insight"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Intimidation"
+                Description="Gain Proficiency with Intimidation"
+                ShortDescription="Gain proficiency with the Intimidation skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Intimidation"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Investigation"
+                Description="Gain Proficiency with investigation"
+                ShortDescription="Gain proficiency with the investigation skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Investigation"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Medicine"
+                Description="Gain Proficiency with medicine"
+                ShortDescription="Gain proficiency with the medicine skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Medicine"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Nature"
+                Description="Gain Proficiency with Nature"
+                ShortDescription="Gain proficiency with the Nature skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Nature"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Perception"
+                Description="Gain Proficiency with Perception"
+                ShortDescription="Gain proficiency with the Perception skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Perception"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Performance"
+                Description="Gain Proficiency with performance"
+                ShortDescription="Gain proficiency with the performance skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Performance"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Persuasion"
+                Description="Gain Proficiency with persuasion"
+                ShortDescription="Gain proficiency with the persuasion skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Persuasion"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Religion"
+                Description="Gain Proficiency with Religion"
+                ShortDescription="Gain proficiency with the religion skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Religion"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Sleight of Hand"
+                Description="Gain Proficiency with sleight of hand"
+                ShortDescription="Gain proficiency with the sleight of hand skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="SleightOfHand"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Stealth"
+                Description="Gain Proficiency with stealth"
+                ShortDescription="Gain proficiency with the stealth skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Stealth"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Suvival"
+                Description="Gain Proficiency with survival"
+                ShortDescription="Gain proficiency with the survival skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Survival"
+                  Proficiency="Proficient"/>
+        </Choice>
+      </Effect>
+    </Effects>
+  </Race>
+
+  <Race Name="Half-Orc"
+        Description="Whether united under the leadership of a mighty
+        warlock or having fought to a standstill after years
+        of conflict, orc and human tribes sometimes form
+        alliances, joining forces into a larger horde to the terror
+        of civilized lands nearby. When these alliances are
+        sealed by marriages, half-orcs are born. Some half-orcs
+        rise to become proud chiefs o f orc tribes, their human
+        blood giving them an edge over their full-blooded orc
+        rivals. Some venture into the w orld to prove their worth
+        among humans and other more civilized races. Many of
+        these become adventurers, achieving greatness for their
+        mighty deeds and notoriety for their barbaric customs
+        and savage fury."
+        ShortDescription="Big dudes and such; +2 str, +1 con">
+    <Effects>
+      <Effect Type="BonusStatEffect"
+              Stat="Strength"
+              Bonus="2"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Constitution"
+              Bonus="1"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Darkvision"
+              ShortDescription="Gain an ability to see 60 ft. in the dark."
+              Source="Half-Orc racial"
+              Description="Thanks to your orc blood, you have
+              superior vision in dark and dim conditions. You can
+              see in dim light within 60 feet o f you as if it w ere bright
+              light, and in darkness as if it w ere dim light. You can't
+              discern color in darkness, only shades of gray."/>
+      <Effect Type="MinimumSkillProficiencyEffect"
+              Skill="Intimidation"
+              Proficiency="Proficient"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="30"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Relentless Endurance"
+              ShortDescription="Once per day, drop to 1 hp instead of 0 when taking lethal damage."
+              Source="Half-Orc racial"
+              Description="When you are reduced to
+              0 hit points but not killed outright, you can drop to 1 hit
+              point instead. You can’t use this feature again until you
+              finish a long rest."/>
+      <Effect Type="AddFeatureEffect"
+              Name="Savage Attacks"
+              ShortDescription="Your melee critical hits deal extra damage equal to one of the weapon's damage dice."
+              Source="Half-Orc racial"
+              Description="When you score a critical hit with
+              a melee weapon attack, you can roll one of the weapon’s
+              damage dice one additional time and add it to the extra
+              damage o f the critical hit."/>
+    </Effects>
+  </Race>
+
+  <Race Name="Tiefling"
+        Description="To be greeted with stares and whispers, to suffer
+        violence and insult on the street, to see mistrust and
+        fear in every eye: this is the lot o f the tiefling. And to
+        twist the knife, tieflings know that this is because a
+        pact struck generations ago infused the essence o f
+        Asmodeus—overlord o f the Nine Hells—into their
+        bloodline. Their appearance and their nature are not
+        their fault but the result o f an ancient sin, for which
+        they and their children and their children’s children
+        will always be held accountable."
+        ShortDescription="Infernal humans; +2 Cha, +1 int">
+    <Effects>
+      <Effect Type="BonusStatEffect"
+              Stat="Charisma"
+              Bonus="2"/>
+      <Effect Type="BonusStatEffect"
+              Stat="Intelligence"
+              Bonus="1"/>
+      <Effect Type="BonusSpeedEffect"
+              Speed="30"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Darkvision"
+              ShortDescription="See 60 ft in the dark."
+              Source="Tiefling Racial"
+              Description="Thanks to your infernal heritage, you
+              have superior vision in dark and dim conditions. You
+              can see in dim light within 60 feet of you as if it w ere
+              bright light, and in darkness as if it were dim light. You
+              can’t discern color in darkness, only shades of gray."/>
     </Effects>
   </Race>
 </Races>
