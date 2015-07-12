@@ -7,6 +7,7 @@ using Data.Models;
 using Data.Models.Choices;
 using Data.Models.Effects;
 using Data.Models.Effects.ChoiceEffects;
+using Data.Models.Effects.SpellEffects;
 
 namespace Data.EffectParser
 {
@@ -38,6 +39,16 @@ namespace Data.EffectParser
         {
             switch (effectElement.Attribute("Type").Value)
             {
+                case "LevelBasedSpellChoiceEffect":
+                    return ParseLevelBasedSpellChoiceEffect(effectElement);
+                case "StatBasedSpellChoiceEffect":
+                    return ParseStatBasedSpellChoiceEffect(effectElement);
+                case "AddSpellsToSpellListEffect":
+                    return ParseAddSpellsToSpellList(effectElement);
+                case "AddKnownSpellEffect":
+                    return ParseAddKnownSpellEffect(effectElement);
+                case "SpellSelectionChoiceEffect":
+                    return ParseSpellSelectionChoiceEffect(effectElement);
                 case "MultipleChoiceFromPoolEffect":
                     return ParseMultipleChoiceFromPoolEffect(effectElement);
                 case "ClassCustomizationChoiceEffect":
@@ -67,8 +78,39 @@ namespace Data.EffectParser
                 case "SaveProficiencyEffect": 
                     return ParseSaveProficiencyEffect(effectElement);
             }
-            throw new InvalidDataException("XML Element contains invalid Effect Type attribute - " 
-                + effectElement.Attribute("Type").Value);
+            throw new InvalidDataException(string.Format("XML Element contains invalid Effect Type attribute - {0}", effectElement.Attribute("Type").Value));
+        }
+
+        private IEffect ParseLevelBasedSpellChoiceEffect(XElement effectElement)
+        {
+            return new LevelBasedSpellChoiceEffect(
+                choiceCount: int.Parse(effectElement.Attribute("Count").Value),
+                spellLevel: int.Parse(effectElement.Attribute("Level").Value));
+        }
+
+        private IEffect ParseStatBasedSpellChoiceEffect(XElement effectElement)
+        {
+            return new StatBasedSpellChoiceEffect(
+                ParseStatType(effectElement.Attribute("Stat").Value),
+                int.Parse(effectElement.Attribute("BaseNumber").Value));
+        }
+
+        private static IEffect ParseSpellSelectionChoiceEffect(XElement effectElement)
+        {
+            return new SpellSelectionChoiceEffect(
+                int.Parse(effectElement.Attribute("Count").Value));
+        }
+
+        private static IEffect ParseAddKnownSpellEffect(XElement effectElement)
+        {
+            return new AddKnownSpellEffect(effectElement.Attribute("SpellName").Value);
+        }
+
+        private static IEffect ParseAddSpellsToSpellList(XElement effectElement)
+        {
+            return new AddSpellsToSpellListEffect(
+                ParseClassType(effectElement.Attribute("Class").Value),
+                int.Parse(effectElement.Attribute("Level").Value));
         }
 
         private IEffect ParseMultipleChoiceFromPoolEffect(XElement effectElement)

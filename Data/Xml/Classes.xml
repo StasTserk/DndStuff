@@ -151,7 +151,213 @@
     </Effects>
   </Class>
 
-  
+  <Class Name="Sorcerer">
+    <Effects Level="1">
+      <Effect Type="MultipleChoiceFromPoolEffect"
+              ChoiceCount="2"
+              Name="Skill Proficiencies"
+              Description="Choose a skill proficiency from the list"
+              ShortDescription="Choose a skill proficiency">
+        <Choice Name="Arcana"
+                Description="Gain Proficiency with Arcana"
+                ShortDescription="Gain proficiency with the Arcana skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Arcana"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Deception"
+                Description="Gain Proficiency with Deception"
+                ShortDescription="Gain proficiency with the Deception skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Deception"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Insight"
+                Description="Gain Proficiency with Insight"
+                ShortDescription="Gain proficiency with the Insight skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Insight"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Intimidation"
+                Description="Gain Proficiency with Intimidation"
+                ShortDescription="Gain proficiency with the Intimidation skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Intimidation"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Persuasion"
+                Description="Gain Proficiency with Persuasion"
+                ShortDescription="Gain proficiency with the Persuasion skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Persuasion"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Religion"
+                Description="Gain Proficiency with Religion"
+                ShortDescription="Gain proficiency with the Religion skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Religion"
+                  Proficiency="Proficient"/>
+        </Choice>
+      </Effect>
+      <Effect Type="SaveProficiencyEffect"
+              Proficiency="Proficient"
+              SaveModified="Constitution"/>
+      <Effect Type="SaveProficiencyEffect"
+              Proficiency="Proficient"
+              SaveModified="Charisma"/>
+      <Effect Type="AddProficiencyEffect"
+              Source="Sorcerer"
+              Name="Daggers"/>
+      <Effect Type="AddProficiencyEffect"
+              Source="Sorcerer"
+              Name="Darts"/>
+      <Effect Type="AddProficiencyEffect"
+              Source="Sorcerer"
+              Name="Slings"/>
+      <Effect Type="AddProficiencyEffect"
+              Source="Sorcerer"
+              Name="Quarterstaffs"/>
+      <Effect Type="AddProficiencyEffect"
+              Source="Sorcerer"
+              Name="Light Crossbows"/>
+      <Effect Type="AddSpellsToSpellListEffect"
+              Class="Sorcerer"
+              Level="1"/>
+      <Effect Type="SpellSelectionChoiceEffect"
+              Count="2"/>
+      <Effect Type="ClassCustomizationChoiceEffect"
+              Name="Sorcerous Origin"
+              Description="Choose a sorcerous origin, which describes the
+              source o f your innate magical power: Draconic
+              Bloodline or Wild Magic, both detailed at the end o f the
+              class description.
+              Your choice grants you features when you choose it at
+              1st level and again at 6th, 14th, and 18th level."
+              ShortDescription="Choose the origin of your sorcerous power."
+              AffectedClass="Sorcerer"/>
+    </Effects>
+    <Effects Level="2">
+      <Effect Type="SpellSelectionChoiceEffect"
+              Count="1"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Sorcery Points"
+              Description="At 2nd level, you tap into a deep wellspring o f magic
+                within yourself. This w ellspring is represented by
+                sorcery points, which allow you to create a variety o f
+                magical effects."
+              ShortDescription="Gain sorcery a pool of sorcery points"
+              Source="Sorcerer"/>
+      <Effect Type="AddFeatureEffect"
+              Name="Flexible Casting"
+              Description="You can transform unexpended
+              sorcery points into one spell slot as a bonus action on
+              your turn. The Creating Spell Slots table shows the cost
+              of creating a spell slot of a given level. You can create
+              spell slots no higher in level than 5th.
+              Level one slots cost 2 sorcery points, level 2 cost 3, level 3 cost 5, 
+              level 4 cost 6 and level 5 cost 7.
+              You can spend spells as a bonus action to regain a number of sorcery points
+              equal to the spell level."
+              ShortDescription="Spend socrecy points to regain spell slots, or spells to regain points."
+              Source="Sorcerer"/>
+    </Effects>
+    <Effects Level="3">
+      <Effect Type="AddSpellsToSpellListEffect"
+              Class="Sorcerer"
+              Level="2"/>
+      <Effect Type="SpellSelectionChoiceEffect"
+              Count="1"/>
+    </Effects>
+    <Effects Level="4">
+      <Effect Type="SpellSelectionChoiceEffect"
+              Count="1"/>
+    </Effects>
+  </Class>
+
+  <Class Name="Wizard">
+    <Effects Level="1">
+      <Effect Type="MultipleChoiceFromPoolEffect"
+              ChoiceCount="2"
+              Name="Skill Proficiencies"
+              Description="Choose a skill proficiency from the list"
+              ShortDescription="Choose a skill proficiency">
+        <Choice Name="Arcana"
+                Description="Gain Proficiency with Arcana"
+                ShortDescription="Gain proficiency with the Arcana skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Arcana"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="History"
+                Description="Gain Proficiency with History"
+                ShortDescription="Gain proficiency with the History skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="History"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Insight"
+                Description="Gain Proficiency with Insight"
+                ShortDescription="Gain proficiency with the Insight skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Insight"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Investigation"
+                Description="Gain Proficiency with Investigation"
+                ShortDescription="Gain proficiency with the Investigation skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Intimidation"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Medicine"
+                Description="Gain Proficiency with Medicine"
+                ShortDescription="Gain proficiency with the Medicine skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Medicine"
+                  Proficiency="Proficient"/>
+        </Choice>
+        <Choice Name="Religion"
+                Description="Gain Proficiency with Religion"
+                ShortDescription="Gain proficiency with the Religion skill">
+          <Effect Type="MinimumSkillProficiencyEffect"
+                  Skill="Religion"
+                  Proficiency="Proficient"/>
+        </Choice>
+      </Effect>
+      <Effect Type="SaveProficiencyEffect"
+              Proficiency="Proficient"
+              SaveModified="Intelligence"/>
+      <Effect Type="SaveProficiencyEffect"
+              Proficiency="Proficient"
+              SaveModified="Wisdom"/>
+      <Effect Type="AddProficiencyEffect"
+              Source="Wizard"
+              Name="Daggers"/>
+      <Effect Type="AddProficiencyEffect"
+              Source="Wizard"
+              Name="Darts"/>
+      <Effect Type="AddProficiencyEffect"
+              Source="Wizard"
+              Name="Slings"/>
+      <Effect Type="AddProficiencyEffect"
+              Source="Wizard"
+              Name="Quarterstaffs"/>
+      <Effect Type="AddProficiencyEffect"
+              Source="Wizard"
+              Name="Light Crossbows"/>
+      <Effect Type="AddSpellsToSpellListEffect"
+              Class="Wizard"
+              Level="1"/>
+      <Effect Type="LevelBasedSpellChoiceEffect"
+              Level="0"
+              Count="3"/>
+      <Effect Type="LevelBasedSpellChoiceEffect"
+              Level="1"
+              Count="6"/>
+    </Effects>
+  </Class>
   <!-- CLASS CUSTOMIZATIONS -->
   <ClassCustomization AffectedClass="Barbarian"
                       Name="Path of the Berserker"
@@ -360,6 +566,61 @@
               that creature."
               ShortDescription="Use your reaction to strike back against someone that damaged out."
               Source="Path of the Berserker"/>
+    </Effects>
+  </ClassCustomization>
+  <ClassCustomization AffectedClass="Sorcerer"
+                      Name="Draconic Bloodline"
+                      Description="Your innate magic comes from draconic magic that was
+                      mingled with your blood or that of your ancestors. Most
+                      often, sorcerers with this origin trace their descent
+                      back to a mighty sorcerer of ancient times who made a
+                      bargain with a dragon or who might even have claimed
+                      a dragon parent. Some of these bloodlines are well
+                      established in the world, but most are obscure. Any
+                      given sorcerer could be the first of a new bloodline, as a
+                      result of a pact or some other exceptional circumstance."
+                      ShortDescription="Draconic magical heritage giving some draconic properties.">
+    <Effects Level="1">
+
+    </Effects>
+    <Effects Level="6">
+      
+    </Effects>
+    <Effects Level="14">
+      
+    </Effects>
+    <Effects Level="18">
+      
+    </Effects>
+  </ClassCustomization>
+  <ClassCustomization AffectedClass="Sorcerer"
+                      Name="Wild Magic"
+                      Description=""
+                      ShortDescription="">
+    <Effects Level="1">
+      <Effect Type="AddFeatureEffect"
+              Name="Draconic Resilience"
+              Description="As magic flows through your body, it causes physical
+              traits of your dragon ancestors to emerge. At 1st level,
+              your hit point maximum increases by 1 and increases by
+              1 again whenever you gain a level in this class.
+              Additionally, parts of your skin are covered by a thin
+              sheen of dragon-like scales. When you aren’t wearing
+              armor, your AC equals 13 + your Dexterity modifier."
+              ShortDescription="Gain ability to cast Beast Sense and Speak with Animals"
+              Source="Draconic Heritage"/>
+      <Effect Type="ArmorWithMaxDexEffect"
+              MaxDex="99"
+              Bonus="3"/>
+    </Effects>
+    <Effects Level="6">
+      
+    </Effects>
+    <Effects Level="14">
+      
+    </Effects>
+    <Effects Level="18">
+      
     </Effects>
   </ClassCustomization>
 </ClassList>

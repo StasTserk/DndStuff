@@ -18,6 +18,7 @@ namespace CharacterSheetVisualizer.NinjectModules
             Bind<IRaceProvider>().To<RaceProvider>().InSingletonScope();
             Bind<IRaceLoader>().To<RaceLoader>().InSingletonScope();
             Bind<IEffectParser>().To<XmlToEffectParser>();
+            Bind<ISpellLoader>().To<SpellLoader>();
         }
     }
 }

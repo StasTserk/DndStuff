@@ -17,7 +17,9 @@
         <DataGrid Name="OutsatndingChoicesGrid"
                   ItemsSource="{Binding Character.OutstandingChoices, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}"
                   SelectedItem="{Binding SelectedChoice, Mode=TwoWay}"
-                  AutoGenerateColumns="False">
+                  AutoGenerateColumns="False"
+                  MinHeight="50"
+                  MaxHeight="300">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}"
                                     Header="Choice"
@@ -42,7 +44,9 @@
                Margin="10,10,10,0"/>
         <DataGrid ItemsSource="{Binding SelectedChoice.Choices}"
                   SelectedItem="{Binding SelectedOption, Mode=TwoWay}"
-                  AutoGenerateColumns="False">
+                  AutoGenerateColumns="False"
+                  MinHeight="50"
+                  MaxHeight="300">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}"
                                     Header="Choice"
@@ -76,7 +80,9 @@
                FontWeight="Bold"
                Margin="10,10,10,0"/>
         <DataGrid ItemsSource="{Binding Character.CompletedChoices, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}"
-            AutoGenerateColumns="False">
+                  AutoGenerateColumns="False"
+                  MinHeight="50"
+                  MaxHeight="300">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}"
                                     Header="Choice"

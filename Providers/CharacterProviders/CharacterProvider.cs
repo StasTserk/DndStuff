@@ -5,6 +5,8 @@ using Data.Models;
 using Data.Models.Choices;
 using Data.Models.Effects;
 using Data.Models.Items;
+using Data.Models.Managers;
+using Data.Repositories.Interfaces;
 
 namespace Providers.CharacterProviders
 {
@@ -15,6 +17,7 @@ namespace Providers.CharacterProviders
         private readonly ISkillProvider _skillProvider;
         private readonly IClassProvider _classProvider;
         private readonly IRaceProvider _raceProvider;
+        private readonly ISpellLoader _spellLoader;
         private readonly IBackgroundProvider _backgroundProvider;
 
         public event EventHandler NewCharacterLoaded;
@@ -34,13 +37,20 @@ namespace Providers.CharacterProviders
             }
         }
 
-        public CharacterProvider(IStatProvider statProvider, ISkillProvider skillProvider, IClassProvider classProvider, IRaceProvider raceProvider, IBackgroundProvider backgroundProvider)
+        public CharacterProvider(
+            IStatProvider statProvider, 
+            ISkillProvider skillProvider, 
+            IClassProvider classProvider, 
+            IRaceProvider raceProvider, 
+            IBackgroundProvider backgroundProvider, 
+            ISpellLoader spellLoader)
         {
             _statProvider = statProvider;
             _skillProvider = skillProvider;
             _classProvider = classProvider;
             _raceProvider = raceProvider;
             _backgroundProvider = backgroundProvider;
+            _spellLoader = spellLoader;
             // Load a new Character
             CreateNewCharacter();
         }
@@ -72,16 +82,13 @@ namespace Providers.CharacterProviders
                 LevelModifiers = modifiers,
                 PlayerName = "Coolguy Steve",
                 CharacterName = "Bruenor",
+                SpellBook = new SpellBookManager(_spellLoader)
             };
 
             var minimumStatBonus = new MinimumStatEffect(StatType.Strength, 17);
             var flatStatBonus = new BonusStatEffect(StatType.Dexterity, 2);
 
-            var effectList = new List<IEffect>
-            {
-                minimumStatBonus,
-                flatStatBonus
-            };
+
 
             // set level up choice
             var choice = new ClassSelectionChoice(
@@ -94,6 +101,12 @@ namespace Providers.CharacterProviders
                 ShortDescription = string.Format(@"Pick your level {0} class", CurrentCharacter.LevelModifiers.Level + 1)
             };
             CurrentCharacter.AddChoice(choice);
+
+            //var effectList = new List<IEffect>
+            //{
+            //    minimumStatBonus,
+            //    flatStatBonus
+            //};
 
             //var randomHat = new EquippableItem(
             //    name: "Cool Hat", 

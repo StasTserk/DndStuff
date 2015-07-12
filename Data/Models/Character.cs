@@ -7,6 +7,7 @@ using Data.Models.Choices;
 using Data.Models.Effects;
 using Data.Models.Effects.BackgroundEffects;
 using Data.Models.Items;
+using Data.Models.Managers;
 using GalaSoft.MvvmLight;
 
 namespace Data.Models
@@ -44,7 +45,6 @@ namespace Data.Models
         private IEnumerable<Skill> _skills;
         private IEnumerable<Stat> _stats;
         private AlignmentType _alignment;
-        
 
         #endregion
 
@@ -199,6 +199,28 @@ namespace Data.Models
         }
 
         public ClassCustomization ClassCustomization { get; set; }
+
+        public ISpellBookManager SpellBook { get; set; }
+
+        public IEnumerable<Spell> KnownSpells
+        {
+            get
+            {
+                return SpellBook != null 
+                    ? SpellBook.GetCharacterKnownSpells() 
+                    : new List<Spell>();
+            }
+        }
+
+        public IEnumerable<Spell> PreparedSpells
+        {
+            get
+            {
+                return SpellBook != null
+                    ? SpellBook.GetCharacterPreparedSpells()
+                    : new List<Spell>();
+            }
+        } 
 
         #endregion
 
