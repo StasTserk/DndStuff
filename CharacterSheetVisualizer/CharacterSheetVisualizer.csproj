@@ -84,6 +84,7 @@
     <Compile Include="ViewModel\CharacterBackgroundViewModel.cs" />
     <Compile Include="ViewModel\CharacterChoicesViewModel.cs" />
     <Compile Include="ViewModel\CharacterSkillsViewModel.cs" />
+    <Compile Include="ViewModel\CharacterSpellbookViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="Views\BaseCharacterStatsView.xaml.cs">
@@ -97,6 +98,9 @@
     </Compile>
     <Compile Include="Views\CharacterSkillsView.xaml.cs">
       <DependentUpon>CharacterSkillsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CharacterSpellbookView.xaml.cs">
+      <DependentUpon>CharacterSpellbookView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CharacterVisualizationView.xaml.cs">
       <DependentUpon>CharacterVisualizationView.xaml</DependentUpon>
@@ -134,6 +138,10 @@
     </Page>
     <Page Include="Views\CharacterSkillsView.xaml">
       <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CharacterSpellbookView.xaml">
+      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CharacterVisualizationView.xaml">

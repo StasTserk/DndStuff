@@ -8,6 +8,9 @@
         mc:Ignorable="d ignore">
     <Grid>
         <TabControl>
+            <TabItem Header="Choices">
+                <views:CharacterChoicesView/>
+            </TabItem>
             <TabItem Header="General">
                 <views:BaseCharacterStatsView/>
             </TabItem>
@@ -17,8 +20,8 @@
             <TabItem Header="Background">
                 <views:CharacterBackgroundView/>
             </TabItem>
-            <TabItem Header="Choices">
-                <views:CharacterChoicesView/>
+            <TabItem Header="Spellbook">
+                <views:CharacterSpellbookView/>
             </TabItem>
         </TabControl>
     </Grid>

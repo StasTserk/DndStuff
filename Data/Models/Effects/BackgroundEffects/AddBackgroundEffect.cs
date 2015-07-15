@@ -33,7 +33,7 @@ namespace Data.Models.Effects.BackgroundEffects
             personalityTraitsChoice.Description = "A defining trait of your character's personality";
             personalityTraitsChoice.ShortDescription = "You character's personality trait";
 
-            IChoice bondsChoice = ConstructChoice(_background.PersonalityTraits.Select(b =>
+            IChoice bondsChoice = ConstructChoice(_background.Bonds.Select(b =>
                 new ChoiceOption(
                     name: "Character Bond",
                     description: b,
@@ -43,7 +43,7 @@ namespace Data.Models.Effects.BackgroundEffects
             bondsChoice.Description = "A bond that ties your character to the world around you";
             bondsChoice.ShortDescription = "A bond to the land";
 
-            IChoice flawsChoice = ConstructChoice(_background.PersonalityTraits.Select(f =>
+            IChoice flawsChoice = ConstructChoice(_background.Flaws.Select(f =>
                 new ChoiceOption(
                     name: "Personality Flaw",
                     description: f,
@@ -53,7 +53,7 @@ namespace Data.Models.Effects.BackgroundEffects
             flawsChoice.Description = "A personality flaw in your character";
             flawsChoice.ShortDescription = "A character flaw";
 
-            IChoice idealsChoice = ConstructChoice(_background.PersonalityTraits.Select(i =>
+            IChoice idealsChoice = ConstructChoice(_background.Ideals.Select(i =>
                 new ChoiceOption(
                     name: "Character Ideals",
                     description: i,

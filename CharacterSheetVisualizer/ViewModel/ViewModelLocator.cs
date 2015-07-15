@@ -74,6 +74,11 @@ namespace CharacterSheetVisualizer.ViewModel
             get { return _kernel.Get<CharacterChoicesViewModel>(); }
         }
 
+        public CharacterSpellbookViewModel Spellbook
+        {
+            get { return _kernel.Get<CharacterSpellbookViewModel>(); }
+        }
+
         public static void Cleanup()
         {
             // TODO Clear the ViewModels
