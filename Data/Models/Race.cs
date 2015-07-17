@@ -8,6 +8,8 @@ namespace Data.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public IEnumerable<IEffect> Effects { get; set; }
+        public string ShortDescription { get; set; }
+
         public void ApplyToCharacter(Character targetCharacter)
         {
             targetCharacter.Race = this;

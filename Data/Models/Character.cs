@@ -36,7 +36,7 @@ namespace Data.Models
         private readonly ICollection<string> _personalityTraits;
         private readonly ICollection<string> _characterBonds;
         private readonly ICollection<string> _characterFlaws;
-        private readonly ICollection<string> _CharacterIdeals;
+        private readonly ICollection<string> _characterIdeals;
         private readonly ObservableCollection<IChoice> _oustandingChoices;
         private readonly ObservableCollection<IChoice> _completedChoices;
         private Race _race;
@@ -124,6 +124,7 @@ namespace Data.Models
             {
                 _race = value;
                 RaisePropertyChanged(() => Race.Name);
+                RaisePropertyChanged(() => Race);
             } 
         }
         
@@ -150,7 +151,7 @@ namespace Data.Models
                 {
                     prof.GetProficencyList(profList);
                 }
-                return profList;
+                return profList.GroupBy(p => p.Name).Select(g => g.First());
             }
         }
 
@@ -185,7 +186,7 @@ namespace Data.Models
         public IEnumerable<string> PersonalityTraits { get { return _personalityTraits; } }
         public IEnumerable<string> CharacterBonds { get { return _characterBonds; } }
         public IEnumerable<string> CharacterFlaws { get { return _characterFlaws; } }
-        public IEnumerable<string> CharacterIdeals { get { return _CharacterIdeals; } }
+        public IEnumerable<string> CharacterIdeals { get { return _characterIdeals; } }
 
         public Background Background
         {
@@ -214,7 +215,7 @@ namespace Data.Models
             _personalityTraits = new List<string>();
             _characterBonds = new List<string>();
             _characterFlaws = new List<string>();
-            _CharacterIdeals = new List<string>();
+            _characterIdeals = new List<string>();
         }
         #endregion
 
@@ -263,7 +264,7 @@ namespace Data.Models
                        
         public void AddBackgroundIdeal(string ideal)
         {              
-            _CharacterIdeals.Add(ideal);
+            _characterIdeals.Add(ideal);
             RaisePropertyChanged(() => CharacterIdeals);
         }
 
@@ -287,7 +288,7 @@ namespace Data.Models
 
         public void RemoveBackgroundIdeal(string ideal)
         {
-            _CharacterIdeals.Remove(ideal);
+            _characterIdeals.Remove(ideal);
             RaisePropertyChanged(() => CharacterIdeals);
         }
 

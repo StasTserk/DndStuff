@@ -33,16 +33,12 @@
                                     IsReadOnly="True"
                                     FontSize="15"
                                     Width="Auto"/>
-                <DataGridTemplateColumn Header="Proficency"
-                                        IsReadOnly="False">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <ComboBox ItemsSource="{Binding ModifierTypes}"
-                                      SelectedItem="{Binding ModifierType, UpdateSourceTrigger=PropertyChanged}"
-                                      />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Proficiency"
+                                    Binding="{Binding ModifierType}"
+                                    IsReadOnly="True"
+                                    FontSize="15"
+                                    Width="Auto"/>
+
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

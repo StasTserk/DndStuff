@@ -76,6 +76,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Design\DesignClassController.cs" />
+    <Compile Include="Design\DesignRaceProvider.cs" />
     <Compile Include="NinjectModules\DesignTimeModule.cs" />
     <Compile Include="NinjectModules\RunTimeModule.cs" />
     <Compile Include="NinjectModules\ViewModelModule.cs" />

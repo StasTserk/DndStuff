@@ -108,21 +108,27 @@ namespace Data.Models
         public void AddSkillEffect(ISkillEffect skillEffect)
         {
             _skillEffects.Add(skillEffect);
+            RaisePropertyChanged(() => Modifier);
         }
 
         public void RemoveSkillEffect(ISkillEffect skillEffect)
         {
             _skillEffects.Remove(skillEffect);
+            RaisePropertyChanged(() => Modifier);
         }
 
         public void AddSkillProficiencyEffect(ISkillProficiencyEffect effect)
         {
             _skillProfficiencyEffects.Add(effect);
+            RaisePropertyChanged(() => ModifierType);
+            RaisePropertyChanged(() => Modifier);
         }
 
         public void RemoveSkillProficiencyEffect(ISkillProficiencyEffect effect)
         {
             _skillProfficiencyEffects.Remove(effect);
+            RaisePropertyChanged(() => ModifierType);
+            RaisePropertyChanged(() => Modifier);
         }
 #endregion
     }
