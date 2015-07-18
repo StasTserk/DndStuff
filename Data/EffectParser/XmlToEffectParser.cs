@@ -38,6 +38,8 @@ namespace Data.EffectParser
         {
             switch (effectElement.Attribute("Type").Value)
             {
+                case "LevelBasedDelayedEffect":
+                    return LevelBasedDelayedEffect(effectElement);
                 case "MultipleChoiceFromPoolEffect":
                     return ParseMultipleChoiceFromPoolEffect(effectElement);
                 case "ClassCustomizationChoiceEffect":
@@ -69,6 +71,21 @@ namespace Data.EffectParser
             }
             throw new InvalidDataException("XML Element contains invalid Effect Type attribute - " 
                 + effectElement.Attribute("Type").Value);
+        }
+
+        private IEffect LevelBasedDelayedEffect(XElement effectElement)
+        {
+            var effectsDictionary = new Dictionary<int, IEnumerable<IEffect>>();
+
+            foreach (var subEffect in effectElement.Elements("Effects"))
+            {
+                var key = int.Parse(subEffect.Attribute("Level").Value);
+                var effects = GetEffectsFromXml(subEffect);
+
+                effectsDictionary.Add(key, effects);
+            }
+
+            return new DelayedLevelBasedEffect(effectsDictionary);
         }
 
         private IEffect ParseMultipleChoiceFromPoolEffect(XElement effectElement)
