@@ -10,6 +10,7 @@ namespace DnD5thEdTools.Repositories
     {
         private List<Spell> _spellList;
         private Dictionary<String, Spell> _classSpellList;
+        private List<string> _classList;
 
         public SpellLoader()
         {
@@ -23,11 +24,18 @@ namespace DnD5thEdTools.Repositories
             var list = doc.Root.Elements("class");
 
             _classSpellList = new Dictionary<string, Spell>();
+            _classList = new List<string>();
 
             foreach(var spellClass in list)
             {
                 String className = spellClass.Attribute("name").Value;
                 var spellCollection = spellClass.Elements("spell");
+
+                if (!_classList.Contains(className))
+                {
+                    _classList.Add(className);
+                }
+
                 foreach (var spellEntry in spellCollection)
                 {
                     if (_spellList.Where(s => s.Name == spellEntry.Attribute("name").Value).Any())
@@ -62,8 +70,10 @@ namespace DnD5thEdTools.Repositories
                     Concentration = spellNode.Elements("Concentration").First().Value == "Yes",
                     Duration = spellNode.Elements("Duration").First().Value,
                     Overcastable = spellNode.Elements("Overcastable").First().Value == "Yes",
+                    Ritual = spellNode.Elements("Ritual").First().Value == "Yes",
                     Components = spellNode.Elements("Components").First().Value,
                     School = spellNode.Elements("School").First().Value,
+                    RequiresAttackRoll = spellNode.Elements("RequiresAttackRoll").First().Value == "Yes",
                     Level = Int32.Parse(spellNode.Elements("Level").First().Value)
                 };
 
@@ -79,6 +89,12 @@ namespace DnD5thEdTools.Repositories
         public IEnumerable<Spell> GetSpells()
         {
             return _spellList;
+        }
+
+
+        public IEnumerable<string> GetClassList()
+        {
+            return _classList;
         }
     }
 }

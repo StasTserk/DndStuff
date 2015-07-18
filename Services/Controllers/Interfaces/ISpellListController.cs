@@ -9,8 +9,13 @@ namespace DnD5thEdTools.Controllers
 {
     public interface ISpellListController
     {
+        IEnumerable<string> GetClassList();
         IEnumerable<Spell> GetFilteredSpells(Func<Spell, bool> criteria);
+        IEnumerable<Spell> GetFilteredSpells();
         IEnumerable<Spell> GetUnfilteredSpells();
         Spell GetSpellByName(String name);
+        bool AddFilterCriteria(String filterName, Func<Spell, bool> criteria);
+        bool RemoveFilterCriteria(String filterName);
+        void ClearFilterCriteria();
     }
 }

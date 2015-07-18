@@ -25,5 +25,15 @@ namespace MVVMViews.Design
                 },
             };
         }
+
+
+        public IEnumerable<string> GetClassList()
+        {
+            return new List<string>
+            {
+                "Class1",
+                "Class2"
+            };
+        }
     }
 }

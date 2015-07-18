@@ -97,6 +97,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Design\DesignSpellLoader.cs" />
+    <Compile Include="Messages\FilterAppliedMessage.cs" />
     <Compile Include="Messages\SpellSelectedMessage.cs" />
     <Compile Include="NinjectModules\DesignTimeModule.cs" />
     <Compile Include="NinjectModules\RunTimeModule.cs" />
@@ -104,12 +105,16 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\SimpleSpellListViewModel.cs" />
     <Compile Include="ViewModel\SpellDetailViewModel.cs" />
+    <Compile Include="ViewModel\SpellListFilterViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="Views\SimpleSpellListView.xaml.cs">
       <DependentUpon>SimpleSpellListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SpellDetailView.xaml.cs">
       <DependentUpon>SpellDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpellListFilterView.xaml.cs">
+      <DependentUpon>SpellListFilterView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -132,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SpellDetailView.xaml">
+      <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SpellListFilterView.xaml">
       <SubType>Form</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,7 +184,9 @@
       <Name>Providers</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Converters\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

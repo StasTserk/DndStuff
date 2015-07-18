@@ -56,5 +56,18 @@ namespace ServicesTest
             // controller should return nothing since names do not match
             Assert.AreEqual(controller.GetSpellByName("Test Spells"), null);
         }
+
+        [TestMethod]
+        public void GetFilteredSpellsNoFilter()
+        {
+            Spell singleSpell = new Spell { Name = "Test Spell" };
+            ISpellLoader spellLoader = MockRepository.GenerateMock<ISpellLoader>();
+            spellLoader.Stub(s => s.GetSpells())
+                .Return(new List<Spell> { singleSpell });
+
+            SpellListController controller = new SpellListController(spellLoader);
+
+            Assert.AreEqual(controller.GetFilteredSpells().First(), singleSpell);
+        }
     }
 }

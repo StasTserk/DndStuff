@@ -1,9 +1,11 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 using DnD5thEdTools.Controllers;
 using DnD5thEdTools.Models;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
 using MVVMViews.Messages;
+using Ninject;
 
 namespace MVVMViews.ViewModel
 {
@@ -13,7 +15,9 @@ namespace MVVMViews.ViewModel
     /// See http://www.galasoft.ch/mvvm
     /// </para>
     /// </summary>
-    public class SimpleSpellListViewModel : ViewModelBase
+    public class SimpleSpellListViewModel 
+        : ViewModelBase
+        , IInitializable
     {
         private readonly IMessenger _messenger;
         private readonly ISpellListController _controller;
@@ -56,6 +60,16 @@ namespace MVVMViews.ViewModel
         {
             _controller = controller;
             _messenger = messenger;
+
+            _messenger.Register<FilterAppliedMessage>(this, message =>
+            {
+                _controller.AddFilterCriteria(message.Type.ToString(), message.FilterFunction);
+                Spells = new ObservableCollection<Spell>(_controller.GetFilteredSpells());
+            });
+        }
+
+        public void Initialize()
+        {
             Spells = new ObservableCollection<Spell>(_controller.GetUnfilteredSpells());
         }
     }
