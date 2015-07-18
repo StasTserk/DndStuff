@@ -84,6 +84,7 @@
     <Compile Include="Models\Effects\ChoiceEffects\SpellSelectionChoiceEffect.cs" />
     <Compile Include="Models\Effects\ChoiceEffects\StatBasedSpellChoiceEffect.cs" />
     <Compile Include="Models\Effects\ClassCustomizationEffect.cs" />
+    <Compile Include="Models\Effects\DelayedLevelBasedEffect.cs" />
     <Compile Include="Models\Effects\IArmorClassEffect.cs" />
     <Compile Include="Models\Effects\IEffect.cs" />
     <Compile Include="Models\Effects\IFeatureEffect.cs" />

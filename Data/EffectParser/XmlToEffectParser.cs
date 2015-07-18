@@ -49,6 +49,8 @@ namespace Data.EffectParser
                     return ParseAddKnownSpellEffect(effectElement);
                 case "SpellSelectionChoiceEffect":
                     return ParseSpellSelectionChoiceEffect(effectElement);
+                case "LevelBasedDelayedEffect":
+                    return LevelBasedDelayedEffect(effectElement);
                 case "MultipleChoiceFromPoolEffect":
                     return ParseMultipleChoiceFromPoolEffect(effectElement);
                 case "ClassCustomizationChoiceEffect":
@@ -111,6 +113,21 @@ namespace Data.EffectParser
             return new AddSpellsToSpellListEffect(
                 ParseClassType(effectElement.Attribute("Class").Value),
                 int.Parse(effectElement.Attribute("Level").Value));
+        }
+
+        private IEffect LevelBasedDelayedEffect(XElement effectElement)
+        {
+            var effectsDictionary = new Dictionary<int, IEnumerable<IEffect>>();
+
+            foreach (var subEffect in effectElement.Elements("Effects"))
+            {
+                var key = int.Parse(subEffect.Attribute("Level").Value);
+                var effects = GetEffectsFromXml(subEffect);
+
+                effectsDictionary.Add(key, effects);
+            }
+
+            return new DelayedLevelBasedEffect(effectsDictionary);
         }
 
         private IEffect ParseMultipleChoiceFromPoolEffect(XElement effectElement)

@@ -1245,6 +1245,29 @@
               can see in dim light within 60 feet of you as if it w ere
               bright light, and in darkness as if it were dim light. You
               can’t discern color in darkness, only shades of gray."/>
+      <Effect Type="LevelBasedDelayedEffect">
+        <Effects Level="1">
+          <Effect Type="AddFeatureEffect"
+                  Name="Thaumaturgy"
+                  ShortDescription="You know the thaumaturgy cantrip"
+                  Source="Tiefling Racial"
+                  Description="You know the thaumaturgy cantrip"/>
+        </Effects>
+        <Effects Level="3">
+          <Effect Type="AddFeatureEffect"
+                  Name="Hellish Rebuke"
+                  ShortDescription="You can cast Hellish Rebuke once per day."
+                  Source="Tiefling Racial"
+                  Description="You can cast Hellish Rebuke once per day, using your charisma as the casting stat."/>
+        </Effects>
+        <Effects Level="5">
+          <Effect Type="AddFeatureEffect"
+                  Name="Darkness"
+                  ShortDescription="You can cast Darkness once per day."
+                  Source="Tiefling Racial"
+                  Description="You can cast Darkness once per day, using your charisma as the casting stat."/>
+        </Effects>
+      </Effect>
     </Effects>
   </Race>
 </Races>
